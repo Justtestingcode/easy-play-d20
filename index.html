@@ -157,7 +157,7 @@
         .cs-inv-slot { display: flex; align-items: flex-end; gap: 5px; }
         .cs-inv-num { font-family: 'Arial', sans-serif; font-size: 9pt; font-weight: bold; color: var(--accent-color); }
 
-        .cs-notes { height: auto; padding-bottom: 10px; } /* Changed to auto so the border wraps all lines */
+        .cs-notes { height: auto; padding-bottom: 10px; } /* Adjusted to fit the new page margins perfectly */
         .cs-note-line { border-bottom: 1px dotted #888; height: 22px; width: 100%; display: block; }
 
         @media print {
@@ -241,7 +241,7 @@
             <div class="cs-vital-giant">
                 <div class="cs-vital-title">DEFENSE TARGET <span class="cs-vital-abbr">(DT)</span></div>
                 <div class="cs-vital-space"></div>
-                <div class="cs-vital-formula">Base: 10 + Agility</div>
+                <div class="cs-vital-formula">Base: 8 + Agility</div>
                 <div class="cs-vital-prog">+ Armor/Shield: ____</div>
             </div>
             <div class="cs-vital-giant">
@@ -422,14 +422,9 @@
                     <td>None</td>
                 </tr>
                 <tr>
-                    <td>Medium Armor</td>
-                    <td>+2</td>
-                    <td>None</td>
-                </tr>
-                <tr>
                     <td>Heavy Armor</td>
-                    <td>+3</td>
-                    <td>None</td>
+                    <td>+2</td>
+                    <td>Requires 3 Might</td>
                 </tr>
                 <tr>
                     <td>Shield (Passive Wall)</td>
@@ -452,7 +447,7 @@
 
             <div class="callout-box" style="margin-top: 15px;">
                 <h3>Wealth & Bartering</h3>
-                <p>Easy Play D20 abstracts currency to keep the game fast. Most common adventuring gear, a night at the inn, or basic repairs are assumed to be covered by your general Wealth. Acquiring rare weapons, custom armor, or permanent sanctuary requires completing dangerous bounties or trading valuable loot found in the wild.</p>
+                <p>Easy Play D20 abstracts exact coin counting into general Wealth, but survival is never free. You must actively scavenge loot, claim bounties, or trade valuables to pay for your basic needs. Booking a safe inn, buying standard consumables, or repairing gear requires spending your hard-earned Wealth. If your pockets are empty, you will be sleeping in the dirt and fighting with whatever you can find.</p>
             </div>
 
             <div style="break-inside: avoid;">
@@ -488,7 +483,7 @@
                         <td><strong>Ranged Weapon</strong><br><span style="font-size: 8pt; font-weight: normal; color: #555;">(10 Paces Range / 10 Inches)</span></td>
                         <td>1</td>
                         <td>2 Hands</td>
-                        <td>Agility</td>
+                        <td>Will</td>
                     </tr>
                     <tr>
                         <td><strong>Light Melee</strong><br><span style="font-size: 8pt; font-weight: normal; color: #555;">(1 Pace Range / 1 Inch)</span></td>
