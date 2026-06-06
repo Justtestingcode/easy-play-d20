@@ -2,221 +2,581 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EASY PLAY 2D20 TTRPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY PLAY D20: Complete Rulebook & Sheet</title>
     <style>
-        body { font-family: 'Times New Roman', serif; line-height: 1.4; color: #000; background: #eee; margin: 0; padding: 20px; }
-        .page { background: #fff; width: 8.5in; min-height: 11in; padding: 0.5in; margin: 0 auto 20px auto; box-sizing: border-box; page-break-after: always; }
-        
-        .tabs { display: flex; flex-wrap: wrap; border: 1px solid #000; margin-bottom: 20px; }
-        .tab { flex: 1 1 auto; text-align: center; padding: 10px 5px; background: #1a202c; color: #fff; font-weight: bold; text-transform: uppercase; border: 1px solid #000; cursor: pointer; font-size: 0.55rem; min-width: 100px; }
-        .tab.active { background: #475569; }
-        
-        .tab-view { display: none; }
-        .tab-view.active { display: block; }
+        /* Screen Layout: Makes it look like pages sitting on a desk */
+        :root {
+            --bg-color: #e2e5e9;
+            --page-color: #ffffff;
+            --text-color: #1a1a1a;
+            --accent-color: #8b0000;
+            --box-bg: #f8f9fa;
+            --border-color: #d1d5db;
+        }
 
-        h1 { border-bottom: 3px solid #000; text-transform: uppercase; font-size: 20pt; margin-top: 0; }
-        h2 { border-bottom: 1px solid #000; margin-top: 15px; text-transform: uppercase; font-size: 14pt; }
-        h3 { font-size: 12pt; margin-bottom: 5px; }
-        .box { border: 1px solid #000; padding: 10px; margin: 10px 0; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-        table { width: 100%; border-collapse: collapse; margin: 10px 0; }
-        th, td { border: 1px solid #000; padding: 8px; text-align: left; }
-        .progression-box { border: 1px solid #000; padding: 5px; width: 40px; display: inline-block; }
+        body {
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Georgia', serif;
+            color: var(--text-color);
+            line-height: 1.25; /* Balanced line height */
+        }
+
+        .page {
+            width: 8.5in;
+            height: 11in; 
+            background: var(--page-color);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            padding: 0.38in 0.5in; /* Thicker top/bottom margins to prevent cut-offs */
+            box-sizing: border-box;
+            margin-bottom: 0.5in;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Two-Column Layout for the Rules text */
+        .content-columns {
+            column-count: 2;
+            column-gap: 0.4in;
+            text-align: justify;
+        }
+
+        /* Typography */
+        h1 {
+            column-span: all;
+            text-align: center;
+            font-family: 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            font-size: 25pt;
+            color: var(--accent-color);
+            border-bottom: 4px solid var(--text-color);
+            padding-bottom: 4px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            font-size: 11.5pt;
+            color: var(--page-color);
+            background-color: var(--text-color);
+            padding: 2px 8px;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-family: 'Arial', sans-serif;
+            font-size: 10.5pt;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2px;
+            margin-bottom: 4px;
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        p { font-size: 8.5pt; margin-top: 0; margin-bottom: 6px; }
+        ul { margin-top: 0; margin-bottom: 6px; padding-left: 18px; font-size: 8.5pt; }
+        li { margin-bottom: 3px; }
+
+        /* Callout Boxes */
+        .callout-box {
+            background-color: var(--box-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-color);
+            padding: 6px 8px;
+            margin-bottom: 10px;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .callout-box p:last-child { margin-bottom: 0; }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 8px;
+            font-size: 8pt;
+            break-inside: avoid;
+        }
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 4px;
+            text-align: left;
+        }
+        th { background-color: var(--box-bg); color: var(--accent-color); font-family: 'Arial', sans-serif; }
+
+        /* Playbook Lists */
+        .feature-list { list-style-type: none; padding-left: 0; }
+        .feature-list li {
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed var(--border-color);
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        .feature-list li:last-child { border-bottom: none; }
+
+        /* =========================================
+           CHARACTER SHEET SPECIFIC STYLES
+           ========================================= */
+        .cs-input { width: 100%; }
+        .cs-label { font-family: 'Arial', sans-serif; font-weight: bold; font-size: 8.5pt; text-transform: uppercase; color: var(--accent-color); margin-bottom: 2px;}
+        .cs-line { border-bottom: 1px solid var(--text-color); height: 18px; width: 100%; display: block; }
+
+        .cs-attr-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+        .cs-attr-box { border: 1px solid var(--border-color); padding: 5px 10px; background: var(--box-bg); display: flex; align-items: center; justify-content: space-between; }
+        .cs-attr-title { font-family: 'Arial Black', sans-serif; font-size: 10pt; }
+        .cs-attr-desc { font-size: 7pt; font-style: italic; color: #555; display: block; }
+        .cs-attr-val { border-bottom: 1px solid #000; width: 40px; height: 20px; text-align: center; font-size: 12pt; font-weight: bold; }
+
+        .cs-vitals-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+        .cs-vital-giant { border: 3px solid var(--text-color); background: var(--box-bg); padding: 10px; text-align: center; border-radius: 6px; box-shadow: inset 0 0 10px rgba(0,0,0,0.05); }
+        .cs-vital-title { font-family: 'Arial Black', sans-serif; font-size: 15pt; color: var(--accent-color); margin-bottom: 5px; }
+        .cs-vital-abbr { font-size: 9pt; color: var(--text-color); }
+        .cs-vital-space { height: 50px; display: flex; align-items: center; justify-content: center; font-size: 40pt; font-family: 'Arial', sans-serif; color: #e5e7eb; font-weight: bold; }
+        .cs-vital-formula { font-size: 8pt; color: #666; border-top: 1px dashed var(--border-color); padding-top: 5px; margin-top: 5px;}
+        .cs-vital-prog { font-size: 8pt; margin-top: 5px; font-weight: bold; }
+
+        .cs-secondary-row { display: grid; grid-template-columns: 1fr 1.1fr 1.4fr; gap: 12px; margin-bottom: 15px; }
+        .cs-sec-box { border: 1px solid var(--text-color); padding: 10px; margin-bottom: 15px; }
+        .cs-sec-title { font-family: 'Arial', sans-serif; font-weight: bold; font-size: 10pt; text-transform: uppercase; border-bottom: 1px solid var(--border-color); padding-bottom: 3px; margin-bottom: 10px; }
+        
+        .cs-inventory { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .cs-inv-slot { display: flex; align-items: flex-end; gap: 5px; }
+        .cs-inv-num { font-family: 'Arial', sans-serif; font-size: 9pt; font-weight: bold; color: var(--accent-color); }
+
+        .cs-notes { height: auto; padding-bottom: 10px; } /* Changed to auto so the border wraps all lines */
+        .cs-note-line { border-bottom: 1px dotted #888; height: 22px; width: 100%; display: block; }
+
+        @media print {
+            @page {
+                size: letter portrait;
+                margin: 0 !important; 
+            }
+            body { 
+                background: none; 
+                padding: 0; 
+                margin: 0;
+                display: block; 
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .page { 
+                box-shadow: none; 
+                margin: 0; 
+                width: 8.5in; 
+                height: 11in; 
+                padding: 0.38in 0.5in;
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+        }
     </style>
 </head>
 <body>
 
-<div class="page">
-    <div class="tabs">
-        <div class="tab active" onclick="showTab('tab1')">CHARACTER PLAY SHEET</div>
-        <div class="tab" onclick="showTab('tab2')">CHARACTER CREATION</div>
-        <div class="tab" onclick="showTab('tab3')">CORE RULES REFERENCE</div>
-        <div class="tab" onclick="showTab('tab4')">GEAR RULES</div>
-        <div class="tab" onclick="showTab('tab5')">UNIFIED PLAYBOOK CODEX</div>
-        <div class="tab" onclick="showTab('tab6')">THE WARRIOR</div>
-        <div class="tab" onclick="showTab('tab7')">THE SCOUT</div>
-        <div class="tab" onclick="showTab('tab8')">THE ADEPT</div>
-    </div>
-
-    <!-- TAB 1: CHARACTER PLAY SHEET -->
-    <div id="tab1" class="tab-view active">
+    <!-- =========================================================
+         PAGE 1: CHARACTER PLAY SHEET
+         ========================================================= -->
+    <div class="page">
         <h1>CHARACTER PLAY SHEET</h1>
-        <div class="grid-2">
-            <div class="box"><strong>CHARACTER NAME:</strong><br>________________</div>
-            <div class="box"><strong>LEVEL:</strong><br>________________</div>
-            <div class="box"><strong>CORE CLASS:</strong> Warrior / Scout / Adept<br>________________</div>
-            <div class="box"><strong>CURRENT XP:</strong><br>________________</div>
-        </div>
-        <div class="box"><strong>RESOLUTE TRACK:</strong> ________________________________</div>
-
-        <h2>CORE ATTRIBUTE MODIFIERS (UNCAPPED SCALING)</h2>
-        <div class="grid-3">
-            <div class="box"><strong>MIGHT:</strong> ___<br><em>Brawn / Force / Strength</em></div>
-            <div class="box"><strong>AGILITY:</strong> ___<br><em>Reflexes / Speed / Evasion</em></div>
-            <div class="box"><strong>WILL:</strong> ___<br><em>Mind / Perception / Magic</em></div>
-        </div>
-
-        <h2>Vitals</h2>
-        <div class="grid-2">
-            <div class="box"><strong>BASE HP:</strong> (Might × 3) + 10<br>+ PROGRESSION BONUS: [ <span class="progression-box">&nbsp;</span> ]</div>
-            <div class="box"><strong>DEFENSE:</strong> 10 + Agility + Armor + Shield</div>
-            <div class="box"><strong>BASE RP:</strong> Will × 2<br>+ PROGRESSION BONUS: [ <span class="progression-box">&nbsp;</span> ]</div>
-            <div class="box"><strong>MOVEMENT:</strong> 2 paces + Agility</div>
-        </div>
-
-        <h2>TACTICAL ENGINE PHASE FLOW</h2>
-        <div class="box">
-            <ul>
-                <li><strong>1. Move Phase:</strong> Move paces up to your total Movement rating. Climb and swim movement costs double pace value.</li>
-                <li><strong>2. Action Phase:</strong> Roll 1d20 + matching Attribute Modifier against the target's static Defense Target or Guide Difficulty threshold.</li>
-                <li><strong>3. Damage Phase:</strong> No damage dice are rolled. A successful hit instantly inflicts flat damage based on weapon size and class specialties.</li>
-            </ul>
-        </div>
-
-        <h2>TACTICAL EQUIPMENT INVENTORY PACK</h2>
-        <div class="grid-2">
-            <div class="box">[1] Armor: ____________</div>
-            <div class="box">[5] ____________</div>
-            <div class="box">[2] Shield: ____________</div>
-            <div class="box">[6] ____________</div>
-            <div class="box">[3] ____________</div>
-            <div class="box">[7] ____________</div>
-            <div class="box">[4] ____________</div>
-            <div class="box">[8] ____________</div>
-        </div>
-    </div>
-
-    <!-- TAB 2: CHARACTER CREATION -->
-    <div id="tab2" class="tab-view">
-        <h1>CHARACTER CREATION</h1>
-        <h2>The Three Pillars of Adventure</h2>
-        <div class="box">
-            <p><strong>Might [Brawn / Force]:</strong> Heavy physical impact, breaking barriers, two-handed combat tracking, and scaling Health Points.</p>
-            <p><strong>Agility [Reflexes / Speed]:</strong> Precise weapon combat accuracy, rapid stealth, tactical pacing, and your Defense Target.</p>
-            <p><strong>Will [Mind / Perception]:</strong> Sensory scanning, long-range tracking, arcane hex manipulation, and maximum Resolute Points.</p>
-        </div>
         
-        <h2>Step-by-Step</h2>
-        <div class="box">
-            <p>1. <strong>Select Class:</strong> Warrior, Scout, or Adept.</p>
-            <p>2. <strong>Distribute Attributes:</strong> Start with +1 in all. Spend 4 additional points.</p>
-            <p>3. <strong>Calculate Vitals:</strong> Compute HP, Defense, RP, and Movement based on your Attributes.</p>
-            <p>4. <strong>Equip Gear:</strong> Choose your starting armor and weaponry based on your class restrictions.</p>
+        <!-- Header Grid -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+            <div class="cs-input"><div class="cs-label">Character Name</div><div class="cs-line"></div></div>
+            <div class="cs-input"><div class="cs-label">Core Class</div><div class="cs-line"></div></div>
+            <div class="cs-input"><div class="cs-label">Level / XP</div><div class="cs-line"></div></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1.5fr 1.5fr 1fr; gap: 10px; margin-bottom: 15px;">
+            <div class="cs-input"><div class="cs-label">Background / Career</div><div class="cs-line"></div></div>
+            <div class="cs-input"><div class="cs-label">Drive / Motivation</div><div class="cs-line"></div></div>
+            <div class="cs-input"><div class="cs-label">Wealth / Loot</div><div class="cs-line"></div></div>
+        </div>
+
+        <div class="cs-label">Core Attributes (Min +1 / Max +4)</div>
+        <div class="cs-attr-row">
+            <div class="cs-attr-box">
+                <div>
+                    <div class="cs-attr-title">MIGHT</div>
+                    <span class="cs-attr-desc">Brawn / Force / Strength</span>
+                </div>
+                <div class="cs-attr-val"></div>
+            </div>
+            <div class="cs-attr-box">
+                <div>
+                    <div class="cs-attr-title">AGILITY</div>
+                    <span class="cs-attr-desc">Reflexes / Speed / Evasion</span>
+                </div>
+                <div class="cs-attr-val"></div>
+            </div>
+            <div class="cs-attr-box">
+                <div>
+                    <div class="cs-attr-title">WILL</div>
+                    <span class="cs-attr-desc">Mind / Perception / Focus</span>
+                </div>
+                <div class="cs-attr-val"></div>
+            </div>
+        </div>
+
+        <div class="cs-label">Vitals & Combat Stats</div>
+        <div class="cs-vitals-row">
+            <div class="cs-vital-giant">
+                <div class="cs-vital-title">HEALTH POINTS <span class="cs-vital-abbr">(HP)</span></div>
+                <div class="cs-vital-space"></div>
+                <div class="cs-vital-formula">Base: (Might × 4) + 15</div>
+                <div class="cs-vital-prog">Current HP: _______</div>
+            </div>
+            <div class="cs-vital-giant">
+                <div class="cs-vital-title">DEFENSE TARGET <span class="cs-vital-abbr">(DT)</span></div>
+                <div class="cs-vital-space"></div>
+                <div class="cs-vital-formula">Base: 10 + Agility</div>
+                <div class="cs-vital-prog">+ Armor/Shield: ____</div>
+            </div>
+            <div class="cs-vital-giant">
+                <div class="cs-vital-title">RESOLUTE POINTS <span class="cs-vital-abbr">(RP)</span></div>
+                <div class="cs-vital-space"></div>
+                <div class="cs-vital-formula">Base: Will × 2</div>
+                <div class="cs-vital-prog">+ Prog. Bonus: ____</div>
+            </div>
+        </div>
+
+        <div class="cs-secondary-row">
+            <!-- Movement Box -->
+            <div class="cs-sec-box" style="margin-bottom: 0; display: flex; align-items: flex-end; justify-content: space-between; padding: 10px 12px;">
+                <div>
+                    <div style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 10pt; text-transform: uppercase; margin-bottom: 4px;">Movement Paces</div>
+                    <div style="font-size: 8pt; color: #555; line-height: 1.3;">Base: 2 + Agility (Min 3)<br>Climb/Swim: Half Speed</div>
+                </div>
+                <div style="width: 35px; border-bottom: 2px solid var(--text-color); height: 25px;"></div>
+            </div>
+            
+            <!-- Primary Weapon Box -->
+            <div class="cs-sec-box" style="margin-bottom: 0; padding: 10px 12px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 9pt; text-transform: uppercase; color: var(--accent-color); margin-bottom: 4px;">Primary Attack</div>
+                <div style="font-size: 8pt; color: #444; line-height: 1.5;">
+                    <div style="display:flex; justify-content: space-between; margin-bottom: 2px;">Wpn: <div style="border-bottom: 1px solid var(--text-color); flex: 1; margin-left: 5px;"></div></div>
+                    <div style="display:flex; justify-content: space-between; margin-bottom: 2px;">Base <div style="border-bottom: 1px solid var(--text-color); width: 25px;"></div> + Attr <div style="border-bottom: 1px solid var(--text-color); width: 25px;"></div></div>
+                    <div style="display:flex; justify-content: space-between; font-weight: bold; color: var(--text-color);">TOTAL DMG: <div style="border-bottom: 2px solid var(--text-color); width: 35px;"></div></div>
+                </div>
+            </div>
+
+            <!-- Turn Sequence Quick Ref Box -->
+            <div class="cs-sec-box" style="margin-bottom: 0; padding: 10px 12px; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 9pt; text-transform: uppercase; margin-bottom: 4px; color: var(--accent-color);">Turn Sequence Quick Ref</div>
+                <div style="font-size: 7.5pt; color: #444; line-height: 1.3;">
+                    <strong>Init:</strong> 1d20. Highest first (Players win ties).<br>
+                    <strong>1. Move:</strong> Move up to max paces.<br>
+                    <strong>2. Action:</strong> 1d20 + Attr vs DT (One attack limit).<br>
+                    <strong>3. Damage:</strong> Inflict flat weapon damage.
+                </div>
+            </div>
+        </div>
+
+        <div class="cs-sec-box" style="margin-bottom: 15px;">
+            <div class="cs-sec-title">Tactical Equipment</div>
+            <div class="cs-inventory">
+                <div class="cs-inv-slot"><span class="cs-inv-num">[1] Armor:</span> <span class="cs-line"></span></div>
+                <div class="cs-inv-slot"><span class="cs-inv-num">[5] Item:</span> <span class="cs-line"></span></div>
+                <div class="cs-inv-slot"><span class="cs-inv-num">[2] Shield:</span> <span class="cs-line"></span></div>
+                <div class="cs-inv-slot"><span class="cs-inv-num">[6] Item:</span> <span class="cs-line"></span></div>
+                <div class="cs-inv-slot"><span class="cs-inv-num">[3] Wpn:</span> <span class="cs-line"></span></div>
+                <div class="cs-inv-slot"><span class="cs-inv-num">[7] Item:</span> <span class="cs-line"></span></div>
+                <div class="cs-inv-slot"><span class="cs-inv-num">[4] Item:</span> <span class="cs-line"></span></div>
+                <div class="cs-inv-slot"><span class="cs-inv-num">[8] Item:</span> <span class="cs-line"></span></div>
+            </div>
+        </div>
+
+        <div class="cs-sec-box cs-notes" style="margin-bottom: 0;">
+            <div class="cs-sec-title" style="border-bottom: none; margin-bottom: 0;">Notes & Conditions</div>
+            <span class="cs-note-line"></span>
+            <span class="cs-note-line"></span>
+            <span class="cs-note-line"></span>
+            <span class="cs-note-line"></span>
+            <span class="cs-note-line"></span>
+            <span class="cs-note-line"></span>
+            <span class="cs-note-line"></span>
+            <span class="cs-note-line"></span>
+            <span class="cs-note-line"></span>
         </div>
     </div>
 
-    <!-- TAB 3: CORE RULES REFERENCE -->
-    <div id="tab3" class="tab-view">
-        <h1>CORE RULES REFERENCE</h1>
-        <h2>1. How to Roll (The Action d20 Engine)</h2>
-        <div class="box">
-            <ul>
-                <li><strong>How Many Dice:</strong> Roll 1d20 + Attribute modifier. Spend 1 RP for Advantage to roll 2d20 (keep highest). Under Disadvantage, roll 2d20 and keep the lowest.</li>
-                <li><strong>Why You Roll:</strong> To meet or exceed the static numerical Target Difficulty threshold set by the Guide.</li>
-                <li><strong>How It Resolves:</strong> Check total against target score. Success means perfect execution. No reactions exist outside your active turn.</li>
-            </ul>
-        </div>
+
+    <!-- =========================================================
+         PAGE 2: CORE RULES
+         ========================================================= -->
+    <div class="page">
+        <h1>EASY PLAY D20</h1>
         
-        <h2>[!] The Twin Die Engine (Resource Resolution)</h2>
-        <div class="box">
-            <p>Spend 1 RP during your Action Phase to buy <strong>Advantage</strong>. Roll an explicit second d20 concurrently (2d20) and evaluate using the highest single face value.</p>
-            <p>If combat factors impose <strong>Disadvantage</strong>, you must roll 2d20 and resolve the action using the lowest face value.</p>
-        </div>
+        <div class="content-columns">
+            <p>Welcome to <strong>Easy Play D20</strong>. In this game, one player acts as the <strong>Guide</strong> (running the world and enemies), while everyone else plays an Adventurer. You will need a 20-sided die (a d20) and these rules.</p>
+            
+            <h2>1. Heroic Genesis</h2>
+            <p>Before you draw a weapon, you must build your adventurer.</p>
+            <ul>
+                <li><strong>Background & Drive:</strong> Write down a past career (e.g., Smuggler, Disgraced Noble) and a core motivation (e.g., "I must protect the weak").</li>
+                <li><strong>Class:</strong> Choose to be a Warrior, Scout, or Adept.</li>
+                <li><strong>Attributes:</strong> You begin with a base score of +1 in Might, Agility, and Will. Allocate 4 additional custom points across these modifiers. Attributes cannot be lower than <strong>+1</strong> and are capped at a maximum of <strong>+4</strong>.</li>
+                <li><strong>Vitals:</strong> Compute your HP, Defense, RP, and Movement using the Character Sheet.</li>
+            </ul>
 
-        <h2>2. Leveling Progression Timeline</h2>
-        <table>
-            <tr><th>Target Level</th><th>Permanent System Progression Upgrades & Structural Benefits</th></tr>
-            <tr><td>Level 1</td><td>Calculate baseline vitals and unlock Core Class Level 1 abilities.</td></tr>
-            <tr><td>Level 2</td><td>Maximum Health permanently increases by +2 HP. Unlock Level 2 Class features.</td></tr>
-            <tr><td>Level 3</td><td>Maximum Resolute Points permanently increase by +1 RP. Unlock Level 3 Class features.</td></tr>
-            <tr><td>Level 4</td><td>Add +1 point directly to any uncapped Core Attribute modifier. Unlock Level 4 Class features.</td></tr>
-            <tr><td>Level 5</td><td>Maximum Health permanently increases by +2 HP. Unlock Level 5 Class features.</td></tr>
-        </table>
+            <h2>2. The Action Engine</h2>
+            <p>When your character attempts something risky, the Guide will ask for an action roll.</p>
+            <ul>
+                <li><strong>How Many Dice:</strong> Roll 1d20 + matching Attribute Modifier.</li>
+                <li><strong>Why You Roll:</strong> To meet or exceed a Target Difficulty set by the Guide <em>(e.g., Easy = 10, Normal = 14, Hard = 18)</em>, or an enemy's static Defense Target.</li>
+                <li><strong>How It Resolves:</strong> If your total meets or exceeds the target, you succeed. <strong>Rule of 20:</strong> A Natural 20 is always an automatic HIT, and a Natural 1 is always an automatic MISS.</li>
+            </ul>
+
+            <div class="callout-box">
+                <h3>[!] The Twin Die Engine</h3>
+                <p>Spend 1 Resolute Point (RP) <strong>before making any action roll</strong> (in or out of combat) to buy Advantage. Roll an explicit second d20 concurrently (2d20) and evaluate using the highest single face value.</p>
+                <p>If factors impose <strong>Disadvantage</strong>, you must roll 2d20 and resolve the action using the lowest face value. If you have both, they cancel each other out.</p>
+            </div>
+
+            <h2>3. Exploration & Social</h2>
+            <p>Attributes govern how you interact with the world outside of combat:</p>
+            <ul>
+                <li><strong>Might:</strong> Used for physical intimidation, athletic endurance, lifting heavy obstacles, and forcing open doors.</li>
+                <li><strong>Agility:</strong> Used for stealth, picking locks, disarming traps, sleight of hand, and dodging hazards or balancing.</li>
+                <li><strong>Will:</strong> Used for persuasion, diplomacy, insight (reading intentions), and noticing hidden details.</li>
+            </ul>
+            <p><strong>Background Advantage:</strong> If you attempt a task that directly relates to your Background, you automatically gain Advantage on the roll. Your <strong>Drive</strong> is a pure roleplaying tool to help guide your character's decisions.</p>
+
+            <h2>4. Tactical Combat Flow</h2>
+            <p>Combat resolves sequentially on your turn.</p>
+            <ul>
+                <li><strong>Initiative:</strong> Everyone rolls 1d20. The highest roll goes first. On a tie, players act before enemies.</li>
+                <li><strong>1. Move Phase:</strong> Move up to your total Movement paces. <em>(Note: On a tabletop, 1 pace = 1 inch).</em></li>
+                <li><strong>2. Action Phase:</strong> Roll 1d20 + the matching Attribute Modifier for your weapon against the target's Defense Target. <strong>You may only make one attack per turn</strong>, regardless of how many weapons you hold.</li>
+                <li><strong>3. Damage Phase:</strong> A successful hit instantly inflicts flat damage based on your weapon.</li>
+            </ul>
+            <p><strong>Hitting 0 HP:</strong> If your HP drops to 0, you fall unconscious. You must be stabilized by an ally within a number of hours equal to your Will modifier (minimum 1 hour), or you die. To stabilize you, an ally must use their Action Phase to apply a potion/medkit, or pass a Normal (14) Will check. Once stabilized, you wake up with 1 HP.</p>
+
+            <h2>5. Rest, Recovery & Downtime</h2>
+            <p>Managing your vitals is crucial, as healing takes time and forces the party to seek safety.</p>
+            <ul>
+                <li><strong>Short Breather:</strong> A quick pause (10–15 minutes) after a skirmish to bind wounds. Recover HP equal to your Might modifier, and RP equal to your Will modifier (minimum 1 each).</li>
+                <li><strong>Rough Sleep:</strong> Resting overnight (6–8 hours) in hostile territory or uncomfortable conditions where you must keep watch. Recover HP and RP equal to the sum of all your Attributes combined (Might + Agility + Will).</li>
+                <li><strong>Sanctuary Rest (Downtime):</strong> Spending at least 24 hours in a secure, comfortable location where no one keeps watch. This fully restores all max HP and RP and allows time for roleplay.</li>
+            </ul>
+
+            <h2>6. Leveling Progression</h2>
+            <p>The Guide awards Experience Points (XP) for milestones. You level up cumulatively as you gain XP.</p>
+            <table>
+                <tr><th>Lvl</th><th>XP</th><th>Permanent Upgrades</th></tr>
+                <tr><td>1</td><td>0</td><td>Calculate vitals and unlock Level 1 abilities.</td></tr>
+                <tr><td>2</td><td>10</td><td>Add +1 to any Attribute. Unlock L2 features.</td></tr>
+                <tr><td>3</td><td>20</td><td>Max RP increases by +1. Unlock L3 features.</td></tr>
+                <tr><td>4</td><td>30</td><td>Add +1 to any Attribute. Unlock L4 features.</td></tr>
+                <tr><td>5</td><td>40</td><td>Max RP increases by +1. Unlock L5 features.</td></tr>
+            </table>
+
+            <h2>7. The Golden Rule</h2>
+            <p>If a situation arises that is not explicitly covered by this manual, the Guide makes a fair judgment call. Do not let the game stall to argue over physics or logic. Prioritize the story, rely on the core Action Engine, and keep the adventure moving forward.</p>
+
+            <h2>8. Failing Forward</h2>
+            <p>When an action roll fails, the Guide shouldn't just say "nothing happens." A failure should introduce a new complication, a loss of resources, or a shift in the environment to escalate tension.</p>
+
+        </div>
     </div>
 
-    <!-- TAB 4: GEAR RULES -->
-    <div id="tab4" class="tab-view">
-        <h1>GEAR RULES</h1>
-        <h2>Vitals & Static Equipment Integration</h2>
-        <div class="box">
-            <p><strong>HEALTH POINTS (HP)</strong> = (Might Modifier × 3) + 10 | <strong>DEFENSE TARGET</strong> = 10 + Agility + Armor + Shield</p>
-            <p><strong>RESOLUTE POINTS (RP)</strong> = Will Modifier × 2 | <strong>MOVEMENT</strong> = 2 paces + Agility (Climb/Swim: Half Speed)</p>
-            <ul>
-                <li><strong>Light / Medium / Heavy Armor:</strong> Grants a flat +1 / +2 / +3 bonus directly to your baseline static Defense Target.</li>
-                <li><strong>Shields (The Passive Wall):</strong> Occupies 1 hand. Grants a flat +1 bonus to your static Defense Target. Restricts two-handed weaponry deployment.</li>
-            </ul>
-        </div>
 
-        <h2>Flat Weapon Damage Engine & Hand Constraints</h2>
-        <div class="box">
-            <p><strong>Hand Limit Rule:</strong> Wielding a shield uses 1 hand, locking out heavy weapons, 2-handed ranged sniper stances, or playbook abilities like <em>Cleave</em> or <em>Twin Fangs</em>. No dice are rolled for damage. Hits deal Weapon Base + Attribute modifier directly to HP (minimum 1).</p>
-            <ul>
-                <li><strong>Ranged Weapons (Base 1 Damage):</strong> [All Classes] 1-Handed Layout = 3 paces range (allows shield choice). 2-Handed Layout = 10 paces range (prevents shield).</li>
-                <li><strong>Light Melee Weapons (Base 3 Damage):</strong> [Warrior / Scout Only. Requires 1 hand] Fast close-quarters mobility tracking.</li>
-                <li><strong>Heavy Melee Weapons (Base 5 Damage):</strong> [Warrior Only. Requires 2 hands] Pure crushing devastation. Excludes shield usage.</li>
-                <li><strong>Basic Arcane Spells/Hexes (Base 4 Damage):</strong> [Adept Only. Requires 1 free hand] Kinetic bursts. Costs exactly 1 RP per cast.</li>
-                <li><strong>Overdrive Strike:</strong> Natural 20 rolls add your matching Attribute Modifier to the execution a second time.</li>
-            </ul>
+    <!-- =========================================================
+         PAGE 3: GEAR & ARMORY
+         ========================================================= -->
+    <div class="page">
+        <h1>ARMORY & EQUIPMENT</h1>
+        <p style="text-align: center; margin-bottom: 20px;"><em>Your gear dictates your combat style and tactical flexibility. In Easy Play D20, combat relies on predictable flat damage and strict constraints on what you can hold in your hands. Adapt your arsenal to the threat at hand.</em></p>
+        
+        <div class="content-columns">
+            
+            <h2>The Hand Limit Rule</h2>
+            <div class="callout-box">
+                <p>Your character only has two hands. How you fill them determines your combat capabilities. Wielding a shield uses 1 hand, completely locking you out from using Heavy Melee Weapons or utilizing the 2-Handed stance for Ranged Weapons.</p>
+            </div>
+
+            <h2>Armor & Defense</h2>
+            <p>Armor provides a direct, static boost to your Defense Target (DT). You may only wear one type of armor at a time.</p>
+            
+            <table>
+                <tr>
+                    <th>Armor Type</th>
+                    <th>Bonus to DT</th>
+                    <th>Requirements</th>
+                </tr>
+                <tr>
+                    <td>Light Armor</td>
+                    <td>+1</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>Medium Armor</td>
+                    <td>+2</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>Heavy Armor</td>
+                    <td>+3</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>Shield (Passive Wall)</td>
+                    <td>+1</td>
+                    <td>Requires 1 Hand</td>
+                </tr>
+            </table>
+
+            <h2>Flat Weapon Damage Engine</h2>
+            <p>To keep combat fast, we do not roll dice to calculate damage. If your attack roll is successful, you deal predictable, flat damage directly to the enemy's Health Points.</p>
+            
+            <div class="callout-box">
+                <h3>Damage Formula</h3>
+                <p><strong>Weapon Base Damage + Attribute Modifier = Total Flat Damage</strong></p>
+                <p><em>(Note: Even with negative modifiers or penalties, an attack that successfully hits will always deal a minimum of 1 damage).</em></p>
+            </div>
+
+            <h3 style="margin-top: 15px;">Overdrive Strike (Critical Hit)</h3>
+            <p>If your d20 attack roll naturally lands on a 20, you execute an Overdrive Strike. Add your matching Attribute Modifier to the total flat damage a second time.</p>
+
+            <div class="callout-box" style="margin-top: 15px;">
+                <h3>Wealth & Bartering</h3>
+                <p>Easy Play D20 abstracts currency to keep the game fast. Most common adventuring gear, a night at the inn, or basic repairs are assumed to be covered by your general Wealth. Acquiring rare weapons, custom armor, or permanent sanctuary requires completing dangerous bounties or trading valuable loot found in the wild.</p>
+            </div>
+
+            <div style="break-inside: avoid;">
+                <h2 style="margin-top: 25px;">Weapon Classes</h2>
+                <p>Choose your weapon category based on your Core Class. The weapon you choose determines which Core Attribute you add to your attack and damage rolls.</p>
+
+                <table>
+                    <tr>
+                        <th>Weapon Style</th>
+                        <th>Base Dmg</th>
+                        <th>Hands Req.</th>
+                        <th>Attribute Used</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Unarmed Strike</strong><br><span style="font-size: 8pt; font-weight: normal; color: #555;">(1 Pace Range / 1 Inch)</span></td>
+                        <td>0</td>
+                        <td>1 Hand</td>
+                        <td>Might or Agility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Improvised Tool</strong><br><span style="font-size: 8pt; font-weight: normal; color: #555;">(Chair, bottle, rock)</span></td>
+                        <td>1</td>
+                        <td>1 or 2</td>
+                        <td>Might</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ranged Weapon</strong><br><span style="font-size: 8pt; font-weight: normal; color: #555;">(3 Paces Range / 3 Inches)</span></td>
+                        <td>1</td>
+                        <td>1 Hand</td>
+                        <td>Agility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ranged Weapon</strong><br><span style="font-size: 8pt; font-weight: normal; color: #555;">(10 Paces Range / 10 Inches)</span></td>
+                        <td>1</td>
+                        <td>2 Hands</td>
+                        <td>Agility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Light Melee</strong><br><span style="font-size: 8pt; font-weight: normal; color: #555;">(1 Pace Range / 1 Inch)</span></td>
+                        <td>3</td>
+                        <td>1 Hand</td>
+                        <td>Might or Agility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Heavy Melee</strong><br><span style="font-size: 8pt; font-weight: normal; color: #555;">(1 Pace Range / 1 Inch)</span></td>
+                        <td>5</td>
+                        <td>2 Hands</td>
+                        <td>Might</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Basic Energy Projection</strong><br><span style="font-size: 8pt; font-weight: normal; color: #555;">Kinetic burst (Costs 1 RP)</span></td>
+                        <td>4</td>
+                        <td>1 Hand</td>
+                        <td>Will</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2 style="margin-top: 25px;">Other Gear & Inventory</h2>
+            <div class="callout-box">
+                <h3>Carrying Capacity & Usage</h3>
+                <p>Your character has a maximum number of Tactical Equipment slots equal to <strong>4 + your Might modifier</strong>.</p>
+                <ul>
+                    <li><strong>Equipped Gear Counts:</strong> The armor you wear, the shield on your arm, and the weapons in your hands all take up inventory slots.</li>
+                    <li><strong>Consumables:</strong> Using an item costs your Action Phase. Note that healing potions and medkits <strong>ONLY</strong> stabilize dying allies; they do not restore lost HP. True healing requires a Short Breather, a trained doctor, or a medbay.</li>
+                    <li><strong>Item Sizes:</strong> Meaningful gear takes exactly 1 slot each. Insignificant items (coins, keys) are free to carry.</li>
+                    <li><strong>Over-Encumbrance:</strong> If you carry more items than your max slots allow, you suffer <strong>Disadvantage</strong> on all rolls and your Move pace is halved. You may freely drop an item at any time to regain your standard speed and remove the penalty.</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 
-    <!-- TAB 5: UNIFIED PLAYBOOK CODEX -->
-    <div id="tab5" class="tab-view">
+
+    <!-- =========================================================
+         PAGE 4: PLAYBOOKS
+         ========================================================= -->
+    <div class="page">
         <h1>UNIFIED PLAYBOOK CODEX</h1>
-        <p>Features execute during your active phase unless explicitly marked as a passive structural benefit. Resource expenditures subtract instantly from your current Resolute Points (RP) track. <strong>Note: Unless otherwise specified, all active abilities with a duration last until the start of your next turn.</strong></p>
-        <p><em>Use the class tabs above for full detailed breakdowns.</em></p>
-    </div>
+        <p style="text-align: center; font-size: 9pt; margin-bottom: 10px;"><em>Features execute during your Action Phase unless explicitly marked as a passive structural benefit. Resource expenditures subtract instantly from your current Resolute Points (RP) track.</em></p>
+        
+        <div class="callout-box" style="margin-bottom: 10px; padding: 6px;">
+            <p style="text-align: center; margin: 0;"><strong>UNIVERSAL DURATION RULE:</strong> Unless an ability explicitly states it affects a single action or attack, any temporary defensive or status effect lasts until the <strong>start of your next turn</strong>.</p>
+        </div>
 
-    <!-- TAB 6: THE WARRIOR -->
-    <div id="tab6" class="tab-view">
-        <h1>THE WARRIOR</h1>
-        <div class="box">
-            <p><strong>L1 Specialty: Twin Fangs (Passive):</strong> When wielding two Light Melee weapons simultaneously, add +1 to your total flat damage output on all successful close-combat strikes. (Requires both hands occupied by weapons; incompatible with Shields).</p>
-            <p><strong>L1: Cleave (Heavy Weapon Only):</strong> Immediately following a successful melee strike with a Heavy Weapon, deal your normal flat damage to the primary target, and inflict exactly 2 flat damage to one adjacent secondary foe within arm's reach. (Requires 2 hands; incompatible with Shields).</p>
-            <p><strong>L2: Iron Hide [1 RP]:</strong> Spend 1 RP during the Damage Phase when you are hit by an attack. You instantly blunt the blow, reducing the incoming damage by 2 points (minimum 1 damage taken).</p>
-            <p><strong>L3: Brutal Force [1 RP]:</strong> Spend 1 RP immediately after confirming a successful melee hit. You completely double your Might modifier's contribution to that attack's flat damage calculation.</p>
-            <p><strong>L4: Steel Hide [2 RP]:</strong> Spend 2 RP during the Damage Phase when you are hit by an attack. You instantly blunt the blow, reducing the incoming damage by 4 points (minimum 1 damage taken).</p>
-            <p><strong>L5: Unstoppable Defiance [2 RP]:</strong> Spend 2 RP when an attack would reduce your HP to 0. You completely negate the knockout blow, remaining active and standing at exactly 1 HP.</p>
+        <div class="content-columns">
+            <!-- THE WARRIOR -->
+            <h2>The Warrior</h2>
+            <p style="font-size: 8.5pt; margin-bottom: 10px; color: #333;"><strong>Narrative Role:</strong> You are the shield of the party. You should be drawing enemy attention, breaking down physical barriers, and leading the charge into the fray.</p>
+            <ul class="feature-list">
+                <li><strong>L1 Specialty: Twin Fangs (Passive):</strong> When wielding two Light Melee weapons simultaneously, add +1 to your total flat damage output on all successful close-combat strikes. (Requires both hands occupied by weapons).</li>
+                <li><strong>L1: Cleave (Heavy Weapon Only):</strong> Immediately following a successful melee strike with a Heavy Weapon, deal your normal flat damage to the primary target, and inflict exactly 2 flat damage to one adjacent secondary foe within 1 pace (or 1 inch). (Requires 2 free hands).</li>
+                <li><strong>L2: Iron Hide [1 RP]:</strong> Spend 1 RP during the Damage Phase when you are hit by an attack. You instantly blunt the blow, reducing the damage of that specific attack by 2 points (minimum 1 damage taken).</li>
+                <li><strong>L3: Brutal Force [1 RP]:</strong> Spend 1 RP immediately after confirming a successful melee hit. You completely double your Might modifier's contribution to that attack's flat damage calculation.</li>
+                <li><strong>L4: Steel Hide [2 RP]:</strong> Spend 2 RP during the Damage Phase when you are hit by an attack. You instantly harden your stance, reducing all incoming damage taken by 4 points (minimum 1 damage taken per hit) until the start of your next turn.</li>
+                <li><strong>L5: Unstoppable Defiance [2 RP]:</strong> Spend 2 RP when an attack would reduce your HP to 0; you completely negate the knockout blow, remaining active and standing at exactly 1 HP.</li>
+            </ul>
+
+            <!-- THE SCOUT -->
+            <h2>The Scout</h2>
+            <p style="font-size: 8.5pt; margin-bottom: 10px; color: #333;"><strong>Narrative Role:</strong> You are the eyes and ears. You should be scouting ahead, disarming traps, finding safe paths, and eliminating priority targets from the shadows.</p>
+            <ul class="feature-list">
+                <li><strong>L1: Fade Step (Passive):</strong> During your Move Phase, you may freely step directly behind an engaged enemy without penalty or complication.</li>
+                <li><strong>L1: Climber (Passive):</strong> Climbing costs standard movement paces instead of double.</li>
+                <li><strong>L1: Backstab [1 RP]:</strong> When you are positioned directly behind a target engaged by an active ally from the front, spend 1 RP to gain Advantage (roll 2d20, keep highest) on your attack roll and add +2 to your flat damage. (Requires a Light Melee weapon).</li>
+                <li><strong>L2: Infiltrator's Eye [1 RP]:</strong> Spend 1 RP to automatically succeed without needing a Will check, instantly revealing all hidden traps, secret pathways, footprints, or ambushes in your immediate zone.</li>
+                <li><strong>L3 Specialty: Poison Pulse [2 RP]:</strong> Spend 2 RP upon landing a successful weapon attack to Stun the target. The Stun status completely skips the target's next action phase and lasts until the start of that target's subsequent turn.</li>
+                <li><strong>L4: Shadow Strike [2 RP]:</strong> Spend 2 RP during your Action Phase to strike from absolute concealment. The attack automatically hits without requiring a d20 roll, dealing your flat weapon base damage + your Agility modifier.</li>
+                <li><strong>L5: Vanish [3 RP]:</strong> Spend 3 RP when targeted by an enemy attack. You instantly dissolve into environmental cover, breaking line of sight and causing the incoming attack to automatically fail.</li>
+            </ul>
+
+            <!-- THE ADEPT -->
+            <h2>The Adept</h2>
+            <p style="font-size: 8.5pt; margin-bottom: 10px; color: #333;"><strong>Narrative Role:</strong> You are the wildcard. You should be manipulating the battlefield, discovering hidden secrets, and providing critical utility to your team.</p>
+            <ul class="feature-list">
+                <li><strong>L1: Focused Grasp (Passive):</strong> Your hands crackle with passive energy. You can make a free close-combat attack at a 1-pace range (or 1 inch) without spending RP. On a successful Will check, you deal flat damage equal to 1 + your Will modifier.</li>
+                <li><strong>L1: Trickery (Passive):</strong> You may produce minor sensory effects—such as a brief spark, a sudden shadow, a faint whisper, or a slight draft—freely and automatically without spending RP.</li>
+                <li><strong>L2: Pyrokinesis [1 RP]:</strong> Spend 1 RP to instantly channel molecular friction, automatically igniting candles, campfires, torches, or any preprepared highly combustible environmental item within 10 paces (or 10 inches).</li>
+                <li><strong>L3 Specialty: Aegis Shield [1 RP]:</strong> Spend 1 RP when an ally in your line of sight is targeted by an attack. You instantly grant them a +2 bonus to their Defense Target against that specific incoming attack.</li>
+                <li><strong>L4: Shatter-Blast [1 RP]:</strong> Spend 1 RP to direct a kinetic shockwave at a visible target. On a successful Will check against their Defense Target, you inflict flat damage equal to your Will modifier + 6.</li>
+                <li><strong>L5: Kinetic Storm [3 RP]:</strong> Spend 3 RP to release a surge of raw kinetic energy, constructing a protective field extending 2 paces (or 2 inches) outward in all directions from your character. This field automatically blocks all incoming standard projectile attacks until the start of your next turn.</li>
+            </ul>
         </div>
     </div>
-
-    <!-- TAB 7: THE SCOUT -->
-    <div id="tab7" class="tab-view">
-        <h1>THE SCOUT</h1>
-        <div class="box">
-            <p><strong>L1: Fade Step (Passive):</strong> During your Move Phase, you may freely disengage from active close combat and step directly behind an enemy without triggering any movement penalties or complications.</p>
-            <p><strong>L1: Climber (Passive):</strong> Climbing costs standard movement paces rather than double, completely bypassing the standard half-speed constraint.</p>
-            <p><strong>L1: Backstab [1 RP]:</strong> When you are positioned directly behind a target engaged by an active ally from the front, spend 1 RP to gain Advantage (roll 2d20, keep highest) on your attack roll and add +2 to your flat damage. (Requires a Light Melee weapon).</p>
-            <p><strong>L2: Infiltrator's Eye [1 RP]:</strong> Spend 1 RP to automatically succeed without needing a Will check, instantly revealing all hidden traps, secret pathways, footprints, or ambushes in your immediate zone.</p>
-            <p><strong>L3 Specialty: Poison Pulse [2 RP]:</strong> Spend 2 RP upon landing a successful weapon attack to Stun the target. The Stun status completely skips the target's next action phase and lasts until the start of that target's subsequent turn.</p>
-            <p><strong>L4: Shadow Strike [2 RP]:</strong> Spend 2 RP during your Action Phase to strike from absolute concealment. The attack automatically hits without requiring a d20 roll, dealing your flat weapon base damage + your Agility modifier.</p>
-            <p><strong>L5: Vanish [3 RP]:</strong> Spend 3 RP when targeted by an enemy attack. You instantly dissolve into environmental cover, breaking line of sight and causing the incoming attack to automatically fail.</p>
-        </div>
-    </div>
-
-    <!-- TAB 8: THE ADEPT -->
-    <div id="tab8" class="tab-view">
-        <h1>THE ADEPT</h1>
-        <div class="box">
-            <p><strong>L1: Shatter-Blast [1 RP]:</strong> Spend 1 RP to direct a kinetic shockwave at a visible target. On a successful Will check against their Defense Target, you inflict flat damage equal to your Will modifier + 6.</p>
-            <p><strong>L1: Trickery (Passive):</strong> You may freely produce minor magical effects—such as a brief spark, a shadow flare, a faint whisper, or a slight draft—without requiring an execution roll or an RP spend.</p>
-            <p><strong>L2: Pyrokinesis [1 RP]:</strong> Spend 1 RP to instantly channel molecular friction, automatically igniting candles, campfires, torches, or any highly combustible environmental item within your direct line of sight.</p>
-            <p><strong>L3 Specialty: Aegis Shield [1 RP]:</strong> Spend 1 RP when an ally in your line of sight is targeted by an attack (before the d20 accuracy roll is made). You instantly grant them a +2 bonus to their Defense Target against that specific attack.</p>
-            <p><strong>L4: Chthonic Hex [2 RP]:</strong> Spend 2 RP to curse a visible foe for the duration of the combat encounter. While active, anytime that target suffers flat damage from any source, they take an additional +1 flat damage.</p>
-            <p><strong>L5: Runic Storm [3 RP]:</strong> Spend 3 RP to release a surge of raw kinetic energy, constructing a protective field extending 2 paces outward in all directions from your character. This field automatically blocks all incoming standard projectile attacks. <em>Duration: Lasts until the start of your next turn.</em></p>
-        </div>
-    </div>
-</div>
-
-<script>
-    function showTab(tabId) {
-        document.querySelectorAll('.tab-view').forEach(view => view.classList.remove('active'));
-        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-        document.getElementById(tabId).classList.add('active');
-        event.currentTarget.classList.add('active');
-    }
-</script>
 
 </body>
 </html>
