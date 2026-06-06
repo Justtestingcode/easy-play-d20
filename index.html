@@ -24,7 +24,7 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.25; /* Balanced line height */
+            line-height: 1.25; 
         }
 
         .page {
@@ -32,7 +32,7 @@
             height: 11in; 
             background: var(--page-color);
             box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-            padding: 0.38in 0.5in; /* Thicker top/bottom margins to prevent cut-offs */
+            padding: 0.38in 0.5in; 
             box-sizing: border-box;
             margin-bottom: 0.5in;
             position: relative;
@@ -157,7 +157,7 @@
         .cs-inv-slot { display: flex; align-items: flex-end; gap: 5px; }
         .cs-inv-num { font-family: 'Arial', sans-serif; font-size: 9pt; font-weight: bold; color: var(--accent-color); }
 
-        .cs-notes { height: auto; padding-bottom: 10px; } /* Adjusted to fit the new page margins perfectly */
+        .cs-notes { height: auto; padding-bottom: 10px; } 
         .cs-note-line { border-bottom: 1px dotted #888; height: 22px; width: 100%; display: block; }
 
         @media print {
@@ -326,7 +326,7 @@
             <p>Before you draw a weapon, you must build your adventurer.</p>
             <ul>
                 <li><strong>Background & Drive:</strong> Write down a past career (e.g., Smuggler, Disgraced Noble) and a core motivation (e.g., "I must protect the weak").</li>
-                <li><strong>Class:</strong> Choose to be a Warrior, Scout, or Adept.</li>
+                <li><strong>Class:</strong> Choose to be an Operator, Infiltrator, or Catalyst.</li>
                 <li><strong>Attributes:</strong> You begin with a base score of +1 in Might, Agility, and Will. Allocate 4 additional custom points across these modifiers. Attributes cannot be lower than <strong>+1</strong> and are capped at a maximum of <strong>+4</strong>.</li>
                 <li><strong>Vitals:</strong> Compute your HP, Defense, RP, and Movement using the Character Sheet.</li>
             </ul>
@@ -534,8 +534,8 @@
         </div>
 
         <div class="content-columns">
-            <!-- THE WARRIOR -->
-            <h2>The Warrior</h2>
+            <!-- THE OPERATOR -->
+            <h2>The Operator</h2>
             <p style="font-size: 8.5pt; margin-bottom: 10px; color: #333;"><strong>Narrative Role:</strong> You are the shield of the party. You should be drawing enemy attention, breaking down physical barriers, and leading the charge into the fray.</p>
             <ul class="feature-list">
                 <li><strong>L1 Specialty: Twin Fangs (Passive):</strong> When wielding two Light Melee weapons simultaneously, add +1 to your total flat damage output on all successful close-combat strikes. (Requires both hands occupied by weapons).</li>
@@ -546,8 +546,8 @@
                 <li><strong>L5: Unstoppable Defiance [2 RP]:</strong> Spend 2 RP when an attack would reduce your HP to 0; you completely negate the knockout blow, remaining active and standing at exactly 1 HP.</li>
             </ul>
 
-            <!-- THE SCOUT -->
-            <h2>The Scout</h2>
+            <!-- THE INFILTRATOR -->
+            <h2>The Infiltrator</h2>
             <p style="font-size: 8.5pt; margin-bottom: 10px; color: #333;"><strong>Narrative Role:</strong> You are the eyes and ears. You should be scouting ahead, disarming traps, finding safe paths, and eliminating priority targets from the shadows.</p>
             <ul class="feature-list">
                 <li><strong>L1: Fade Step (Passive):</strong> During your Move Phase, you may freely step directly behind an engaged enemy without penalty or complication.</li>
@@ -559,8 +559,8 @@
                 <li><strong>L5: Vanish [3 RP]:</strong> Spend 3 RP when targeted by an enemy attack. You instantly dissolve into environmental cover, breaking line of sight and causing the incoming attack to automatically fail.</li>
             </ul>
 
-            <!-- THE ADEPT -->
-            <h2>The Adept</h2>
+            <!-- THE CATALYST -->
+            <h2>The Catalyst</h2>
             <p style="font-size: 8.5pt; margin-bottom: 10px; color: #333;"><strong>Narrative Role:</strong> You are the wildcard. You should be manipulating the battlefield, discovering hidden secrets, and providing critical utility to your team.</p>
             <ul class="feature-list">
                 <li><strong>L1: Focused Grasp (Passive):</strong> Your hands crackle with passive energy. You can make a free close-combat attack at a 1-pace range (or 1 inch) without spending RP. On a successful Will check, you deal flat damage equal to 1 + your Will modifier.</li>
