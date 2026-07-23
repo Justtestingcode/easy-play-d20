@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EASY PLAY D20: Complete Rulebook & Sheet</title>
     <style>
-        /* Screen Layout: Makes it look like pages sitting on a desk */
         :root {
             --bg-color: #e2e5e9;
             --page-color: #ffffff;
@@ -24,7 +23,7 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.2;
+            line-height: 1.4;
         }
 
         .page {
@@ -45,43 +44,51 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 5px;
+            padding-bottom: 4px;
         }
 
         h2 {
-            font-size: 13px;
+            font-size: 14px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 10px;
-            margin-bottom: 4px;
+            margin-top: 14px;
+            margin-bottom: 6px;
             border-bottom: 1px solid var(--border-color);
         }
 
-        p, li {
-            font-size: 10.5px;
-            margin-top: 2px;
+        h3 {
+            font-size: 12px;
+            color: #2b5b84;
+            margin-top: 10px;
             margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        p, li {
+            font-size: 11.5px;
+            margin-top: 3px;
+            margin-bottom: 5px;
         }
 
         ul {
-            padding-left: 15px;
-            margin-top: 2px;
-            margin-bottom: 4px;
+            padding-left: 18px;
+            margin-top: 3px;
+            margin-bottom: 6px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 4px;
-            margin-bottom: 8px;
-            font-size: 10px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            font-size: 11px;
         }
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 4px;
+            padding: 5px 7px;
             text-align: left;
         }
 
@@ -94,21 +101,27 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 8px;
-            margin-top: 6px;
-            margin-bottom: 8px;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 10px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 12px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
+            gap: 12px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
         }
 
         .line-input {
@@ -117,7 +130,14 @@
             min-width: 100px;
         }
 
-        /* Print Override: Strips desk view and outputs perfectly formatted printable pages */
+        .page-num {
+            position: absolute;
+            bottom: 0.3in;
+            right: 0.5in;
+            font-size: 10px;
+            color: #666;
+        }
+
         @media print {
             body {
                 background-color: #fff;
@@ -133,73 +153,7 @@
 </head>
 <body>
 
-    <!-- PAGE 1: RULEBOOK AMENDMENTS -->
-    <div class="page">
-        <h1>EASY PLAY D20 — SYSTEM CORE (NO-TN EDITION)</h1>
-        
-        <h2>1. THE UNIFIED THRESHOLD (FLAT 14)</h2>
-        <p>Target Difficulties and enemy Defense Targets (DT) are completely removed[cite: 1]. Every risky action, skill attempt, attack roll, and evasion check targets a <strong>Universal Baseline Threshold of 14</strong>.</p>
-        <ul>
-            <li><strong>Standard Action:</strong> Roll 1d20 + Attribute Modifier vs 14.</li>
-            <li><strong>Twin Die Engine:</strong> Spend 1 RP before rolling to buy <strong>Advantage</strong> (Roll 2d20, keep highest)[cite: 1].</li>
-            <li><strong>Difficulty & Conditions:</strong> Favorable situations grant Advantage[cite: 1]. Heavy resistance or severe hazards impose <strong>Disadvantage</strong> (Roll 2d20, keep lowest)[cite: 1].</li>
-        </ul>
-
-        <h2>2. 100% PLAYER-FACING COMBAT</h2>
-        <p>The Guide never rolls dice in combat[cite: 1]. Players make all attack and evasion rolls against 14.</p>
-        <ul>
-            <li><strong>Attacking (Action Phase):</strong> Roll 1d20 + Attribute Mod vs 14[cite: 1]. Hit = deal flat weapon damage directly to HP[cite: 1]. Natural 20 (Overdrive Strike) = add matching Attribute Mod a second time[cite: 1].</li>
-            <li><strong>Evading (Enemy Turn):</strong> When targeted by an attack, roll 1d20 + Agility Mod vs 14. Success (14+) = dodge completely. Failure (&lt;14) = take incoming flat damage.</li>
-        </ul>
-
-        <h2>3. DAMAGE REDUCTION (DR)</h2>
-        <p>Armor subtracts incoming flat damage directly when you fail an Evasion Roll:</p>
-        <ul>
-            <li><strong>Light Armor:</strong> DR -1 (Subtracts 1 from incoming damage taken).</li>
-            <li><strong>Heavy Armor:</strong> DR -2 (Requires 3 Might) (Subtracts 2 from incoming damage taken)[cite: 1].</li>
-            <li><strong>Shield:</strong> Active Block — Once per round, gain <strong>Advantage</strong> on a single Evasion Roll[cite: 1].</li>
-        </ul>
-
-        <h2>4. WEAPON CLASSES & FLAT DAMAGE ENGINE</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Weapon Style</th>
-                    <th>Base Dmg</th>
-                    <th>Hands Req.</th>
-                    <th>Attribute Used</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Unarmed Strike (1 Pace)</td><td>0</td><td>1 Hand</td><td>Might or Agility[cite: 1]</td></tr>
-                <tr><td>Improvised Tool</td><td>1</td><td>1 or 2</td><td>Might[cite: 1]</td></tr>
-                <tr><td>Ranged/Thrown (3 Paces)</td><td>1</td><td>1 Hand</td><td>Agility[cite: 1]</td></tr>
-                <tr><td>Ranged Weapon (10 Paces)</td><td>2</td><td>2 Hands</td><td>Will[cite: 1]</td></tr>
-                <tr><td>Light Melee (1 Pace)</td><td>3</td><td>1 Hand</td><td>Might or Agility[cite: 1]</td></tr>
-                <tr><td>Heavy Melee (1 Pace)</td><td>5</td><td>2 Hands</td><td>Might[cite: 1]</td></tr>
-            </tbody>
-        </table>
-
-        <h2>5. THREAT TIERS & EVASION RULES</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Threat Tier</th>
-                    <th>HP</th>
-                    <th>Incoming Dmg</th>
-                    <th>Evasion Rules / Modifiers</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Tier 1: Minions</td><td>3</td><td>2</td><td>Standard Evasion vs 14[cite: 1].</td></tr>
-                <tr><td>Tier 2: Standard</td><td>12</td><td>3</td><td>Standard Evasion vs 14[cite: 1].</td></tr>
-                <tr><td>Tier 3: Elite</td><td>22</td><td>5</td><td>Tactical: Forces Disadvantage on Evasion if player is flanked[cite: 1].</td></tr>
-                <tr><td>Tier 4: Boss / Leader</td><td>45</td><td>6</td><td>2 Actions per turn (forces player to roll Evasion twice per round)[cite: 1].</td></tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- PAGE 2: CHARACTER PLAY SHEET -->
+    <!-- PAGE 1: CHARACTER PLAY SHEET -->
     <div class="page">
         <h1>EASY PLAY D20 — CHARACTER PLAY SHEET</h1>
         
@@ -209,8 +163,8 @@
                 <div><strong>COMBAT ARCHETYPE:</strong> <span class="line-input" style="width: 140px;"></span></div>
                 <div><strong>DRIVE / MOTIVATION:</strong> <span class="line-input" style="width: 140px;"></span></div>
                 <div><strong>BACKGROUND:</strong> <span class="line-input" style="width: 170px;"></span></div>
-                <div><strong>LEVEL / XP:</strong> Lvl 1 [ ] / XP: ____</div>
-                <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 160px;"></span>[cite: 1]</div>
+                <div><strong>LEVEL / XP:</strong> Level 1 [ ] / XP: ____</div>
+                <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 160px;"></span></div>
             </div>
         </div>
 
@@ -218,46 +172,46 @@
         <div class="sheet-grid-3">
             <div class="box" style="text-align: center;">
                 <strong>MIGHT</strong><br>
-                <small>Brawn / Force / Endurance[cite: 1]</small><br><br>
+                <small>Brawn / Force / Endurance</small><br><br>
                 <strong>MODIFIER: +[ ____ ]</strong><br><br>
                 HP: (Might x 4) + 15<br>
-                <strong>Current HP: [ ________ ]</strong>[cite: 1]
+                <strong>Current HP: [ ________ ]</strong>
             </div>
             <div class="box" style="text-align: center;">
                 <strong>AGILITY</strong><br>
-                <small>Reflexes / Speed / Evasion[cite: 1]</small><br><br>
+                <small>Reflexes / Speed / Evasion</small><br><br>
                 <strong>MODIFIER: +[ ____ ]</strong><br><br>
                 Movement: 2 + Agility<br>
-                <strong>Max Paces: [ ________ ]</strong>[cite: 1]
+                <strong>Max Paces: [ ________ ]</strong>
             </div>
             <div class="box" style="text-align: center;">
                 <strong>WILL</strong><br>
-                <small>Mind / Perception / Focus[cite: 1]</small><br><br>
+                <small>Mind / Perception / Focus</small><br><br>
                 <strong>MODIFIER: +[ ____ ]</strong><br><br>
                 Resolute: Will x 2<br>
-                <strong>Current RP: [ ________ ]</strong>[cite: 1]
+                <strong>Current RP: [ ________ ]</strong>
             </div>
         </div>
 
         <h2>COMBAT ENGINE & DEFENSE</h2>
         <div class="sheet-grid">
             <div class="box">
-                <strong>ARMOR & DEFENSE REDUCTION (DR)</strong><br><br>
+                <strong>ARMOR & DAMAGE REDUCTION (DR)</strong><br><br>
                 [ ] Light Armor (DR -1)<br>
-                [ ] Heavy Armor (DR -2, Req 3 Might)[cite: 1]<br>
-                [ ] Shield (Active Block: Adv on 1 Evasion/rnd)[cite: 1]<br><br>
+                [ ] Heavy Armor (DR -2, Req 3 Might)<br>
+                [ ] Shield (Active Block: Adv on 1 Evasion/rnd)<br><br>
                 <strong>TOTAL ARMOR DR: [ ______ ]</strong>
             </div>
             <div class="box">
                 <strong>PRIMARY ATTACK ENGINE</strong><br><br>
                 Weapon: <span class="line-input" style="width: 120px;"></span><br>
                 Base Dmg: ____ + Attr Mod: +____<br>
-                <strong>TOTAL FLAT DAMAGE: [ ______ ]</strong>[cite: 1]<br>
-                <small><i>Natural 20: Add Attr Mod a 2nd time.[cite: 1]</i></small>
+                <strong>TOTAL FLAT DAMAGE: [ ______ ]</strong><br>
+                <small><i>Natural 20: Add Attr Mod a 2nd time.</i></small>
             </div>
         </div>
 
-        <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod)[cite: 1]</h2>
+        <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod)</h2>
         <div class="sheet-grid">
             <div>[ 1 ] Armor: <span class="line-input" style="width: 180px;"></span></div>
             <div>[ 5 ] Item: <span class="line-input" style="width: 180px;"></span></div>
@@ -271,12 +225,198 @@
 
         <div class="box" style="margin-top: 15px;">
             <strong>QUICK-REF SYSTEM CHECKS (BASE THRESHOLD = 14)</strong><br>
-            • <strong>Twin Die Engine:</strong> Spend 1 RP before any roll to gain <strong>Advantage</strong> (Roll 2d20, keep high)[cite: 1]. Disadvantage = Roll 2d20, keep low[cite: 1].<br>
+            • <strong>Twin Die Engine:</strong> Spend 1 RP before any roll to gain <strong>Advantage</strong> (Roll 2d20, keep high). Disadvantage = Roll 2d20, keep low.<br>
             • <strong>Out-of-Combat Check:</strong> Roll 1d20 + Attr Mod vs 14.<br>
-            • <strong>Action Phase (Attack):</strong> Roll 1d20 + Attr Mod vs 14. Hit = Deal Total Flat Damage directly to enemy HP[cite: 1].<br>
+            • <strong>Action Phase (Attack):</strong> Roll 1d20 + Attr Mod vs 14. Hit = Deal Total Flat Damage directly to enemy HP.<br>
             • <strong>Evasion Phase (Defense):</strong> Roll 1d20 + Agility Mod vs 14. Pass (14+) = 0 Dmg. Fail = Take Enemy Dmg - Armor DR.<br>
-            • <strong>Dying (0 HP):</strong> Unconscious[cite: 1]. Ally must pass Will Check vs 14 within 1 pace to stabilize[cite: 1].
+            • <strong>Dying (0 HP):</strong> Unconscious. Ally must pass Will Check vs 14 within 1 pace to stabilize.
         </div>
+        <div class="page-num">Page 1</div>
+    </div>
+
+    <!-- PAGE 2: CORE RULES & ARMORY -->
+    <div class="page">
+        <h1>EASY PLAY D20 — SYSTEM CORE & ARMORY</h1>
+        <p>One player acts as the Guide; everyone else plays an Adventurer. You need a 20-sided die (d20) and these rules.</p>
+
+        <h2>1. THE ACTION ENGINE (FLAT 14 THRESHOLD)</h2>
+        <p>All risky tasks, skill attempts, attacks, and evasions target a <strong>Universal Baseline Threshold of 14</strong>.</p>
+        <ul>
+            <li><strong>How to Roll:</strong> Roll 1d20 + Attribute Modifier. Meet or exceed 14 to succeed.</li>
+            <li><strong>Rule of 20:</strong> A Natural 20 in combat is an Overdrive Strike (add Attribute Mod to damage twice). Outside combat, it is an overwhelming success. A Natural 1 is always a critical failure.</li>
+        </ul>
+
+        <div class="box">
+            <strong>THE TWIN DIE ENGINE</strong><br>
+            Spend 1 Resolute Point (RP) before any roll to buy <strong>Advantage</strong> (Roll 2d20, keep highest).<br>
+            Severe obstacles or environmental hazards impose <strong>Disadvantage</strong> (Roll 2d20, keep lowest).
+        </div>
+
+        <h2>2. COMBAT & TIME (PLAYER-FACING)</h2>
+        <p>A "Round" represents 6 seconds of simultaneous action. The Guide never rolls to hit.</p>
+        <ul>
+            <li><strong>Initiative:</strong> Roll 1d20 vs 14. Highest goes first. Players win ties.</li>
+            <li><strong>1. Move Phase:</strong> Move up to your total Movement paces (1 pace = ~5 feet).</li>
+            <li><strong>2. Action Phase:</strong> Roll 1d20 + Attribute Mod vs 14 to attack. Deal flat weapon damage on hit.</li>
+            <li><strong>3. Evasion Phase (Enemy Turn):</strong> When targeted, roll <strong>1d20 + Agility Mod vs 14</strong>. Success (14+) = 0 damage. Failure (&lt;14) = take incoming damage minus your Armor DR.</li>
+            <li><strong>Dying (0 HP):</strong> Fall unconscious. An ally must pass a Will check vs 14 within 1 pace to stabilize you, or you die within hours equal to your Will modifier. Direct damage at 0 HP causes instant death.</li>
+        </ul>
+
+        <h2>3. WEAPON CLASSES & FLAT DAMAGE</h2>
+        <table>
+            <thead>
+                <tr><th>Weapon Style</th><th>Base Dmg</th><th>Hands</th><th>Attribute Used</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Unarmed Strike (1 Pace)</td><td>0</td><td>1 Hand</td><td>Might or Agility</td></tr>
+                <tr><td>Improvised Tool</td><td>1</td><td>1 or 2</td><td>Might</td></tr>
+                <tr><td>Ranged/Thrown (3 Paces)</td><td>1</td><td>1 Hand</td><td>Agility</td></tr>
+                <tr><td>Ranged Weapon (10 Paces)</td><td>2</td><td>2 Hands</td><td>Will</td></tr>
+                <tr><td>Light Melee (1 Pace)</td><td>3</td><td>1 Hand</td><td>Might or Agility</td></tr>
+                <tr><td>Heavy Melee (1 Pace)</td><td>5</td><td>2 Hands</td><td>Might</td></tr>
+            </tbody>
+        </table>
+
+        <h2>4. ARMOR & INVENTORY CAPACITY</h2>
+        <table>
+            <thead>
+                <tr><th>Armor Type</th><th>Damage Reduction</th><th>Requirements</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Light Armor</td><td>DR -1</td><td>None</td></tr>
+                <tr><td>Heavy Armor</td><td>DR -2</td><td>Requires 3 Might</td></tr>
+                <tr><td>Shield</td><td>Active Block</td><td>1 Hand; Grants Advantage on 1 Evasion/rnd</td></tr>
+            </tbody>
+        </table>
+        <p><strong>Inventory Limit:</strong> Max slots = <strong>4 + Might modifier</strong>. Over-encumbrance causes Disadvantage on all rolls and halves movement.</p>
+        <div class="page-num">Page 2</div>
+    </div>
+
+    <!-- PAGE 3: UNIFIED PLAYBOOK CODEX -->
+    <div class="page">
+        <h1>UNIFIED PLAYBOOK CODEX</h1>
+
+        <div class="two-column">
+            <div>
+                <h3>THE WARDEN</h3>
+                <p><em>The unmovable shield of the party.</em></p>
+                <ul>
+                    <li><strong>L1 Vanguard Guard:</strong> End Move Phase adjacent to ally to grant them Advantage on Evasion.</li>
+                    <li><strong>L1 Cleave:</strong> Heavy Melee hit deals +2 flat damage to adjacent secondary foe.</li>
+                    <li><strong>L2 Iron Stance [1 RP]:</strong> Reduce incoming damage by 2 until next turn.</li>
+                    <li><strong>L3 Brutal Force [1 RP]:</strong> Add Might modifier to flat damage a second time.</li>
+                    <li><strong>L4 Steel Stance [2 RP]:</strong> Reduce incoming damage by 4 until next turn.</li>
+                    <li><strong>L5 Unstoppable Defiance [2 RP]:</strong> When dropped to 0 HP, stand at 1 HP.</li>
+                    <li><strong>L8 Brawl Mastery [4 RP]:</strong> Grapple foe as cover (+Adv on Evasion) or pin beast.</li>
+                </ul>
+
+                <h3>THE BREAKER</h3>
+                <p><em>The aggressive entry specialist.</em></p>
+                <ul>
+                    <li><strong>L1 Breacher:</strong> Never suffer penalties breaking doors/barricades.</li>
+                    <li><strong>L1 Drive Back [1 RP]:</strong> Heavy Melee hit shoves target 1 pace back (+2 wall crush damage).</li>
+                    <li><strong>L2 Adrenaline Surge [2 RP]:</strong> Double movement paces for turn.</li>
+                    <li><strong>L3 Concussive Blow [1 RP]:</strong> Target passes Might check vs 14 or becomes Dazed.</li>
+                    <li><strong>L5 Relentless Assault [3 RP]:</strong> Make a second attack against adjacent target.</li>
+                    <li><strong>L8 Crash the Gates [4 RP]:</strong> Smash barrier to take Action Phase with Advantage against unaware foes.</li>
+                </ul>
+
+                <h3>THE PROWLER</h3>
+                <p><em>The lethal stealth scalpel.</em></p>
+                <ul>
+                    <li><strong>L1 Twin Fangs:</strong> Dual-wielding Light Melee adds +1 flat damage.</li>
+                    <li><strong>L1 Backstab [1 RP]:</strong> Attack from behind for Advantage and +2 damage.</li>
+                    <li><strong>L3 Nerve Strike [2 RP]:</strong> Target passes Might check vs 14 or becomes Pinned.</li>
+                    <li><strong>L4 Shadow Strike [2 RP]:</strong> Strike from concealment with Advantage; add Agility mod twice.</li>
+                    <li><strong>L8 Lethal Strike [4 RP]:</strong> Strike unaware target from behind to bypass armor and instantly drop to 0 HP.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>THE MARKSMAN</h3>
+                <p><em>The ranged overwatch specialist.</em></p>
+                <ul>
+                    <li><strong>L1 Aimed Shot:</strong> Forfeit Move Phase to gain +2 on Ranged attack vs 14.</li>
+                    <li><strong>L2 Pinning Volley [2 RP]:</strong> First enemy entering chokepoint automatically takes flat weapon damage.</li>
+                    <li><strong>L4 Elevated Advantage [1 RP]:</strong> Firing from vertical elevation ignores target cover.</li>
+                    <li><strong>L5 Piercing Strike [3 RP]:</strong> Hit primary target and deal equal damage to foe directly behind.</li>
+                    <li><strong>L8 Perfect Aim [4 RP]:</strong> Forfeit Move; roll with Advantage, ignore cover, add Will mod to damage.</li>
+                </ul>
+
+                <h3>THE SABOTEUR</h3>
+                <p><em>Environmental manipulator and demolitionist.</em></p>
+                <ul>
+                    <li><strong>L1 Structural Weakness [1 RP]:</strong> Will check vs 14; next hit against target ignores Armor DR.</li>
+                    <li><strong>L2 Blinding Debris [1 RP]:</strong> Throw ash/debris; Agility check vs 14 inflicts -2 on target's next attack.</li>
+                    <li><strong>L4 Rig Trap [2 RP]:</strong> Rig hazard; Agility check vs 14 drops object for 8 flat damage and Prone.</li>
+                    <li><strong>L8 Volatile Reaction [4 RP]:</strong> Trigger explosion for 10 flat damage and Dazed within 2 paces.</li>
+                </ul>
+
+                <h3>THE SURVIVALIST</h3>
+                <p><em>Field medic and tracker.</em></p>
+                <ul>
+                    <li><strong>L1 Combat Medic:</strong> Stabilize dying ally within 1 pace using Move Phase (Will check vs 14).</li>
+                    <li><strong>L1 Drag to Safety [1 RP]:</strong> Grab unconscious ally and drag them full movement paces.</li>
+                    <li><strong>L3 Pressure Dressing [2 RP]:</strong> Reduce incoming damage of next hit against ally by 3 points.</li>
+                    <li><strong>L8 Extreme Triage [4 RP]:</strong> Save dying ally from lethal hit; wake at 1 HP permanently maimed.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-num">Page 3</div>
+    </div>
+
+    <!-- PAGE 4: GUIDE'S MANUAL & BESTIARY -->
+    <div class="page">
+        <h1>THE GUIDE'S MANUAL</h1>
+
+        <h2>1. ADJUDICATING THE THRESHOLD (14)</h2>
+        <p>The Guide never rolls for difficulty or monster attacks. All player checks meet or exceed 14. Apply Advantage for favorable circumstances or Disadvantage for severe hazards.</p>
+
+        <h2>2. HAZARD FLAT DAMAGE</h2>
+        <ul>
+            <li><strong>Minor Hazard:</strong> 2 Flat Damage (Scrapes, minor toxins, sprained ankles).</li>
+            <li><strong>Major Hazard:</strong> 5 Flat Damage (Deep cuts, heavy kinetic traps, electrical shocks).</li>
+            <li><strong>Lethal Hazard:</strong> 10 Flat Damage (Point-blank explosions, massive collapses).</li>
+        </ul>
+
+        <h2>3. THREAT TIERS & PLAYER-FACING STATS</h2>
+        <table>
+            <thead>
+                <tr><th>Threat Tier</th><th>HP</th><th>Incoming Dmg</th><th>Evasion Rules / Modifiers</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Tier 1: Minions</td><td>3</td><td>2</td><td>Standard Evasion vs 14.</td></tr>
+                <tr><td>Tier 2: Standard</td><td>12</td><td>3</td><td>Standard Evasion vs 14.</td></tr>
+                <tr><td>Tier 3: Elite</td><td>22</td><td>5</td><td>Tactical: Forces Disadvantage on Evasion if player is flanked.</td></tr>
+                <tr><td>Tier 4: Boss / Leader</td><td>45</td><td>6</td><td>2 Actions per turn (attacks twice per round).</td></tr>
+            </tbody>
+        </table>
+
+        <h2>4. ENEMY MODIFIERS & MORALE</h2>
+        <ul>
+            <li><strong>Heavy / Armored:</strong> Add +1 Damage Reduction to enemy (halve movement).</li>
+            <li><strong>Agile / Skirmisher:</strong> Player rolls Evasion with Disadvantage (+2 Movement paces, subtract 2 HP).</li>
+            <li><strong>Lethal / Sniper:</strong> Add +2 to incoming Flat Damage (subtract 5 HP).</li>
+            <li><strong>Morale Test:</strong> When losing half their numbers or leader, roll 1d20. On 10 or lower, surviving enemies flee or surrender.</li>
+        </ul>
+
+        <h2>5. LEVELING PROGRESSION</h2>
+        <table>
+            <thead>
+                <tr><th>Lvl</th><th>XP</th><th>Permanent Upgrades</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>0</td><td>Calculate vitals and unlock L1 features.</td></tr>
+                <tr><td>2</td><td>10</td><td>Add +1 to any Attribute. Unlock L2 features.</td></tr>
+                <tr><td>3</td><td>20</td><td>Max RP increases by +1. Unlock L3 features.</td></tr>
+                <tr><td>4</td><td>30</td><td>Add +1 to any Attribute. Unlock L4 features.</td></tr>
+                <tr><td>5</td><td>40</td><td>Max RP increases by +1. Unlock L5 features.</td></tr>
+                <tr><td>6</td><td>50</td><td>Add +1 to any Attribute. Unlock L6 features.</td></tr>
+                <tr><td>7</td><td>60</td><td>Max RP increases by +1. Unlock L7 features.</td></tr>
+                <tr><td>8</td><td>70</td><td>Unlock Apex L8 feature (Max Level).</td></tr>
+            </tbody>
+        </table>
+        <div class="page-num">Page 4</div>
     </div>
 
 </body>
