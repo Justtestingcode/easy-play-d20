@@ -23,7 +23,7 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.4;
+            line-height: 1.35;
         }
 
         .page {
@@ -39,56 +39,56 @@
 
         h1 {
             text-align: center;
-            font-size: 22px;
+            font-size: 20px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 4px;
         }
 
         h2 {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 14px;
-            margin-bottom: 6px;
+            margin-top: 10px;
+            margin-bottom: 4px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 12px;
+            font-size: 11px;
             color: #2b5b84;
-            margin-top: 10px;
-            margin-bottom: 4px;
+            margin-top: 8px;
+            margin-bottom: 2px;
             text-transform: uppercase;
         }
 
         p, li {
-            font-size: 11.5px;
-            margin-top: 3px;
-            margin-bottom: 5px;
+            font-size: 10.5px;
+            margin-top: 2px;
+            margin-bottom: 4px;
         }
 
         ul {
-            padding-left: 18px;
-            margin-top: 3px;
-            margin-bottom: 6px;
+            padding-left: 16px;
+            margin-top: 2px;
+            margin-bottom: 4px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 6px;
-            margin-bottom: 10px;
-            font-size: 11px;
+            margin-top: 4px;
+            margin-bottom: 8px;
+            font-size: 10px;
         }
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 5px 7px;
+            padding: 4px 6px;
             text-align: left;
         }
 
@@ -101,27 +101,21 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 10px;
-            margin-top: 8px;
-            margin-bottom: 10px;
+            padding: 8px;
+            margin-top: 6px;
+            margin-bottom: 8px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 10px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 12px;
-        }
-
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 10px;
         }
 
         .line-input {
@@ -134,7 +128,7 @@
             position: absolute;
             bottom: 0.3in;
             right: 0.5in;
-            font-size: 10px;
+            font-size: 9px;
             color: #666;
         }
 
@@ -223,7 +217,7 @@
             <div>[ 8 ] Item: <span class="line-input" style="width: 180px;"></span></div>
         </div>
 
-        <div class="box" style="margin-top: 15px;">
+        <div class="box" style="margin-top: 10px;">
             <strong>QUICK-REF SYSTEM CHECKS (BASE THRESHOLD = 14)</strong><br>
             • <strong>Twin Die Engine:</strong> Spend 1 RP before any roll to gain <strong>Advantage</strong> (Roll 2d20, keep high). Disadvantage = Roll 2d20, keep low.<br>
             • <strong>Out-of-Combat Check:</strong> Roll 1d20 + Attr Mod vs 14.<br>
@@ -255,14 +249,32 @@
         <h2>2. COMBAT & TIME (PLAYER-FACING)</h2>
         <p>A "Round" represents 6 seconds of simultaneous action. The Guide never rolls to hit.</p>
         <ul>
-            <li><strong>Initiative:</strong> Roll 1d20 vs 14. Highest goes first. Players win ties.</li>
+            <li><strong>Initiative:</strong> Roll 1d20 + Agility Mod vs 14. Highest goes first. Players win ties.</li>
             <li><strong>1. Move Phase:</strong> Move up to your total Movement paces (1 pace = ~5 feet).</li>
-            <li><strong>2. Action Phase:</strong> Roll 1d20 + Attribute Mod vs 14 to attack. Deal flat weapon damage on hit.</li>
+            <li><strong>2. Action Phase:</strong> Roll 1d20 + Attribute Mod vs 14 to attack. Hit = deal flat damage directly to enemy HP.</li>
             <li><strong>3. Evasion Phase (Enemy Turn):</strong> When targeted, roll <strong>1d20 + Agility Mod vs 14</strong>. Success (14+) = 0 damage. Failure (&lt;14) = take incoming damage minus your Armor DR.</li>
-            <li><strong>Dying (0 HP):</strong> Fall unconscious. An ally must pass a Will check vs 14 within 1 pace to stabilize you, or you die within hours equal to your Will modifier. Direct damage at 0 HP causes instant death.</li>
+            <li><strong>Dying (0 HP):</strong> Fall unconscious. An ally must pass a Will check vs 14 as an Action within 1 pace to stabilize you, or you die within hours equal to your Will modifier (min 1). Direct damage at 0 HP causes instant death.</li>
         </ul>
 
-        <h2>3. WEAPON CLASSES & FLAT DAMAGE</h2>
+        <h2>3. LEVELING PROGRESSION</h2>
+        <table>
+            <thead>
+                <tr><th>Lvl</th><th>XP</th><th>Permanent Upgrades</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>0</td><td>Calculate vitals and unlock L1 features.</td></tr>
+                <tr><td>2</td><td>10</td><td>Add +1 to any Attribute. Unlock L2 features.</td></tr>
+                <tr><td>3</td><td>20</td><td>Max RP increases by +1. Unlock L3 features.</td></tr>
+                <tr><td>4</td><td>30</td><td>Add +1 to any Attribute. Unlock L4 features.</td></tr>
+                <tr><td>5</td><td>40</td><td>Max RP increases by +1. Unlock L5 features.</td></tr>
+                <tr><td>6</td><td>50</td><td>Add +1 to any Attribute. Unlock L6 features.</td></tr>
+                <tr><td>7</td><td>60</td><td>Max RP increases by +1. Unlock L7 features.</td></tr>
+                <tr><td>8</td><td>70</td><td>Unlock Apex L8 feature (Max Level).</td></tr>
+            </tbody>
+        </table>
+
+        <h2>4. WEAPON CLASSES & FLAT DAMAGE ENGINE</h2>
+        <p><strong>Damage Formula:</strong> Weapon Base Damage + Attribute Modifier = Total Flat Damage.</p>
         <table>
             <thead>
                 <tr><th>Weapon Style</th><th>Base Dmg</th><th>Hands</th><th>Attribute Used</th></tr>
@@ -277,7 +289,7 @@
             </tbody>
         </table>
 
-        <h2>4. ARMOR & INVENTORY CAPACITY</h2>
+        <h2>5. ARMOR & INVENTORY CAPACITY</h2>
         <table>
             <thead>
                 <tr><th>Armor Type</th><th>Damage Reduction</th><th>Requirements</th></tr>
@@ -292,87 +304,110 @@
         <div class="page-num">Page 2</div>
     </div>
 
-    <!-- PAGE 3: UNIFIED PLAYBOOK CODEX -->
+    <!-- PAGE 3: UNIFIED PLAYBOOK CODEX (PART 1) -->
     <div class="page">
-        <h1>UNIFIED PLAYBOOK CODEX</h1>
+        <h1>UNIFIED PLAYBOOK CODEX (PART 1)</h1>
 
-        <div class="two-column">
-            <div>
-                <h3>THE WARDEN</h3>
-                <p><em>The unmovable shield of the party.</em></p>
-                <ul>
-                    <li><strong>L1 Vanguard Guard:</strong> End Move Phase adjacent to ally to grant them Advantage on Evasion.</li>
-                    <li><strong>L1 Cleave:</strong> Heavy Melee hit deals +2 flat damage to adjacent secondary foe.</li>
-                    <li><strong>L2 Iron Stance [1 RP]:</strong> Reduce incoming damage by 2 until next turn.</li>
-                    <li><strong>L3 Brutal Force [1 RP]:</strong> Add Might modifier to flat damage a second time.</li>
-                    <li><strong>L4 Steel Stance [2 RP]:</strong> Reduce incoming damage by 4 until next turn.</li>
-                    <li><strong>L5 Unstoppable Defiance [2 RP]:</strong> When dropped to 0 HP, stand at 1 HP.</li>
-                    <li><strong>L8 Brawl Mastery [4 RP]:</strong> Grapple foe as cover (+Adv on Evasion) or pin beast.</li>
-                </ul>
+        <h2>THE WARDEN</h2>
+        <p><em>Narrative Role: The unmovable shield of the party. You secure physical space, hold the line, and endure what others cannot survive.</em></p>
+        <ul>
+            <li><strong>L1 Specialty: Vanguard Guard (Passive):</strong> End Move Phase adjacent to an ally to grant them Advantage on Evasion rolls while you remain conscious.</li>
+            <li><strong>L1: Cleave (Heavy Weapon):</strong> After a hit, deal 2 flat damage to an adjacent secondary foe within 1 pace.</li>
+            <li><strong>L2: Iron Stance [1 RP]:</strong> Spend 1 RP during Action Phase. Reduce all incoming flat damage by 2 points until your next turn (min 1).</li>
+            <li><strong>L3: Brutal Force [1 RP]:</strong> Spend 1 RP on hit to add Might modifier to flat damage a second time.</li>
+            <li><strong>L4: Steel Stance [2 RP]:</strong> Spend 2 RP during Action Phase. Reduce all incoming flat damage by 4 points until next turn (min 1).</li>
+            <li><strong>L5: Unstoppable Defiance [2 RP]:</strong> When dropped to 0 HP, spend 2 RP to remain standing at 1 HP.</li>
+            <li><strong>L6: Hardened Conditioning (Passive):</strong> Advantage on Might and Will checks vs environmental weather; rest in heavy armor without penalty.</li>
+            <li><strong>L7: Sunder / Disarm [2 RP]:</strong> Spend 2 RP on hit to wrench target's weapon away OR permanently reduce target's Damage Reduction by 2.</li>
+            <li><strong>L8: Brawl Mastery [4 RP]:</strong> Spend 4 RP on hit to grapple foe as physical cover (+Advantage on Evasion) OR pin a beast to remove its Action Phase.</li>
+        </ul>
 
-                <h3>THE BREAKER</h3>
-                <p><em>The aggressive entry specialist.</em></p>
-                <ul>
-                    <li><strong>L1 Breacher:</strong> Never suffer penalties breaking doors/barricades.</li>
-                    <li><strong>L1 Drive Back [1 RP]:</strong> Heavy Melee hit shoves target 1 pace back (+2 wall crush damage).</li>
-                    <li><strong>L2 Adrenaline Surge [2 RP]:</strong> Double movement paces for turn.</li>
-                    <li><strong>L3 Concussive Blow [1 RP]:</strong> Target passes Might check vs 14 or becomes Dazed.</li>
-                    <li><strong>L5 Relentless Assault [3 RP]:</strong> Make a second attack against adjacent target.</li>
-                    <li><strong>L8 Crash the Gates [4 RP]:</strong> Smash barrier to take Action Phase with Advantage against unaware foes.</li>
-                </ul>
+        <h2>THE BREAKER</h2>
+        <p><em>Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.</em></p>
+        <ul>
+            <li><strong>L1 Specialty: Breacher (Passive):</strong> Never suffer movement penalties kicking open doors or smashing barricades.</li>
+            <li><strong>L1: Drive Back [1 RP]:</strong> On Heavy Melee hit, shove target 1 pace back. Wall collision deals +2 crush damage.</li>
+            <li><strong>L2: Adrenaline Surge [2 RP]:</strong> Double total movement paces for this turn.</li>
+            <li><strong>L3: Concussive Blow [1 RP]:</strong> Spend 1 RP on hit. Target passes Might check vs 14 or becomes Dazed.</li>
+            <li><strong>L4: Linebreaker [2 RP]:</strong> Move directly through enemy spaces, forcing them 1 pace aside (backed against wall = 2 crush damage).</li>
+            <li><strong>L5: Relentless Assault [3 RP]:</strong> Spend 3 RP during Action Phase to make a second attack against a different adjacent target.</li>
+            <li><strong>L6: Pack Mule (Passive):</strong> Maximum active inventory slots permanently increased by 2.</li>
+            <li><strong>L7: Heave [2 RP]:</strong> Lift and throw heavy object up to 2 paces. Target passes Agility check vs 14 or takes 4 flat damage and falls Prone.</li>
+            <li><strong>L8: Crash the Gates [4 RP]:</strong> Smash barrier on Move Phase to take immediate Action Phase with Advantage against unaware targets.</li>
+        </ul>
 
-                <h3>THE PROWLER</h3>
-                <p><em>The lethal stealth scalpel.</em></p>
-                <ul>
-                    <li><strong>L1 Twin Fangs:</strong> Dual-wielding Light Melee adds +1 flat damage.</li>
-                    <li><strong>L1 Backstab [1 RP]:</strong> Attack from behind for Advantage and +2 damage.</li>
-                    <li><strong>L3 Nerve Strike [2 RP]:</strong> Target passes Might check vs 14 or becomes Pinned.</li>
-                    <li><strong>L4 Shadow Strike [2 RP]:</strong> Strike from concealment with Advantage; add Agility mod twice.</li>
-                    <li><strong>L8 Lethal Strike [4 RP]:</strong> Strike unaware target from behind to bypass armor and instantly drop to 0 HP.</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>THE MARKSMAN</h3>
-                <p><em>The ranged overwatch specialist.</em></p>
-                <ul>
-                    <li><strong>L1 Aimed Shot:</strong> Forfeit Move Phase to gain +2 on Ranged attack vs 14.</li>
-                    <li><strong>L2 Pinning Volley [2 RP]:</strong> First enemy entering chokepoint automatically takes flat weapon damage.</li>
-                    <li><strong>L4 Elevated Advantage [1 RP]:</strong> Firing from vertical elevation ignores target cover.</li>
-                    <li><strong>L5 Piercing Strike [3 RP]:</strong> Hit primary target and deal equal damage to foe directly behind.</li>
-                    <li><strong>L8 Perfect Aim [4 RP]:</strong> Forfeit Move; roll with Advantage, ignore cover, add Will mod to damage.</li>
-                </ul>
-
-                <h3>THE SABOTEUR</h3>
-                <p><em>Environmental manipulator and demolitionist.</em></p>
-                <ul>
-                    <li><strong>L1 Structural Weakness [1 RP]:</strong> Will check vs 14; next hit against target ignores Armor DR.</li>
-                    <li><strong>L2 Blinding Debris [1 RP]:</strong> Throw ash/debris; Agility check vs 14 inflicts -2 on target's next attack.</li>
-                    <li><strong>L4 Rig Trap [2 RP]:</strong> Rig hazard; Agility check vs 14 drops object for 8 flat damage and Prone.</li>
-                    <li><strong>L8 Volatile Reaction [4 RP]:</strong> Trigger explosion for 10 flat damage and Dazed within 2 paces.</li>
-                </ul>
-
-                <h3>THE SURVIVALIST</h3>
-                <p><em>Field medic and tracker.</em></p>
-                <ul>
-                    <li><strong>L1 Combat Medic:</strong> Stabilize dying ally within 1 pace using Move Phase (Will check vs 14).</li>
-                    <li><strong>L1 Drag to Safety [1 RP]:</strong> Grab unconscious ally and drag them full movement paces.</li>
-                    <li><strong>L3 Pressure Dressing [2 RP]:</strong> Reduce incoming damage of next hit against ally by 3 points.</li>
-                    <li><strong>L8 Extreme Triage [4 RP]:</strong> Save dying ally from lethal hit; wake at 1 HP permanently maimed.</li>
-                </ul>
-            </div>
-        </div>
+        <h2>THE PROWLER</h2>
+        <p><em>Narrative Role: The scalpel. Bypassing security, flanking, and executing devastating close-quarters strikes.</em></p>
+        <ul>
+            <li><strong>L1 Specialty: Twin Fangs (Passive):</strong> Dual-wielding Light Melee adds +1 to flat damage output.</li>
+            <li><strong>L1: Backstab [1 RP]:</strong> Positioned behind an engaged target, spend 1 RP for Advantage on attack and +2 flat damage.</li>
+            <li><strong>L2: Prowler's Eye [1 RP]:</strong> Scan 3-pace area with Advantage vs 14 to spot hidden hazards and mechanisms.</li>
+            <li><strong>L3: Nerve Strike [2 RP]:</strong> Spend 2 RP on hit. Target passes Might check vs 14 or becomes Pinned.</li>
+            <li><strong>L4: Shadow Strike [2 RP]:</strong> Strike from concealment with Advantage; add Agility mod to flat damage a second time.</li>
+            <li><strong>L5: Absolute Camouflage [3 RP]:</strong> In cover, enemies suffer Disadvantage on perception and attack rolls against you.</li>
+            <li><strong>L6: Ghost Step (Passive):</strong> Advantage on silent movement; leave no physical footprints on natural terrain.</li>
+            <li><strong>L7: Hamstring [2 RP]:</strong> Sever a tendon on hit; target movement permanently reduced to 1 pace until treated.</li>
+            <li><strong>L8: Lethal Strike [4 RP]:</strong> Strike unaware non-boss target from behind to bypass armor and instantly drop them to 0 HP.</li>
+        </ul>
         <div class="page-num">Page 3</div>
     </div>
 
-    <!-- PAGE 4: GUIDE'S MANUAL & BESTIARY -->
+    <!-- PAGE 4: UNIFIED PLAYBOOK CODEX (PART 2) -->
+    <div class="page">
+        <h1>UNIFIED PLAYBOOK CODEX (PART 2)</h1>
+
+        <h2>THE MARKSMAN</h2>
+        <p><em>Narrative Role: Ranged overwatch. Securing angles, controlling enemy movement, and eliminating targets from afar.</em></p>
+        <ul>
+            <li><strong>L1 Specialty: Aimed Shot (Passive):</strong> Forfeit Move Phase to gain +2 on Ranged attack roll vs 14.</li>
+            <li><strong>L1: Rig Chokepoint [1 RP]:</strong> Set tripwire in adjacent space; first enemy entering has movement reduced to 0 for that turn.</li>
+            <li><strong>L2: Pinning Volley [2 RP]:</strong> Hail of fire at chokepoint; first enemy passing through automatically takes flat weapon damage.</li>
+            <li><strong>L3: Crippling Shot [1 RP]:</strong> Spend 1 RP before attack. On hit, target's movement is halved on their next turn.</li>
+            <li><strong>L4: Elevated Advantage [1 RP]:</strong> Firing from vertical elevation completely ignores target cover bonuses.</li>
+            <li><strong>L5: Piercing Strike [3 RP]:</strong> Hit primary target with 2-Handed Ranged weapon and deal equal flat damage to secondary enemy directly behind.</li>
+            <li><strong>L6: Eagle Eye (Passive):</strong> Effective range extended by +2 paces across all ranged weapon categories.</li>
+            <li><strong>L7: Funneling Fire [2 RP]:</strong> Rapid burst forces target to immediately move 1 pace in a direction of your choice.</li>
+            <li><strong>L8: Perfect Aim [4 RP]:</strong> Forfeit Move Phase; roll attack with Advantage, ignore cover, and add Will mod to flat damage.</li>
+        </ul>
+
+        <h2>THE SABOTEUR</h2>
+        <p><em>Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.</em></p>
+        <ul>
+            <li><strong>L1 Specialty: Saboteur (Passive):</strong> Automatically dismantle simple mechanical locks and traps given 1 full minute outside combat.</li>
+            <li><strong>L1: Structural Weakness [1 RP]:</strong> Action Phase Will check vs 14; next successful hit against target completely ignores Armor DR.</li>
+            <li><strong>L2: Blinding Debris [1 RP]:</strong> Throw ash/debris; Agility check vs 14 forces target to suffer -2 penalty on next attack roll.</li>
+            <li><strong>L3: Cripple Target [2 RP]:</strong> Action Phase check vs 14 forces target to attack with Disadvantage until they forfeit an Action Phase.</li>
+            <li><strong>L4: Rig Trap [2 RP]:</strong> Rig environmental object; Agility check vs 14 drops object for 8 flat damage and knocks Prone.</li>
+            <li><strong>L5: Master of Ruin [3 RP]:</strong> Exploit structural flaws in building/vehicle to cause localized physical collapse.</li>
+            <li><strong>L6: Scavenger's Eye (Passive):</strong> Identify mechanical components to salvage usable tools from disabled technology.</li>
+            <li><strong>L7: Noxious Irritant [2 RP]:</strong> Throw chemical vial at 1-pace spot; enemies starting turn in space suffer Disadvantage on all rolls.</li>
+            <li><strong>L8: Volatile Reaction [4 RP]:</strong> Trigger explosive hazard dealing 10 flat damage and Dazed to everything within 2 paces.</li>
+        </ul>
+
+        <h2>THE SURVIVALIST</h2>
+        <p><em>Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions.</em></p>
+        <ul>
+            <li><strong>L1 Specialty: Combat Medic (Passive):</strong> Stabilize dying ally within 1 pace using Move Phase (Will check vs 14).</li>
+            <li><strong>L1: Drag to Safety [1 RP]:</strong> Grab unconscious or prone ally during Move Phase and drag them full movement paces.</li>
+            <li><strong>L2: Aggressive Rouse [1 RP]:</strong> Action Phase instantly removes one physical condition (like Dazed) from an adjacent ally.</li>
+            <li><strong>L3: Pressure Dressing [2 RP]:</strong> Bind wound; padding reduces incoming damage of very next attack hitting ally by 3 points.</li>
+            <li><strong>L4: Forage [1 RP]:</strong> Spend 1 RP outside combat to automatically locate sustenance to sustain party for one day.</li>
+            <li><strong>L5: Field Surgery [3 RP]:</strong> Short Breather procedure restores ally HP equal to twice your Will modifier.</li>
+            <li><strong>L6: Iron Gut (Passive):</strong> Advantage vs natural toxins/diseases; require half standard daily rations.</li>
+            <li><strong>L7: Potent Stimulant [2 RP]:</strong> Administer brew; ally regains 1 RP and +2 flat damage on next attack (takes 2 crash damage at combat end).</li>
+            <li><strong>L8: Extreme Triage [4 RP]:</strong> Save dying ally from lethal hit; instantly wake at 1 HP with permanent maiming.</li>
+        </ul>
+        <div class="page-num">Page 4</div>
+    </div>
+
+    <!-- PAGE 5: GUIDE'S MANUAL & THREAT TIERS -->
     <div class="page">
         <h1>THE GUIDE'S MANUAL</h1>
 
         <h2>1. ADJUDICATING THE THRESHOLD (14)</h2>
-        <p>The Guide never rolls for difficulty or monster attacks. All player checks meet or exceed 14. Apply Advantage for favorable circumstances or Disadvantage for severe hazards.</p>
+        <p>The Guide never rolls for difficulty or monster attacks. All player checks target 14. Adjust difficulty using Advantage (favorable context) or Disadvantage (extreme hazards/opposition).</p>
 
-        <h2>2. HAZARD FLAT DAMAGE</h2>
+        <h2>2. ENVIRONMENTAL HAZARD DAMAGE</h2>
         <ul>
             <li><strong>Minor Hazard:</strong> 2 Flat Damage (Scrapes, minor toxins, sprained ankles).</li>
             <li><strong>Major Hazard:</strong> 5 Flat Damage (Deep cuts, heavy kinetic traps, electrical shocks).</li>
@@ -400,23 +435,21 @@
             <li><strong>Morale Test:</strong> When losing half their numbers or leader, roll 1d20. On 10 or lower, surviving enemies flee or surrender.</li>
         </ul>
 
-        <h2>5. LEVELING PROGRESSION</h2>
-        <table>
-            <thead>
-                <tr><th>Lvl</th><th>XP</th><th>Permanent Upgrades</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>1</td><td>0</td><td>Calculate vitals and unlock L1 features.</td></tr>
-                <tr><td>2</td><td>10</td><td>Add +1 to any Attribute. Unlock L2 features.</td></tr>
-                <tr><td>3</td><td>20</td><td>Max RP increases by +1. Unlock L3 features.</td></tr>
-                <tr><td>4</td><td>30</td><td>Add +1 to any Attribute. Unlock L4 features.</td></tr>
-                <tr><td>5</td><td>40</td><td>Max RP increases by +1. Unlock L5 features.</td></tr>
-                <tr><td>6</td><td>50</td><td>Add +1 to any Attribute. Unlock L6 features.</td></tr>
-                <tr><td>7</td><td>60</td><td>Max RP increases by +1. Unlock L7 features.</td></tr>
-                <tr><td>8</td><td>70</td><td>Unlock Apex L8 feature (Max Level).</td></tr>
-            </tbody>
-        </table>
-        <div class="page-num">Page 4</div>
+        <h2>5. TACTICAL & ENVIRONMENTAL RULES</h2>
+        <ul>
+            <li><strong>Partial Cover:</strong> Crouching behind objects grants <strong>Advantage on Evasion Rolls</strong> against Ranged attacks.</li>
+            <li><strong>Full Cover:</strong> You cannot be targeted until the enemy physically flanks you.</li>
+            <li><strong>Status Conditions:</strong>
+                <ul>
+                    <li><em>Prone:</em> Spend Move Phase to stand up.</li>
+                    <li><em>Dazed:</em> Disadvantage on next action roll; movement halved.</li>
+                    <li><em>Pinned:</em> Forfeit next Action Phase.</li>
+                    <li><em>Stunned:</em> Forfeit next Action and Move Phase.</li>
+                </ul>
+            </li>
+            <li><strong>Environmental Physics:</strong> Falling &gt;2 paces inflicts 2 flat damage per pace fallen. Difficult terrain halves movement.</li>
+        </ul>
+        <div class="page-num">Page 5</div>
     </div>
 
 </body>
