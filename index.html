@@ -32,7 +32,7 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.35;
+            line-height: 1.45;
         }
 
         .page {
@@ -55,56 +55,56 @@
 
         h1 {
             text-align: center;
-            font-size: 19px;
+            font-size: 20px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 3px;
+            padding-bottom: 4px;
         }
 
         h2 {
-            font-size: 12.5px;
+            font-size: 13px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 10px;
-            margin-bottom: 4px;
+            margin-top: 12px;
+            margin-bottom: 6px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 11px;
+            font-size: 11.5px;
             color: #2b5b84;
-            margin-top: 6px;
-            margin-bottom: 2px;
+            margin-top: 8px;
+            margin-bottom: 3px;
             text-transform: uppercase;
         }
 
         p, li {
-            font-size: 10px;
-            margin-top: 2px;
-            margin-bottom: 3px;
+            font-size: 10.5px;
+            margin-top: 3px;
+            margin-bottom: 4px;
         }
 
         ul {
-            padding-left: 15px;
-            margin-top: 2px;
-            margin-bottom: 4px;
+            padding-left: 16px;
+            margin-top: 3px;
+            margin-bottom: 5px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 4px;
-            margin-bottom: 6px;
-            font-size: 9.5px;
+            margin-top: 6px;
+            margin-bottom: 8px;
+            font-size: 10px;
         }
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 3px 5px;
+            padding: 4px 6px;
             text-align: left;
         }
 
@@ -117,27 +117,27 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 6px 8px;
-            margin-top: 5px;
-            margin-bottom: 6px;
+            padding: 8px 10px;
+            margin-top: 6px;
+            margin-bottom: 8px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 10px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 8px;
+            gap: 10px;
         }
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 18px;
         }
 
         .line-input {
@@ -150,7 +150,7 @@
             text-align: right;
             font-size: 9px;
             color: #666;
-            margin-top: 4px;
+            margin-top: 6px;
         }
 
         @media print {
@@ -242,13 +242,13 @@
                 <div>[ 8 ] Item: <span class="line-input" style="width: 160px;"></span></div>
             </div>
 
-            <div class="box" style="margin-top: 8px;">
+            <div class="box" style="margin-top: 15px;">
                 <strong>QUICK-REF SYSTEM CHECKS (BASE THRESHOLD = 14)</strong><br>
                 • <strong>Twin Die Engine:</strong> Spend 1 RP before a roll (max 1/turn) to gain <strong>Advantage</strong> (Roll 2d20, keep high). Disadvantage = Roll 2d20, keep low. Both together = standard 1d20.<br>
                 • <strong>Out-of-Combat Check:</strong> Roll 1d20 + Attr Mod vs 14.<br>
                 • <strong>Action Phase (Attack):</strong> Roll 1d20 + Attr Mod vs 14. Hit = Deal Total Flat Damage directly to enemy HP.<br>
                 • <strong>Evasion Phase (Defense):</strong> Roll 1d20 + Agility Mod vs 14. Pass (14+) = 0 Dmg. Fail = Take Enemy Dmg - Armor DR.<br>
-                • <strong>Dying (0 HP):</strong> Unconscious. Ally must pass Will Check vs 14 within 1 pace to stabilize.
+                • <strong>Dying (0 HP):</strong> Unconscious. You have rounds equal to your Will Mod (min 1) before death is permanent. Ally must pass Will Check vs 14 within 1 pace to stabilize you.
             </div>
         </div>
         <div class="page-num">Page 1</div>
@@ -291,8 +291,15 @@
                         <li><strong>1. Move Phase:</strong> Move up to your total Movement paces (1 pace = ~5 feet).</li>
                         <li><strong>2. Action Phase:</strong> Roll 1d20 + Attribute Mod vs 14 to attack. Hit = deal flat damage directly to enemy HP.</li>
                         <li><strong>3. Evasion Phase (Enemy Turn):</strong> When targeted, roll <strong>1d20 + Agility Mod vs 14</strong>. Success (14+) = 0 damage. Failure (&lt;14) = take incoming damage minus your Armor DR.</li>
-                        <li><strong>Dying (0 HP):</strong> Fall unconscious. An ally must pass a Will check vs 14 as an Action within 1 pace to stabilize you, or you die within hours equal to your Will modifier (min 1). Direct damage at 0 HP causes instant death.</li>
                     </ul>
+                    
+                    <div class="box" style="background-color: #fce8e8; border-color: var(--accent-color);">
+                        <strong style="color: var(--accent-color);">DEATH & STABILIZATION (0 HP)</strong><br>
+                        When reduced to 0 HP, you immediately fall Prone, drop your items, and become <strong>Unconscious</strong>. You can no longer take phases.<br>
+                        • <strong>The Bleed Out:</strong> You will die permanently in a number of rounds equal to your Will modifier (minimum 1 round).<br>
+                        • <strong>Stabilization:</strong> An adjacent ally can spend their Action Phase to roll a Will check vs 14. On success, you stabilize at 1 HP.<br>
+                        • <strong>Execution:</strong> Any direct damage taken while Unconscious at 0 HP results in instant, permanent death.
+                    </div>
                 </div>
 
                 <div>
@@ -402,7 +409,7 @@
                     </ul>
 
                     <div class="box" style="margin-top: 15px; background-color: #f0f4f8; border-color: #2b5b84;">
-                        <h3 style="margin-top: 0; color: #1a1a1a;">EXAMPLE OF PLAY: THE BREACH</h3>
+                        <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY: THE BREACH</h3>
                         <p><strong>Guide:</strong> "The blast door seals shut. Two Elite enforcers take aim from behind the barricade."</p>
                         <p><strong>Warden:</strong> "I'll spend my Action Phase to enter <em>Active Guard</em> with my shield and Move adjacent to the Saboteur."</p>
                         <p><strong>Saboteur:</strong> "I'll use <em>Structural Weakness</em> on the barricade. <em>(Rolls 1d20 + Will vs 14)</em> Got a 16!"</p>
@@ -469,7 +476,7 @@
                     </ul>
 
                     <div class="box" style="margin-top: 15px; background-color: #f0f4f8; border-color: #2b5b84;">
-                        <h3 style="margin-top: 0; color: #1a1a1a;">EXAMPLE OF PLAY: THE STRIKE</h3>
+                        <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY: THE STRIKE</h3>
                         <p><strong>Breaker:</strong> "I'll spend 1 RP for Advantage to smash through the weakened barricade and use <em>Drive Back</em> on the first Elite!"</p>
                         <p><strong>Guide:</strong> "Roll it."</p>
                         <p><strong>Breaker:</strong> "<em>(Rolls 2d20, keeps high)</em> 18 plus my Might mod. Hit! That's 5 Heavy Melee damage, plus 2 crush damage from hitting the wall!"</p>
@@ -546,11 +553,12 @@
                 <li><strong>Environmental Physics:</strong> Falling &gt;2 paces inflicts 2 flat damage per pace fallen. Difficult terrain halves movement.</li>
             </ul>
             
-            <h2>6. REST, RECOVERY & DOWNTIME</h2>
+            <h2>6. REST, RECOVERY & REWARDING RP</h2>
             <ul>
                 <li><strong>Short Breather:</strong> (10-15 mins). Recover HP equal to Might mod, and RP equal to Will mod (min 1 each).</li>
                 <li><strong>Rough Sleep:</strong> (6-8 hrs) in hostile territory. Recover HP and RP equal to total combined Attributes.</li>
                 <li><strong>Sanctuary Rest:</strong> (24 hrs) Safe rest. Fully restores HP and RP.</li>
+                <li><strong>Rewarding Resolute Points (RP):</strong> The Guide should award 1 RP to a player when they play heavily into their Drive to their own detriment, execute a brilliant tactical maneuver, or deeply engage the table in roleplay.</li>
             </ul>
         </div>
         <div class="page-num">Page 5</div>
@@ -635,6 +643,9 @@
                 <li><strong>Enhancers (Black Market Ammo, Experimental Serums, Plasma Charges):</strong> Grants +2 Flat Damage to your next successful hit, OR completely ignores the target's Armor DR for one attack.</li>
                 <li><strong>Utility & Survival (Warding Components, Scavenged Parts, Rations):</strong> Grants Advantage on a specific Out-of-Combat check (e.g., picking a lock, banishing a spirit), OR fulfills the food/water requirements needed to safely complete a <em>Rough Sleep</em> or <em>Sanctuary Rest</em> without suffering environmental hazard damage.</li>
             </ul>
+
+            <h2>4. VEHICLES, MOUNTS & CHASES</h2>
+            <p>When operating a vehicle (a starfighter, a galloping horse, or a rusted hover-skiff), your base movement becomes the vehicle's speed. In chase sequences or hazardous terrain, the driver must roll an <strong>Agility Check vs 14</strong> to avoid crashing (taking Major Hazard damage). The <em>Master of Ruin</em> and <em>Rig Trap</em> abilities can be used to specifically target enemy vehicles to force them into a crash.</p>
         </div>
         <div class="page-num">Page 6</div>
     </div>
