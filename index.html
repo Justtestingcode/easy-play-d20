@@ -260,74 +260,88 @@
             <h1>EASY PLAY D20 — SYSTEM CORE & ARMORY</h1>
             <p>One player acts as the Guide; everyone else plays an Adventurer. You need a 20-sided die (d20) and these rules.</p>
 
-            <h2>1. THE ACTION ENGINE (FLAT 14 THRESHOLD)</h2>
-            <p>All risky tasks, skill attempts, attacks, and evasions target a <strong>Universal Baseline Threshold of 14</strong>.</p>
-            <ul>
-                <li><strong>How to Roll:</strong> Roll 1d20 + Attribute Modifier. Meet or exceed 14 to succeed.</li>
-                <li><strong>Rule of 20:</strong> A Natural 20 in combat is an Overdrive Strike (add Attribute Mod to damage twice). Outside combat, it is an overwhelming success. A Natural 1 is always a critical failure.</li>
-            </ul>
+            <div class="two-column">
+                <div>
+                    <h2>1. HEROIC GENESIS (CREATION)</h2>
+                    <ul>
+                        <li><strong>Background & Drive:</strong> Write a past career and core motivation.</li>
+                        <li><strong>Class:</strong> Choose your combat archetype from the Codex.</li>
+                        <li><strong>Attributes:</strong> Start with +1 in Might, Agility, and Will. Allocate 2 custom points across these modifiers. Attributes max out at +4.</li>
+                        <li><strong>Vitals:</strong> Compute HP, Movement, RP, and Armor DR on your sheet.</li>
+                    </ul>
 
-            <div class="box">
-                <strong>THE TWIN DIE ENGINE</strong><br>
-                Spend 1 Resolute Point (RP) before any roll to buy <strong>Advantage</strong> (Roll 2d20, keep highest).<br>
-                Severe obstacles or environmental hazards impose <strong>Disadvantage</strong> (Roll 2d20, keep lowest).
+                    <h2>2. THE ACTION ENGINE (FLAT 14)</h2>
+                    <p>All risky tasks, skill attempts, attacks, and evasions target a <strong>Universal Baseline Threshold of 14</strong>.</p>
+                    <ul>
+                        <li><strong>How to Roll:</strong> Roll 1d20 + Attribute Modifier. Meet or exceed 14 to succeed.</li>
+                        <li><strong>Rule of 20:</strong> A Natural 20 in combat is an Overdrive Strike (add Attribute Mod to damage twice). Outside combat, it is an overwhelming success. A Natural 1 is always a critical failure.</li>
+                    </ul>
+
+                    <div class="box">
+                        <strong>THE TWIN DIE ENGINE</strong><br>
+                        Spend 1 Resolute Point (RP) before any roll to buy <strong>Advantage</strong> (Roll 2d20, keep highest).<br>
+                        Severe obstacles or environmental hazards impose <strong>Disadvantage</strong> (Roll 2d20, keep lowest).
+                    </div>
+
+                    <h2>3. COMBAT & TIME (PLAYER-FACING)</h2>
+                    <p>A "Round" represents 6 seconds. There are no reactions outside your turn. The Guide never rolls to hit.</p>
+                    <ul>
+                        <li><strong>Initiative:</strong> Roll 1d20 + Agility Mod vs 14. Highest goes first. Players win ties.</li>
+                        <li><strong>1. Move Phase:</strong> Move up to your total Movement paces (1 pace = ~5 feet).</li>
+                        <li><strong>2. Action Phase:</strong> Roll 1d20 + Attribute Mod vs 14 to attack. Hit = deal flat damage directly to enemy HP.</li>
+                        <li><strong>3. Evasion Phase (Enemy Turn):</strong> When targeted, roll <strong>1d20 + Agility Mod vs 14</strong>. Success (14+) = 0 damage. Failure (&lt;14) = take incoming damage minus your Armor DR.</li>
+                        <li><strong>Dying (0 HP):</strong> Fall unconscious. An ally must pass a Will check vs 14 as an Action within 1 pace to stabilize you, or you die within hours equal to your Will modifier (min 1). Direct damage at 0 HP causes instant death.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>4. LEVELING PROGRESSION</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Lvl</th><th>XP</th><th>Permanent Upgrades</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>0</td><td>Calculate vitals and unlock L1 features.</td></tr>
+                            <tr><td>2</td><td>10</td><td>Add +1 to any Attribute. Unlock L2 features.</td></tr>
+                            <tr><td>3</td><td>20</td><td>Max RP increases by +1. Unlock L3 features.</td></tr>
+                            <tr><td>4</td><td>30</td><td>Add +1 to any Attribute. Unlock L4 features.</td></tr>
+                            <tr><td>5</td><td>40</td><td>Max RP increases by +1. Unlock L5 features.</td></tr>
+                            <tr><td>6</td><td>50</td><td>Add +1 to any Attribute. Unlock L6 features.</td></tr>
+                            <tr><td>7</td><td>60</td><td>Max RP increases by +1. Unlock L7 features.</td></tr>
+                            <tr><td>8</td><td>70</td><td>Unlock Apex L8 feature (Max Level).</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>5. WEAPON CLASSES & FLAT DAMAGE</h2>
+                    <p><strong>Damage Formula:</strong> Weapon Base Damage + Attribute Modifier = Total Flat Damage.</p>
+                    <table>
+                        <thead>
+                            <tr><th>Weapon Style</th><th>Base Dmg</th><th>Hands</th><th>Attribute Used</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Unarmed Strike</td><td>0</td><td>1 Hand</td><td>Might or Agility</td></tr>
+                            <tr><td>Improvised Tool</td><td>1</td><td>1 or 2</td><td>Might</td></tr>
+                            <tr><td>Ranged/Thrown</td><td>1</td><td>1 Hand</td><td>Agility or Will</td></tr>
+                            <tr><td>Ranged Weapon</td><td>2</td><td>2 Hands</td><td>Will</td></tr>
+                            <tr><td>Light Melee</td><td>3</td><td>1 Hand</td><td>Might or Agility</td></tr>
+                            <tr><td>Heavy Melee</td><td>5</td><td>2 Hands</td><td>Might</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>6. ARMOR & INVENTORY CAPACITY</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Armor Type</th><th>Damage Reduction</th><th>Requirements / Stance Benefit</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Light Armor</td><td>DR -1</td><td>None</td></tr>
+                            <tr><td>Heavy Armor</td><td>DR -2</td><td>Requires 3 Might</td></tr>
+                            <tr><td>Shield</td><td>Active Guard</td><td>1 Hand; Spend Action Phase to gain Advantage on all Evasion rolls until next turn</td></tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Inventory Limit:</strong> Max slots = <strong>4 + Might modifier</strong>. Over-encumbrance causes Disadvantage on all rolls and halves movement.</p>
+                </div>
             </div>
-
-            <h2>2. COMBAT & TIME (PLAYER-FACING)</h2>
-            <p>A "Round" represents 6 seconds of simultaneous action. There are no reactions outside your turn. The Guide never rolls to hit.</p>
-            <ul>
-                <li><strong>Initiative:</strong> Roll 1d20 + Agility Mod vs 14. Highest goes first. Players win ties.</li>
-                <li><strong>1. Move Phase:</strong> Move up to your total Movement paces (1 pace = ~5 feet).</li>
-                <li><strong>2. Action Phase:</strong> Roll 1d20 + Attribute Mod vs 14 to attack. Hit = deal flat damage directly to enemy HP.</li>
-                <li><strong>3. Evasion Phase (Enemy Turn):</strong> When targeted, roll <strong>1d20 + Agility Mod vs 14</strong>. Success (14+) = 0 damage. Failure (&lt;14) = take incoming damage minus your Armor DR.</li>
-                <li><strong>Dying (0 HP):</strong> Fall unconscious. An ally must pass a Will check vs 14 as an Action within 1 pace to stabilize you, or you die within hours equal to your Will modifier (min 1). Direct damage at 0 HP causes instant death.</li>
-            </ul>
-
-            <h2>3. LEVELING PROGRESSION</h2>
-            <table>
-                <thead>
-                    <tr><th>Lvl</th><th>XP</th><th>Permanent Upgrades</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>0</td><td>Calculate vitals and unlock L1 features.</td></tr>
-                    <tr><td>2</td><td>10</td><td>Add +1 to any Attribute. Unlock L2 features.</td></tr>
-                    <tr><td>3</td><td>20</td><td>Max RP increases by +1. Unlock L3 features.</td></tr>
-                    <tr><td>4</td><td>30</td><td>Add +1 to any Attribute. Unlock L4 features.</td></tr>
-                    <tr><td>5</td><td>40</td><td>Max RP increases by +1. Unlock L5 features.</td></tr>
-                    <tr><td>6</td><td>50</td><td>Add +1 to any Attribute. Unlock L6 features.</td></tr>
-                    <tr><td>7</td><td>60</td><td>Max RP increases by +1. Unlock L7 features.</td></tr>
-                    <tr><td>8</td><td>70</td><td>Unlock Apex L8 feature (Max Level).</td></tr>
-                </tbody>
-            </table>
-
-            <h2>4. WEAPON CLASSES & FLAT DAMAGE ENGINE</h2>
-            <p><strong>Damage Formula:</strong> Weapon Base Damage + Attribute Modifier = Total Flat Damage.</p>
-            <table>
-                <thead>
-                    <tr><th>Weapon Style</th><th>Base Dmg</th><th>Hands</th><th>Attribute Used</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Unarmed Strike (1 Pace)</td><td>0</td><td>1 Hand</td><td>Might or Agility</td></tr>
-                    <tr><td>Improvised Tool</td><td>1</td><td>1 or 2</td><td>Might</td></tr>
-                    <tr><td>Ranged/Thrown (3 Paces)</td><td>1</td><td>1 Hand</td><td>Agility or Will</td></tr>
-                    <tr><td>Ranged Weapon (10 Paces)</td><td>2</td><td>2 Hands</td><td>Will</td></tr>
-                    <tr><td>Light Melee (1 Pace)</td><td>3</td><td>1 Hand</td><td>Might or Agility</td></tr>
-                    <tr><td>Heavy Melee (1 Pace)</td><td>5</td><td>2 Hands</td><td>Might</td></tr>
-                </tbody>
-            </table>
-
-            <h2>5. ARMOR & INVENTORY CAPACITY</h2>
-            <table>
-                <thead>
-                    <tr><th>Armor Type</th><th>Damage Reduction</th><th>Requirements / Stance Benefit</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Light Armor</td><td>DR -1</td><td>None</td></tr>
-                    <tr><td>Heavy Armor</td><td>DR -2</td><td>Requires 3 Might</td></tr>
-                    <tr><td>Shield</td><td>Active Guard</td><td>1 Hand; Spend Action Phase to gain Advantage on all Evasion rolls until next turn</td></tr>
-                </tbody>
-            </table>
-            <p><strong>Inventory Limit:</strong> Max slots = <strong>4 + Might modifier</strong>. Over-encumbrance causes Disadvantage on all rolls and halves movement.</p>
         </div>
         <div class="page-num">Page 2</div>
     </div>
