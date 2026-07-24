@@ -32,7 +32,7 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.35;
+            line-height: 1.4;
         }
 
         .page {
@@ -153,6 +153,16 @@
             color: #666;
         }
 
+        .pro-tip {
+            background-color: #f8f9fa;
+            border-left: 3px solid #2b5b84;
+            padding: 4px 8px;
+            margin-top: 4px;
+            margin-bottom: 8px;
+            font-style: italic;
+            font-size: 9.5px;
+        }
+
         @media print {
             body {
                 background-color: #fff;
@@ -166,7 +176,6 @@
                 width: 7.7in;
                 padding: 0;
             }
-            /* Override absolute positioning for page numbers on print to ensure they don't shift */
             .page-num {
                 bottom: 0;
                 right: 0;
@@ -329,15 +338,15 @@
                     <p><strong>Damage Formula:</strong> Weapon Base Damage + Attribute Modifier = Total Flat Damage.</p>
                     <table>
                         <thead>
-                            <tr><th>Weapon Style</th><th>Base Dmg</th><th>Hands</th><th>Attribute Used</th></tr>
+                            <tr><th>Weapon Style & Examples</th><th>Base Dmg</th><th>Hands</th><th>Attribute</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Unarmed Strike</td><td>0</td><td>1 Hand</td><td>Might or Agility</td></tr>
-                            <tr><td>Improvised Tool</td><td>1</td><td>1 or 2</td><td>Might</td></tr>
-                            <tr><td>Ranged/Thrown</td><td>1</td><td>1 Hand</td><td>Agility or Will</td></tr>
-                            <tr><td>Ranged Weapon</td><td>2</td><td>2 Hands</td><td>Will</td></tr>
-                            <tr><td>Light Melee</td><td>3</td><td>1 Hand</td><td>Might or Agility</td></tr>
-                            <tr><td>Heavy Melee</td><td>5</td><td>2 Hands</td><td>Might</td></tr>
+                            <tr><td><strong>Unarmed Strike</strong><br><small><em>Fists, kicks, claws</em></small></td><td>0</td><td>1 Hand</td><td>Might or Agility</td></tr>
+                            <tr><td><strong>Improvised Tool</strong><br><small><em>Chairs, chains, rocks</em></small></td><td>1</td><td>1 or 2</td><td>Might</td></tr>
+                            <tr><td><strong>Ranged/Thrown</strong><br><small><em>Throwing knives, flasks</em></small></td><td>1</td><td>1 Hand</td><td>Agility or Will</td></tr>
+                            <tr><td><strong>Ranged Weapon</strong><br><small><em>Bows, sniper rifles</em></small></td><td>2</td><td>2 Hands</td><td>Will</td></tr>
+                            <tr><td><strong>Light Melee</strong><br><small><em>Daggers, shortswords</em></small></td><td>3</td><td>1 Hand</td><td>Might or Agility</td></tr>
+                            <tr><td><strong>Heavy Melee</strong><br><small><em>Greatswords, sledgehammers</em></small></td><td>5</td><td>2 Hands</td><td>Might</td></tr>
                         </tbody>
                     </table>
 
@@ -379,6 +388,7 @@
                         <li><strong>L7: Sunder / Disarm [2 RP]:</strong> Spend 2 RP on hit to wrench target's weapon away OR permanently reduce target's Damage Reduction by 2.</li>
                         <li><strong>L8: Brawl Mastery [4 RP]:</strong> Spend 4 RP on hit to grapple foe as physical cover (+Advantage on Evasion) OR pin a beast to remove its Action Phase.</li>
                     </ul>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> Your low Agility makes dodging difficult. Rely heavily on Active Guard (Shield) and Iron Stance to soak hits, turning yourself into a chokepoint.</div>
 
                     <h3>THE BREAKER</h3>
                     <p><em>Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.</em></p>
@@ -388,16 +398,17 @@
                         <li><strong>L2: Adrenaline Surge [2 RP]:</strong> Double total movement paces for this turn.</li>
                         <li><strong>L3: Concussive Blow [1 RP]:</strong> Spend 1 RP on hit. Target passes Might check vs 14 or becomes Dazed.</li>
                         <li><strong>L4: Linebreaker [2 RP]:</strong> Move directly through enemy spaces, forcing them 1 pace aside (backed against wall = 2 crush damage).</li>
-                        <li><strong>L5: Relentless Assault [3 RP]:</strong> Spend 3 RP during Action Phase to make a second attack against a different adjacent target.</li>
                     </ul>
                 </div>
                 
                 <div>
                     <ul>
+                        <li><strong>L5: Relentless Assault [3 RP]:</strong> Spend 3 RP during Action Phase to make a second attack against a different adjacent target.</li>
                         <li><strong>L6: Pack Mule (Passive):</strong> Maximum active inventory slots permanently increased by 2.</li>
                         <li><strong>L7: Heave [2 RP]:</strong> Lift and throw heavy object up to 2 paces. Target passes Agility check vs 14 or takes 4 flat damage and falls Prone.</li>
                         <li><strong>L8: Crash the Gates [4 RP]:</strong> Smash barrier on Move Phase to take immediate Action Phase with Advantage against unaware targets.</li>
                     </ul>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> Positioning is your best weapon. Always try to line up your Drive Back and Linebreaker abilities to smash enemies into walls for that free +2 Crush damage.</div>
 
                     <h3>THE PROWLER</h3>
                     <p><em>Narrative Role: The scalpel. Bypassing security, flanking, and executing devastating close-quarters strikes.</em></p>
@@ -412,8 +423,9 @@
                         <li><strong>L7: Hamstring [2 RP]:</strong> Sever a tendon on hit; target movement permanently reduced to 1 pace until treated.</li>
                         <li><strong>L8: Lethal Strike [4 RP]:</strong> Strike unaware non-boss target from behind to bypass armor and instantly drop them to 0 HP.</li>
                     </ul>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> You are a lethal glass cannon. Use Absolute Camouflage and Shadow Strike to ensure you are dealing massive damage while enemies suffer Disadvantage to hit you.</div>
 
-                    <div class="box" style="margin-top: 15px; background-color: #f0f4f8; border-color: #2b5b84;">
+                    <div class="box" style="margin-top: 10px; background-color: #f0f4f8; border-color: #2b5b84;">
                         <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY: THE BREACH</h3>
                         <p><strong>Guide:</strong> "The blast door seals shut. Two Elite enforcers take aim from behind the barricade."</p>
                         <p><strong>Warden:</strong> "I'll spend my Action Phase to enter <em>Active Guard</em> with my shield and Move adjacent to the Saboteur."</p>
@@ -446,6 +458,7 @@
                         <li><strong>L7: Funneling Fire [2 RP]:</strong> Rapid burst forces target to immediately move 1 pace in a direction of your choice.</li>
                         <li><strong>L8: Perfect Aim [4 RP]:</strong> Forfeit Move Phase; roll attack with Advantage, ignore cover, and add Will mod to flat damage.</li>
                     </ul>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> Distance is your armor. Always prioritize high ground for Elevated Advantage, and use Rig Chokepoint to stop Elites from closing the gap.</div>
 
                     <h3>THE SABOTEUR</h3>
                     <p><em>Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.</em></p>
@@ -465,6 +478,7 @@
                         <li><strong>L7: Noxious Irritant [2 RP]:</strong> Throw chemical vial at 1-pace spot; enemies starting turn in space grant Advantage on all player attacks and Evasion rolls.</li>
                         <li><strong>L8: Volatile Reaction [4 RP]:</strong> Trigger explosive hazard dealing 10 flat damage and Dazed to everything within 2 paces.</li>
                     </ul>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> Don't just attack—manipulate. Use Blinding Debris to protect fragile allies, and use Structural Weakness to strip DR off armored targets before your Breaker hits them.</div>
 
                     <h3>THE SURVIVALIST</h3>
                     <p><em>Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions.</em></p>
@@ -479,8 +493,9 @@
                         <li><strong>L7: Potent Stimulant [2 RP]:</strong> Administer brew; ally regains 1 RP and +2 flat damage on next attack (takes 2 crash damage at combat end).</li>
                         <li><strong>L8: Extreme Triage [4 RP]:</strong> Save dying ally from lethal hit; instantly wake at 1 HP with permanent maiming.</li>
                     </ul>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> You control the party's momentum. Use Pressure Dressing preemptively on the Warden, and save Potent Stimulant to buff your heavy hitters during Boss fights.</div>
 
-                    <div class="box" style="margin-top: 15px; background-color: #f0f4f8; border-color: #2b5b84;">
+                    <div class="box" style="margin-top: 10px; background-color: #f0f4f8; border-color: #2b5b84;">
                         <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY: THE STRIKE</h3>
                         <p><strong>Breaker:</strong> "I'll spend 1 RP for Advantage to smash through the weakened barricade and use <em>Drive Back</em> on the first Elite!"</p>
                         <p><strong>Guide:</strong> "Roll it."</p>
@@ -501,7 +516,7 @@
             <div class="two-column">
                 <div>
                     <h2>1. ADJUDICATING THE THRESHOLD (14)</h2>
-                    <p>The Guide never rolls for difficulty or monster attacks. All player checks target 14. Adjust difficulty using Advantage (favorable/easy context) or Disadvantage (extreme hazards/heavy opposition).</p>
+                    <p>The Guide never rolls for difficulty or monster attacks. All player checks target 14. Adjust difficulty using <strong>Advantage</strong> (favorable context, high ground, distracted target) or <strong>Disadvantage</strong> (extreme hazards, heavy opposition, poor footing).</p>
 
                     <h2>2. ENVIRONMENTAL HAZARD DAMAGE</h2>
                     <ul>
@@ -552,12 +567,14 @@
                         <li><strong>Agile / Skirmisher:</strong> Player rolls Evasion with Disadvantage (+2 Movement paces, subtract 2 HP).</li>
                         <li><strong>Lethal / Sniper:</strong> Add +2 to incoming Flat Damage (subtract 5 HP).</li>
                         <li><strong>Morale Test:</strong> When losing half their numbers or leader, roll 1d20. On 10 or lower, surviving enemies flee or surrender.</li>
+                        <li><strong>Boss Escalation:</strong> When a Tier 4 Boss reaches half HP, trigger an immediate escalation: spawn 1d4 Minions or activate a Major Environmental Hazard.</li>
                     </ul>
 
                     <h2>5. TACTICAL & ENVIRONMENTAL RULES</h2>
                     <ul>
                         <li><strong>Partial Cover:</strong> Crouching behind objects grants <strong>Advantage on Evasion Rolls</strong> against Ranged attacks.</li>
                         <li><strong>Full Cover:</strong> You cannot be targeted until the enemy physically bypasses the cover.</li>
+                        <li><strong>Visibility & Darkness:</strong> Fighting in Dim Light/Fog imposes Disadvantage on Perception and Ranged attacks. In Pitch Black/Blindness, players cannot target enemies further than 1 pace away, and Evasion rolls suffer Disadvantage.</li>
                         <li><strong>Status Conditions:</strong>
                             <ul>
                                 <li><em>Prone:</em> Spend Move Phase to stand up.</li>
@@ -579,7 +596,7 @@
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 15px; background-color: #f0f4f8; border-color: #2b5b84;">
+            <div class="box" style="margin-top: 10px; background-color: #f0f4f8; border-color: #2b5b84;">
                 <h3 style="margin-top: 0; color: #1a1a1a;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</h3>
                 <p>When a player fails an Out-of-Combat Check vs 14, do not let the story stall. Instead of simply saying "you fail," introduce a complication. They pick the lock, but alert a guard. They decipher the ancient text, but trigger a trap. They repair the engine, but permanently break a crucial tool. Every roll should push the narrative forward, even when the dice betray the players.</p>
             </div>
@@ -668,7 +685,10 @@
                 <li><strong>Utility & Survival (Warding Components, Scavenged Parts, Rations):</strong> Grants Advantage on a specific Out-of-Combat check (e.g., picking a lock, banishing a spirit), OR fulfills the food/water requirements needed to safely complete a <em>Rough Sleep</em> or <em>Sanctuary Rest</em> without suffering environmental hazard damage.</li>
             </ul>
 
-            <h2>4. VEHICLES, MOUNTS & CHASES</h2>
+            <h2>4. MAGIC, PSIONICS & CYBERWARE</h2>
+            <p>This system handles extraordinary abilities through narrative re-skinning rather than complex spell slots. If a player wants to be a Wizard or a Cyborg, their "Ranged Weapon" is simply a Firebolt or an Arm-Cannon. Their "Light Armor" is a passive Mage Armor spell or sub-dermal plating. An "Enhancer Consumable" is a spell scroll or an overclock shard. Their class abilities remain mathematically identical—a Breaker's "Concussive Blow" could be described as a kinetic shockwave spell or a hydraulic punch. The mathematical balance remains identical, but the narrative freedom is limitless.</p>
+
+            <h2>5. VEHICLES, MOUNTS & CHASES</h2>
             <p>When operating a vehicle (a starfighter, a galloping horse, or a rusted hover-skiff), your base movement becomes the vehicle's speed. In chase sequences or hazardous terrain, the driver must roll an <strong>Agility Check vs 14</strong> to avoid crashing (taking Major Hazard damage). The <em>Master of Ruin</em> and <em>Rig Trap</em> abilities can be used to specifically target enemy vehicles to force them into a crash.</p>
         </div>
         <div class="page-num">Page 6</div>
