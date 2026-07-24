@@ -32,7 +32,7 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.45;
+            line-height: 1.35;
         }
 
         .page {
@@ -46,7 +46,6 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
         .content-wrap {
@@ -55,56 +54,56 @@
 
         h1 {
             text-align: center;
-            font-size: 20px;
+            font-size: 19px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 4px;
+            padding-bottom: 3px;
         }
 
         h2 {
-            font-size: 13px;
+            font-size: 12.5px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 12px;
-            margin-bottom: 6px;
+            margin-top: 8px;
+            margin-bottom: 3px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 11.5px;
+            font-size: 11px;
             color: #2b5b84;
-            margin-top: 8px;
-            margin-bottom: 3px;
+            margin-top: 6px;
+            margin-bottom: 2px;
             text-transform: uppercase;
         }
 
         p, li {
-            font-size: 10.5px;
-            margin-top: 3px;
-            margin-bottom: 4px;
+            font-size: 10px;
+            margin-top: 2px;
+            margin-bottom: 3px;
         }
 
         ul {
-            padding-left: 16px;
-            margin-top: 3px;
-            margin-bottom: 5px;
+            padding-left: 15px;
+            margin-top: 2px;
+            margin-bottom: 4px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 6px;
-            margin-bottom: 8px;
-            font-size: 10px;
+            margin-top: 4px;
+            margin-bottom: 6px;
+            font-size: 9.5px;
         }
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 4px 6px;
+            padding: 3px 4px;
             text-align: left;
         }
 
@@ -117,27 +116,27 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 8px 10px;
-            margin-top: 6px;
-            margin-bottom: 8px;
+            padding: 5px 8px;
+            margin-top: 4px;
+            margin-bottom: 5px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 6px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
+            gap: 6px;
         }
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 18px;
+            gap: 14px;
         }
 
         .line-input {
@@ -147,10 +146,11 @@
         }
 
         .page-num {
-            text-align: right;
+            position: absolute;
+            bottom: 0.3in;
+            right: 0.45in;
             font-size: 9px;
             color: #666;
-            margin-top: 6px;
         }
 
         @media print {
@@ -161,10 +161,15 @@
             .page {
                 box-shadow: none;
                 margin-bottom: 0;
-                page-break-before: always;
+                page-break-after: always;
                 height: 10.2in;
                 width: 7.7in;
                 padding: 0;
+            }
+            /* Override absolute positioning for page numbers on print to ensure they don't shift */
+            .page-num {
+                bottom: 0;
+                right: 0;
             }
         }
     </style>
@@ -178,12 +183,12 @@
             
             <div class="box">
                 <div class="sheet-grid">
-                    <div><strong>CHARACTER NAME:</strong> <span class="line-input" style="width: 130px;"></span></div>
-                    <div><strong>COMBAT ARCHETYPE:</strong> <span class="line-input" style="width: 120px;"></span></div>
-                    <div><strong>DRIVE / MOTIVATION:</strong> <span class="line-input" style="width: 120px;"></span></div>
-                    <div><strong>BACKGROUND:</strong> <span class="line-input" style="width: 150px;"></span></div>
+                    <div><strong>CHARACTER NAME:</strong> <span class="line-input" style="width: 140px;"></span></div>
+                    <div><strong>COMBAT ARCHETYPE:</strong> <span class="line-input" style="width: 130px;"></span></div>
+                    <div><strong>DRIVE / MOTIVATION:</strong> <span class="line-input" style="width: 130px;"></span></div>
+                    <div><strong>BACKGROUND:</strong> <span class="line-input" style="width: 160px;"></span></div>
                     <div><strong>LEVEL / XP:</strong> Level 1 [ ] / XP: ____</div>
-                    <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 140px;"></span></div>
+                    <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 150px;"></span></div>
                 </div>
             </div>
 
@@ -223,7 +228,7 @@
                 </div>
                 <div class="box">
                     <strong>PRIMARY ATTACK ENGINE</strong><br><br>
-                    Weapon: <span class="line-input" style="width: 110px;"></span><br>
+                    Weapon: <span class="line-input" style="width: 120px;"></span><br>
                     Base Dmg: ____ + Attr Mod: +____<br>
                     <strong>TOTAL FLAT DAMAGE: [ ______ ]</strong><br>
                     <small><i>Natural 20: Add Attr Mod a 2nd time.</i></small>
@@ -232,17 +237,17 @@
 
             <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod)</h2>
             <div class="sheet-grid">
-                <div>[ 1 ] Armor: <span class="line-input" style="width: 160px;"></span></div>
-                <div>[ 5 ] Item: <span class="line-input" style="width: 160px;"></span></div>
-                <div>[ 2 ] Shield: <span class="line-input" style="width: 160px;"></span></div>
-                <div>[ 6 ] Item: <span class="line-input" style="width: 160px;"></span></div>
-                <div>[ 3 ] Primary Weapon: <span class="line-input" style="width: 120px;"></span></div>
-                <div>[ 7 ] Item: <span class="line-input" style="width: 160px;"></span></div>
-                <div>[ 4 ] Secondary/Tool: <span class="line-input" style="width: 120px;"></span></div>
-                <div>[ 8 ] Item: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 1 ] Armor: <span class="line-input" style="width: 180px;"></span></div>
+                <div>[ 5 ] Item: <span class="line-input" style="width: 180px;"></span></div>
+                <div>[ 2 ] Shield: <span class="line-input" style="width: 180px;"></span></div>
+                <div>[ 6 ] Item: <span class="line-input" style="width: 180px;"></span></div>
+                <div>[ 3 ] Primary Weapon: <span class="line-input" style="width: 140px;"></span></div>
+                <div>[ 7 ] Item: <span class="line-input" style="width: 180px;"></span></div>
+                <div>[ 4 ] Secondary/Tool: <span class="line-input" style="width: 140px;"></span></div>
+                <div>[ 8 ] Item: <span class="line-input" style="width: 180px;"></span></div>
             </div>
 
-            <div class="box" style="margin-top: 15px;">
+            <div class="box" style="margin-top: 10px;">
                 <strong>QUICK-REF SYSTEM CHECKS (BASE THRESHOLD = 14)</strong><br>
                 • <strong>Twin Die Engine:</strong> Spend 1 RP before a roll (max 1/turn) to gain <strong>Advantage</strong> (Roll 2d20, keep high). Disadvantage = Roll 2d20, keep low. Both together = standard 1d20.<br>
                 • <strong>Out-of-Combat Check:</strong> Roll 1d20 + Attr Mod vs 14.<br>
@@ -279,7 +284,7 @@
 
                     <div class="box">
                         <strong>THE TWIN DIE ENGINE</strong><br>
-                        Spend 1 Resolute Point (RP) before any roll to buy <strong>Advantage</strong> (Roll 2d20, keep highest). <em>You may only buy Advantage once per turn.</em><br>
+                        Spend 1 Resolute Point (RP) before any roll to buy <strong>Advantage</strong> (Roll 2d20, keep highest). <em>Max 1/turn.</em><br>
                         Severe obstacles or environmental hazards impose <strong>Disadvantage</strong> (Roll 2d20, keep lowest).<br>
                         <em>Cancellation Rule: If you have Disadvantage and spend 1 RP to buy Advantage, they cancel each other out. You roll a standard 1d20.</em>
                     </div>
@@ -298,7 +303,7 @@
                         When reduced to 0 HP, you immediately fall Prone, drop your items, and become <strong>Unconscious</strong>. You can no longer take phases.<br>
                         • <strong>The Bleed Out:</strong> You will die permanently in a number of rounds equal to your Will modifier (minimum 1 round).<br>
                         • <strong>Stabilization:</strong> An adjacent ally can spend their Action Phase to roll a Will check vs 14. On success, you stabilize at 1 HP.<br>
-                        • <strong>Execution:</strong> Any direct damage taken while Unconscious at 0 HP results in instant, permanent death.
+                        • <strong>Execution:</strong> Any direct damage taken while Unconscious at 0 HP results in instant death.
                     </div>
                 </div>
 
@@ -344,7 +349,7 @@
                         <tbody>
                             <tr><td>Light Armor</td><td>DR -1</td><td>None</td></tr>
                             <tr><td>Heavy Armor</td><td>DR -2</td><td>Requires 3 Might</td></tr>
-                            <tr><td>Shield</td><td>Active Guard</td><td>1 Hand; Spend Action Phase to gain Advantage on all Evasion rolls until next turn</td></tr>
+                            <tr><td>Shield</td><td>Active Guard</td><td>1 Hand; Spend Action Phase for Evasion Adv until next turn</td></tr>
                         </tbody>
                     </table>
                     <p><strong>Inventory Limit:</strong> Max slots = <strong>4 + Might modifier</strong>. Over-encumbrance causes Disadvantage on all rolls and halves movement.</p>
@@ -493,73 +498,92 @@
         <div class="content-wrap">
             <h1>THE GUIDE'S MANUAL</h1>
 
-            <h2>1. ADJUDICATING THE THRESHOLD (14)</h2>
-            <p>The Guide never rolls for difficulty or monster attacks. All player checks target 14. Adjust difficulty using Advantage (favorable/easy context) or Disadvantage (extreme hazards/heavy opposition).</p>
+            <div class="two-column">
+                <div>
+                    <h2>1. ADJUDICATING THE THRESHOLD (14)</h2>
+                    <p>The Guide never rolls for difficulty or monster attacks. All player checks target 14. Adjust difficulty using Advantage (favorable/easy context) or Disadvantage (extreme hazards/heavy opposition).</p>
 
-            <h2>2. ENVIRONMENTAL HAZARD DAMAGE</h2>
-            <ul>
-                <li><strong>Minor Hazard:</strong> 2 Flat Damage (Scrapes, minor toxins, sprained ankles).</li>
-                <li><strong>Major Hazard:</strong> 5 Flat Damage (Deep cuts, heavy kinetic traps, electrical shocks).</li>
-                <li><strong>Lethal Hazard:</strong> 10 Flat Damage (Point-blank explosions, massive collapses).</li>
-            </ul>
-
-            <h2>3. THREAT TIERS & PLAYER-FACING STATS</h2>
-            <table>
-                <thead>
-                    <tr><th>Threat Tier</th><th>HP</th><th>DR</th><th>Incoming Dmg</th><th>Combat Traits & Evasion Rules</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Tier 1: Minions</td><td>3</td><td>0</td><td>2</td><td>Standard Evasion vs 14.</td></tr>
-                    <tr><td>Tier 2: Standard</td><td>12</td><td>0</td><td>3</td><td>Standard Evasion vs 14.</td></tr>
-                    <tr><td>Tier 3: Elite</td><td>25</td><td>-1</td><td>6</td><td><strong>Hard Target:</strong> Player attacks suffer Disadvantage unless the player attacks from concealment.<br><strong>Tactical:</strong> Forces Disadvantage on player Evasion if the player is Prone or Dazed.</td></tr>
-                    <tr><td>Tier 4: Boss / Leader</td><td>55</td><td>-2</td><td>8</td><td><strong>Legendary Defense:</strong> Player attacks naturally suffer Disadvantage.<br><strong>Frenzy:</strong> 2 Actions per turn (forces player to roll Evasion twice).</td></tr>
-                </tbody>
-            </table>
-
-            <p><strong>LEVEL SCALING:</strong> The baseline stats above are balanced for Levels 1–2. As the party levels up, apply these flat modifiers to keep combat dangerous:</p>
-            <ul>
-                <li><strong>Veteran (Levels 3–5):</strong> All enemies gain <strong>+5 HP</strong> and <strong>+1 Damage</strong>. <em>(Bosses gain +15 HP)</em>.</li>
-                <li><strong>Apex (Levels 6–8):</strong> All enemies gain <strong>+10 HP</strong>, <strong>+2 Damage</strong>, and <strong>+1 DR</strong>. <em>(Bosses gain +30 HP)</em>.</li>
-            </ul>
-
-            <h2>4. ENEMY MODIFIERS & ENCOUNTER SCALING</h2>
-            <p><strong>Encounter Scaling Examples (For a standard party of 4):</strong></p>
-            <ul>
-                <li><strong>Light Skirmish:</strong> 4 Minions, 2 Standards</li>
-                <li><strong>Tactical Clash:</strong> 3 Minions, 2 Standards, 1 Elite</li>
-                <li><strong>Heavy Assault:</strong> 4 Standards, 2 Elites</li>
-                <li><strong>Apex Boss Fight:</strong> 5 Minions, 1 Boss</li>
-            </ul>
-            <p><strong>General Modifiers:</strong></p>
-            <ul>
-                <li><strong>Heavy / Armored:</strong> Add -1 Damage Reduction to enemy (halve movement).</li>
-                <li><strong>Agile / Skirmisher:</strong> Player rolls Evasion with Disadvantage (+2 Movement paces, subtract 2 HP).</li>
-                <li><strong>Lethal / Sniper:</strong> Add +2 to incoming Flat Damage (subtract 5 HP).</li>
-                <li><strong>Morale Test:</strong> When losing half their numbers or leader, roll 1d20. On 10 or lower, surviving enemies flee or surrender.</li>
-            </ul>
-
-            <h2>5. TACTICAL & ENVIRONMENTAL RULES</h2>
-            <ul>
-                <li><strong>Partial Cover:</strong> Crouching behind objects grants <strong>Advantage on Evasion Rolls</strong> against Ranged attacks.</li>
-                <li><strong>Full Cover:</strong> You cannot be targeted until the enemy physically bypasses the cover.</li>
-                <li><strong>Status Conditions:</strong>
+                    <h2>2. ENVIRONMENTAL HAZARD DAMAGE</h2>
                     <ul>
-                        <li><em>Prone:</em> Spend Move Phase to stand up.</li>
-                        <li><em>Dazed:</em> Disadvantage on next action roll; movement halved.</li>
-                        <li><em>Pinned:</em> Forfeit next Action Phase.</li>
-                        <li><em>Stunned:</em> Forfeit next Action and Move Phase.</li>
+                        <li><strong>Minor Hazard:</strong> 2 Flat Damage (Scrapes, minor toxins, sprained ankles).</li>
+                        <li><strong>Major Hazard:</strong> 5 Flat Damage (Deep cuts, heavy kinetic traps, electrical shocks).</li>
+                        <li><strong>Lethal Hazard:</strong> 10 Flat Damage (Point-blank explosions, massive collapses).</li>
                     </ul>
-                </li>
-                <li><strong>Environmental Physics:</strong> Falling &gt;2 paces inflicts 2 flat damage per pace fallen. Difficult terrain halves movement.</li>
-            </ul>
-            
-            <h2>6. REST, RECOVERY & REWARDING RP</h2>
-            <ul>
-                <li><strong>Short Breather:</strong> (10-15 mins). Recover HP equal to Might mod, and RP equal to Will mod (min 1 each).</li>
-                <li><strong>Rough Sleep:</strong> (6-8 hrs) in hostile territory. Recover HP and RP equal to total combined Attributes.</li>
-                <li><strong>Sanctuary Rest:</strong> (24 hrs) Safe rest. Fully restores HP and RP.</li>
-                <li><strong>Rewarding Resolute Points (RP):</strong> The Guide should award 1 RP to a player when they play heavily into their Drive to their own detriment, execute a brilliant tactical maneuver, or deeply engage the table in roleplay.</li>
-            </ul>
+
+                    <h2>3. THREAT TIERS & PLAYER-FACING STATS</h2>
+                    <table>
+                        <thead>
+                            <tr><th>Threat Tier</th><th>HP</th><th>DR</th><th>Incoming Dmg</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Tier 1: Minions</td><td>3</td><td>0</td><td>2</td></tr>
+                            <tr><td>Tier 2: Standard</td><td>12</td><td>0</td><td>3</td></tr>
+                            <tr><td>Tier 3: Elite</td><td>25</td><td>-1</td><td>6</td></tr>
+                            <tr><td>Tier 4: Boss / Leader</td><td>55</td><td>-2</td><td>8</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Combat Traits & Evasion Rules:</strong></p>
+                    <ul>
+                        <li><strong>Elite:</strong> Player attacks suffer Disadvantage unless attacking from concealment. Forces Disadvantage on player Evasion if the player is Prone or Dazed.</li>
+                        <li><strong>Boss:</strong> Player attacks naturally suffer Disadvantage. 2 Actions per turn (forces player to roll Evasion twice).</li>
+                    </ul>
+
+                    <p><strong>LEVEL SCALING:</strong> The baseline stats above are balanced for Levels 1–2. As the party levels up, apply these flat modifiers to keep combat dangerous:</p>
+                    <ul>
+                        <li><strong>Veteran (Levels 3–5):</strong> All enemies gain <strong>+5 HP</strong> and <strong>+1 Damage</strong>. <em>(Bosses gain +15 HP)</em>.</li>
+                        <li><strong>Apex (Levels 6–8):</strong> All enemies gain <strong>+10 HP</strong>, <strong>+2 Damage</strong>, and <strong>+1 DR</strong>. <em>(Bosses gain +30 HP)</em>.</li>
+                    </ul>
+
+                </div>
+                
+                <div>
+                    <h2>4. ENEMY MODIFIERS & ENCOUNTER SCALING</h2>
+                    <p><strong>Encounter Scaling Examples (For a standard party of 4):</strong></p>
+                    <ul>
+                        <li><strong>Light Skirmish:</strong> 4 Minions, 2 Standards</li>
+                        <li><strong>Tactical Clash:</strong> 3 Minions, 2 Standards, 1 Elite</li>
+                        <li><strong>Heavy Assault:</strong> 4 Standards, 2 Elites</li>
+                        <li><strong>Apex Boss Fight:</strong> 5 Minions, 1 Boss</li>
+                    </ul>
+                    <p><strong>General Modifiers:</strong></p>
+                    <ul>
+                        <li><strong>Heavy / Armored:</strong> Add -1 Damage Reduction to enemy (halve movement).</li>
+                        <li><strong>Agile / Skirmisher:</strong> Player rolls Evasion with Disadvantage (+2 Movement paces, subtract 2 HP).</li>
+                        <li><strong>Lethal / Sniper:</strong> Add +2 to incoming Flat Damage (subtract 5 HP).</li>
+                        <li><strong>Morale Test:</strong> When losing half their numbers or leader, roll 1d20. On 10 or lower, surviving enemies flee or surrender.</li>
+                    </ul>
+
+                    <h2>5. TACTICAL & ENVIRONMENTAL RULES</h2>
+                    <ul>
+                        <li><strong>Partial Cover:</strong> Crouching behind objects grants <strong>Advantage on Evasion Rolls</strong> against Ranged attacks.</li>
+                        <li><strong>Full Cover:</strong> You cannot be targeted until the enemy physically bypasses the cover.</li>
+                        <li><strong>Status Conditions:</strong>
+                            <ul>
+                                <li><em>Prone:</em> Spend Move Phase to stand up.</li>
+                                <li><em>Dazed:</em> Disadvantage on next action roll; movement halved.</li>
+                                <li><em>Pinned:</em> Forfeit next Action Phase.</li>
+                                <li><em>Stunned:</em> Forfeit next Action and Move Phase.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Environmental Physics:</strong> Falling &gt;2 paces inflicts 2 flat damage per pace fallen. Difficult terrain halves movement.</li>
+                    </ul>
+                    
+                    <h2>6. REST, RECOVERY & REWARDING RP</h2>
+                    <ul>
+                        <li><strong>Short Breather:</strong> (10-15 mins). Recover HP equal to Might mod, and RP equal to Will mod (min 1 each).</li>
+                        <li><strong>Rough Sleep:</strong> (6-8 hrs) in hostile territory. Recover HP and RP equal to total combined Attributes.</li>
+                        <li><strong>Sanctuary Rest:</strong> (24 hrs) Safe rest. Fully restores HP and RP.</li>
+                        <li><strong>Rewarding Resolute Points (RP):</strong> The Guide should award 1 RP to a player when they play heavily into their Drive to their own detriment, execute a brilliant tactical maneuver, or deeply engage the table in roleplay.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box" style="margin-top: 15px; background-color: #f0f4f8; border-color: #2b5b84;">
+                <h3 style="margin-top: 0; color: #1a1a1a;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</h3>
+                <p>When a player fails an Out-of-Combat Check vs 14, do not let the story stall. Instead of simply saying "you fail," introduce a complication. They pick the lock, but alert a guard. They decipher the ancient text, but trigger a trap. They repair the engine, but permanently break a crucial tool. Every roll should push the narrative forward, even when the dice betray the players.</p>
+            </div>
+
         </div>
         <div class="page-num">Page 5</div>
     </div>
