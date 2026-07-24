@@ -468,19 +468,27 @@
             <h2>3. THREAT TIERS & PLAYER-FACING STATS</h2>
             <table>
                 <thead>
-                    <tr><th>Threat Tier</th><th>HP</th><th>Incoming Dmg</th><th>Evasion Rules / Modifiers</th></tr>
+                    <tr><th>Threat Tier</th><th>HP</th><th>DR</th><th>Incoming Dmg</th><th>Combat Traits & Evasion Rules</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>Tier 1: Minions</td><td>3</td><td>2</td><td>Standard Evasion vs 14.</td></tr>
-                    <tr><td>Tier 2: Standard</td><td>12</td><td>3</td><td>Standard Evasion vs 14.</td></tr>
-                    <tr><td>Tier 3: Elite</td><td>22</td><td>5</td><td>Tactical: Forces Disadvantage on Evasion if player is flanked.</td></tr>
-                    <tr><td>Tier 4: Boss / Leader</td><td>45</td><td>6</td><td>2 Actions per turn (forces player to roll Evasion twice per round).</td></tr>
+                    <tr><td>Tier 1: Minions</td><td>3</td><td>0</td><td>2</td><td>Standard Evasion vs 14.</td></tr>
+                    <tr><td>Tier 2: Standard</td><td>12</td><td>0</td><td>3</td><td>Standard Evasion vs 14.</td></tr>
+                    <tr><td>Tier 3: Elite</td><td>25</td><td>-1</td><td>6</td><td><strong>Hard Target:</strong> Player attacks suffer Disadvantage unless the player attacks from concealment.<br><strong>Tactical:</strong> Forces Disadvantage on player Evasion if the player is Prone or Dazed.</td></tr>
+                    <tr><td>Tier 4: Boss / Leader</td><td>55</td><td>-2</td><td>8</td><td><strong>Legendary Defense:</strong> Player attacks naturally suffer Disadvantage.<br><strong>Frenzy:</strong> 2 Actions per turn (forces player to roll Evasion twice).</td></tr>
                 </tbody>
             </table>
 
-            <h2>4. ENEMY MODIFIERS & MORALE</h2>
+            <h2>4. ENEMY MODIFIERS & ENCOUNTER SCALING</h2>
+            <p><strong>Encounter Scaling Examples (For a standard party of 4):</strong></p>
             <ul>
-                <li><strong>Heavy / Armored:</strong> Add +1 Damage Reduction to enemy (halve movement).</li>
+                <li><strong>Light Skirmish:</strong> 4 Minions, 2 Standards</li>
+                <li><strong>Tactical Clash:</strong> 3 Minions, 2 Standards, 1 Elite</li>
+                <li><strong>Heavy Assault:</strong> 4 Standards, 2 Elites</li>
+                <li><strong>Apex Boss Fight:</strong> 5 Minions, 1 Boss</li>
+            </ul>
+            <p><strong>General Modifiers:</strong></p>
+            <ul>
+                <li><strong>Heavy / Armored:</strong> Add -1 Damage Reduction to enemy (halve movement).</li>
                 <li><strong>Agile / Skirmisher:</strong> Player rolls Evasion with Disadvantage (+2 Movement paces, subtract 2 HP).</li>
                 <li><strong>Lethal / Sniper:</strong> Add +2 to incoming Flat Damage (subtract 5 HP).</li>
                 <li><strong>Morale Test:</strong> When losing half their numbers or leader, roll 1d20. On 10 or lower, surviving enemies flee or surrender.</li>
@@ -489,7 +497,7 @@
             <h2>5. TACTICAL & ENVIRONMENTAL RULES</h2>
             <ul>
                 <li><strong>Partial Cover:</strong> Crouching behind objects grants <strong>Advantage on Evasion Rolls</strong> against Ranged attacks.</li>
-                <li><strong>Full Cover:</strong> You cannot be targeted until the enemy physically flanks you.</li>
+                <li><strong>Full Cover:</strong> You cannot be targeted until the enemy physically bypasses the cover.</li>
                 <li><strong>Status Conditions:</strong>
                     <ul>
                         <li><em>Prone:</em> Spend Move Phase to stand up.</li>
