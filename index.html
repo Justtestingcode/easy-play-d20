@@ -33,15 +33,15 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.32;
+            line-height: 1.35;
         }
 
         .page {
             width: 8.5in;
             height: 11in;
             background-color: var(--page-color);
-            padding: 0.38in 0.4in 0.48in 0.4in;
-            margin-bottom: 20px;
+            padding: 0.4in 0.4in 0.45in 0.4in;
+            margin-bottom: 25px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             position: relative;
             overflow: hidden;
@@ -57,53 +57,53 @@
 
         h1 {
             text-align: center;
-            font-size: 17.5px;
+            font-size: 18px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 2px;
+            padding-bottom: 3px;
         }
 
         h2 {
-            font-size: 11.5px;
+            font-size: 12px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 6px;
+            margin-top: 8px;
             margin-bottom: 3px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 10px;
+            font-size: 10.5px;
             color: #2b5b84;
-            margin-top: 5px;
+            margin-top: 6px;
             margin-bottom: 2px;
             text-transform: uppercase;
         }
 
         p, li, div, td, th {
-            font-size: 9.2px;
+            font-size: 9.5px;
         }
 
         p, li {
-            margin-top: 1px;
-            margin-bottom: 2px;
+            margin-top: 2px;
+            margin-bottom: 3px;
         }
 
         ul {
-            padding-left: 13px;
-            margin-top: 1px;
-            margin-bottom: 3px;
+            padding-left: 14px;
+            margin-top: 2px;
+            margin-bottom: 4px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 3px;
-            margin-bottom: 4px;
+            margin-top: 4px;
+            margin-bottom: 5px;
         }
 
         th, td {
@@ -121,28 +121,28 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 5px 7px;
-            margin-top: 3px;
-            margin-bottom: 3px;
+            padding: 5px 8px;
+            margin-top: 4px;
+            margin-bottom: 4px;
             border-radius: 2px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6px;
+            gap: 8px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 6px;
+            gap: 8px;
         }
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 14px;
             align-items: start;
         }
 
@@ -158,11 +158,11 @@
 
         .page-num {
             position: absolute;
-            bottom: 0.18in;
+            bottom: 0.15in;
             right: 0.4in;
-            font-size: 8.5px;
+            font-size: 9px;
             font-weight: bold;
-            color: #555;
+            color: #444;
             z-index: 20;
             background-color: var(--page-color);
             padding: 1px 4px;
@@ -171,14 +171,14 @@
         .pro-tip {
             background-color: #f8f9fa;
             border-left: 3px solid #2b5b84;
-            padding: 3px 5px;
-            margin-top: 3px;
+            padding: 4px 6px;
+            margin-top: 4px;
             margin-bottom: 4px;
             font-style: italic;
-            font-size: 8.8px;
+            font-size: 9px;
         }
 
-        /* LINED NOTES BOX WITH HORIZONTAL RULED WRITING LINES */
+        /* DYNAMIC FLEX-STRETCHED LINED NOTES BOX TO FILL ALL REMAINING WHITE SPACE */
         .notes-box {
             border: 1px solid var(--border-color);
             background-color: #ffffff;
@@ -190,11 +190,13 @@
             );
             background-position: 0 16px;
             padding: 2px 6px;
-            margin-top: auto;
-            margin-bottom: 4px;
+            margin-top: 8px;
+            margin-bottom: 0;
             border-radius: 2px;
             width: 100%;
             box-sizing: border-box;
+            flex: 1 1 auto;
+            min-height: 45px;
         }
 
         .notes-title {
@@ -208,14 +210,6 @@
             padding-right: 4px;
             line-height: 12px;
         }
-
-        /* EXACT HEIGHT CALCULATIONS TO FILL WHITE SPACE SAFELY ABOVE FOOTER */
-        .notes-p1 { height: 56px; }
-        .notes-p2 { height: 110px; }
-        .notes-p3 { height: 110px; }
-        .notes-p4 { height: 110px; }
-        .notes-p5 { height: 56px; }
-        .notes-p6 { height: 92px; }
 
         .genre-table th:nth-child(1), .genre-table td:nth-child(1) { width: 25%; }
         .genre-table th:nth-child(2), .genre-table td:nth-child(2) { width: 38%; }
@@ -314,7 +308,7 @@
                 <div>[ 8 ] Item: <span class="line-input" style="width: 150px;"></span></div>
             </div>
 
-            <div class="box" style="margin-top: 3px;">
+            <div class="box" style="margin-top: 4px;">
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
                 • <strong>The 14+ Rule:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.<br />
                 • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling to gain <strong>Advantage</strong> (roll 2d20, keep high; max 1/turn). Hazards impose <strong>Disadvantage</strong> (roll 2d20, keep low). Advantage + Disadvantage cancel to a flat 1d20 roll.<br />
@@ -323,7 +317,7 @@
                 • <strong>Dying and Bleed Out (0 HP):</strong> At 0 HP you fall Unconscious. You bleed out in rounds equal to your Will modifier (min 1). An adjacent ally must spend an Action Phase to pass a Will Check vs 14 to stabilize you at 1 HP.
             </div>
 
-            <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 3px;">
+            <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 4px;">
                 <strong style="color: #2b5b84;">ACTION PHASE MANEUVERS (NON-ATTACK)</strong><br />
                 • <strong>Active Guard:</strong> Raise an equipped Shield to gain Advantage on all Evasion rolls until your next turn.<br />
                 • <strong>Dash:</strong> Forfeit your attack to immediately move your total Movement paces a second time.<br />
@@ -332,8 +326,8 @@
                 • <strong>Interact:</strong> Manipulate complex objects, pick a lock, pull a heavy lever, or hand a consumable item to a teammate.
             </div>
 
-            <!-- LINED NOTES BOX PAGE 1 -->
-            <div class="notes-box notes-p1">
+            <!-- STRETCHED LINED NOTES BOX PAGE 1 -->
+            <div class="notes-box">
                 <span class="notes-title">SESSION & CHARACTER NOTES:</span>
             </div>
         </div>
@@ -446,8 +440,8 @@
                 </div>
             </div>
 
-            <!-- LINED NOTES BOX PAGE 2 -->
-            <div class="notes-box notes-p2">
+            <!-- STRETCHED LINED NOTES BOX PAGE 2 -->
+            <div class="notes-box">
                 <span class="notes-title">CORE RULES & ARMORY NOTES:</span>
             </div>
         </div>
@@ -516,8 +510,8 @@
                 </div>
             </div>
 
-            <!-- LINED NOTES BOX PAGE 3 -->
-            <div class="notes-box notes-p3">
+            <!-- STRETCHED LINED NOTES BOX PAGE 3 -->
+            <div class="notes-box">
                 <span class="notes-title">FRONTLINE COMBAT NOTES & SYNERGIES:</span>
             </div>
         </div>
@@ -585,8 +579,8 @@
                 </div>
             </div>
 
-            <!-- LINED NOTES BOX PAGE 4 -->
-            <div class="notes-box notes-p4">
+            <!-- STRETCHED LINED NOTES BOX PAGE 4 -->
+            <div class="notes-box">
                 <span class="notes-title">TACTICAL SUPPORT & GEAR NOTES:</span>
             </div>
         </div>
@@ -680,13 +674,13 @@
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 3px; background-color: #f0f4f8; border-color: #2b5b84;">
+            <div class="box" style="margin-top: 4px; background-color: #f0f4f8; border-color: #2b5b84;">
                 <h3 style="margin-top: 0; color: #1a1a1a;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</h3>
                 <p>On a failed Out-of-Combat Check vs 14, avoid simply saying "nothing happens." Introduce a complication: picking a lock alerts a guard; deciphering a rune causes mental shock; repairing an engine burns out a rare component. Roll 1d20 to decide severity (1-10 = Minor complication like noise or delays, 11-20 = Major complication like tool breakage or immediately taking 5 Flat Damage). Every failed roll pushes the narrative forward with fresh tension.</p>
             </div>
 
-            <!-- LINED NOTES BOX PAGE 5 -->
-            <div class="notes-box notes-p5">
+            <!-- STRETCHED LINED NOTES BOX PAGE 5 -->
+            <div class="notes-box">
                 <span class="notes-title">ENCOUNTER & CAMPAIGN TRACKING NOTES:</span>
             </div>
         </div>
@@ -797,8 +791,8 @@
                 </div>
             </div>
 
-            <!-- LINED NOTES BOX PAGE 6 -->
-            <div class="notes-box notes-p6">
+            <!-- STRETCHED LINED NOTES BOX PAGE 6 -->
+            <div class="notes-box">
                 <span class="notes-title">GENRE & WORLD-BUILDING NOTES:</span>
             </div>
         </div>
