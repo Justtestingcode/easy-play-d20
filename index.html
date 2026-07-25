@@ -16,7 +16,7 @@
 
         @page {
             size: letter;
-            margin: 0.4in;
+            margin: 0.35in;
         }
 
         * {
@@ -26,20 +26,20 @@
         body {
             background-color: var(--bg-color);
             margin: 0;
-            padding: 20px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.4;
+            line-height: 1.32;
         }
 
         .page {
             width: 8.5in;
             height: 11in;
             background-color: var(--page-color);
-            padding: 0.45in;
+            padding: 0.4in;
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             position: relative;
@@ -54,56 +54,56 @@
 
         h1 {
             text-align: center;
-            font-size: 19px;
+            font-size: 18px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 3px;
+            padding-bottom: 2px;
         }
 
         h2 {
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 8px;
+            margin-top: 6px;
             margin-bottom: 3px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 11px;
+            font-size: 10.5px;
             color: #2b5b84;
-            margin-top: 6px;
+            margin-top: 5px;
             margin-bottom: 2px;
             text-transform: uppercase;
         }
 
         p, li {
-            font-size: 10px;
+            font-size: 9.5px;
             margin-top: 2px;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         ul {
-            padding-left: 15px;
+            padding-left: 14px;
             margin-top: 2px;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 4px;
-            margin-bottom: 6px;
-            font-size: 9.5px;
+            margin-top: 3px;
+            margin-bottom: 4px;
+            font-size: 9px;
         }
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 4px 5px;
+            padding: 2px 4px;
             text-align: left;
         }
 
@@ -116,51 +116,51 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 6px 9px;
-            margin-top: 4px;
-            margin-bottom: 5px;
+            padding: 4px 7px;
+            margin-top: 3px;
+            margin-bottom: 4px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6px;
+            gap: 5px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 6px;
+            gap: 5px;
         }
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 14px;
+            gap: 12px;
         }
 
         .line-input {
             border-bottom: 1px solid #000;
             display: inline-block;
-            min-width: 90px;
+            min-width: 80px;
         }
 
         .page-num {
             position: absolute;
-            bottom: 0.3in;
-            right: 0.45in;
-            font-size: 9px;
+            bottom: 0.25in;
+            right: 0.4in;
+            font-size: 8.5px;
             color: #666;
         }
 
         .pro-tip {
             background-color: #f8f9fa;
             border-left: 3px solid #2b5b84;
-            padding: 4px 8px;
-            margin-top: 4px;
-            margin-bottom: 8px;
+            padding: 3px 6px;
+            margin-top: 3px;
+            margin-bottom: 5px;
             font-style: italic;
-            font-size: 9.5px;
+            font-size: 9px;
         }
 
         @media print {
@@ -192,12 +192,12 @@
             
             <div class="box">
                 <div class="sheet-grid">
-                    <div><strong>CHARACTER NAME:</strong> <span class="line-input" style="width: 140px;"></span></div>
-                    <div><strong>COMBAT ARCHETYPE:</strong> <span class="line-input" style="width: 130px;"></span></div>
-                    <div><strong>DRIVE / MOTIVATION:</strong> <span class="line-input" style="width: 130px;"></span></div>
-                    <div><strong>BACKGROUND:</strong> <span class="line-input" style="width: 160px;"></span></div>
+                    <div><strong>CHARACTER NAME:</strong> <span class="line-input" style="width: 130px;"></span></div>
+                    <div><strong>COMBAT ARCHETYPE:</strong> <span class="line-input" style="width: 120px;"></span></div>
+                    <div><strong>DRIVE / MOTIVATION:</strong> <span class="line-input" style="width: 120px;"></span></div>
+                    <div><strong>BACKGROUND:</strong> <span class="line-input" style="width: 150px;"></span></div>
                     <div><strong>LEVEL / XP:</strong> Level 1 [ ] / XP: ____</div>
-                    <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 150px;"></span></div>
+                    <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 140px;"></span></div>
                 </div>
             </div>
 
@@ -205,39 +205,36 @@
             <div class="sheet-grid-3">
                 <div class="box" style="text-align: center;">
                     <strong>MIGHT</strong><br>
-                    <small>Brawn / Force / Endurance</small><br><br>
-                    <strong>MODIFIER: +[ ____ ]</strong><br><br>
-                    HP: (Might x 4) + 15<br>
-                    <strong>Current HP: [ ________ ]</strong>
+                    <small>Brawn / Force / Endurance</small><br>
+                    <strong>MODIFIER: +[ ____ ]</strong><br>
+                    HP: (Might x 4) + 15 | <strong>Current HP: [ ______ ]</strong>
                 </div>
                 <div class="box" style="text-align: center;">
                     <strong>AGILITY</strong><br>
-                    <small>Reflexes / Speed / Evasion</small><br><br>
-                    <strong>MODIFIER: +[ ____ ]</strong><br><br>
-                    Movement: 2 + Agility<br>
-                    <strong>Max Paces: [ ________ ]</strong>
+                    <small>Reflexes / Speed / Evasion</small><br>
+                    <strong>MODIFIER: +[ ____ ]</strong><br>
+                    Movement: 2 + Agility | <strong>Max Paces: [ ______ ]</strong>
                 </div>
                 <div class="box" style="text-align: center;">
                     <strong>WILL</strong><br>
-                    <small>Mind / Perception / Focus</small><br><br>
-                    <strong>MODIFIER: +[ ____ ]</strong><br><br>
-                    Resolute: Will x 2<br>
-                    <strong>Current RP: [ ________ ]</strong>
+                    <small>Mind / Perception / Focus</small><br>
+                    <strong>MODIFIER: +[ ____ ]</strong><br>
+                    Resolute: Will x 2 | <strong>Current RP: [ ______ ]</strong>
                 </div>
             </div>
 
             <h2>COMBAT ENGINE & DEFENSE</h2>
             <div class="sheet-grid">
                 <div class="box">
-                    <strong>ARMOR & DAMAGE REDUCTION (DR)</strong><br><br>
+                    <strong>ARMOR & DAMAGE REDUCTION (DR)</strong><br>
                     [ ] Light Armor (DR -1)<br>
                     [ ] Heavy Armor (DR -2, Req 3 Might)<br>
-                    [ ] Shield (Active Guard: Spend Action Phase for Adv on all Evasion rolls until next turn)<br><br>
+                    [ ] Shield (Active Guard: Action Phase = Adv Evasion)<br>
                     <strong>TOTAL ARMOR DR: [ ______ ]</strong>
                 </div>
                 <div class="box">
-                    <strong>PRIMARY ATTACK ENGINE</strong><br><br>
-                    Weapon: <span class="line-input" style="width: 120px;"></span><br>
+                    <strong>PRIMARY ATTACK ENGINE</strong><br>
+                    Weapon: <span class="line-input" style="width: 110px;"></span><br>
                     Base Dmg: ____ + Attr Mod: +____<br>
                     <strong>TOTAL FLAT DAMAGE: [ ______ ]</strong><br>
                     <small><i>Natural 20: Add Attr Mod a 2nd time.</i></small>
@@ -246,23 +243,23 @@
 
             <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod)</h2>
             <div class="sheet-grid">
-                <div>[ 1 ] Armor: <span class="line-input" style="width: 180px;"></span></div>
-                <div>[ 5 ] Item: <span class="line-input" style="width: 180px;"></span></div>
-                <div>[ 2 ] Shield: <span class="line-input" style="width: 180px;"></span></div>
-                <div>[ 6 ] Item: <span class="line-input" style="width: 180px;"></span></div>
-                <div>[ 3 ] Primary Weapon: <span class="line-input" style="width: 140px;"></span></div>
-                <div>[ 7 ] Item: <span class="line-input" style="width: 180px;"></span></div>
-                <div>[ 4 ] Secondary/Tool: <span class="line-input" style="width: 140px;"></span></div>
-                <div>[ 8 ] Item: <span class="line-input" style="width: 180px;"></span></div>
+                <div>[ 1 ] Armor: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 5 ] Item: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 2 ] Shield: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 6 ] Item: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 3 ] Primary Weapon: <span class="line-input" style="width: 130px;"></span></div>
+                <div>[ 7 ] Item: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 4 ] Secondary/Tool: <span class="line-input" style="width: 130px;"></span></div>
+                <div>[ 8 ] Item: <span class="line-input" style="width: 160px;"></span></div>
             </div>
 
-            <div class="box" style="margin-top: 10px;">
-                <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL BASELINE THRESHOLD = 14)</strong><br>
-                • <strong>The Twin Die Engine:</strong> Spend 1 Resolute Point (RP) before rolling to gain <strong>Advantage</strong> (roll 2d20 and take the higher value). A maximum of 1 RP may be spent to buy Advantage per turn. Environmental hazards or severe obstacles impose <strong>Disadvantage</strong> (roll 2d20 and keep the lower value). If Advantage and Disadvantage apply simultaneously, they cancel each other out completely, resulting in a standard single 1d20 roll.<br>
-                • <strong>Out-of-Combat Check:</strong> Roll 1d20 + the appropriate Attribute Modifier against the Baseline Threshold of 14. A final total of 14 or higher indicates success.<br>
-                • <strong>Action Phase (Attacking):</strong> Roll 1d20 + the designated Weapon Attribute Modifier vs 14. If the roll succeeds (14+), you instantly inflict your calculated Total Flat Damage directly to the enemy's Health Points.<br>
-                • <strong>Evasion Phase (Defending):</strong> On an enemy's turn, when targeted by an attack, roll 1d20 + Agility Modifier vs 14. Achieving a 14 or higher completely dodges the blow for 0 damage. Failing (&lt;14) means taking incoming flat enemy damage minus your total Armor DR.<br>
-                • <strong>Dying & Bleed Out (0 HP):</strong> Upon hitting 0 HP, you become Unconscious. You have a bleed-out timer equal to your Will modifier in rounds (minimum 1 round) before death becomes permanent. An adjacent ally must spend an Action Phase to pass a Will Check vs 14 to stabilize you.
+            <div class="box" style="margin-top: 6px;">
+                <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br>
+                • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling to gain <strong>Advantage</strong> (roll 2d20, keep high; max 1/turn). Hazards impose <strong>Disadvantage</strong> (roll 2d20, keep low). Advantage + Disadvantage cancel to a flat 1d20 roll.<br>
+                • <strong>Out-of-Combat Check:</strong> Roll 1d20 + Attribute Modifier vs 14. Total of 14+ succeeds.<br>
+                • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attribute vs 14. Success (14+) deals calculated Flat Damage to target HP.<br>
+                • <strong>Evasion Phase (Defending):</strong> On enemy turn, roll 1d20 + Agility vs 14. 14+ = 0 damage. Fail (&lt;14) = take enemy flat damage minus your Armor DR.<br>
+                • <strong>Dying & Bleed Out (0 HP):</strong> At 0 HP you fall Unconscious. You bleed out in rounds equal to your Will modifier (min 1). An adjacent ally must spend an Action Phase to pass a Will Check vs 14 to stabilize you at 1 HP.
             </div>
         </div>
         <div class="page-num">Page 1</div>
@@ -272,106 +269,101 @@
     <div class="page">
         <div class="content-wrap">
             <h1>EASY PLAY D20 — SYSTEM CORE & ARMORY</h1>
-            <p>One participant assumes the narrative role of the Guide, while all other participants play Adventurers. To play, you require a single 20-sided die (d20) and these core rules.</p>
+            <p>One participant acts as the Guide; all others play Adventurers. Requires a 20-sided die (d20) and these rules.</p>
 
             <div class="two-column">
                 <div>
                     <h2>1. HEROIC GENESIS (CHARACTER CREATION)</h2>
-                    <p>Building an Adventurer is structured around four simple foundational steps:</p>
                     <ul>
-                        <li><strong>Background & Drive:</strong> Record a former trade or profession alongside a singular personal Drive that motivates your adventurer.</li>
-                        <li><strong>Class Selection:</strong> Select one of the six specialized Combat Archetypes detailed in the Unified Playbook Codex.</li>
-                        <li><strong>Attribute Allocation:</strong> All characters begin with a baseline score of +1 in Might, Agility, and Will. You receive 2 additional custom points to allocate across these attributes. Individual attribute modifiers cannot exceed +4.</li>
-                        <li><strong>Derived Vitals:</strong> Calculate your derived vital statistics directly onto your Character Sheet:
+                        <li><strong>Background & Drive:</strong> Write a former trade and core motivation.</li>
+                        <li><strong>Class Selection:</strong> Choose 1 Archetype from the Codex.</li>
+                        <li><strong>Attributes:</strong> Base score +1 in Might, Agility, Will. Allocate +2 custom points (Max +4 per attribute).</li>
+                        <li><strong>Derived Vitals:</strong>
                             <ul>
-                                <li><em>Health Points (HP):</em> (Might Modifier × 4) + 15</li>
-                                <li><em>Movement Speed:</em> 2 + Agility Modifier (in Paces)</li>
-                                <li><em>Resolute Points (RP):</em> Will Modifier × 2</li>
+                                <li><em>HP:</em> (Might × 4) + 15</li>
+                                <li><em>Movement:</em> 2 + Agility (in Paces)</li>
+                                <li><em>RP:</em> Will × 2</li>
                             </ul>
                         </li>
                     </ul>
 
-                    <h2>2. THE ACTION ENGINE (UNIVERSAL THRESHOLD 14)</h2>
-                    <p>Every non-trivial task, physical effort, attack roll, and defensive evasion check targets a single static target number known as the <strong>Universal Baseline Threshold of 14</strong>.</p>
+                    <h2>2. THE ACTION ENGINE (FLAT 14)</h2>
+                    <p>All risky tasks, attack rolls, and evasions target a static <strong>Universal Baseline Threshold of 14</strong>.</p>
                     <ul>
-                        <li><strong>How Checks are Resolved:</strong> Roll 1d20 and add the relevant Attribute Modifier. If the final sum equals or exceeds 14, the attempt succeeds.</li>
-                        <li><strong>The Rule of 20 & Critical Hits:</strong> Rolling a Natural 20 on an attack roll triggers an Overdrive Strike, allowing you to add your Attribute Modifier to flat damage a second time. Outside of combat, a Natural 20 represents an exceptional, dramatic success. A Natural 1 is always an unmitigated critical failure.</li>
+                        <li><strong>Resolution:</strong> Roll 1d20 + Attribute Modifier. Sum of 14+ succeeds.</li>
+                        <li><strong>Rule of 20 & Criticals:</strong> Natural 20 on an attack is an Overdrive Strike (add Attribute Mod to flat damage twice). Natural 1 is a critical failure.</li>
                     </ul>
 
                     <div class="box">
-                        <strong>THE TWIN DIE ENGINE (ADVANTAGE & DISADVANTAGE)</strong><br>
-                        <p>Whenever you desire extra certainty, you may spend 1 Resolute Point (RP) prior to rolling to gain <strong>Advantage</strong> (roll 2d20 and keep the higher outcome). Players are strictly limited to purchasing Advantage once per turn.</p>
-                        <p>Environmental dangers, tactical handicaps, or severe physical impairments force you to roll with <strong>Disadvantage</strong> (roll 2d20 and keep the lower outcome).</p>
-                        <p><em>The Cancellation Rule:</em> If you are subject to Disadvantage but spend 1 RP to buy Advantage, both effects cancel each other out completely. You make a single standard 1d20 roll without taking the higher or lower die.</p>
+                        <strong>THE TWIN DIE ENGINE</strong><br>
+                        Spend 1 RP before rolling to buy <strong>Advantage</strong> (2d20, keep high; max 1/turn). Hazards impose <strong>Disadvantage</strong> (2d20, keep low).<br>
+                        <em>Cancellation Rule:</em> Advantage + Disadvantage cancel out to a standard 1d20 roll.
                     </div>
 
                     <h2>3. COMBAT STRUCTURE & TURN FLOW</h2>
-                    <p>Combat is split into a structured series of rounds, with each round representing 6 seconds of real-time battlefield action. Easy Play D20 utilizes a 100% Player-Facing system: there are no reactions taken outside of your turn, and the Guide never rolls attack dice.</p>
+                    <p>Rounds represent 6 seconds. System is 100% Player-Facing: no out-of-turn reactions, and the Guide never rolls attack dice.</p>
                     <ul>
-                        <li><strong>Initiative Phase:</strong> At the start of combat, every player rolls 1d20 + Agility Modifier vs 14. Characters who meet or exceed 14 act in the Player Turn Phase before enemy forces; those who fail act after the enemy forces. Players win all ties.</li>
-                        <li><strong>1. Move Phase:</strong> During the Move Phase, a character may travel a distance up to their total Movement attribute in paces (1 pace = ~5 feet). For example, an Adventurer with an Agility of +3 has a Movement capacity of 5 paces, allowing them to cover up to 25 feet or 5 standard grid squares.</li>
-                        <li><strong>2. Action Phase:</strong> Spend your Action Phase to execute an attack, deploy a class ability, utilize a consumable item, or brace behind cover. Attack rolls require rolling 1d20 + Weapon Attribute Modifier vs 14. A success deals your full calculated Total Flat Damage directly to the target's HP pool.</li>
-                        <li><strong>3. Evasion Phase (Enemy Turn):</strong> When an enemy targets your character on their turn, you roll an active Evasion Check consisting of 1d20 + Agility Modifier vs 14. Rolling 14 or higher results in a complete dodge, parry, or block, causing you to take 0 damage. A total below 14 means the blow connects, and you suffer the enemy's flat incoming damage minus your active Armor DR.</li>
+                        <li><strong>Initiative:</strong> Roll 1d20 + Agility vs 14. 14+ acts before enemies; &lt;14 acts after. Players win ties.</li>
+                        <li><strong>1. Move Phase:</strong> Travel up to your Movement speed in paces (1 pace = ~5 ft / 1 grid square).</li>
+                        <li><strong>2. Action Phase:</strong> Attack, use an ability, consume an item, or assume cover. Roll 1d20 + Weapon Attr vs 14 to hit.</li>
+                        <li><strong>3. Evasion Phase:</strong> When targeted, roll 1d20 + Agility vs 14. 14+ = 0 damage. Fail = take flat enemy damage minus Armor DR.</li>
                     </ul>
                     
                     <div class="box" style="background-color: #fce8e8; border-color: var(--accent-color);">
-                        <strong style="color: var(--accent-color);">DEATH, BLEED OUT & STABILIZATION (0 HP)</strong><br>
-                        <p>When reduced to 0 HP, your character collapses Prone, drops all held items, and becomes <strong>Unconscious</strong>. While Unconscious, you cannot take Move or Action phases.</p>
-                        <p>• <strong>The Bleed Out Timer:</strong> You enter a critical state lasting a number of combat rounds equal to your Will modifier (minimum 1 round). If you are not stabilized before this timer elapses at the end of your turn, your character suffers permanent death.</p>
-                        <p>• <strong>Stabilization Protocol:</strong> An adjacent conscious ally within 1 pace can spend their Action Phase to perform a medical stabilization check by rolling 1d20 + Will Modifier vs 14. Upon success, you instantly stabilize and revive at 1 HP.</p>
-                        <p>• <strong>Execution Rule:</strong> Taking any direct damage while Unconscious at 0 HP bypasses the bleed-out timer and causes immediate permanent death.</p>
+                        <strong style="color: var(--accent-color);">DEATH & STABILIZATION (0 HP)</strong><br>
+                        At 0 HP you collapse Prone and become <strong>Unconscious</strong>.<br>
+                        • <strong>Bleed Out:</strong> You permanently die in rounds equal to your Will modifier (min 1).<br>
+                        • <strong>Stabilization:</strong> Adjacent ally spends an Action Phase for a Will check vs 14 to revive you at 1 HP.<br>
+                        • <strong>Execution:</strong> Direct damage taken while at 0 HP causes instant permanent death.
                     </div>
                 </div>
 
                 <div>
-                    <h2>4. CHARACTER LEVELING & PROGRESSION</h2>
-                    <p>As Adventurers accumulate Experience Points (XP) through combat survival and objective completion, they unlock permanent stat enhancements and new tactical abilities:</p>
+                    <h2>4. CHARACTER LEVELING</h2>
                     <table>
                         <thead>
                             <tr><th>Lvl</th><th>XP</th><th>Permanent Upgrades Unlocked</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>1</td><td>0</td><td>Establish base vitals and access all Level 1 specialty and class abilities.</td></tr>
-                            <tr><td>2</td><td>10</td><td>Permanently increase any core Attribute by +1. Unlock Level 2 ability.</td></tr>
-                            <tr><td>3</td><td>20</td><td>Permanently increase maximum Resolute Points (RP) pool by +1. Unlock L3 ability.</td></tr>
-                            <tr><td>4</td><td>30</td><td>Permanently increase any core Attribute by +1. Unlock Level 4 ability.</td></tr>
-                            <tr><td>5</td><td>40</td><td>Permanently increase maximum Resolute Points (RP) pool by +1. Unlock L5 ability.</td></tr>
-                            <tr><td>6</td><td>50</td><td>Permanently increase any core Attribute by +1. Unlock Level 6 ability.</td></tr>
-                            <tr><td>7</td><td>60</td><td>Permanently increase maximum Resolute Points (RP) pool by +1. Unlock L7 ability.</td></tr>
-                            <tr><td>8</td><td>70</td><td>Unlock your archetype's capstone Apex Level 8 ability (Maximum Character Level).</td></tr>
+                            <tr><td>1</td><td>0</td><td>Base vitals and Level 1 class features.</td></tr>
+                            <tr><td>2</td><td>10</td><td>+1 to any Attribute. Unlock L2 ability.</td></tr>
+                            <tr><td>3</td><td>20</td><td>Max RP increases by +1. Unlock L3 ability.</td></tr>
+                            <tr><td>4</td><td>30</td><td>+1 to any Attribute. Unlock L4 ability.</td></tr>
+                            <tr><td>5</td><td>40</td><td>Max RP increases by +1. Unlock L5 ability.</td></tr>
+                            <tr><td>6</td><td>50</td><td>+1 to any Attribute. Unlock L6 ability.</td></tr>
+                            <tr><td>7</td><td>60</td><td>Max RP increases by +1. Unlock L7 ability.</td></tr>
+                            <tr><td>8</td><td>70</td><td>Unlock Apex Level 8 ability (Max Level).</td></tr>
                         </tbody>
                     </table>
 
-                    <h2>5. WEAPON CLASSES & FLAT DAMAGE ENGINE</h2>
-                    <p>Weapon attacks do not rely on variable damage dice. Instead, all strikes utilize static flat damage values derived from weapon archetype and character stats.</p>
-                    <p><strong>Universal Flat Damage Formula:</strong> Weapon Base Damage + Attribute Modifier = Total Flat Damage Inflicted.</p>
+                    <h2>5. WEAPON CLASSES & FLAT DAMAGE</h2>
+                    <p><strong>Formula:</strong> Base Damage + Attribute Modifier = Total Flat Damage.</p>
                     <table>
                         <thead>
-                            <tr><th>Weapon Style & Examples</th><th>Base Dmg</th><th>Hands</th><th>Attribute Used</th></tr>
+                            <tr><th>Weapon Style & Examples</th><th>Base</th><th>Hands</th><th>Attribute</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td><strong>Unarmed Strike</strong><br><small><em>Bare fists, martial strikes, kicks, claws</em></small></td><td>0</td><td>1 Hand</td><td>Might or Agility</td></tr>
-                            <tr><td><strong>Improvised Tool</strong><br><small><em>Heavy chairs, iron chains, crowbars, rocks</em></small></td><td>1</td><td>1 or 2</td><td>Might</td></tr>
-                            <tr><td><strong>Ranged/Thrown</strong><br><small><em>Throwing daggers, javelins, chemical flasks</em></small></td><td>1</td><td>1 Hand</td><td>Agility or Will</td></tr>
-                            <tr><td><strong>Ranged Weapon</strong><br><small><em>Crossbows, hunting rifles, longbows</em></small></td><td>2</td><td>2 Hands</td><td>Will</td></tr>
-                            <tr><td><strong>Light Melee</strong><br><small><em>Shortswords, combat knives, hatchets</em></small></td><td>3</td><td>1 Hand</td><td>Might or Agility</td></tr>
-                            <tr><td><strong>Heavy Melee</strong><br><small><em>Greatswords, warhammers, sledgehammers</em></small></td><td>5</td><td>2 Hands</td><td>Might</td></tr>
+                            <tr><td><strong>Unarmed Strike</strong> (Fists, kicks)</td><td>0</td><td>1 Hand</td><td>Might / Agility</td></tr>
+                            <tr><td><strong>Improvised Tool</strong> (Chairs, chains)</td><td>1</td><td>1 or 2</td><td>Might</td></tr>
+                            <tr><td><strong>Ranged/Thrown</strong> (Daggers, flasks)</td><td>1</td><td>1 Hand</td><td>Agility / Will</td></tr>
+                            <tr><td><strong>Ranged Weapon</strong> (Bows, rifles)</td><td>2</td><td>2 Hands</td><td>Will</td></tr>
+                            <tr><td><strong>Light Melee</strong> (Shortswords, knives)</td><td>3</td><td>1 Hand</td><td>Might / Agility</td></tr>
+                            <tr><td><strong>Heavy Melee</strong> (Greatswords, hammers)</td><td>5</td><td>2 Hands</td><td>Might</td></tr>
                         </tbody>
                     </table>
 
-                    <h2>6. ARMOR & INVENTORY CAPACITY</h2>
-                    <p>Armor absorbs incoming damage by directly subtracting points from flat enemy hits whenever an active Evasion roll fails.</p>
+                    <h2>6. ARMOR & INVENTORY</h2>
                     <table>
                         <thead>
-                            <tr><th>Armor Type</th><th>Damage Reduction</th><th>Requirements & Active Stance Benefit</th></tr>
+                            <tr><th>Armor Type</th><th>DR</th><th>Requirements & Stance Benefit</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Light Armor</td><td>DR -1</td><td>None. Subtracts 1 point from all incoming physical damage taken.</td></tr>
-                            <tr><td>Heavy Armor</td><td>DR -2</td><td>Requires 3 Might. Subtracts 2 points from all incoming physical damage taken.</td></tr>
-                            <tr><td>Shield</td><td>Active Guard</td><td>Requires 1 Hand. Spend your Action Phase to assume Active Guard, gaining Advantage on all Evasion rolls until your next turn.</td></tr>
+                            <tr><td>Light Armor</td><td>DR -1</td><td>None. Subtracts 1 from incoming damage.</td></tr>
+                            <tr><td>Heavy Armor</td><td>DR -2</td><td>Req 3 Might. Subtracts 2 from incoming damage.</td></tr>
+                            <tr><td>Shield</td><td>Active Guard</td><td>1 Hand. Action Phase = Advantage on Evasion until next turn.</td></tr>
                         </tbody>
                     </table>
-                    <p><strong>Inventory Limit:</strong> A character can active-equip and carry a maximum number of item slots equal to <strong>4 + Might modifier</strong>. Exceeding this carrying capacity causes Encumbrance, inflicting Disadvantage on all physical action rolls and reducing movement paces by half.</p>
+                    <p><strong>Inventory Limit:</strong> Max equipped slots = <strong>4 + Might modifier</strong>. Over-encumbrance imposes Disadvantage on actions and halves movement.</p>
                 </div>
             </div>
         </div>
@@ -398,7 +390,7 @@
                         <li><strong>L7: Sunder / Disarm [2 RP]:</strong> Spend 2 RP on hit to wrench target's weapon away OR permanently reduce target's Damage Reduction by 2.</li>
                         <li><strong>L8: Brawl Mastery [4 RP]:</strong> Spend 4 RP on hit to grapple foe as physical cover (+Advantage on Evasion) OR pin a beast to remove its Action Phase.</li>
                     </ul>
-                    <div class="pro-tip"><strong>Tactical Tip:</strong> Your lower Agility modifier makes dodging incoming attacks difficult. Rely heavily on combining Active Guard with your Shield and deploying Iron Stance to soak heavy flat hits, converting yourself into an impassable chokepoint that shields your party.</div>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> Combine Active Guard with Iron Stance to soak heavy flat hits, turning yourself into an impassable chokepoint that shields your allies.</div>
 
                     <h3>THE BREAKER</h3>
                     <p><em>Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.</em></p>
@@ -418,7 +410,7 @@
                         <li><strong>L7: Heave [2 RP]:</strong> Lift and throw heavy object up to 2 paces. Target passes Agility check vs 14 or takes 4 flat damage and falls Prone.</li>
                         <li><strong>L8: Crash the Gates [4 RP]:</strong> Smash barrier on Move Phase to take immediate Action Phase with Advantage against unaware targets.</li>
                     </ul>
-                    <div class="pro-tip"><strong>Tactical Tip:</strong> Battlefield geometry is your primary weapon. Continually position yourself to use Drive Back and Linebreaker to slam foes directly into walls or physical obstacles, granting free bonus crush damage while displacing enemy formations.</div>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> Line up Drive Back and Linebreaker to slam foes into walls or solid cover for free bonus crush damage.</div>
 
                     <h3>THE PROWLER</h3>
                     <p><em>Narrative Role: The scalpel. Bypassing security, flanking, and executing devastating close-quarters strikes.</em></p>
@@ -433,14 +425,14 @@
                         <li><strong>L7: Hamstring [2 RP]:</strong> Sever a tendon on hit; target movement permanently reduced to 1 pace until treated.</li>
                         <li><strong>L8: Lethal Strike [4 RP]:</strong> Strike unaware non-boss target from behind to bypass armor and instantly drop them to 0 HP.</li>
                     </ul>
-                    <div class="pro-tip"><strong>Tactical Tip:</strong> You operate as a lethal glass cannon. Combine Absolute Camouflage with Shadow Strike to consistently roll attacks with Advantage while forcing opponents to suffer Disadvantage when targeting your Evasion.</div>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> Combine Absolute Camouflage with Shadow Strike to attack with Advantage while forcing opponents to target you with Disadvantage.</div>
 
-                    <div class="box" style="margin-top: 10px; background-color: #f0f4f8; border-color: #2b5b84;">
+                    <div class="box" style="margin-top: 6px; background-color: #f0f4f8; border-color: #2b5b84;">
                         <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY EXAMPLE: THE BREACH</h3>
-                        <p><strong>Guide:</strong> "The armored blast door seals shut. Two Elite enforcers take defensive aim from behind a reinforced steel barricade."</p>
-                        <p><strong>Warden:</strong> "I'll spend my Action Phase to enter <em>Active Guard</em> with my shield and use my Move Phase to position myself adjacent to the Saboteur."</p>
-                        <p><strong>Saboteur:</strong> "I'll spend 1 RP to execute <em>Structural Weakness</em> on the barricade. <em>(Rolls 1d20 + Will vs 14)</em> Got a 16! That meets the threshold."</p>
-                        <p><strong>Guide:</strong> "Excellent work. The barricade's armor structural integrity is ruined—the next successful strike against it completely bypasses its Damage Reduction."</p>
+                        <p><strong>Guide:</strong> "Two Elites take defensive aim behind a steel barricade."</p>
+                        <p><strong>Warden:</strong> "I enter <em>Active Guard</em> with my shield and move adjacent to the Saboteur."</p>
+                        <p><strong>Saboteur:</strong> "I spend 1 RP for <em>Structural Weakness</em> on the barricade. <em>(Rolls 1d20 + Will vs 14)</em> 16! Success."</p>
+                        <p><strong>Guide:</strong> "The barricade's DR is compromised for the next hit."</p>
                     </div>
                 </div>
             </div>
@@ -468,7 +460,7 @@
                         <li><strong>L7: Funneling Fire [2 RP]:</strong> Rapid burst forces target to immediately move 1 pace in a direction of your choice.</li>
                         <li><strong>L8: Perfect Aim [4 RP]:</strong> Forfeit Move Phase; roll attack with Advantage, ignore cover, and add Will mod to flat damage.</li>
                     </ul>
-                    <div class="pro-tip"><strong>Tactical Tip:</strong> Distance is your primary defense. Prioritize climbing onto elevated perches to activate Elevated Advantage, and deploy Rig Chokepoint to immobilize dangerous Elite targets before they can close into melee range.</div>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> Prioritize elevated perches to activate Elevated Advantage, and deploy Rig Chokepoint to freeze Elites before they reach melee range.</div>
 
                     <h3>THE SABOTEUR</h3>
                     <p><em>Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.</em></p>
@@ -488,7 +480,7 @@
                         <li><strong>L7: Noxious Irritant [2 RP]:</strong> Throw chemical vial at 1-pace spot; enemies starting turn in space grant Advantage on all player attacks and Evasion rolls.</li>
                         <li><strong>L8: Volatile Reaction [4 RP]:</strong> Trigger explosive hazard dealing 10 flat damage and Dazed to everything within 2 paces.</li>
                     </ul>
-                    <div class="pro-tip"><strong>Tactical Tip:</strong> Your focus is battlefield debuffing. Use Blinding Debris to protect fragile allies, and target high-DR boss enemies with Structural Weakness so your heavy melee allies can strike for full flat damage.</div>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> Target high-DR bosses with Structural Weakness so your heavy melee allies strike for full unmitigated flat damage.</div>
 
                     <h3>THE SURVIVALIST</h3>
                     <p><em>Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions.</em></p>
@@ -503,14 +495,13 @@
                         <li><strong>L7: Potent Stimulant [2 RP]:</strong> Administer brew; ally regains 1 RP and +2 flat damage on next attack (takes 2 crash damage at combat end).</li>
                         <li><strong>L8: Extreme Triage [4 RP]:</strong> Save dying ally from lethal hit; instantly wake at 1 HP with permanent maiming.</li>
                     </ul>
-                    <div class="pro-tip"><strong>Tactical Tip:</strong> You control the team's combat endurance. Apply Pressure Dressing preemptively onto front-line allies before heavy clashes, and reserve Potent Stimulant to boost allies when bursting down high-HP Boss targets.</div>
+                    <div class="pro-tip"><strong>Tactical Tip:</strong> Apply Pressure Dressing preemptively onto front-line allies, and reserve Potent Stimulant for bursting down high-HP Boss targets.</div>
 
-                    <div class="box" style="margin-top: 10px; background-color: #f0f4f8; border-color: #2b5b84;">
+                    <div class="box" style="margin-top: 6px; background-color: #f0f4f8; border-color: #2b5b84;">
                         <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY EXAMPLE: THE STRIKE</h3>
-                        <p><strong>Breaker:</strong> "I'll spend 1 RP to buy Advantage, charge forward to smash through the compromised barricade, and execute <em>Drive Back</em> on the first Elite!"</p>
-                        <p><strong>Guide:</strong> "Make your attack check vs 14."</p>
-                        <p><strong>Breaker:</strong> "<em>(Rolls 2d20, keeps high)</em> 18 plus my Might modifier! Hit! That inflicts 5 Heavy Melee damage, plus 2 crush damage from shoving him directly into the stone wall behind him!"</p>
-                        <p><strong>Guide:</strong> "The Elite takes 7 flat damage total and staggers back. The surviving Elite readies a weapon against the Warden."</p>
+                        <p><strong>Breaker:</strong> "I spend 1 RP for Advantage, charge through the barricade, and execute <em>Drive Back</em> on the Elite!"</p>
+                        <p><strong>Breaker:</strong> "<em>(Rolls 2d20, keeps high)</em> 18 + Might! Hit! 5 Heavy Melee damage + 2 crush damage from slamming him into the wall!"</p>
+                        <p><strong>Guide:</strong> "The Elite takes 7 flat damage total. The surviving Elite readies a weapon."</p>
                     </div>
                 </div>
             </div>
@@ -526,19 +517,18 @@
             <div class="two-column">
                 <div>
                     <h2>1. ADJUDICATING THE THRESHOLD (14)</h2>
-                    <p>The Guide never rolls to determine task difficulties or enemy attacks. All player actions, checks, and evasions strictly target the static **Universal Baseline Threshold of 14**.</p>
-                    <p>Difficulty is adjusted dynamically using narrative conditions:</p>
+                    <p>The Guide never rolls for difficulties or attacks. All player actions and evasions strictly target the static <strong>Universal Baseline Threshold of 14</strong>.</p>
                     <ul>
-                        <li><strong>Grant Advantage (Roll 2d20, keep high):</strong> When players leverage high ground, exploit tactical surprises, double-team isolated foes, or act with ideal tools in favorable contexts.</li>
-                        <li><strong>Impose Disadvantage (Roll 2d20, keep low):</strong> When players act under severe physical strain, fight on slick ice, suffer from blindness, or target heavily concealed threats.</li>
+                        <li><strong>Grant Advantage:</strong> High ground, tactical surprise, or ideal tools in favorable contexts.</li>
+                        <li><strong>Impose Disadvantage:</strong> Heavy strain, slick ice, blindness, or heavy target concealment.</li>
                     </ul>
 
                     <h2>2. ENVIRONMENTAL HAZARD DAMAGE</h2>
-                    <p>Environmental dangers bypass physical armor DR unless explicit hard cover is established. Damage is flat and static based on severity:</p>
+                    <p>Environmental dangers bypass armor DR unless hard cover is present:</p>
                     <ul>
-                        <li><strong>Minor Hazard (5 Flat Damage):</strong> Minor toxins, barbed wire scrapes, sprained ankles, shallow falls, minor electrical sparks.</li>
-                        <li><strong>Major Hazard (10 Flat Damage):</strong> Deep laceration traps, heavy kinetic deadfalls, acid baths, high-voltage shocks, heavy falling debris.</li>
-                        <li><strong>Lethal Hazard (15 Flat Damage):</strong> Point-blank fuel explosions, massive cave-ins, magma submersion, planetary atmospheric depressurization.</li>
+                        <li><strong>Minor Hazard (5 Flat Damage):</strong> Minor toxins, barbed wire scrapes, sprained ankles, minor electrical sparks.</li>
+                        <li><strong>Major Hazard (10 Flat Damage):</strong> Deep laceration traps, kinetic deadfalls, acid baths, high-voltage shocks.</li>
+                        <li><strong>Lethal Hazard (15 Flat Damage):</strong> Fuel explosions, massive cave-ins, magma submersion, atmospheric depressurization.</li>
                     </ul>
 
                     <h2>3. THREAT TIERS & PLAYER-FACING STATS</h2>
@@ -556,68 +546,65 @@
                     
                     <p><strong>Combat Traits & Evasion Rules:</strong></p>
                     <ul>
-                        <li><strong>Tier 1 & 2 (Minions & Standard):</strong> Require standard player Evasion rolls vs 14. Minions are designed to be dispatched in a single hit.</li>
-                        <li><strong>Tier 3 (Elite):</strong> <em>Hard Target:</em> Player attacks against Elites suffer Disadvantage unless the player strikes from ambush or concealment. <em>Tactical:</em> Forces Disadvantage on player Evasion rolls if the target player is Prone or Dazed.</li>
-                        <li><strong>Tier 4 (Boss / Leader):</strong> <em>Legendary Defense:</em> All player attacks naturally suffer Disadvantage. <em>Frenzy:</em> Bosses possess 2 Actions per turn, forcing target players to roll Evasion twice per round.</li>
+                        <li><strong>Tier 1 & 2:</strong> Standard Evasion vs 14. Minions drop in 1 hit.</li>
+                        <li><strong>Tier 3 (Elite):</strong> <em>Hard Target:</em> Player attacks suffer Disadvantage unless striking from concealment. <em>Tactical:</em> Forces Disadvantage on player Evasion if the target player is Prone or Dazed.</li>
+                        <li><strong>Tier 4 (Boss):</strong> <em>Legendary Defense:</em> Player attacks naturally suffer Disadvantage. <em>Frenzy:</em> Bosses take 2 Actions/turn (players roll Evasion twice).</li>
                     </ul>
 
-                    <p><strong>LEVEL SCALING BRACKETS:</strong> The baseline threat stats above are calibrated for Level 1–2 parties. Scale encounters for higher-level parties using these flat modifiers:</p>
+                    <p><strong>LEVEL SCALING BRACKETS:</strong></p>
                     <ul>
-                        <li><strong>Veteran Party (Levels 3–5):</strong> All enemies gain <strong>+5 HP</strong> and <strong>+1 Damage</strong>. <em>(Bosses gain +15 HP)</em>.</li>
-                        <li><strong>Apex Party (Levels 6–8):</strong> All enemies gain <strong>+10 HP</strong>, <strong>+2 Damage</strong>, and <strong>+1 DR</strong>. <em>(Bosses gain +30 HP)</em>.</li>
+                        <li><strong>Veteran Party (L3–5):</strong> Enemies gain <strong>+5 HP</strong> and <strong>+1 Damage</strong> (Bosses +15 HP).</li>
+                        <li><strong>Apex Party (L6–8):</strong> Enemies gain <strong>+10 HP</strong>, <strong>+2 Damage</strong>, and <strong>+1 DR</strong> (Bosses +30 HP).</li>
                     </ul>
-
                 </div>
                 
                 <div>
-                    <h2>4. ENEMY MODIFIERS & ENCOUNTER SCALING</h2>
-                    <p>Construct balanced combat encounters for a standard 4-player party using these modular templates:</p>
+                    <h2>4. ENEMY MODIFIERS & SCALING</h2>
+                    <p><strong>4-Player Encounter Templates:</strong></p>
                     <ul>
                         <li><strong>Light Skirmish:</strong> 4 Minions, 2 Standards</li>
                         <li><strong>Tactical Clash:</strong> 3 Minions, 2 Standards, 1 Elite</li>
                         <li><strong>Heavy Assault:</strong> 4 Standards, 2 Elites</li>
                         <li><strong>Apex Boss Fight:</strong> 5 Minions, 1 Boss</li>
                     </ul>
-                    <p><strong>General Enemy Modifiers:</strong></p>
+                    <p><strong>Enemy Modifiers:</strong></p>
                     <ul>
-                        <li><strong>Heavy / Armored:</strong> Add -1 Damage Reduction to enemy (halve their total movement paces).</li>
-                        <li><strong>Agile / Skirmisher:</strong> Player rolls Evasion with Disadvantage (+2 Movement paces to enemy, subtract 2 from enemy HP).</li>
-                        <li><strong>Lethal / Sniper:</strong> Add +2 to incoming Flat Damage (subtract 5 from enemy HP).</li>
-                        <li><strong>Morale Test:</strong> When an enemy group loses half their total numbers or their squad leader dies, the Guide rolls 1d20. On a roll of 10 or lower, surviving foes rout, retreat, or surrender.</li>
-                        <li><strong>Boss Escalation Phase:</strong> When a Tier 4 Boss drops below 50% HP, instantly trigger an environmental escalation: spawn 1d4 reinforcing Minions or activate a Major Environmental Hazard.</li>
+                        <li><strong>Heavy / Armored:</strong> Add -1 DR to enemy (halve their movement).</li>
+                        <li><strong>Agile / Skirmisher:</strong> Player Evasion suffers Disadvantage (+2 enemy movement, -2 enemy HP).</li>
+                        <li><strong>Lethal / Sniper:</strong> Add +2 incoming Flat Damage (-5 enemy HP).</li>
+                        <li><strong>Morale Test:</strong> When losing half their squad or leader, roll 1d20. On 10 or lower, surviving foes rout or surrender.</li>
+                        <li><strong>Boss Escalation:</strong> When a Boss drops below 50% HP, spawn 1d4 Minions or trigger a Major Environmental Hazard.</li>
                     </ul>
 
-                    <h2>5. TACTICAL, ENVIRONMENTAL & VISIBILITY RULES</h2>
+                    <h2>5. TACTICAL & VISIBILITY RULES</h2>
                     <ul>
-                        <li><strong>Partial Cover:</strong> Crouching behind barricades or crates grants <strong>Advantage on Evasion Rolls</strong> against incoming Ranged attacks.</li>
-                        <li><strong>Full Cover:</strong> Characters behind complete solid physical barriers cannot be targeted by ranged strikes until enemies maneuver around the barrier.</li>
-                        <li><strong>Visibility & Darkness:</strong> Dim Light or dense smoke imposes Disadvantage on Perception and Ranged attacks. Pitch Black conditions prevent targeting foes beyond 1 pace and impose Disadvantage on all Evasion rolls.</li>
+                        <li><strong>Partial Cover:</strong> Crouching behind cover grants <strong>Advantage on Evasion</strong> vs Ranged attacks.</li>
+                        <li><strong>Full Cover:</strong> Cannot be targeted until enemies maneuver around the barrier.</li>
+                        <li><strong>Visibility:</strong> Dim Light/Fog = Disadvantage on Perception and Ranged attacks. Pitch Black = cannot target beyond 1 pace; Disadvantage on Evasion.</li>
                         <li><strong>Status Conditions:</strong>
                             <ul>
-                                <li><em>Prone:</em> Must spend your Move Phase to stand back up.</li>
-                                <li><em>Dazed:</em> Roll your next action with Disadvantage; total movement paces are halved.</li>
-                                <li><em>Pinned:</em> Forfeit your next Action Phase completely.</li>
-                                <li><em>Stunned:</em> Forfeit both your Action Phase and Move Phase on your next turn.</li>
+                                <li><em>Prone:</em> Spend Move Phase to stand up.</li>
+                                <li><em>Dazed:</em> Disadvantage on next action; movement halved.</li>
+                                <li><em>Pinned:</em> Forfeit next Action Phase.</li>
+                                <li><em>Stunned:</em> Forfeit Action and Move Phase on next turn.</li>
                             </ul>
                         </li>
-                        <li><strong>Environmental Physics:</strong> Falling greater than 2 paces inflicts 2 flat damage per pace fallen. Traversing difficult terrain halves total movement.</li>
                     </ul>
                     
-                    <h2>6. REST, RECOVERY & REWARDING ROLEPLAY</h2>
+                    <h2>6. REST, RECOVERY & RP</h2>
                     <ul>
-                        <li><strong>Short Breather (10–15 Minutes):</strong> Catch your breath following a fight. Recover HP equal to your Might modifier, and RP equal to your Will modifier (minimum 1 each).</li>
-                        <li><strong>Rough Sleep (6–8 Hours):</strong> Resting in hostile or dangerous territory. Recover HP and RP equal to your total combined core Attributes.</li>
-                        <li><strong>Sanctuary Rest (24 Hours):</strong> Resting inside a safe, fortified settlement or secure sanctuary. Completely restores all HP and RP to maximum capacity.</li>
-                        <li><strong>Rewarding Resolute Points (RP):</strong> The Guide should grant +1 RP to players when they act on their personal Drive to their own clear detriment, execute exceptional tactical teamwork, or drive dramatic narrative roleplay.</li>
+                        <li><strong>Short Breather (10-15 Min):</strong> Recover HP = Might mod, RP = Will mod (min 1 each).</li>
+                        <li><strong>Rough Sleep (6-8 Hr):</strong> Rest in danger. Recover HP & RP = sum of all Attributes.</li>
+                        <li><strong>Sanctuary Rest (24 Hr):</strong> Safe rest. Restores all HP & RP to max.</li>
+                        <li><strong>RP Rewards:</strong> Award +1 RP when players play into their Drive to their detriment or execute great teamwork.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 10px; background-color: #f0f4f8; border-color: #2b5b84;">
+            <div class="box" style="margin-top: 6px; background-color: #f0f4f8; border-color: #2b5b84;">
                 <h3 style="margin-top: 0; color: #1a1a1a;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</h3>
-                <p>When a player fails an Out-of-Combat Check vs 14, avoid letting the narrative grind to a complete halt. Rather than stating "nothing happens," introduce an immediate complication or trade-off. The character successfully picks the electronic lock, but trips a silent security alarm. They decipher the ancient ritual rune, but suffer a mental shock. They repair the vehicle drive, but burn out a rare component. Every failed roll must advance the story with fresh tension.</p>
+                <p>On a failed Out-of-Combat Check vs 14, avoid saying "nothing happens." Introduce a complication: picking a lock alerts a guard; deciphering a rune causes mental shock; repairing an engine burns out a rare component. Every failed roll pushes the narrative forward.</p>
             </div>
-
         </div>
         <div class="page-num">Page 5</div>
     </div>
@@ -626,10 +613,10 @@
     <div class="page">
         <div class="content-wrap">
             <h1>APPENDIX: UNIVERSAL GENRE ADAPTATION</h1>
-            <p>Easy Play D20 functions as a universal narrative chassis. Because all mechanics rely on static flat damage, uniform baseline thresholds, and abstract **Loot Tags** rather than complex currency math, the system adapts instantly to any setting. Below are guidelines for reskinning gear, economy, and magic across various genres.</p>
+            <p>Easy Play D20 functions as a universal narrative chassis. Because all mechanics rely on static flat damage, uniform baseline thresholds, and abstract <strong>Loot Tags</strong> rather than complex currency math, the system adapts instantly to any setting.</p>
 
             <h2>1. WEALTH, LOOT & NARRATIVE ECONOMY</h2>
-            <p>Wealth is tracked narratively on the Character Sheet using **Loot Tags** rather than counting individual coins or credits. Guide rewards players with setting-appropriate Loot Tags. Players trade these tags in settlements to secure safe Sanctuary Rests, restock gear, purchase bribes, or secure local favors.</p>
+            <p>Wealth is tracked on the Character Sheet using <strong>Loot Tags</strong> rather than individual coins or credits. Guide awards setting-appropriate Loot Tags. Players trade tags in settlements for Sanctuary Rests, gear, bribes, or local favors.</p>
             
             <table>
                 <thead>
@@ -684,33 +671,33 @@
             </table>
 
             <h2>2. ADAPTING EQUIPMENT & ARMORY</h2>
-            <p>Armory mechanics remain mathematically identical across all settings. Reskin item names during Character Creation to match your genre:</p>
+            <p>Armory mechanics remain mathematically identical across all settings. Reskin item names during Character Creation:</p>
             <ul>
                 <li><strong>Light Armor (DR -1):</strong> Leather jerkin (Fantasy), Kevlar weave (Cyberpunk), tactical vest (Urban Fantasy), scrap vest (Post-Apoc).</li>
-                <li><strong>Heavy Armor (DR -2):</strong> Full plate mail (Fantasy), Powered Exosuit (Sci-Fi), Steam-powered rig (Steampunk), reinforced combat shell (Cyberpunk).</li>
-                <li><strong>Active Guard (Shield):</strong> Wooden tower shield (Fantasy), hard-light energy barrier (Sci-Fi), steel riot shield (Cyberpunk/Modern).</li>
+                <li><strong>Heavy Armor (DR -2):</strong> Full plate mail (Fantasy), Powered Exosuit (Sci-Fi), Steam-powered rig (Steampunk), combat shell (Cyberpunk).</li>
+                <li><strong>Active Guard (Shield):</strong> Wooden tower shield (Fantasy), hard-light barrier (Sci-Fi), steel riot shield (Cyberpunk/Modern).</li>
                 <li><strong>Light Melee (3 Flat Dmg):</strong> Shortsword (Fantasy), vibro-blade (Cyberpunk), wrench (Post-Apoc), hunting knife (Space Western).</li>
                 <li><strong>Heavy Melee (5 Flat Dmg):</strong> Greataxe (Fantasy), kinetic hammer (Sci-Fi), sledgehammer (Steampunk), power sword (Grimdark).</li>
-                <li><strong>Ranged Weapon (2 Flat Dmg):</strong> Longbow (Fantasy), plasma rifle (Sci-Fi), lever-action repeater (Space Western), bolt-action sniper (Modern).</li>
+                <li><strong>Ranged Weapon (2 Flat Dmg):</strong> Longbow (Fantasy), plasma rifle (Sci-Fi), lever-action repeater (Space Western), sniper (Modern).</li>
             </ul>
 
             <h2>3. CONSUMABLE & UTILITY LOOT MECHANICS</h2>
-            <p>Avoid creating complex custom rules for every item found. Instead, assign setting-flavored consumables to one of three standardized mechanical templates. Using any consumable during combat costs an <strong>Action Phase</strong>:</p>
+            <p>Assign setting-flavored consumables to one of three standardized mechanical templates. Using any consumable during combat costs an <strong>Action Phase</strong>:</p>
             <ul>
-                <li><strong>Restoratives (Potions, Hyper-Med Kits, Healing Tinctures, Stim-Packs):</strong> Instantly restores 5 HP, regains 1 RP, OR clears one physical condition (such as Dazed or Pinned).</li>
-                <li><strong>Enhancers (Black Market Ammo, Experimental Serums, Plasma Charges, Weapon Oils):</strong> Grants +2 Flat Damage to your next successful attack, OR forces your next attack to completely ignore the target's Armor DR.</li>
-                <li><strong>Utility & Survival (Warding Components, Scavenged Parts, Rations, Lockpicks):</strong> Grants Advantage on a specific Out-of-Combat check (e.g., bypassing a security lock, banishing an entity), OR fulfills the food/water requirements needed to safely complete a <em>Rough Sleep</em> or <em>Sanctuary Rest</em> without suffering environmental hazard damage.</li>
+                <li><strong>Restoratives (Potions, Hyper-Med Kits, Stim-Packs):</strong> Restores 5 HP, regains 1 RP, OR clears one physical condition (such as Dazed or Pinned).</li>
+                <li><strong>Enhancers (Black Market Ammo, Experimental Serums, Plasma Charges):</strong> Grants +2 Flat Damage to your next hit, OR forces your next attack to ignore target Armor DR.</li>
+                <li><strong>Utility & Survival (Warding Components, Scavenged Parts, Rations):</strong> Grants Advantage on a specific Out-of-Combat check, OR fulfills food/water requirements needed to safely complete a <em>Rough Sleep</em> or <em>Sanctuary Rest</em> without taking hazard damage.</li>
             </ul>
 
-            <h2>4. MAGIC, PSIONICS, CYBERWARE & EXTRAORDINARY ABILITIES</h2>
-            <p>Magic and extraordinary powers are handled through narrative reskinning rather than complex spell slot tracking. A Wizard, Psion, or Cybernetic Mercenary utilizes the exact same class features and weapon math, dressed in setting flavor:</p>
+            <h2>4. MAGIC, PSIONICS & CYBERWARE</h2>
+            <p>Magic and extraordinary powers are handled through narrative reskinning. A Wizard, Psion, or Cyborg utilizes the standard class features and weapon math dressed in setting flavor:</p>
             <ul>
-                <li><strong>Spells as Weapons:</strong> A Wizard's "Ranged Weapon" is a Firebolt or Lightning Arc. A Psion's "Heavy Melee" strike is a telekinetic force-crush. A Cyborg's "Ranged/Thrown" weapon is an arm-mounted micro-missile.</li>
-                <li><strong>Abilities as Magic:</strong> A Breaker's <em>Concussive Blow</em> can be described as a kinetic shockwave spell, an explosive breaching charge, or a hydraulic cyber-punch. A Saboteur's <em>Structural Weakness</em> can be narrated as a disintegrating magic hex or a targeted armor-corroding acid vial.</li>
+                <li><strong>Spells as Weapons:</strong> A Wizard's "Ranged Weapon" is a Firebolt. A Psion's "Heavy Melee" is a telekinetic force-crush. A Cyborg's "Ranged/Thrown" weapon is a micro-missile.</li>
+                <li><strong>Abilities as Magic:</strong> A Breaker's <em>Concussive Blow</em> can be narrated as a kinetic shockwave spell or hydraulic cyber-punch. A Saboteur's <em>Structural Weakness</em> can be a disintegrating magic hex or acid vial.</li>
             </ul>
 
-            <h2>5. VEHICLES, MOUNTS & CHASE SEQUENCES</h2>
-            <p>When operating a vehicle or riding a mount (such as a starfighter, a galloping horse, an armored rover, or a hover-skiff), your character's movement capacity equals the vehicle's movement speed in paces. During high-speed chase sequences or hazardous piloting, the driver must pass an <strong>Agility Check vs 14</strong> to maintain control; failure results in a crash, inflicting Major Environmental Hazard Damage (10 Flat Damage) to all passengers. Abilities like <em>Master of Ruin</em> or <em>Rig Trap</em> can be used to target enemy vehicle engines directly to force crashes.</p>
+            <h2>5. VEHICLES, MOUNTS & CHASES</h2>
+            <p>When operating a vehicle or riding a mount (starfighter, horse, rover, hover-skiff), your character's movement capacity equals the vehicle's movement speed in paces. During chase sequences or hazardous piloting, the driver must pass an <strong>Agility Check vs 14</strong> to maintain control; failure results in a crash, inflicting Major Environmental Hazard Damage (10 Flat Damage) to all passengers. Abilities like <em>Master of Ruin</em> or <em>Rig Trap</em> can target enemy vehicle engines directly to force crashes.</p>
         </div>
         <div class="page-num">Page 6</div>
     </div>
