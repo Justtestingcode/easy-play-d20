@@ -16,7 +16,7 @@
 
         @page {
             size: letter;
-            margin: 0.3in;
+            margin: 0.35in;
         }
 
         * {
@@ -26,21 +26,21 @@
         body {
             background-color: var(--bg-color);
             margin: 0;
-            padding: 10px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.3;
+            line-height: 1.4;
         }
 
         .page {
             width: 8.5in;
             height: 11in;
             background-color: var(--page-color);
-            padding: 0.35in;
-            margin-bottom: 20px;
+            padding: 0.45in;
+            margin-bottom: 25px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             position: relative;
             overflow: hidden;
@@ -55,58 +55,59 @@
 
         h1 {
             text-align: center;
-            font-size: 17px;
+            font-size: 19px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
             border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 2px;
+            padding-bottom: 4px;
         }
 
         h2 {
-            font-size: 11px;
+            font-size: 12.5px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 5px;
-            margin-bottom: 2px;
+            margin-top: 10px;
+            margin-bottom: 4px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 9.5px;
+            font-size: 11px;
             color: #2b5b84;
-            margin-top: 4px;
-            margin-bottom: 2px;
+            margin-top: 8px;
+            margin-bottom: 3px;
             text-transform: uppercase;
         }
 
+        /* RESTORED PRINT READABILITY: 10.5px Standard Body Text */
         p, li, div, td, th {
-            font-size: 8.8px;
+            font-size: 10.5px;
         }
 
         p, li {
-            margin-top: 1px;
-            margin-bottom: 2px;
+            margin-top: 2px;
+            margin-bottom: 4px;
         }
 
         ul {
-            padding-left: 12px;
-            margin-top: 1px;
-            margin-bottom: 2px;
+            padding-left: 15px;
+            margin-top: 2px;
+            margin-bottom: 5px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 2px;
-            margin-bottom: 3px;
+            margin-top: 4px;
+            margin-bottom: 6px;
         }
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 2px 4px;
+            padding: 4px 6px;
             text-align: left;
         }
 
@@ -119,28 +120,28 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 4px 6px;
-            margin-top: 3px;
-            margin-bottom: 3px;
+            padding: 6px 9px;
+            margin-top: 6px;
+            margin-bottom: 6px;
             border-radius: 2px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6px;
+            gap: 10px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 6px;
+            gap: 10px;
         }
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 16px;
             align-items: start;
         }
 
@@ -156,40 +157,26 @@
 
         .page-num {
             position: absolute;
-            bottom: 0.2in;
-            right: 0.35in;
-            font-size: 8px;
+            bottom: 0.25in;
+            right: 0.45in;
+            font-size: 9px;
             color: #666;
         }
 
         .pro-tip {
             background-color: #f8f9fa;
             border-left: 3px solid #2b5b84;
-            padding: 2px 4px;
-            margin-top: 2px;
-            margin-bottom: 3px;
+            padding: 4px 6px;
+            margin-top: 4px;
+            margin-bottom: 5px;
             font-style: italic;
-            font-size: 8.5px;
+            font-size: 10px;
         }
 
-        /* PAGE 5 SPECIFIC OVERFLOW FIX */
-        .page-5 h2 {
-            margin-top: 3px;
-            margin-bottom: 1px;
-        }
-        .page-5 .box {
-            padding: 3px 5px;
-            margin-top: 2px;
-            margin-bottom: 2px;
-        }
-        .page-5 ul {
-            margin-bottom: 1px;
-        }
-
-        /* PAGE 6 TABLE COLUMNS FIX */
+        /* PAGE 6 TABLE SPACING */
         .genre-table th:nth-child(1), .genre-table td:nth-child(1) { width: 25%; }
-        .genre-table th:nth-child(2), .genre-table td:nth-child(2) { width: 37%; }
-        .genre-table th:nth-child(3), .genre-table td:nth-child(3) { width: 38%; }
+        .genre-table th:nth-child(2), .genre-table td:nth-child(2) { width: 38%; }
+        .genre-table th:nth-child(3), .genre-table td:nth-child(3) { width: 37%; }
 
         @media print {
             body {
@@ -220,12 +207,12 @@
             
             <div class="box">
                 <div class="sheet-grid">
-                    <div><strong>CHARACTER NAME:</strong> <span class="line-input" style="width: 130px;"></span></div>
-                    <div><strong>COMBAT ARCHETYPE:</strong> <span class="line-input" style="width: 120px;"></span></div>
-                    <div><strong>DRIVE / MOTIVATION:</strong> <span class="line-input" style="width: 120px;"></span></div>
-                    <div><strong>BACKGROUND:</strong> <span class="line-input" style="width: 150px;"></span></div>
+                    <div><strong>CHARACTER NAME:</strong> <span class="line-input" style="width: 140px;"></span></div>
+                    <div><strong>COMBAT ARCHETYPE:</strong> <span class="line-input" style="width: 130px;"></span></div>
+                    <div><strong>DRIVE / MOTIVATION:</strong> <span class="line-input" style="width: 130px;"></span></div>
+                    <div><strong>BACKGROUND:</strong> <span class="line-input" style="width: 160px;"></span></div>
                     <div><strong>LEVEL / XP:</strong> Level 1 [ ] / XP: ____</div>
-                    <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 140px;"></span></div>
+                    <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 150px;"></span></div>
                 </div>
             </div>
 
@@ -265,7 +252,7 @@
                 </div>
                 <div class="box">
                     <strong>PRIMARY ATTACK ENGINE</strong><br /><br />
-                    Weapon: <span class="line-input" style="width: 110px;"></span><br />
+                    Weapon: <span class="line-input" style="width: 120px;"></span><br />
                     Base Dmg: ____ + Attr Mod: +____<br />
                     <strong>TOTAL FLAT DAMAGE: [ ______ ]</strong><br />
                     <small><i>Natural 20: Add Attr Mod a 2nd time.</i></small>
@@ -274,17 +261,17 @@
 
             <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod)</h2>
             <div class="sheet-grid">
-                <div>[ 1 ] Armor: <span class="line-input" style="width: 160px;"></span></div>
-                <div>[ 5 ] Item: <span class="line-input" style="width: 160px;"></span></div>
-                <div>[ 2 ] Shield: <span class="line-input" style="width: 160px;"></span></div>
-                <div>[ 6 ] Item: <span class="line-input" style="width: 160px;"></span></div>
-                <div>[ 3 ] Primary Weapon: <span class="line-input" style="width: 130px;"></span></div>
-                <div>[ 7 ] Item: <span class="line-input" style="width: 160px;"></span></div>
-                <div>[ 4 ] Secondary/Tool: <span class="line-input" style="width: 130px;"></span></div>
-                <div>[ 8 ] Item: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 1 ] Armor: <span class="line-input" style="width: 170px;"></span></div>
+                <div>[ 5 ] Item: <span class="line-input" style="width: 170px;"></span></div>
+                <div>[ 2 ] Shield: <span class="line-input" style="width: 170px;"></span></div>
+                <div>[ 6 ] Item: <span class="line-input" style="width: 170px;"></span></div>
+                <div>[ 3 ] Primary Weapon: <span class="line-input" style="width: 140px;"></span></div>
+                <div>[ 7 ] Item: <span class="line-input" style="width: 170px;"></span></div>
+                <div>[ 4 ] Secondary/Tool: <span class="line-input" style="width: 140px;"></span></div>
+                <div>[ 8 ] Item: <span class="line-input" style="width: 170px;"></span></div>
             </div>
 
-            <div class="box" style="margin-top: 4px;">
+            <div class="box" style="margin-top: 10px;">
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
                 • <strong>The 14+ Rule:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.<br />
                 • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling to gain <strong>Advantage</strong> (roll 2d20, keep high; max 1/turn). Hazards impose <strong>Disadvantage</strong> (roll 2d20, keep low). Advantage + Disadvantage cancel to a flat 1d20 roll.<br />
@@ -321,7 +308,7 @@
 
                     <h2>2. THE ACTION ENGINE (FLAT 14)</h2>
                     <p>All risky tasks, skill checks, attack rolls, and evasions target a static <strong>Universal Baseline Threshold of 14</strong>.</p>
-                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; padding: 3px 5px; margin: 2px 0;">
+                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
                         <strong style="color: #2b5b84;">THE 14+ RULE:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.
                     </div>
                     <ul>
@@ -474,14 +461,6 @@
                         <li><strong>L8: Lethal Strike [4 RP]:</strong> Strike unaware non-boss target from behind to bypass armor and instantly drop them to 0 HP.</li>
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> To attack from Concealment for Shadow Strike, you must be in dim light, behind full cover, or have successfully used your Action Phase to roll the Hide maneuver on a previous turn.</div>
-
-                    <div class="box" style="margin-top: 4px; background-color: #f0f4f8; border-color: #2b5b84;">
-                        <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY EXAMPLE: THE BREACH</h3>
-                        <p><strong>Guide:</strong> "Two Elites take defensive aim behind a steel barricade. I will roll Initiative - got a 12!"</p>
-                        <p><strong>Warden:</strong> "My Agility is +2, rolled a 15 - I beat 12! I take Fast Phase, enter <em>Active Guard</em> with my shield, and move adjacent to the Saboteur."</p>
-                        <p><strong>Saboteur:</strong> "I spend 1 RP for <em>Structural Weakness</em> on the barricade. (Rolls 1d20 + Will vs 14) 16! Success."</p>
-                        <p><strong>Guide:</strong> "The barricade's DR is compromised. The Breaker can now smash through effortlessly."</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -546,13 +525,6 @@
                         <li><strong>L7: Potent Stimulant [2 RP]:</strong> Administer brew; ally regains 1 RP and +2 flat damage on next attack (takes 2 crash damage at combat end).</li>
                         <li><strong>L8: Extreme Triage [4 RP]:</strong> Save dying ally from lethal hit; instantly wake at 1 HP with permanent maiming.</li>
                     </ul>
-
-                    <div class="box" style="margin-top: 4px; background-color: #f0f4f8; border-color: #2b5b84;">
-                        <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY EXAMPLE: THE STRIKE</h3>
-                        <p><strong>Breaker:</strong> "I spend 1 RP for Advantage, charge through the barricade, and execute <em>Drive Back</em> on the Elite!"</p>
-                        <p><strong>Breaker:</strong> "(Rolls 2d20, keeps high) 18 + Might! Hit! 5 Heavy Melee damage + 2 crush damage from slamming him into the wall!"</p>
-                        <p><strong>Guide:</strong> "The Elite takes 7 flat damage total. Because the Saboteur stripped its DR, it took the full force of the blow. The surviving Elite readies a weapon."</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -560,7 +532,7 @@
     </div>
 
     <!-- PAGE 5: THE GUIDE'S MANUAL -->
-    <div class="page page-5">
+    <div class="page">
         <div class="content-wrap">
             <h1>THE GUIDE'S MANUAL</h1>
 
@@ -646,7 +618,7 @@
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 2px; background-color: #f0f4f8; border-color: #2b5b84;">
+            <div class="box" style="margin-top: 6px; background-color: #f0f4f8; border-color: #2b5b84;">
                 <h3 style="margin-top: 0; color: #1a1a1a;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</h3>
                 <p>On a failed Out-of-Combat Check vs 14, avoid simply saying "nothing happens." Introduce a complication: picking a lock alerts a guard; deciphering a rune causes mental shock; repairing an engine burns out a rare component. Roll 1d20 to decide severity (1-10 = Minor complication like noise or delays, 11-20 = Major complication like tool breakage or immediately taking 5 Flat Damage). Every failed roll pushes the narrative forward with fresh tension.</p>
             </div>
