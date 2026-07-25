@@ -32,14 +32,14 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.4;
+            line-height: 1.35;
         }
 
         .page {
             width: 8.5in;
             height: 11in;
             background-color: var(--page-color);
-            padding: 0.45in;
+            padding: 0.4in;
             margin-bottom: 25px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             position: relative;
@@ -55,59 +55,58 @@
 
         h1 {
             text-align: center;
-            font-size: 19px;
+            font-size: 18px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 4px;
+            padding-bottom: 3px;
         }
 
         h2 {
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 10px;
-            margin-bottom: 4px;
+            margin-top: 8px;
+            margin-bottom: 3px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 11px;
+            font-size: 10.5px;
             color: #2b5b84;
-            margin-top: 8px;
-            margin-bottom: 3px;
+            margin-top: 6px;
+            margin-bottom: 2px;
             text-transform: uppercase;
         }
 
-        /* RESTORED PRINT READABILITY: 10.5px Standard Body Text */
         p, li, div, td, th {
-            font-size: 10.5px;
+            font-size: 9.8px;
         }
 
         p, li {
             margin-top: 2px;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         ul {
-            padding-left: 15px;
+            padding-left: 14px;
             margin-top: 2px;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 4px;
-            margin-bottom: 6px;
+            margin-top: 3px;
+            margin-bottom: 5px;
         }
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 4px 6px;
+            padding: 3px 5px;
             text-align: left;
         }
 
@@ -120,28 +119,28 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 6px 9px;
-            margin-top: 6px;
-            margin-bottom: 6px;
+            padding: 5px 8px;
+            margin-top: 4px;
+            margin-bottom: 4px;
             border-radius: 2px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 8px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 10px;
+            gap: 8px;
         }
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 14px;
             align-items: start;
         }
 
@@ -157,9 +156,9 @@
 
         .page-num {
             position: absolute;
-            bottom: 0.25in;
-            right: 0.45in;
-            font-size: 9px;
+            bottom: 0.22in;
+            right: 0.4in;
+            font-size: 8.5px;
             color: #666;
         }
 
@@ -167,13 +166,12 @@
             background-color: #f8f9fa;
             border-left: 3px solid #2b5b84;
             padding: 4px 6px;
-            margin-top: 4px;
-            margin-bottom: 5px;
+            margin-top: 3px;
+            margin-bottom: 4px;
             font-style: italic;
-            font-size: 10px;
+            font-size: 9.5px;
         }
 
-        /* PAGE 6 TABLE SPACING */
         .genre-table th:nth-child(1), .genre-table td:nth-child(1) { width: 25%; }
         .genre-table th:nth-child(2), .genre-table td:nth-child(2) { width: 38%; }
         .genre-table th:nth-child(3), .genre-table td:nth-child(3) { width: 37%; }
@@ -207,12 +205,12 @@
             
             <div class="box">
                 <div class="sheet-grid">
-                    <div><strong>CHARACTER NAME:</strong> <span class="line-input" style="width: 140px;"></span></div>
-                    <div><strong>COMBAT ARCHETYPE:</strong> <span class="line-input" style="width: 130px;"></span></div>
-                    <div><strong>DRIVE / MOTIVATION:</strong> <span class="line-input" style="width: 130px;"></span></div>
-                    <div><strong>BACKGROUND:</strong> <span class="line-input" style="width: 160px;"></span></div>
+                    <div><strong>CHARACTER NAME:</strong> <span class="line-input" style="width: 130px;"></span></div>
+                    <div><strong>COMBAT ARCHETYPE:</strong> <span class="line-input" style="width: 120px;"></span></div>
+                    <div><strong>DRIVE / MOTIVATION:</strong> <span class="line-input" style="width: 120px;"></span></div>
+                    <div><strong>BACKGROUND:</strong> <span class="line-input" style="width: 150px;"></span></div>
                     <div><strong>LEVEL / XP:</strong> Level 1 [ ] / XP: ____</div>
-                    <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 150px;"></span></div>
+                    <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 140px;"></span></div>
                 </div>
             </div>
 
@@ -252,7 +250,7 @@
                 </div>
                 <div class="box">
                     <strong>PRIMARY ATTACK ENGINE</strong><br /><br />
-                    Weapon: <span class="line-input" style="width: 120px;"></span><br />
+                    Weapon: <span class="line-input" style="width: 110px;"></span><br />
                     Base Dmg: ____ + Attr Mod: +____<br />
                     <strong>TOTAL FLAT DAMAGE: [ ______ ]</strong><br />
                     <small><i>Natural 20: Add Attr Mod a 2nd time.</i></small>
@@ -261,23 +259,33 @@
 
             <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod)</h2>
             <div class="sheet-grid">
-                <div>[ 1 ] Armor: <span class="line-input" style="width: 170px;"></span></div>
-                <div>[ 5 ] Item: <span class="line-input" style="width: 170px;"></span></div>
-                <div>[ 2 ] Shield: <span class="line-input" style="width: 170px;"></span></div>
-                <div>[ 6 ] Item: <span class="line-input" style="width: 170px;"></span></div>
-                <div>[ 3 ] Primary Weapon: <span class="line-input" style="width: 140px;"></span></div>
-                <div>[ 7 ] Item: <span class="line-input" style="width: 170px;"></span></div>
-                <div>[ 4 ] Secondary/Tool: <span class="line-input" style="width: 140px;"></span></div>
-                <div>[ 8 ] Item: <span class="line-input" style="width: 170px;"></span></div>
+                <div>[ 1 ] Armor: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 5 ] Item: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 2 ] Shield: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 6 ] Item: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 3 ] Primary Weapon: <span class="line-input" style="width: 130px;"></span></div>
+                <div>[ 7 ] Item: <span class="line-input" style="width: 160px;"></span></div>
+                <div>[ 4 ] Secondary/Tool: <span class="line-input" style="width: 130px;"></span></div>
+                <div>[ 8 ] Item: <span class="line-input" style="width: 160px;"></span></div>
             </div>
 
-            <div class="box" style="margin-top: 10px;">
+            <div class="box" style="margin-top: 5px;">
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
                 • <strong>The 14+ Rule:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.<br />
                 • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling to gain <strong>Advantage</strong> (roll 2d20, keep high; max 1/turn). Hazards impose <strong>Disadvantage</strong> (roll 2d20, keep low). Advantage + Disadvantage cancel to a flat 1d20 roll.<br />
                 • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attribute vs 14. Success deals calculated Flat Damage directly to target HP.<br />
                 • <strong>Evasion Phase (Defending):</strong> On enemy turn, roll 1d20 + Agility vs 14. Success = 0 damage. Fail = take enemy flat damage minus your Armor DR.<br />
                 • <strong>Dying and Bleed Out (0 HP):</strong> At 0 HP you fall Unconscious. You bleed out in rounds equal to your Will modifier (min 1). An adjacent ally must spend an Action Phase to pass a Will Check vs 14 to stabilize you at 1 HP.
+            </div>
+
+            <!-- ACTION PHASE MANEUVERS: LONGWAYS ACROSS BOTTOM OF PAGE 1 -->
+            <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 4px;">
+                <strong style="color: #2b5b84;">ACTION PHASE MANEUVERS (NON-ATTACK)</strong><br />
+                • <strong>Active Guard:</strong> Raise an equipped Shield to gain Advantage on all Evasion rolls until your next turn.<br />
+                • <strong>Dash:</strong> Forfeit your attack to immediately move your total Movement paces a second time.<br />
+                • <strong>Assist Ally:</strong> Grant an adjacent ally Advantage on their very next skill check or attack roll.<br />
+                • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical Concealment from enemy perception.<br />
+                • <strong>Interact:</strong> Manipulate complex objects, pick a lock, pull a heavy lever, or hand a consumable item to a teammate.
             </div>
         </div>
         <div class="page-num">Page 1</div>
@@ -386,16 +394,6 @@
                         </tbody>
                     </table>
                     <p><strong>Inventory Limit:</strong> Max equipped slots = <strong>4 + Might modifier</strong>. Over-encumbrance imposes Disadvantage on all physical actions and halves your movement paces.</p>
-
-                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
-                        <strong style="color: #2b5b84;">ACTION PHASE MANEUVERS (NON-ATTACK)</strong><br />
-                        During your Action Phase, you can choose a tactical maneuver instead of executing an attack:<br />
-                        • <strong>Active Guard:</strong> Raise an equipped Shield to gain Advantage on all Evasion rolls until your next turn.<br />
-                        • <strong>Dash:</strong> Forfeit your attack to immediately move your total Movement paces a second time.<br />
-                        • <strong>Assist Ally:</strong> Grant an adjacent ally Advantage on their very next skill check or attack roll.<br />
-                        • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical Concealment from enemy perception.<br />
-                        • <strong>Interact:</strong> Manipulate complex objects, pick a lock, pull a heavy lever, or hand a consumable item to a teammate.
-                    </div>
                 </div>
             </div>
         </div>
