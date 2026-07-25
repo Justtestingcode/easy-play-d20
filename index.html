@@ -16,7 +16,7 @@
 
         @page {
             size: letter;
-            margin: 0.35in;
+            margin: 0.3in;
         }
 
         * {
@@ -26,20 +26,20 @@
         body {
             background-color: var(--bg-color);
             margin: 0;
-            padding: 15px;
+            padding: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.35;
+            line-height: 1.3;
         }
 
         .page {
             width: 8.5in;
             height: 11in;
             background-color: var(--page-color);
-            padding: 0.4in;
+            padding: 0.35in;
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             position: relative;
@@ -55,59 +55,58 @@
 
         h1 {
             text-align: center;
-            font-size: 18px;
+            font-size: 17px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 2px;
         }
 
         h2 {
-            font-size: 11.5px;
+            font-size: 11px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 7px;
-            margin-bottom: 3px;
+            margin-top: 5px;
+            margin-bottom: 2px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 10px;
+            font-size: 9.5px;
             color: #2b5b84;
-            margin-top: 6px;
+            margin-top: 4px;
             margin-bottom: 2px;
             text-transform: uppercase;
         }
 
-        /* LOCKED BASELINE FONT SIZE: Standard 9.5px across all body elements */
         p, li, div, td, th {
-            font-size: 9.5px;
+            font-size: 8.8px;
         }
 
         p, li {
             margin-top: 1px;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         ul {
-            padding-left: 14px;
+            padding-left: 12px;
             margin-top: 1px;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 3px;
-            margin-bottom: 5px;
+            margin-top: 2px;
+            margin-bottom: 3px;
         }
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 3px 5px;
+            padding: 2px 4px;
             text-align: left;
         }
 
@@ -120,28 +119,28 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 5px 7px;
-            margin-top: 4px;
-            margin-bottom: 4px;
+            padding: 4px 6px;
+            margin-top: 3px;
+            margin-bottom: 3px;
             border-radius: 2px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 6px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 8px;
+            gap: 6px;
         }
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
+            gap: 10px;
             align-items: start;
         }
 
@@ -157,20 +156,20 @@
 
         .page-num {
             position: absolute;
-            bottom: 0.22in;
-            right: 0.4in;
-            font-size: 8.5px;
+            bottom: 0.2in;
+            right: 0.35in;
+            font-size: 8px;
             color: #666;
         }
 
         .pro-tip {
             background-color: #f8f9fa;
             border-left: 3px solid #2b5b84;
-            padding: 3px 5px;
-            margin-top: 3px;
-            margin-bottom: 4px;
+            padding: 2px 4px;
+            margin-top: 2px;
+            margin-bottom: 3px;
             font-style: italic;
-            font-size: 9px;
+            font-size: 8.5px;
         }
 
         @media print {
@@ -195,7 +194,7 @@
 </head>
 <body>
 
-    <!-- PAGE 1: CHARACTER PLAY SHEET (LOCKED MASTER) -->
+    <!-- PAGE 1: CHARACTER PLAY SHEET -->
     <div class="page">
         <div class="content-wrap">
             <h1>EASY PLAY D20 - CHARACTER PLAY SHEET</h1>
@@ -266,7 +265,7 @@
                 <div>[ 8 ] Item: <span class="line-input" style="width: 160px;"></span></div>
             </div>
 
-            <div class="box" style="margin-top: 8px;">
+            <div class="box" style="margin-top: 4px;">
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
                 • <strong>The 14+ Rule:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.<br />
                 • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling to gain <strong>Advantage</strong> (roll 2d20, keep high; max 1/turn). Hazards impose <strong>Disadvantage</strong> (roll 2d20, keep low). Advantage + Disadvantage cancel to a flat 1d20 roll.<br />
@@ -278,7 +277,7 @@
         <div class="page-num">Page 1</div>
     </div>
 
-    <!-- PAGE 2: SYSTEM CORE and ARMORY -->
+    <!-- PAGE 2: SYSTEM CORE AND ARMORY -->
     <div class="page">
         <div class="content-wrap">
             <h1>EASY PLAY D20 - SYSTEM CORE and ARMORY</h1>
@@ -303,7 +302,7 @@
 
                     <h2>2. THE ACTION ENGINE (FLAT 14)</h2>
                     <p>All risky tasks, skill checks, attack rolls, and evasions target a static <strong>Universal Baseline Threshold of 14</strong>.</p>
-                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
+                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; padding: 3px 5px; margin: 2px 0;">
                         <strong style="color: #2b5b84;">THE 14+ RULE:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.
                     </div>
                     <ul>
@@ -457,10 +456,10 @@
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> To attack from Concealment for Shadow Strike, you must be in dim light, behind full cover, or have successfully used your Action Phase to roll the Hide maneuver on a previous turn.</div>
 
-                    <div class="box" style="margin-top: 8px; background-color: #f0f4f8; border-color: #2b5b84;">
+                    <div class="box" style="margin-top: 4px; background-color: #f0f4f8; border-color: #2b5b84;">
                         <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY EXAMPLE: THE BREACH</h3>
                         <p><strong>Guide:</strong> "Two Elites take defensive aim behind a steel barricade. I will roll Initiative - got a 12!"</p>
-                        <p><strong>Warden:</strong> "My Agility is +2, rolled a 15 - I beat 12! I take the Fast Phase, enter <em>Active Guard</em> with my shield, and move adjacent to the Saboteur."</p>
+                        <p><strong>Warden:</strong> "My Agility is +2, rolled a 15 - I beat 12! I take Fast Phase, enter <em>Active Guard</em> with my shield, and move adjacent to the Saboteur."</p>
                         <p><strong>Saboteur:</strong> "I spend 1 RP for <em>Structural Weakness</em> on the barricade. (Rolls 1d20 + Will vs 14) 16! Success."</p>
                         <p><strong>Guide:</strong> "The barricade's DR is compromised. The Breaker can now smash through effortlessly."</p>
                     </div>
@@ -529,7 +528,7 @@
                         <li><strong>L8: Extreme Triage [4 RP]:</strong> Save dying ally from lethal hit; instantly wake at 1 HP with permanent maiming.</li>
                     </ul>
 
-                    <div class="box" style="margin-top: 8px; background-color: #f0f4f8; border-color: #2b5b84;">
+                    <div class="box" style="margin-top: 4px; background-color: #f0f4f8; border-color: #2b5b84;">
                         <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY EXAMPLE: THE STRIKE</h3>
                         <p><strong>Breaker:</strong> "I spend 1 RP for Advantage, charge through the barricade, and execute <em>Drive Back</em> on the Elite!"</p>
                         <p><strong>Breaker:</strong> "(Rolls 2d20, keeps high) 18 + Might! Hit! 5 Heavy Melee damage + 2 crush damage from slamming him into the wall!"</p>
@@ -559,7 +558,7 @@
                     <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
                         <strong style="color: #2b5b84;">WHEN DOES THE GUIDE ROLL A D20?</strong><br />
                         To maintain 100% player agency, the Guide only rolls d20s for high-impact world events:<br />
-                        1. <strong>Initiative Target:</strong> Roll 1d20 (+ Tier Mod) at combat start to set the Fast/Slow turn threshold.<br />
+                        1. <strong>Initiative Target:</strong> Roll 1d20 (+ Tier Mod) at combat start to set Fast/Slow turn threshold.<br />
                         2. <strong>Morale Checks:</strong> Roll 1d20 when an enemy squad loses 50% of its members or leader.<br />
                         3. <strong>Boss Escalation:</strong> Roll 1d20 when a Boss hits 50% HP (1-10: Spawn 2 Minions, 11-20: Trigger Major Hazard).<br />
                         4. <strong>Failing Forward:</strong> Roll 1d20 to decide narrative complication severity on failed player checks.
@@ -628,7 +627,7 @@
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 6px; background-color: #f0f4f8; border-color: #2b5b84;">
+            <div class="box" style="margin-top: 4px; background-color: #f0f4f8; border-color: #2b5b84;">
                 <h3 style="margin-top: 0; color: #1a1a1a;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</h3>
                 <p>On a failed Out-of-Combat Check vs 14, avoid simply saying "nothing happens." Introduce a complication: picking a lock alerts a guard; deciphering a rune causes mental shock; repairing an engine burns out a rare component. Roll 1d20 to decide severity (1-10 = Minor complication like noise or delays, 11-20 = Major complication like tool breakage or immediately taking 5 Flat Damage). Every failed roll pushes the narrative forward with fresh tension.</p>
             </div>
