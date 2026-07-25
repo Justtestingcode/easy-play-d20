@@ -33,15 +33,15 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.35;
+            line-height: 1.32;
         }
 
         .page {
             width: 8.5in;
             height: 11in;
             background-color: var(--page-color);
-            padding: 0.4in 0.4in 0.45in 0.4in;
-            margin-bottom: 25px;
+            padding: 0.38in 0.4in 0.48in 0.4in;
+            margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             position: relative;
             overflow: hidden;
@@ -57,53 +57,53 @@
 
         h1 {
             text-align: center;
-            font-size: 18px;
+            font-size: 17.5px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 3px;
+            padding-bottom: 2px;
         }
 
         h2 {
-            font-size: 12px;
+            font-size: 11.5px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 8px;
+            margin-top: 6px;
             margin-bottom: 3px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 10.5px;
+            font-size: 10px;
             color: #2b5b84;
-            margin-top: 6px;
+            margin-top: 5px;
             margin-bottom: 2px;
             text-transform: uppercase;
         }
 
         p, li, div, td, th {
-            font-size: 9.5px;
+            font-size: 9.1px;
         }
 
         p, li {
-            margin-top: 2px;
-            margin-bottom: 3px;
+            margin-top: 1px;
+            margin-bottom: 2px;
         }
 
         ul {
-            padding-left: 14px;
-            margin-top: 2px;
-            margin-bottom: 4px;
+            padding-left: 13px;
+            margin-top: 1px;
+            margin-bottom: 3px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 4px;
-            margin-bottom: 5px;
+            margin-top: 3px;
+            margin-bottom: 4px;
         }
 
         th, td {
@@ -121,28 +121,28 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 5px 8px;
-            margin-top: 4px;
-            margin-bottom: 4px;
+            padding: 5px 7px;
+            margin-top: 3px;
+            margin-bottom: 3px;
             border-radius: 2px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 6px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 8px;
+            gap: 6px;
         }
 
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 14px;
+            gap: 12px;
             align-items: start;
         }
 
@@ -158,11 +158,11 @@
 
         .page-num {
             position: absolute;
-            bottom: 0.15in;
+            bottom: 0.18in;
             right: 0.4in;
-            font-size: 9px;
+            font-size: 8.5px;
             font-weight: bold;
-            color: #444;
+            color: #555;
             z-index: 20;
             background-color: var(--page-color);
             padding: 1px 4px;
@@ -171,14 +171,14 @@
         .pro-tip {
             background-color: #f8f9fa;
             border-left: 3px solid #2b5b84;
-            padding: 4px 6px;
-            margin-top: 4px;
+            padding: 3px 5px;
+            margin-top: 3px;
             margin-bottom: 4px;
             font-style: italic;
-            font-size: 9px;
+            font-size: 8.8px;
         }
 
-        /* DYNAMIC FLEX-STRETCHED LINED NOTES BOX TO FILL ALL REMAINING WHITE SPACE */
+        /* DYNAMIC FLEX-STRETCHED LINED NOTES BOX */
         .notes-box {
             border: 1px solid var(--border-color);
             background-color: #ffffff;
@@ -190,13 +190,13 @@
             );
             background-position: 0 16px;
             padding: 2px 6px;
-            margin-top: 8px;
+            margin-top: 6px;
             margin-bottom: 0;
             border-radius: 2px;
             width: 100%;
             box-sizing: border-box;
             flex: 1 1 auto;
-            min-height: 45px;
+            min-height: 40px;
         }
 
         .notes-title {
@@ -285,48 +285,48 @@
                     [ ] Light Armor (DR -1)<br />
                     [ ] Heavy Armor (DR -2, Req 3 Might)<br />
                     [ ] Shield (Active Guard: Action Phase = Adv Evasion)<br /><br />
-                    <strong>TOTAL ARMOR DR: [ ______ ]</strong>
+                    <strong>TOTAL ARMOR DR: [ ______ ]</strong><br />
+                    <small><i>*Minimum Damage: Successful hits deal min 1 Dmg.</i></small>
                 </div>
                 <div class="box">
                     <strong>PRIMARY ATTACK ENGINE</strong><br /><br />
                     Weapon: <span class="line-input" style="width: 110px;"></span><br />
                     Base Dmg: ____ + Attr Mod: +____<br />
                     <strong>TOTAL FLAT DAMAGE: [ ______ ]</strong><br />
-                    <small><i>Natural 20: Add Attr Mod a 2nd time.</i></small>
+                    <small><i>Nat 20: Overdrive | Nat 1: Disadv on next Evasion</i></small>
                 </div>
             </div>
 
             <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod)</h2>
             <div class="sheet-grid">
                 <div>[ 1 ] Armor: <span class="line-input" style="width: 150px;"></span></div>
-                <div>[ 5 ] Item: <span class="line-input" style="width: 150px;"></span></div>
+                <div>[ 5 ] Item/Pouch: <span class="line-input" style="width: 130px;"></span></div>
                 <div>[ 2 ] Shield: <span class="line-input" style="width: 150px;"></span></div>
-                <div>[ 6 ] Item: <span class="line-input" style="width: 150px;"></span></div>
+                <div>[ 6 ] Item/Pouch: <span class="line-input" style="width: 130px;"></span></div>
                 <div>[ 3 ] Primary Weapon: <span class="line-input" style="width: 120px;"></span></div>
-                <div>[ 7 ] Item: <span class="line-input" style="width: 150px;"></span></div>
+                <div>[ 7 ] Item/Pouch: <span class="line-input" style="width: 130px;"></span></div>
                 <div>[ 4 ] Secondary/Tool: <span class="line-input" style="width: 120px;"></span></div>
-                <div>[ 8 ] Item: <span class="line-input" style="width: 150px;"></span></div>
+                <div>[ 8 ] Item/Pouch: <span class="line-input" style="width: 130px;"></span></div>
             </div>
 
-            <div class="box" style="margin-top: 4px;">
+            <div class="box" style="margin-top: 3px;">
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
-                • <strong>The 14+ Rule:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.<br />
-                • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling to gain <strong>Advantage</strong> (roll 2d20, keep high; max 1/turn). Hazards impose <strong>Disadvantage</strong> (roll 2d20, keep low). Advantage + Disadvantage cancel to a flat 1d20 roll.<br />
-                • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attribute vs 14. Success deals calculated Flat Damage directly to target HP.<br />
-                • <strong>Evasion Phase (Defending):</strong> On enemy turn, roll 1d20 + Agility vs 14. Success = 0 damage. Fail = take enemy flat damage minus your Armor DR.<br />
-                • <strong>Dying and Bleed Out (0 HP):</strong> At 0 HP you fall Unconscious. You bleed out in rounds equal to your Will modifier (min 1). An adjacent ally must spend an Action Phase to pass a Will Check vs 14 to stabilize you at 1 HP.
+                • <strong>The 14+ Rule:</strong> Any check, attack, or defense totaling 14+ after modifiers is a complete success. Anything under 14 is a failure.<br />
+                • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling for <strong>Advantage</strong> (2d20, keep high; max 1/turn). Disadvantage = 2d20, keep low.<br />
+                • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attr vs 14. Success deals Flat Damage. Nat 1 = automatic miss + Disadvantage on next Evasion.<br />
+                • <strong>Evasion Phase (Defending):</strong> Roll 1d20 + Agility vs 14. 14+ = 0 damage. Fail = take enemy flat damage minus Armor DR (min 1 Dmg).<br />
+                • <strong>Dying and Bleed Out (0 HP):</strong> Decrement Bleed Out counter by 1 at start of your turn. Reaching 0 = die. Ally spending Action Phase passes Will vs 14 to revive at 1 HP.
             </div>
 
-            <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 4px;">
+            <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 3px;">
                 <strong style="color: #2b5b84;">ACTION PHASE MANEUVERS (NON-ATTACK)</strong><br />
-                • <strong>Active Guard:</strong> Raise an equipped Shield to gain Advantage on all Evasion rolls until your next turn.<br />
-                • <strong>Dash:</strong> Forfeit your attack to immediately move your total Movement paces a second time.<br />
-                • <strong>Assist Ally:</strong> Grant an adjacent ally Advantage on their very next skill check or attack roll.<br />
-                • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical Concealment from enemy perception.<br />
-                • <strong>Interact:</strong> Manipulate complex objects, pick a lock, pull a heavy lever, or hand a consumable item to a teammate.
+                • <strong>Active Guard:</strong> Raise Shield to gain Advantage on all Evasion rolls until your next turn.<br />
+                • <strong>Dash:</strong> Forfeit attack to move total Movement paces a second time.<br />
+                • <strong>Assist Ally:</strong> Grant an adjacent ally Advantage on their very next check or attack roll.<br />
+                • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical Concealment.<br />
+                • <strong>Interact:</strong> Pick lock, pull lever, or hand a consumable item to a teammate.
             </div>
 
-            <!-- STRETCHED LINED NOTES BOX PAGE 1 -->
             <div class="notes-box">
                 <span class="notes-title">SESSION & CHARACTER NOTES:</span>
             </div>
@@ -364,7 +364,8 @@
                     </div>
                     <ul>
                         <li><strong>Resolution:</strong> Roll 1d20 + Attribute Modifier. Sum of 14+ succeeds.</li>
-                        <li><strong>Rule of 20 and Criticals:</strong> Natural 20 on an attack is an Overdrive Strike (add Attribute Mod to flat damage twice). Natural 1 is a critical failure.</li>
+                        <li><strong>Critical Hit (Nat 20):</strong> Overdrive Strike—add Attribute Mod to flat damage a second time.</li>
+                        <li><strong>Critical Failure (Nat 1):</strong> Automatic miss; you suffer Disadvantage on your very next Evasion roll.</li>
                     </ul>
 
                     <div class="box">
@@ -376,16 +377,16 @@
                     <h2>3. COMBAT STRUCTURE and TURN FLOW</h2>
                     <p>Rounds represent 6 seconds of simultaneous action. System is 100% Player-Facing: no out-of-turn reactions.</p>
                     <ul>
-                        <li><strong>Dynamic Guide Initiative:</strong> The Guide rolls 1d20 (+ Tier Mod) to set the encounter's <strong>Initiative Target</strong>. Players roll 1d20 + Agility vs this target. Players who meet or beat it act in the Fast Phase (before enemies); those who roll lower act in the Slow Phase (after enemies). Players win ties.</li>
-                        <li><strong>1. Move Phase:</strong> Travel up to your Movement speed in paces (1 pace = 5 ft / 1 grid square).</li>
-                        <li><strong>2. Action Phase:</strong> Attack, execute a class feature, drink a potion, or perform a maneuver. Roll 1d20 + Weapon Attr vs 14 to hit.</li>
-                        <li><strong>3. Evasion Phase:</strong> When targeted on an enemy turn, roll 1d20 + Agility vs 14. 14+ = 0 damage. Fail = take flat enemy damage minus Armor DR.</li>
+                        <li><strong>Dynamic Guide Initiative:</strong> The Guide rolls 1d20 (+ Tier Mod) to set the encounter's <strong>Initiative Target</strong>. Players roll 1d20 + Agility vs this target. Meet/beat = Fast Phase (before enemies); lower = Slow Phase (after enemies). Players win ties.</li>
+                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (1 pace = 5 ft / 1 grid square).</li>
+                        <li><strong>2. Action Phase:</strong> Attack, use ability, drink potion, or execute a maneuver (1d20 + Attr vs 14).</li>
+                        <li><strong>3. Evasion Phase:</strong> When targeted on enemy turn, roll 1d20 + Agility vs 14. 14+ = 0 damage. Fail = take enemy flat damage minus Armor DR (min 1 Dmg).</li>
                     </ul>
 
                     <div class="box" style="background-color: #fce8e8; border-color: var(--accent-color);">
                         <strong style="color: var(--accent-color);">DEATH and STABILIZATION (0 HP)</strong><br />
                         At 0 HP you collapse Prone and become <strong>Unconscious</strong>.<br />
-                        • <strong>Bleed Out:</strong> Permanently die in rounds equal to Will mod (min 1).<br />
+                        • <strong>Bleed Out Timer:</strong> At the start of your turn while at 0 HP, decrement your Bleed Out counter (starts at Will mod, min 1) by 1. Reaching 0 causes permanent death.<br />
                         • <strong>Stabilization:</strong> Adjacent ally spends Action Phase for Will check vs 14 to revive you at 1 HP.<br />
                         • <strong>Execution:</strong> Direct damage taken while at 0 HP causes instant permanent death.
                     </div>
@@ -436,11 +437,11 @@
                             <tr><td>Shield</td><td>Active Guard</td><td>1 Hand. Action Phase = Advantage on Evasion until next turn.</td></tr>
                         </tbody>
                     </table>
-                    <p><strong>Inventory Limit:</strong> Max equipped slots = <strong>4 + Might modifier</strong>. Over-encumbrance imposes Disadvantage on all physical actions and halves your movement paces.</p>
+                    <p><strong>Minimum Damage Rule:</strong> Damage Reduction can never reduce incoming damage below 1 point on a successful enemy hit.</p>
+                    <p><strong>Inventory Limit & Backpacks:</strong> Total slots = <strong>4 + Might modifier</strong>. Each slot holds 1 equipped item OR 1 Pouch of up to 3 unequipped consumables/tools. Exceeding total slots causes <strong>Over-Encumbrance</strong> (Disadvantage on physical actions, movement halved).</p>
                 </div>
             </div>
 
-            <!-- STRETCHED LINED NOTES BOX PAGE 2 -->
             <div class="notes-box">
                 <span class="notes-title">CORE RULES & ARMORY NOTES:</span>
             </div>
@@ -469,7 +470,7 @@
                         <li><strong>L7: Sunder / Disarm [2 RP]:</strong> Spend 2 RP on hit to wrench target's weapon away OR permanently reduce target's Damage Reduction by 2.</li>
                         <li><strong>L8: Brawl Mastery [4 RP]:</strong> Spend 4 RP on hit to grapple foe as physical cover (+Advantage on Evasion) OR pin a beast to remove its Action Phase.</li>
                     </ul>
-                    <div class="pro-tip"><strong>Rule Clarification:</strong> Iron Stance stacks directly with your Armor DR. If you have Heavy Armor (DR -2) and activate Iron Stance (reduce 2 points), you subtract 4 total damage from every incoming hit.</div>
+                    <div class="pro-tip"><strong>Rule Clarification:</strong> Iron Stance stacks directly with Armor DR, but all successful incoming hits still deal a minimum of 1 Flat Damage.</div>
 
                     <h3>THE BREAKER</h3>
                     <p><em>Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.</em></p>
@@ -510,7 +511,6 @@
                 </div>
             </div>
 
-            <!-- STRETCHED LINED NOTES BOX PAGE 3 -->
             <div class="notes-box">
                 <span class="notes-title">FRONTLINE COMBAT NOTES & SYNERGIES:</span>
             </div>
@@ -579,7 +579,6 @@
                 </div>
             </div>
 
-            <!-- STRETCHED LINED NOTES BOX PAGE 4 -->
             <div class="notes-box">
                 <span class="notes-title">TACTICAL SUPPORT & GEAR NOTES:</span>
             </div>
@@ -656,30 +655,38 @@
                         <li><strong>Apex Boss Fight:</strong> 5 Minions, 1 Boss. (Rewards 2 Major Loot Tags + 1 Enhancer).</li>
                     </ul>
 
-                    <p><strong>Enemy Modifiers:</strong></p>
+                    <p><strong>Enemy Modifiers & Morale:</strong></p>
                     <ul>
-                        <li><strong>Heavy / Armored:</strong> Add -1 DR to enemy (halve their movement).</li>
-                        <li><strong>Agile / Skirmisher:</strong> Player Evasion suffers Disadvantage (+2 enemy movement, -2 enemy HP).</li>
-                        <li><strong>Lethal / Sniper:</strong> Add +2 incoming Flat Damage (-5 enemy HP).</li>
-                        <li><strong>Dynamic Morale:</strong> When losing half their squad or leader, the Guide rolls 1d20. Enemies rout, dropping Loot/Intel, if the roll matches these exact ranges: <strong>10 through 20</strong> (Minions Only), <strong>13 through 20</strong> (Standard Present), or <strong>16 through 20</strong> (Elite Present). Bosses never flee.</li>
+                        <li><strong>Heavy:</strong> Add -1 DR (halve movement). <strong>Agile:</strong> Disadv on Evasion (+2 move, -2 HP). <strong>Lethal:</strong> +2 incoming Flat Dmg (-5 HP).</li>
+                        <li><strong>Dynamic Morale:</strong> When losing half squad/leader, Guide rolls 1d20. Enemies rout if roll matches: <strong>10–20</strong> (Minions), <strong>13–20</strong> (Standard), <strong>16–20</strong> (Elite). Bosses never flee.</li>
                     </ul>
 
-                    <h2>5. TACTICAL, VISIBILITY and REST RULES</h2>
+                    <h2>5. TACTICAL, STATUS CONDITIONS & REST</h2>
                     <ul>
-                        <li><strong>Partial Cover:</strong> Crouching behind cover grants <strong>Advantage on Evasion</strong> vs Ranged attacks.</li>
-                        <li><strong>Full Cover:</strong> Cannot be targeted until enemies maneuver around the barrier.</li>
-                        <li><strong>Visibility:</strong> Dim Light/Fog = Disadvantage on Perception and Ranged attacks. Pitch Black = cannot target beyond 1 pace; Disadvantage on Evasion.</li>
-                        <li><strong>Rest & Recovery:</strong> <em>Short Breather:</em> HP = Might mod, RP = Will mod. <em>Rough Sleep:</em> HP & RP = sum of all attributes. <em>Sanctuary Rest:</em> Full restore.</li>
+                        <li><strong>Status Conditions (Players & Enemies):</strong>
+                            <ul>
+                                <li><em>Prone:</em> Halves movement; actions taken while Prone suffer Disadvantage.</li>
+                                <li><em>Dazed:</em> Disadvantage on all rolls until end of turn; movement halved.</li>
+                                <li><em>Pinned:</em> Cannot move until spending Action Phase for Might check vs 14 to break free.</li>
+                                <li><em>Stunned:</em> Forfeits all Move and Action Phases on next turn.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Rest & Recovery:</strong> 
+                            <ul>
+                                <li><em>Short Breather (10 min):</em> HP = (Might mod x 2), RP = Will mod.</li>
+                                <li><em>Rough Sleep (Overnight):</em> HP = Half Max HP, full RP restore.</li>
+                                <li><em>Sanctuary Rest (Town):</em> Full HP/RP restore + clear conditions.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 4px; background-color: #f0f4f8; border-color: #2b5b84;">
+            <div class="box" style="margin-top: 3px; background-color: #f0f4f8; border-color: #2b5b84;">
                 <h3 style="margin-top: 0; color: #1a1a1a;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</h3>
                 <p>On a failed Out-of-Combat Check vs 14, avoid simply saying "nothing happens." Introduce a complication: picking a lock alerts a guard; deciphering a rune causes mental shock; repairing an engine burns out a rare component. Roll 1d20 to decide severity (1-10 = Minor complication like noise or delays, 11-20 = Major complication like tool breakage or immediately taking 5 Flat Damage). Every failed roll pushes the narrative forward with fresh tension.</p>
             </div>
 
-            <!-- STRETCHED LINED NOTES BOX PAGE 5 -->
             <div class="notes-box">
                 <span class="notes-title">ENCOUNTER & CAMPAIGN TRACKING NOTES:</span>
             </div>
@@ -791,7 +798,6 @@
                 </div>
             </div>
 
-            <!-- STRETCHED LINED NOTES BOX PAGE 6 -->
             <div class="notes-box">
                 <span class="notes-title">GENRE & WORLD-BUILDING NOTES:</span>
             </div>
