@@ -266,7 +266,7 @@
                     <strong>AGILITY</strong><br />
                     <small>Reflexes / Speed / Evasion</small><br /><br />
                     <strong>MODIFIER: +[ ____ ]</strong><br /><br />
-                    Movement: 2 + Agility + Armor<br />
+                    Movement: 2 + Agility + Armor Mod<br />
                     <strong>Max Paces: [ ________ ]</strong>
                 </div>
                 <div class="box" style="text-align: center;">
@@ -286,7 +286,7 @@
                     [ ] Light Armor (+3 Max HP, Req 1 Might/Agility)<br />
                     [ ] Medium Armor (+5 Max HP, Req 2 Might)<br />
                     [ ] Heavy Armor (+8 Max HP, -1 Pace, Req 3 Might)<br />
-                    [ ] Shield (Active Guard: Action Phase = Adv Evasion)<br />
+                    [ ] Shield (-1 Pace Speed; Guard = Uses Action & Move)<br />
                     <strong>BONUS HP: [ _____ ] | MOVE MOD: [ _____ ]</strong>
                 </div>
                 <div class="box">
@@ -321,7 +321,7 @@
 
             <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 3px;">
                 <strong style="color: #2b5b84;">ACTION PHASE MANEUVERS (NON-ATTACK)</strong><br />
-                • <strong>Active Guard:</strong> Raise Shield to gain Advantage on all Evasion rolls until your next turn.<br />
+                • <strong>Active Guard:</strong> Raise Shield (forfeits Action AND Move Phase) to gain Advantage on all Evasion rolls until next turn.<br />
                 • <strong>Dash:</strong> Forfeit attack to move total Movement paces a second time.<br />
                 • <strong>Assist Ally:</strong> Grant an adjacent ally Advantage on their very next check or attack roll.<br />
                 • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical Concealment.<br />
@@ -352,7 +352,7 @@
                         <li><strong>Derived Vitals:</strong>
                             <ul>
                                 <li><em>HP:</em> (Might x 4) + 15 + Armor HP</li>
-                                <li><em>Movement:</em> 2 + Agility + Armor Speed (in Paces)</li>
+                                <li><em>Movement:</em> 2 + Agility + Armor/Shield Speed Mod (in Paces)</li>
                                 <li><em>RP:</em> Will x 2</li>
                             </ul>
                         </li>
@@ -430,14 +430,14 @@
                     <h2>6. ARMOR and INVENTORY CAPACITY</h2>
                     <table>
                         <thead>
-                            <tr><th>Armor Type</th><th>Bonus HP</th><th>Speed</th><th>Requirements</th></tr>
+                            <tr><th>Armor Type</th><th>Bonus HP</th><th>Speed</th><th>Requirements & Benefit</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Unarmored</td><td>+0 HP</td><td>+1 Pace</td><td>None. Pure speed & flexibility.</td></tr>
+                            <tr><td>Unarmored</td><td>+0 HP</td><td>+1 Pace</td><td>None. Pure mobility.</td></tr>
                             <tr><td>Light Armor</td><td>+3 HP</td><td>+0 Paces</td><td>Req 1 Might OR 1 Agility.</td></tr>
-                            <tr><td>Medium Armor</td><td>+5 HP</td><td>+0 Paces</td><td>Req 2 Might. Balanced defense.</td></tr>
+                            <tr><td>Medium Armor</td><td>+5 HP</td><td>+0 Paces</td><td>Req 2 Might. Balanced protection.</td></tr>
                             <tr><td>Heavy Armor</td><td>+8 HP</td><td>-1 Pace</td><td>Req 3 Might. Tank protection.</td></tr>
-                            <tr><td>Shield</td><td>Guard</td><td>0 Paces</td><td>1 Hand. Action = Adv Evasion.</td></tr>
+                            <tr><td>Shield</td><td>Guard</td><td>-1 Pace</td><td>1 Hand. Active Guard uses Action AND Move Phase for Adv Evasion.</td></tr>
                         </tbody>
                     </table>
                     <p><strong>Inventory Limit & Backpacks:</strong> Total slots = <strong>4 + Might modifier</strong>. Each slot holds 1 equipped item OR 1 Pouch of up to 3 unequipped consumables/tools. Exceeding total slots causes <strong>Over-Encumbrance</strong> (Disadvantage on physical actions, movement halved).</p>
@@ -460,7 +460,7 @@
                 <div class="column-box">
                     <h3>THE WARDEN</h3>
                     <p><em>Narrative Role: The unmovable shield of the party. You secure physical space, hold the line, and endure what others cannot survive.</em></p>
-                    <p><strong>Recommended Loadout:</strong> Heavy Armor (+8 HP, -1 Pace), Shield (Active Guard), Light Melee (3 Dmg).</p>
+                    <p><strong>Recommended Loadout:</strong> Heavy Armor (+8 HP, -1 Pace), Shield (-1 Pace), Light Melee (3 Dmg).</p>
                     <ul>
                         <li><strong>L1 Specialty: Vanguard Guard (Passive):</strong> End Move Phase adjacent to an ally to grant them Advantage on Evasion rolls while you remain conscious.</li>
                         <li><strong>L1: Cleave (Heavy Weapon):</strong> After a hit, deal 2 flat damage to an adjacent secondary foe within 1 pace.</li>
@@ -472,7 +472,7 @@
                         <li><strong>L7: Sunder / Disarm [2 RP]:</strong> Spend 2 RP on hit to wrench target's weapon away OR deal +3 bonus flat damage.</li>
                         <li><strong>L8: Brawl Mastery [4 RP]:</strong> Spend 4 RP on hit to grapple foe as physical cover (+Advantage on Evasion) OR pin a beast to remove its Action Phase.</li>
                     </ul>
-                    <div class="pro-tip"><strong>Rule Clarification:</strong> Temp HP from Iron/Steel Stance acts as a temporary buffer that absorbs incoming damage first before touching your regular HP pool.</div>
+                    <div class="pro-tip"><strong>Rule Clarification:</strong> Active Guard with a Shield uses both your Action and Move Phases. Temp HP from Iron/Steel Stance absorbs incoming damage before your main HP pool.</div>
 
                     <h3>THE BREAKER</h3>
                     <p><em>Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.</em></p>
@@ -626,10 +626,10 @@
                             <tr><th>Threat Tier</th><th>HP</th><th>Incoming Dmg</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Tier 1: Minions</td><td>3 HP</td><td>2 Dmg</td></tr>
-                            <tr><td>Tier 2: Standard</td><td>12 HP</td><td>3 Dmg</td></tr>
-                            <tr><td>Tier 3: Elite</td><td>25 HP</td><td>6 Dmg</td></tr>
-                            <tr><td>Tier 4: Boss / Leader</td><td>55 HP</td><td>8 Dmg</td></tr>
+                            <tr><td>Tier 1: Minions</td><td>3 HP</td><td>4 Dmg</td></tr>
+                            <tr><td>Tier 2: Standard</td><td>12 HP</td><td>6 Dmg</td></tr>
+                            <tr><td>Tier 3: Elite</td><td>25 HP</td><td>8 Dmg</td></tr>
+                            <tr><td>Tier 4: Boss / Leader</td><td>55 HP</td><td>10 Dmg</td></tr>
                         </tbody>
                     </table>
                 </div>
