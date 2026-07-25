@@ -172,6 +172,25 @@
             font-size: 8.5px;
         }
 
+        /* PAGE 5 SPECIFIC OVERFLOW FIX */
+        .page-5 h2 {
+            margin-top: 3px;
+            margin-bottom: 1px;
+        }
+        .page-5 .box {
+            padding: 3px 5px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        .page-5 ul {
+            margin-bottom: 1px;
+        }
+
+        /* PAGE 6 TABLE COLUMNS FIX */
+        .genre-table th:nth-child(1), .genre-table td:nth-child(1) { width: 25%; }
+        .genre-table th:nth-child(2), .genre-table td:nth-child(2) { width: 37%; }
+        .genre-table th:nth-child(3), .genre-table td:nth-child(3) { width: 38%; }
+
         @media print {
             body {
                 background-color: #fff;
@@ -541,7 +560,7 @@
     </div>
 
     <!-- PAGE 5: THE GUIDE'S MANUAL -->
-    <div class="page">
+    <div class="page page-5">
         <div class="content-wrap">
             <h1>THE GUIDE'S MANUAL</h1>
 
@@ -627,7 +646,7 @@
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 4px; background-color: #f0f4f8; border-color: #2b5b84;">
+            <div class="box" style="margin-top: 2px; background-color: #f0f4f8; border-color: #2b5b84;">
                 <h3 style="margin-top: 0; color: #1a1a1a;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</h3>
                 <p>On a failed Out-of-Combat Check vs 14, avoid simply saying "nothing happens." Introduce a complication: picking a lock alerts a guard; deciphering a rune causes mental shock; repairing an engine burns out a rare component. Roll 1d20 to decide severity (1-10 = Minor complication like noise or delays, 11-20 = Major complication like tool breakage or immediately taking 5 Flat Damage). Every failed roll pushes the narrative forward with fresh tension.</p>
             </div>
@@ -647,7 +666,7 @@
                     <h2>1. WEALTH, LOOT and NARRATIVE ECONOMY</h2>
                     <p>Wealth is tracked on the Character Sheet using <strong>Loot Tags</strong> rather than individual coins or credits. The Guide awards setting-appropriate Loot Tags after combat or exploration. Players trade these tags in settlements for Sanctuary Rests, gear, bribes, or local favors.</p>
                     
-                    <table>
+                    <table class="genre-table">
                         <thead>
                             <tr>
                                 <th>Genre Setting</th>
