@@ -32,7 +32,7 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.35;
+            line-height: 1.4;
         }
 
         .page {
@@ -69,7 +69,7 @@
             font-size: 12px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 8px;
+            margin-top: 10px;
             margin-bottom: 4px;
             border-bottom: 1px solid var(--border-color);
         }
@@ -77,7 +77,7 @@
         h3 {
             font-size: 10.5px;
             color: #2b5b84;
-            margin-top: 6px;
+            margin-top: 8px;
             margin-bottom: 2px;
             text-transform: uppercase;
         }
@@ -117,9 +117,9 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 5px 8px;
-            margin-top: 5px;
-            margin-bottom: 5px;
+            padding: 6px 8px;
+            margin-top: 6px;
+            margin-bottom: 6px;
             border-radius: 2px;
         }
 
@@ -265,10 +265,10 @@
 
             <div class="box" style="margin-top: 10px;">
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
+                • <strong>The 14+ Rule:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.<br />
                 • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling to gain <strong>Advantage</strong> (roll 2d20, keep high; max 1/turn). Hazards impose <strong>Disadvantage</strong> (roll 2d20, keep low). Advantage + Disadvantage cancel to a flat 1d20 roll.<br />
-                • <strong>Out-of-Combat Check:</strong> Roll 1d20 + Attribute Modifier vs 14. Total of 14+ succeeds.<br />
-                • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attribute vs 14. Success (14+) deals calculated Flat Damage directly to target HP.<br />
-                • <strong>Evasion Phase (Defending):</strong> On enemy turn, roll 1d20 + Agility vs 14. 14+ = 0 damage. Fail (under 14) = take enemy flat damage minus your Armor DR.<br />
+                • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attribute vs 14. Success deals calculated Flat Damage directly to target HP.<br />
+                • <strong>Evasion Phase (Defending):</strong> On enemy turn, roll 1d20 + Agility vs 14. Success = 0 damage. Fail = take enemy flat damage minus your Armor DR.<br />
                 • <strong>Dying and Bleed Out (0 HP):</strong> At 0 HP you fall Unconscious. You bleed out in rounds equal to your Will modifier (min 1). An adjacent ally must spend an Action Phase to pass a Will Check vs 14 to stabilize you at 1 HP.
             </div>
         </div>
@@ -300,6 +300,9 @@
 
                     <h2>2. THE ACTION ENGINE (FLAT 14)</h2>
                     <p>All risky tasks, skill checks, attack rolls, and evasions target a static <strong>Universal Baseline Threshold of 14</strong>.</p>
+                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; padding: 4px 6px; margin: 4px 0;">
+                        <strong style="color: #2b5b84;">THE 14+ RULE:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.
+                    </div>
                     <ul>
                         <li><strong>Resolution:</strong> Roll 1d20 + Attribute Modifier. Sum of 14+ succeeds.</li>
                         <li><strong>Rule of 20 and Criticals:</strong> Natural 20 on an attack is an Overdrive Strike (add Attribute Mod to flat damage twice). Natural 1 is a critical failure.</li>
@@ -375,6 +378,16 @@
                         </tbody>
                     </table>
                     <p><strong>Inventory Limit:</strong> Max equipped slots = <strong>4 + Might modifier</strong>. Over-encumbrance imposes Disadvantage on all physical actions and halves your movement paces.</p>
+
+                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
+                        <strong style="color: #2b5b84;">ACTION PHASE MANEUVERS (NON-ATTACK)</strong><br />
+                        During your Action Phase, you can choose a tactical maneuver instead of executing an attack:<br />
+                        • <strong>Active Guard:</strong> Raise an equipped Shield to gain Advantage on all Evasion rolls until your next turn.<br />
+                        • <strong>Dash:</strong> Forfeit your attack to immediately move your total Movement paces a second time.<br />
+                        • <strong>Assist Ally:</strong> Grant an adjacent ally Advantage on their very next skill check or attack roll.<br />
+                        • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical Concealment from enemy perception.<br />
+                        • <strong>Interact:</strong> Manipulate complex objects, pick a lock, pull a heavy lever, or hand a consumable item to a teammate.
+                    </div>
                 </div>
             </div>
         </div>
@@ -444,6 +457,7 @@
                         <li><strong>L7: Hamstring [2 RP]:</strong> Sever a tendon on hit; target movement permanently reduced to 1 pace until treated.</li>
                         <li><strong>L8: Lethal Strike [4 RP]:</strong> Strike unaware non-boss target from behind to bypass armor and instantly drop them to 0 HP.</li>
                     </ul>
+                    <div class="pro-tip"><strong>Rule Clarification:</strong> To attack from Concealment for Shadow Strike, you must be in dim light, behind full cover, or have successfully used your Action Phase to roll the Hide maneuver on a previous turn.</div>
 
                     <div class="box" style="margin-top: 10px; background-color: #fce8e8; border-color: var(--accent-color);">
                         <strong style="color: var(--accent-color);">FRONTLINE ARCHETYPE DRIVES</strong><br />
@@ -547,27 +561,37 @@
                     <ul>
                         <li><strong>Grant Advantage:</strong> High ground, tactical surprise, or ideal tools in favorable contexts.</li>
                         <li><strong>Impose Disadvantage:</strong> Heavy physical strain, slick ice, blindness, or heavy target concealment.</li>
-                        <li><strong>Social and Exploration:</strong> Call for a Will vs 14 check to persuade, deceive, or interrogate an NPC. Use Agility vs 14 for stealth, climbing, or acrobatics. Use Might vs 14 for lifting heavy rubble, breaking doors, or enduring extreme physical labor.</li>
+                    </ul>
+
+                    <h2>2. NARRATIVE DISPOSITIONS and EXPLORATION</h2>
+                    <p>Not every encounter should end in combat. NPCs fall into three Dispositions which alter the way social checks are handled:</p>
+                    <ul>
+                        <li><strong>Hostile:</strong> Will actively hinder the party. Requires a massive bribe or leverage to even attempt a social check (rolled with Disadvantage).</li>
+                        <li><strong>Neutral:</strong> Skeptical but willing to barter. Standard Will vs 14 checks apply to persuade, deceive, or interrogate.</li>
+                        <li><strong>Friendly:</strong> Actively helpful. Will checks vs 14 gain automatic Advantage.</li>
+                        <li><strong>Physical Exploration:</strong> Use Agility vs 14 for stealth, climbing, or acrobatics. Use Might vs 14 for lifting heavy rubble, breaking doors, or enduring extreme physical labor.</li>
                     </ul>
 
                     <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
                         <strong style="color: #2b5b84;">WHEN DOES THE GUIDE ROLL A D20?</strong><br />
                         To maintain 100% player agency, the Guide only rolls d20s for high-impact world events:<br />
                         1. <strong>Initiative Target:</strong> Roll 1d20 (+ Tier Mod) at combat start to set the Fast/Slow turn threshold.<br />
-                        2. <strong>Morale Checks:</strong> Roll 1d20 vs 10 when an enemy squad loses 50% of its members or leader.<br />
+                        2. <strong>Morale Checks:</strong> Roll 1d20 when an enemy squad loses 50% of its members or leader.<br />
                         3. <strong>Boss Escalation:</strong> Roll 1d20 when a Boss hits 50% HP (1-10: Spawn 2 Minions, 11-20: Trigger Major Hazard).<br />
                         4. <strong>Failing Forward:</strong> Roll 1d20 to decide narrative complication severity on failed player checks.
                     </div>
 
-                    <h2>2. ENVIRONMENTAL HAZARD DAMAGE</h2>
+                    <h2>3. ENVIRONMENTAL HAZARD DAMAGE</h2>
                     <p>Environmental dangers bypass armor DR unless hard cover is actively present:</p>
                     <ul>
                         <li><strong>Minor Hazard (5 Flat Damage):</strong> Minor toxins, barbed wire scrapes, sprained ankles, minor electrical sparks.</li>
                         <li><strong>Major Hazard (10 Flat Damage):</strong> Deep laceration traps, kinetic deadfalls, acid baths, high-voltage shocks.</li>
                         <li><strong>Lethal Hazard (15 Flat Damage):</strong> Fuel explosions, massive cave-ins, magma submersion, atmospheric depressurization.</li>
                     </ul>
-
-                    <h2>3. THREAT TIERS and PLAYER-FACING STATS</h2>
+                </div>
+                
+                <div class="column-box">
+                    <h2>4. THREAT TIERS and PLAYER-FACING STATS</h2>
                     <table>
                         <thead>
                             <tr><th>Threat Tier</th><th>HP</th><th>DR</th><th>Incoming Dmg</th></tr>
@@ -586,10 +610,8 @@
                         <li><strong>Tier 3 (Elite):</strong> <em>Hard Target:</em> Player attacks suffer Disadvantage unless striking from concealment. <em>Tactical:</em> Forces Disadvantage on player Evasion if target is Prone or Dazed.</li>
                         <li><strong>Tier 4 (Boss):</strong> <em>Legendary Defense:</em> Player attacks naturally suffer Disadvantage. <em>Frenzy:</em> Bosses take 2 Actions/turn (players roll Evasion twice).</li>
                     </ul>
-                </div>
-                
-                <div class="column-box">
-                    <h2>4. LEVEL SCALING and ENCOUNTER TEMPLATES</h2>
+
+                    <h2>5. LEVEL SCALING and ENCOUNTER TEMPLATES</h2>
                     <p><strong>Level Scaling Brackets:</strong></p>
                     <ul>
                         <li><strong>Veteran Party (L3-5):</strong> Enemies gain <strong>+5 HP</strong> and <strong>+1 Damage</strong> (Bosses +15 HP).</li>
@@ -609,10 +631,10 @@
                         <li><strong>Heavy / Armored:</strong> Add -1 DR to enemy (halve their movement).</li>
                         <li><strong>Agile / Skirmisher:</strong> Player Evasion suffers Disadvantage (+2 enemy movement, -2 enemy HP).</li>
                         <li><strong>Lethal / Sniper:</strong> Add +2 incoming Flat Damage (-5 enemy HP).</li>
-                        <li><strong>Morale Failure Outcomes:</strong> When enemies fail a Morale Test, they drop Loot Tags, trigger an alarm, or surrender and offer valuable intel.</li>
+                        <li><strong>Dynamic Morale:</strong> When losing half their squad or leader, the Guide rolls 1d20. Enemies rout, dropping Loot/Intel, if the roll matches these exact ranges: <strong>10 through 20</strong> (Minions Only), <strong>13 through 20</strong> (Standard Present), or <strong>16 through 20</strong> (Elite Present). Bosses never flee.</li>
                     </ul>
 
-                    <h2>5. TACTICAL and VISIBILITY RULES</h2>
+                    <h2>6. TACTICAL and VISIBILITY RULES</h2>
                     <ul>
                         <li><strong>Partial Cover:</strong> Crouching behind cover grants <strong>Advantage on Evasion</strong> vs Ranged attacks.</li>
                         <li><strong>Full Cover:</strong> Cannot be targeted until enemies maneuver around the barrier.</li>
@@ -626,18 +648,10 @@
                             </ul>
                         </li>
                     </ul>
-                    
-                    <h2>6. REST, RECOVERY and RP REWARDS</h2>
-                    <ul>
-                        <li><strong>Short Breather (10-15 Min):</strong> Recover HP = Might mod, RP = Will mod (min 1 each).</li>
-                        <li><strong>Rough Sleep (6-8 Hr):</strong> Rest in danger. Recover HP and RP = sum of all Attributes.</li>
-                        <li><strong>Sanctuary Rest (24 Hr):</strong> Safe rest. Restores all HP and RP to max.</li>
-                        <li><strong>RP Rewards:</strong> Award +1 RP when players play into their Drive to their detriment or execute great teamwork.</li>
-                    </ul>
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 6px; background-color: #f0f4f8; border-color: #2b5b84;">
+            <div class="box" style="margin-top: 10px; background-color: #f0f4f8; border-color: #2b5b84;">
                 <h3 style="margin-top: 0; color: #1a1a1a;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</h3>
                 <p>On a failed Out-of-Combat Check vs 14, avoid simply saying "nothing happens." Introduce a complication: picking a lock alerts a guard; deciphering a rune causes mental shock; repairing an engine burns out a rare component. Roll 1d20 to decide severity (1-10 = Minor complication like noise or delays, 11-20 = Major complication like tool breakage or immediately taking 5 Flat Damage). Every failed roll pushes the narrative forward with fresh tension.</p>
             </div>
@@ -716,16 +730,16 @@
                         <li><strong>Deep Water / Vacuum:</strong> Players can hold their breath for rounds equal to (Might x 2). Exceeding this inflicts Major Hazard damage every round.</li>
                         <li><strong>Toxic Atmosphere:</strong> Characters must consume a Utility item (filters/wards) every Sanctuary Rest, or permanently lose 1 max HP until cured.</li>
                     </ul>
-                </div>
 
-                <div class="column-box">
                     <h2>3. ADAPTING THE UNIVERSAL THRESHOLD</h2>
                     <p>The baseline Threshold of 14 is mathematically tuned to provide a gritty, highly tactical combat experience where characters will miss attacks and fail dodges roughly half the time without spending RP. However, the Guide can universally adjust this number to fit the desired tone of the campaign:</p>
                     <ul>
                         <li><strong>Super-Heroic Action (Target 12):</strong> Lowers the barrier to entry, ensuring players succeed more often without spending RP. Perfect for fast-paced, pulp-action settings.</li>
                         <li><strong>Survival Horror (Target 16):</strong> Drastically increases the failure rate, forcing players to burn RP constantly just to survive standard encounters. Best for grimdark or horror campaigns.</li>
                     </ul>
+                </div>
 
+                <div class="column-box">
                     <h2>4. ADAPTING EQUIPMENT and ARMORY</h2>
                     <p>Armory mechanics remain mathematically identical across all settings. Reskin item names during Character Creation to fit the narrative:</p>
                     <ul>
@@ -751,6 +765,12 @@
                         <li><strong>Spells as Weapons:</strong> A Wizard's "Ranged Weapon" is a Firebolt. A Psion's "Heavy Melee" is a telekinetic force-crush. A Cyborg's "Ranged/Thrown" weapon is a micro-missile.</li>
                         <li><strong>Abilities as Magic:</strong> A Breaker's <em>Concussive Blow</em> can be narrated as a kinetic shockwave spell or hydraulic cyber-punch. A Saboteur's <em>Structural Weakness</em> can be a disintegrating magic hex or acid vial.</li>
                     </ul>
+
+                    <h2>7. VEHICLES, MOUNTS and CHASES</h2>
+                    <p>When operating a vehicle or riding a mount (starfighter, horse, rover, hover-skiff), your character's movement capacity equals the vehicle's movement speed in paces. Vehicles grant their own Armor DR while occupied. When a vehicle reaches 0 HP, it is destroyed, forcing occupants to suffer a Lethal Hazard (15 Flat Damage). During chase sequences or hazardous piloting, the driver must pass an <strong>Agility Check vs 14</strong> to maintain control; failure results in a crash, inflicting Major Environmental Hazard Damage (10 Flat Damage) to all passengers.</p>
+
+                    <h2>8. CUSTOMIZING LOOT DROPS</h2>
+                    <p>The Guide should invent unique Enhancers tied directly to the monsters they field. If the party defeats an acid-spitting beast, it might drop an "Acid Gland" that functions as an Enhancer (+2 Dmg, ignores Armor DR). Defeating a Cyber-Ninja might yield an "Overclock Shard" (Restorative: Clears Dazed, grants 1 RP). This keeps the loot system feeling localized and rewarding without breaking the core mathematical balance.</p>
                 </div>
             </div>
         </div>
