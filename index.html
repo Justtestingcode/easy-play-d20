@@ -16,7 +16,7 @@
 
         @page {
             size: letter;
-            margin: 0.3in;
+            margin: 0.35in;
         }
 
         * {
@@ -26,20 +26,20 @@
         body {
             background-color: var(--bg-color);
             margin: 0;
-            padding: 10px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.3;
+            line-height: 1.35;
         }
 
         .page {
             width: 8.5in;
             height: 11in;
             background-color: var(--page-color);
-            padding: 0.38in;
+            padding: 0.4in;
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             position: relative;
@@ -55,21 +55,21 @@
 
         h1 {
             text-align: center;
-            font-size: 17.5px;
+            font-size: 18px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 2px;
         }
 
         h2 {
-            font-size: 11px;
+            font-size: 11.5px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 6px;
+            margin-top: 7px;
             margin-bottom: 3px;
             border-bottom: 1px solid var(--border-color);
         }
@@ -77,19 +77,23 @@
         h3 {
             font-size: 10px;
             color: #2b5b84;
-            margin-top: 5px;
+            margin-top: 6px;
             margin-bottom: 2px;
             text-transform: uppercase;
         }
 
+        /* LOCKED BASELINE FONT SIZE: Standard 9.5px across all body elements */
+        p, li, div, td, th {
+            font-size: 9.5px;
+        }
+
         p, li {
-            font-size: 8.8px;
             margin-top: 1px;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         ul {
-            padding-left: 12px;
+            padding-left: 14px;
             margin-top: 1px;
             margin-bottom: 3px;
         }
@@ -98,13 +102,12 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 3px;
-            margin-bottom: 4px;
-            font-size: 8.5px;
+            margin-bottom: 5px;
         }
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 2px 4px;
+            padding: 3px 5px;
             text-align: left;
         }
 
@@ -117,22 +120,22 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 4px 6px;
-            margin-top: 3px;
-            margin-bottom: 3px;
+            padding: 5px 7px;
+            margin-top: 4px;
+            margin-bottom: 4px;
             border-radius: 2px;
         }
 
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6px;
+            gap: 8px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 6px;
+            gap: 8px;
         }
 
         .two-column {
@@ -154,9 +157,9 @@
 
         .page-num {
             position: absolute;
-            bottom: 0.2in;
-            right: 0.38in;
-            font-size: 8px;
+            bottom: 0.22in;
+            right: 0.4in;
+            font-size: 8.5px;
             color: #666;
         }
 
@@ -167,7 +170,7 @@
             margin-top: 3px;
             margin-bottom: 4px;
             font-style: italic;
-            font-size: 8.5px;
+            font-size: 9px;
         }
 
         @media print {
@@ -192,7 +195,7 @@
 </head>
 <body>
 
-    <!-- PAGE 1: CHARACTER PLAY SHEET -->
+    <!-- PAGE 1: CHARACTER PLAY SHEET (LOCKED MASTER) -->
     <div class="page">
         <div class="content-wrap">
             <h1>EASY PLAY D20 - CHARACTER PLAY SHEET</h1>
@@ -263,7 +266,7 @@
                 <div>[ 8 ] Item: <span class="line-input" style="width: 160px;"></span></div>
             </div>
 
-            <div class="box" style="margin-top: 6px;">
+            <div class="box" style="margin-top: 8px;">
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
                 • <strong>The 14+ Rule:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.<br />
                 • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling to gain <strong>Advantage</strong> (roll 2d20, keep high; max 1/turn). Hazards impose <strong>Disadvantage</strong> (roll 2d20, keep low). Advantage + Disadvantage cancel to a flat 1d20 roll.<br />
@@ -275,7 +278,7 @@
         <div class="page-num">Page 1</div>
     </div>
 
-    <!-- PAGE 2: CORE RULES & ARMORY -->
+    <!-- PAGE 2: SYSTEM CORE and ARMORY -->
     <div class="page">
         <div class="content-wrap">
             <h1>EASY PLAY D20 - SYSTEM CORE and ARMORY</h1>
@@ -300,7 +303,7 @@
 
                     <h2>2. THE ACTION ENGINE (FLAT 14)</h2>
                     <p>All risky tasks, skill checks, attack rolls, and evasions target a static <strong>Universal Baseline Threshold of 14</strong>.</p>
-                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; padding: 3px 5px; margin: 3px 0;">
+                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
                         <strong style="color: #2b5b84;">THE 14+ RULE:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.
                     </div>
                     <ul>
@@ -427,11 +430,6 @@
                         <li><strong>L3: Concussive Blow [1 RP]:</strong> Spend 1 RP on hit. Target passes Might check vs 14 or becomes Dazed.</li>
                         <li><strong>L4: Linebreaker [2 RP]:</strong> Move directly through enemy spaces, forcing them 1 pace aside (backed against wall = 2 crush damage).</li>
                     </ul>
-
-                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
-                        <strong style="color: #2b5b84;">OPTIONAL RULE: WEAPON DURABILITY</strong><br />
-                        For gritty campaigns, when you roll a Natural 1 on an attack with a melee weapon, the weapon takes structural damage. It loses -1 Flat Damage until repaired during a Sanctuary Rest. A second Natural 1 snaps the weapon entirely, reducing it to an Improvised Tool.
-                    </div>
                 </div>
                 
                 <div class="column-box">
@@ -459,12 +457,12 @@
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> To attack from Concealment for Shadow Strike, you must be in dim light, behind full cover, or have successfully used your Action Phase to roll the Hide maneuver on a previous turn.</div>
 
-                    <div class="box" style="margin-top: 6px; background-color: #fce8e8; border-color: var(--accent-color);">
-                        <strong style="color: var(--accent-color);">FRONTLINE ARCHETYPE DRIVES</strong><br />
-                        When creating your character, tie your Drive directly to your class for better roleplay.<br />
-                        • <strong>Warden:</strong> Protecting a specific ally or redeeming a past tactical failure.<br />
-                        • <strong>Breaker:</strong> Seeking an adrenaline rush or proving physical superiority over a rival.<br />
-                        • <strong>Prowler:</strong> Erasing a massive underworld debt or uncovering a buried corporate secret.
+                    <div class="box" style="margin-top: 8px; background-color: #f0f4f8; border-color: #2b5b84;">
+                        <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY EXAMPLE: THE BREACH</h3>
+                        <p><strong>Guide:</strong> "Two Elites take defensive aim behind a steel barricade. I will roll Initiative - got a 12!"</p>
+                        <p><strong>Warden:</strong> "My Agility is +2, rolled a 15 - I beat 12! I take the Fast Phase, enter <em>Active Guard</em> with my shield, and move adjacent to the Saboteur."</p>
+                        <p><strong>Saboteur:</strong> "I spend 1 RP for <em>Structural Weakness</em> on the barricade. (Rolls 1d20 + Will vs 14) 16! Success."</p>
+                        <p><strong>Guide:</strong> "The barricade's DR is compromised. The Breaker can now smash through effortlessly."</p>
                     </div>
                 </div>
             </div>
@@ -504,11 +502,6 @@
                         <li><strong>L2: Blinding Debris [1 RP]:</strong> Throw ash/debris; Agility check vs 14 grants the target ally Advantage on their next Evasion roll against that enemy.</li>
                         <li><strong>L3: Cripple Target [2 RP]:</strong> Action Phase check vs 14 forces target to grant Advantage on all player Evasion rolls against it until it forfeits an Action Phase to recover.</li>
                     </ul>
-
-                    <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
-                        <strong style="color: #2b5b84;">SCAVENGING and CRAFTING</strong><br />
-                        Characters with an appropriate Background (like Engineer or Alchemist) can spend a Short Breather to turn raw Loot Tags or environmental scrap into single-use Consumables. Roll an Out-of-Combat Check vs 14; success yields one basic Restorative or Utility item tailored to the current environment.
-                    </div>
                 </div>
                 
                 <div class="column-box">
@@ -536,12 +529,11 @@
                         <li><strong>L8: Extreme Triage [4 RP]:</strong> Save dying ally from lethal hit; instantly wake at 1 HP with permanent maiming.</li>
                     </ul>
 
-                    <div class="box" style="margin-top: 6px; background-color: #fce8e8; border-color: var(--accent-color);">
-                        <strong style="color: var(--accent-color);">SUPPORT ARCHETYPE DRIVES</strong><br />
-                        Tie your Drive to your class to ground your character in the world.<br />
-                        • <strong>Marksman:</strong> Hunting a specific elusive target or maintaining absolute control over your environment.<br />
-                        • <strong>Saboteur:</strong> Dismantling corrupt systems or proving your intellectual brilliance to skeptics.<br />
-                        • <strong>Survivalist:</strong> Ensuring the squad lives to see tomorrow or seeking a fabled safe haven in a broken world.
+                    <div class="box" style="margin-top: 8px; background-color: #f0f4f8; border-color: #2b5b84;">
+                        <h3 style="margin-top: 0; color: #1a1a1a;">CLASS SYNERGY EXAMPLE: THE STRIKE</h3>
+                        <p><strong>Breaker:</strong> "I spend 1 RP for Advantage, charge through the barricade, and execute <em>Drive Back</em> on the Elite!"</p>
+                        <p><strong>Breaker:</strong> "(Rolls 2d20, keeps high) 18 + Might! Hit! 5 Heavy Melee damage + 2 crush damage from slamming him into the wall!"</p>
+                        <p><strong>Guide:</strong> "The Elite takes 7 flat damage total. Because the Saboteur stripped its DR, it took the full force of the blow. The surviving Elite readies a weapon."</p>
                     </div>
                 </div>
             </div>
@@ -549,7 +541,7 @@
         <div class="page-num">Page 4</div>
     </div>
 
-    <!-- PAGE 5: GUIDE'S MANUAL & THREAT TIERS -->
+    <!-- PAGE 5: THE GUIDE'S MANUAL -->
     <div class="page">
         <div class="content-wrap">
             <h1>THE GUIDE'S MANUAL</h1>
@@ -561,15 +553,7 @@
                     <ul>
                         <li><strong>Grant Advantage:</strong> High ground, tactical surprise, or ideal tools in favorable contexts.</li>
                         <li><strong>Impose Disadvantage:</strong> Heavy physical strain, slick ice, blindness, or heavy target concealment.</li>
-                    </ul>
-
-                    <h2>2. NARRATIVE DISPOSITIONS and EXPLORATION</h2>
-                    <p>Not every encounter should end in combat. NPCs fall into three Dispositions which alter the way social checks are handled:</p>
-                    <ul>
-                        <li><strong>Hostile:</strong> Will actively hinder the party. Requires a massive bribe or leverage to even attempt a social check (rolled with Disadvantage).</li>
-                        <li><strong>Neutral:</strong> Skeptical but willing to barter. Standard Will vs 14 checks apply to persuade, deceive, or interrogate.</li>
-                        <li><strong>Friendly:</strong> Actively helpful. Will checks vs 14 gain automatic Advantage.</li>
-                        <li><strong>Physical Exploration:</strong> Use Agility vs 14 for stealth, climbing, or acrobatics. Use Might vs 14 for lifting heavy rubble, breaking doors, or enduring extreme physical labor.</li>
+                        <li><strong>Social and Exploration:</strong> Call for a Will vs 14 check to persuade, deceive, or interrogate an NPC. Use Agility vs 14 for stealth, climbing, or acrobatics. Use Might vs 14 for lifting heavy rubble, breaking doors, or enduring extreme physical labor.</li>
                     </ul>
 
                     <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
@@ -581,17 +565,15 @@
                         4. <strong>Failing Forward:</strong> Roll 1d20 to decide narrative complication severity on failed player checks.
                     </div>
 
-                    <h2>3. ENVIRONMENTAL HAZARD DAMAGE</h2>
+                    <h2>2. ENVIRONMENTAL HAZARD DAMAGE</h2>
                     <p>Environmental dangers bypass armor DR unless hard cover is actively present:</p>
                     <ul>
                         <li><strong>Minor Hazard (5 Flat Damage):</strong> Minor toxins, barbed wire scrapes, sprained ankles, minor electrical sparks.</li>
                         <li><strong>Major Hazard (10 Flat Damage):</strong> Deep laceration traps, kinetic deadfalls, acid baths, high-voltage shocks.</li>
                         <li><strong>Lethal Hazard (15 Flat Damage):</strong> Fuel explosions, massive cave-ins, magma submersion, atmospheric depressurization.</li>
                     </ul>
-                </div>
-                
-                <div class="column-box">
-                    <h2>4. THREAT TIERS and PLAYER-FACING STATS</h2>
+
+                    <h2>3. THREAT TIERS and PLAYER-FACING STATS</h2>
                     <table>
                         <thead>
                             <tr><th>Threat Tier</th><th>HP</th><th>DR</th><th>Incoming Dmg</th></tr>
@@ -603,7 +585,9 @@
                             <tr><td>Tier 4: Boss / Leader</td><td>55</td><td>-2</td><td>8</td></tr>
                         </tbody>
                     </table>
-                    
+                </div>
+                
+                <div class="column-box">
                     <p><strong>Combat Traits and Evasion Rules:</strong></p>
                     <ul>
                         <li><strong>Tier 1 and 2:</strong> Standard Evasion vs 14. Minions drop in 1 hit.</li>
@@ -611,7 +595,7 @@
                         <li><strong>Tier 4 (Boss):</strong> <em>Legendary Defense:</em> Player attacks naturally suffer Disadvantage. <em>Frenzy:</em> Bosses take 2 Actions/turn (players roll Evasion twice).</li>
                     </ul>
 
-                    <h2>5. LEVEL SCALING and ENCOUNTER TEMPLATES</h2>
+                    <h2>4. LEVEL SCALING and ENCOUNTER TEMPLATES</h2>
                     <p><strong>Level Scaling Brackets:</strong></p>
                     <ul>
                         <li><strong>Veteran Party (L3-5):</strong> Enemies gain <strong>+5 HP</strong> and <strong>+1 Damage</strong> (Bosses +15 HP).</li>
@@ -634,24 +618,17 @@
                         <li><strong>Dynamic Morale:</strong> When losing half their squad or leader, the Guide rolls 1d20. Enemies rout, dropping Loot/Intel, if the roll matches these exact ranges: <strong>10 through 20</strong> (Minions Only), <strong>13 through 20</strong> (Standard Present), or <strong>16 through 20</strong> (Elite Present). Bosses never flee.</li>
                     </ul>
 
-                    <h2>6. TACTICAL and VISIBILITY RULES</h2>
+                    <h2>5. TACTICAL, VISIBILITY and REST RULES</h2>
                     <ul>
                         <li><strong>Partial Cover:</strong> Crouching behind cover grants <strong>Advantage on Evasion</strong> vs Ranged attacks.</li>
                         <li><strong>Full Cover:</strong> Cannot be targeted until enemies maneuver around the barrier.</li>
                         <li><strong>Visibility:</strong> Dim Light/Fog = Disadvantage on Perception and Ranged attacks. Pitch Black = cannot target beyond 1 pace; Disadvantage on Evasion.</li>
-                        <li><strong>Status Conditions:</strong>
-                            <ul>
-                                <li><em>Prone:</em> Spend Move Phase to stand up.</li>
-                                <li><em>Dazed:</em> Disadvantage on next action; movement halved.</li>
-                                <li><em>Pinned:</em> Forfeit next Action Phase.</li>
-                                <li><em>Stunned:</em> Forfeit Action and Move Phase on next turn.</li>
-                            </ul>
-                        </li>
+                        <li><strong>Rest & Recovery:</strong> <em>Short Breather:</em> HP = Might mod, RP = Will mod. <em>Rough Sleep:</em> HP & RP = sum of all attributes. <em>Sanctuary Rest:</em> Full restore.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 4px; background-color: #f0f4f8; border-color: #2b5b84;">
+            <div class="box" style="margin-top: 6px; background-color: #f0f4f8; border-color: #2b5b84;">
                 <h3 style="margin-top: 0; color: #1a1a1a;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</h3>
                 <p>On a failed Out-of-Combat Check vs 14, avoid simply saying "nothing happens." Introduce a complication: picking a lock alerts a guard; deciphering a rune causes mental shock; repairing an engine burns out a rare component. Roll 1d20 to decide severity (1-10 = Minor complication like noise or delays, 11-20 = Major complication like tool breakage or immediately taking 5 Flat Damage). Every failed roll pushes the narrative forward with fresh tension.</p>
             </div>
@@ -659,7 +636,7 @@
         <div class="page-num">Page 5</div>
     </div>
 
-    <!-- PAGE 6: UNIVERSAL GENRE ADAPTATION -->
+    <!-- PAGE 6: APPENDIX: UNIVERSAL GENRE ADAPTATION -->
     <div class="page">
         <div class="content-wrap">
             <h1>APPENDIX: UNIVERSAL GENRE ADAPTATION</h1>
@@ -723,15 +700,7 @@
                         </tbody>
                     </table>
 
-                    <h2>2. EXTREME ENVIRONMENTS</h2>
-                    <p>Adjust the base rules to fit extreme planetary or magical locations:</p>
-                    <ul>
-                        <li><strong>Zero-Gravity:</strong> Movement relies entirely on Agility. Might modifiers cannot be applied to Heavy Melee damage unless magnetically anchored.</li>
-                        <li><strong>Deep Water / Vacuum:</strong> Players can hold their breath for rounds equal to (Might x 2). Exceeding this inflicts Major Hazard damage every round.</li>
-                        <li><strong>Toxic Atmosphere:</strong> Characters must consume a Utility item (filters/wards) every Sanctuary Rest, or permanently lose 1 max HP until cured.</li>
-                    </ul>
-
-                    <h2>3. ADAPTING THE UNIVERSAL THRESHOLD</h2>
+                    <h2>2. ADAPTING THE UNIVERSAL THRESHOLD</h2>
                     <p>The baseline Threshold of 14 is mathematically tuned to provide a gritty, highly tactical combat experience where characters will miss attacks and fail dodges roughly half the time without spending RP. However, the Guide can universally adjust this number to fit the desired tone of the campaign:</p>
                     <ul>
                         <li><strong>Super-Heroic Action (Target 12):</strong> Lowers the barrier to entry, ensuring players succeed more often without spending RP. Perfect for fast-paced, pulp-action settings.</li>
@@ -740,7 +709,7 @@
                 </div>
 
                 <div class="column-box">
-                    <h2>4. ADAPTING EQUIPMENT and ARMORY</h2>
+                    <h2>3. ADAPTING EQUIPMENT and ARMORY</h2>
                     <p>Armory mechanics remain mathematically identical across all settings. Reskin item names during Character Creation to fit the narrative:</p>
                     <ul>
                         <li><strong>Light Armor (DR -1):</strong> Leather jerkin (Fantasy), Kevlar weave (Cyberpunk), tactical vest (Urban Fantasy), scrap vest (Post-Apoc).</li>
@@ -751,7 +720,7 @@
                         <li><strong>Ranged Weapon (2 Flat Dmg):</strong> Longbow (Fantasy), plasma rifle (Sci-Fi), lever-action repeater (Space Western), sniper (Modern).</li>
                     </ul>
 
-                    <h2>5. CONSUMABLE and UTILITY LOOT MECHANICS</h2>
+                    <h2>4. CONSUMABLE and UTILITY LOOT MECHANICS</h2>
                     <p>Assign setting-flavored consumables to one of three standardized mechanical templates. Using any consumable during combat costs an <strong>Action Phase</strong>:</p>
                     <ul>
                         <li><strong>Restoratives (Potions, Hyper-Med Kits, Stim-Packs):</strong> Restores 5 HP, regains 1 RP, OR clears one physical condition (such as Dazed or Pinned).</li>
@@ -759,18 +728,15 @@
                         <li><strong>Utility and Survival (Warding Components, Scavenged Parts, Rations):</strong> Grants Advantage on a specific Out-of-Combat check, OR fulfills food/water requirements needed to safely complete a <em>Rough Sleep</em> or <em>Sanctuary Rest</em> without taking hazard damage.</li>
                     </ul>
 
-                    <h2>6. MAGIC, PSIONICS and CYBERWARE</h2>
+                    <h2>5. MAGIC, PSIONICS and CYBERWARE</h2>
                     <p>Magic and extraordinary powers are handled through narrative reskinning. A Wizard, Psion, or Cyborg utilizes the standard class features and weapon math dressed in setting flavor:</p>
                     <ul>
                         <li><strong>Spells as Weapons:</strong> A Wizard's "Ranged Weapon" is a Firebolt. A Psion's "Heavy Melee" is a telekinetic force-crush. A Cyborg's "Ranged/Thrown" weapon is a micro-missile.</li>
                         <li><strong>Abilities as Magic:</strong> A Breaker's <em>Concussive Blow</em> can be narrated as a kinetic shockwave spell or hydraulic cyber-punch. A Saboteur's <em>Structural Weakness</em> can be a disintegrating magic hex or acid vial.</li>
                     </ul>
 
-                    <h2>7. VEHICLES, MOUNTS and CHASES</h2>
+                    <h2>6. VEHICLES, MOUNTS and CHASES</h2>
                     <p>When operating a vehicle or riding a mount (starfighter, horse, rover, hover-skiff), your character's movement capacity equals the vehicle's movement speed in paces. Vehicles grant their own Armor DR while occupied. When a vehicle reaches 0 HP, it is destroyed, forcing occupants to suffer a Lethal Hazard (15 Flat Damage). During chase sequences or hazardous piloting, the driver must pass an <strong>Agility Check vs 14</strong> to maintain control; failure results in a crash, inflicting Major Environmental Hazard Damage (10 Flat Damage) to all passengers.</p>
-
-                    <h2>8. CUSTOMIZING LOOT DROPS</h2>
-                    <p>The Guide's Manual suggests unique Enhancers tied directly to enemies. Defeating an acid-spitting beast might drop an "Acid Gland" (+2 Dmg, ignores Armor DR). Defeating a Cyber-Ninja might yield an "Overclock Shard" (Restores 1 RP, clears Dazed). This keeps loot localized and rewarding.</p>
                 </div>
             </div>
         </div>
