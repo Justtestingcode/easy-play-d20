@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EASY PLAY D20: Complete Rulebook and Sheet</title>
+    <title>EASY PLAY D20: Complete Rulebook and Interactive Sheet</title>
     <style>
         :root {
             --bg-color: #e2e5e9;
@@ -36,6 +36,57 @@
             line-height: 1.32;
         }
 
+        /* TOOLBAR STYLES */
+        .toolbar {
+            width: 8.5in;
+            background-color: #2b5b84;
+            color: #fff;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .toolbar-title {
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        .toolbar-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            background-color: #ffffff;
+            color: #2b5b84;
+            border: none;
+            padding: 5px 10px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e2e5e9;
+        }
+
+        .btn-danger {
+            background-color: #fce8e8;
+            color: #8b0000;
+        }
+
+        .btn-danger:hover {
+            background-color: #f8d7da;
+        }
+
+        /* PAGE STYLES */
         .page {
             width: 8.5in;
             height: 11in;
@@ -150,18 +201,38 @@
             display: block;
         }
 
-        .line-input {
-            border-bottom: 1px solid #000;
-            display: inline-block;
-            min-width: 80px;
+        /* INTERACTIVE INPUT STYLES */
+        input[type="text"], input[type="number"] {
+            border: none;
+            border-bottom: 1.5px solid #000;
+            background: transparent;
+            font-family: inherit;
+            font-size: 10px;
+            font-weight: bold;
+            color: #000;
+            padding: 0 2px;
+            outline: none;
         }
 
-        .write-box {
-            display: inline-block;
-            border-bottom: 1.5px solid #000;
-            min-width: 45px;
+        input[type="text"]:focus, input[type="number"]:focus {
+            background-color: #fffde7;
+            border-bottom-color: var(--accent-color);
+        }
+
+        .center-input {
             text-align: center;
-            font-weight: bold;
+        }
+
+        textarea.notes-input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            font-family: 'Georgia', serif;
+            font-size: 10px;
+            line-height: 18px;
+            resize: none;
+            outline: none;
         }
 
         .page-num {
@@ -204,6 +275,8 @@
             box-sizing: border-box;
             flex: 1 1 auto;
             min-height: 40px;
+            display: flex;
+            flex-direction: column;
         }
 
         .notes-title {
@@ -227,6 +300,9 @@
                 background-color: #fff;
                 padding: 0;
             }
+            .toolbar {
+                display: none !important;
+            }
             .page {
                 box-shadow: none;
                 margin-bottom: 0;
@@ -239,10 +315,24 @@
                 bottom: 0;
                 right: 0;
             }
+            input[type="text"], input[type="number"] {
+                border-bottom: 1px solid #000 !important;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+        <div class="toolbar-title">EASY PLAY D20 — INTERACTIVE CHARACTER SHEET</div>
+        <div class="toolbar-buttons">
+            <button class="btn" onclick="exportCharacter()">💾 Save to File (.json)</button>
+            <button class="btn" onclick="document.getElementById('importFile').click()">📂 Load File</button>
+            <button class="btn btn-danger" onclick="resetSheet()">🧹 Clear Sheet</button>
+            <input type="file" id="importFile" style="display: none;" onchange="importCharacter(event)" accept=".json" />
+        </div>
+    </div>
 
     <!-- PAGE 1: CHARACTER PLAY SHEET -->
     <div class="page">
@@ -251,12 +341,12 @@
             
             <div class="box">
                 <div class="sheet-grid">
-                    <div><strong>CHARACTER NAME:</strong> <span class="line-input" style="width: 130px;"></span></div>
-                    <div><strong>COMBAT ARCHETYPE:</strong> <span class="line-input" style="width: 120px;"></span></div>
-                    <div><strong>DRIVE / MOTIVATION:</strong> <span class="line-input" style="width: 120px;"></span></div>
-                    <div><strong>BACKGROUND:</strong> <span class="line-input" style="width: 150px;"></span></div>
-                    <div><strong>LEVEL / XP:</strong> Level 1 [ ] / XP: ____</div>
-                    <div><strong>WEALTH / LOOT:</strong> <span class="line-input" style="width: 140px;"></span></div>
+                    <div><strong>CHARACTER NAME:</strong> <input type="text" id="charName" style="width: 130px;" /></div>
+                    <div><strong>COMBAT ARCHETYPE:</strong> <input type="text" id="charClass" style="width: 120px;" /></div>
+                    <div><strong>DRIVE / MOTIVATION:</strong> <input type="text" id="charDrive" style="width: 120px;" /></div>
+                    <div><strong>BACKGROUND:</strong> <input type="text" id="charBg" style="width: 150px;" /></div>
+                    <div><strong>LEVEL / XP:</strong> Level <input type="text" id="charLevel" value="1" style="width: 25px; text-align: center;" /> / XP: <input type="text" id="charXP" style="width: 40px;" /></div>
+                    <div><strong>WEALTH / LOOT:</strong> <input type="text" id="charLoot" style="width: 140px;" /></div>
                 </div>
             </div>
 
@@ -265,23 +355,23 @@
                 <div class="box" style="text-align: center;">
                     <strong>MIGHT</strong><br />
                     <small>Brawn / Force / Endurance</small><br /><br />
-                    <strong>MODIFIER: +[ ____ ]</strong><br /><br />
+                    <strong>MODIFIER: +[ <input type="text" id="attrMight" class="center-input" style="width: 30px;" /> ]</strong><br /><br />
                     HP: (Might x 4) + 15<br />
-                    <strong>Current HP: [ ________ ]</strong>
+                    <strong>Current HP: [ <input type="text" id="currHP" class="center-input" style="width: 60px;" /> ]</strong>
                 </div>
                 <div class="box" style="text-align: center;">
                     <strong>AGILITY</strong><br />
                     <small>Reflexes / Speed / Finesse</small><br /><br />
-                    <strong>MODIFIER: +[ ____ ]</strong><br /><br />
+                    <strong>MODIFIER: +[ <input type="text" id="attrAgility" class="center-input" style="width: 30px;" /> ]</strong><br /><br />
                     Initiative Check:<br />
                     <strong>1d20 + Agility Mod</strong>
                 </div>
                 <div class="box" style="text-align: center;">
                     <strong>WILL</strong><br />
                     <small>Mind / Perception / Focus</small><br /><br />
-                    <strong>MODIFIER: +[ ____ ]</strong><br /><br />
+                    <strong>MODIFIER: +[ <input type="text" id="attrWill" class="center-input" style="width: 30px;" /> ]</strong><br /><br />
                     Resolute: Will x 2<br />
-                    <strong>Current RP: [ ________ ]</strong>
+                    <strong>Current RP: [ <input type="text" id="currRP" class="center-input" style="width: 60px;" /> ]</strong>
                 </div>
             </div>
 
@@ -289,33 +379,33 @@
             <div class="sheet-grid">
                 <div class="box" style="padding: 6px 8px;">
                     <strong>ARMOR SELECTION & TRADEOFFS</strong><br />
-                    [ ] Unarmored (+0 Evade, +1 Pace Speed)<br />
-                    [ ] Light Armor (+1 Evade, +0 Speed, Disadv Stealth)<br />
-                    [ ] Medium Armor (+2 Evade, -1 Pace, Req 2 Might)<br />
-                    [ ] Heavy Armor (+3 Evade, -2 Paces, Req 3 Might)<br />
-                    [ ] Shield (-1 Pace Speed; Guard = Action & Move)
+                    <label><input type="checkbox" id="armorUnarmored" /> Unarmored (+0 Evade, +1 Pace Speed)</label><br />
+                    <label><input type="checkbox" id="armorLight" /> Light Armor (+1 Evade, +0 Speed, Disadv Stealth)</label><br />
+                    <label><input type="checkbox" id="armorMed" /> Medium Armor (+2 Evade, -1 Pace, Req 2 Might)</label><br />
+                    <label><input type="checkbox" id="armorHeavy" /> Heavy Armor (+3 Evade, -2 Paces, Req 3 Might)</label><br />
+                    <label><input type="checkbox" id="armorShield" /> Shield (-1 Pace Speed; Guard = Action & Move)</label>
                 </div>
                 <div class="box" style="padding: 6px 8px; line-height: 1.55;">
                     <strong style="font-size: 10px; color: var(--accent-color);">PRIMARY ATTACK & DERIVED DEFENSE</strong><br />
-                    Weapon: <span class="line-input" style="width: 130px;"></span> | Range: <span class="write-box" style="min-width: 40px;"></span><br />
-                    Base Dmg: <span class="write-box" style="min-width: 35px;"></span> + Attr Mod: +<span class="write-box" style="min-width: 35px;"></span><br />
-                    <strong style="font-size: 10px;">TOTAL FLAT DAMAGE: [ <span class="write-box" style="min-width: 50px;"></span> ]</strong><br />
+                    Weapon: <input type="text" id="weapName" style="width: 130px;" /> | Range: <input type="text" id="weapRange" class="center-input" style="width: 45px;" /><br />
+                    Base Dmg: <input type="text" id="weapBase" class="center-input" style="width: 35px;" /> + Attr Mod: +<input type="text" id="weapAttrMod" class="center-input" style="width: 35px;" /><br />
+                    <strong style="font-size: 10px;">TOTAL FLAT DAMAGE: [ <input type="text" id="totalFlatDmg" class="center-input" style="width: 50px;" /> ]</strong><br />
                     <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 5px 0 4px 0;" />
-                    <strong style="font-size: 9.8px;">EVADE MOD: [ <span class="write-box" style="min-width: 45px;"></span> ]</strong> <span style="font-size: 8.5px;">(Roll 1d20 + Evade vs 14)</span><br />
-                    <strong style="font-size: 9.8px;">SPEED MOD: [ <span class="write-box" style="min-width: 45px;"></span> ] Paces</strong> <span style="font-size: 8.5px;">(Base 3 + Armor, Min 1)</span>
+                    <strong style="font-size: 9.8px;">EVADE MOD: [ <input type="text" id="totalEvade" class="center-input" style="width: 45px;" /> ]</strong> <span style="font-size: 8.5px;">(Roll 1d20 + Evade vs 14)</span><br />
+                    <strong style="font-size: 9.8px;">SPEED MOD: [ <input type="text" id="totalSpeed" class="center-input" style="width: 45px;" /> ] Paces</strong> <span style="font-size: 8.5px;">(Base 3 + Armor, Min 1)</span>
                 </div>
             </div>
 
             <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod)</h2>
             <div class="sheet-grid">
-                <div>[ 1 ] Armor: <span class="line-input" style="width: 150px;"></span></div>
-                <div>[ 5 ] Item/Pouch: <span class="line-input" style="width: 130px;"></span></div>
-                <div>[ 2 ] Shield: <span class="line-input" style="width: 150px;"></span></div>
-                <div>[ 6 ] Item/Pouch: <span class="line-input" style="width: 130px;"></span></div>
-                <div>[ 3 ] Primary Weapon: <span class="line-input" style="width: 120px;"></span></div>
-                <div>[ 7 ] Item/Pouch: <span class="line-input" style="width: 130px;"></span></div>
-                <div>[ 4 ] Secondary/Tool: <span class="line-input" style="width: 120px;"></span></div>
-                <div>[ 8 ] Item/Pouch: <span class="line-input" style="width: 130px;"></span></div>
+                <div>[ 1 ] Armor: <input type="text" id="inv1" style="width: 150px;" /></div>
+                <div>[ 5 ] Item/Pouch: <input type="text" id="inv5" style="width: 130px;" /></div>
+                <div>[ 2 ] Shield: <input type="text" id="inv2" style="width: 150px;" /></div>
+                <div>[ 6 ] Item/Pouch: <input type="text" id="inv6" style="width: 130px;" /></div>
+                <div>[ 3 ] Primary Weapon: <input type="text" id="inv3" style="width: 120px;" /></div>
+                <div>[ 7 ] Item/Pouch: <input type="text" id="inv7" style="width: 130px;" /></div>
+                <div>[ 4 ] Secondary/Tool: <input type="text" id="inv4" style="width: 120px;" /></div>
+                <div>[ 8 ] Item/Pouch: <input type="text" id="inv8" style="width: 130px;" /></div>
             </div>
 
             <div class="box" style="margin-top: 3px;">
@@ -338,6 +428,7 @@
 
             <div class="notes-box">
                 <span class="notes-title">SESSION & CHARACTER NOTES:</span>
+                <textarea class="notes-input" id="p1Notes" placeholder="Type character background, campaign milestones, or session notes here..."></textarea>
             </div>
         </div>
         <div class="page-num">Page 1</div>
@@ -454,6 +545,7 @@
 
             <div class="notes-box">
                 <span class="notes-title">CORE RULES & ARMORY NOTES:</span>
+                <textarea class="notes-input" id="p2Notes" placeholder="Rules clarifications, house rules, or inventory overflow notes..."></textarea>
             </div>
         </div>
         <div class="page-num">Page 2</div>
@@ -523,6 +615,7 @@
 
             <div class="notes-box">
                 <span class="notes-title">FRONTLINE COMBAT NOTES & SYNERGIES:</span>
+                <textarea class="notes-input" id="p3Notes" placeholder="Frontline combat tactics and ability combos..."></textarea>
             </div>
         </div>
         <div class="page-num">Page 3</div>
@@ -591,6 +684,7 @@
 
             <div class="notes-box">
                 <span class="notes-title">TACTICAL SUPPORT & GEAR NOTES:</span>
+                <textarea class="notes-input" id="p4Notes" placeholder="Ranged overwatch, traps, and medical notes..."></textarea>
             </div>
         </div>
         <div class="page-num">Page 4</div>
@@ -701,6 +795,7 @@
 
             <div class="notes-box">
                 <span class="notes-title">ENCOUNTER & CAMPAIGN TRACKING NOTES:</span>
+                <textarea class="notes-input" id="p5Notes" placeholder="Track active encounter HP, mob roles, initiative order, and loot tags here..."></textarea>
             </div>
         </div>
         <div class="page-num">Page 5</div>
@@ -814,10 +909,97 @@
 
             <div class="notes-box">
                 <span class="notes-title">GENRE & WORLD-BUILDING NOTES:</span>
+                <textarea class="notes-input" id="p6Notes" placeholder="World-building, campaign factions, and vehicle stats..."></textarea>
             </div>
         </div>
         <div class="page-num">Page 6</div>
     </div>
 
+    <!-- AUTO-SAVE & IMPORT/EXPORT JAVASCRIPT -->
+    <script>
+        const STORAGE_KEY = 'EasyPlayD20_CharacterData';
+
+        // Save all input values to LocalStorage
+        function saveSheet() {
+            const data = {};
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                if (input.type === 'checkbox') {
+                    data[input.id] = input.checked;
+                } else if (input.id) {
+                    data[input.id] = input.value;
+                }
+            });
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        }
+
+        // Load saved values from LocalStorage
+        function loadSheet() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (!saved) return;
+            const data = JSON.parse(saved);
+            Object.keys(data).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    if (el.type === 'checkbox') {
+                        el.checked = data[id];
+                    } else {
+                        el.value = data[id];
+                    }
+                }
+            });
+        }
+
+        // Export Character to JSON file
+        function exportCharacter() {
+            const data = localStorage.getItem(STORAGE_KEY) || '{}';
+            const charName = document.getElementById('charName').value.trim() || 'Character';
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${charName}_EasyPlayD20.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Import Character from JSON file
+        function importCharacter(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const content = e.target.result;
+                localStorage.setItem(STORAGE_KEY, content);
+                loadSheet();
+            };
+            reader.readAsText(file);
+        }
+
+        // Reset all sheet values
+        function resetSheet() {
+            if (confirm("Are you sure you want to clear this entire sheet? All unsaved character data will be lost!")) {
+                localStorage.removeItem(STORAGE_KEY);
+                const inputs = document.querySelectorAll('input, textarea');
+                inputs.forEach(input => {
+                    if (input.type === 'checkbox') {
+                        input.checked = false;
+                    } else if (input.id !== 'importFile') {
+                        input.value = '';
+                    }
+                });
+            }
+        }
+
+        // Event listeners for auto-saving on change/input
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSheet();
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('input', saveSheet);
+                input.addEventListener('change', saveSheet);
+            });
+        });
+    </script>
 </body>
 </html>
