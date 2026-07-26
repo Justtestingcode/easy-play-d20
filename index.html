@@ -156,6 +156,14 @@
             min-width: 80px;
         }
 
+        .write-box {
+            display: inline-block;
+            border-bottom: 1.5px solid #000;
+            min-width: 45px;
+            text-align: center;
+            font-weight: bold;
+        }
+
         .page-num {
             position: absolute;
             bottom: 0.18in;
@@ -279,7 +287,7 @@
 
             <h2>COMBAT ENGINE and DEFENSE</h2>
             <div class="sheet-grid">
-                <div class="box">
+                <div class="box" style="padding: 6px 8px;">
                     <strong>ARMOR SELECTION & TRADEOFFS</strong><br />
                     [ ] Unarmored (+0 Evade, +1 Pace Speed)<br />
                     [ ] Light Armor (+1 Evade, +0 Speed, Disadv Stealth)<br />
@@ -287,14 +295,14 @@
                     [ ] Heavy Armor (+3 Evade, -2 Paces, Req 3 Might)<br />
                     [ ] Shield (-1 Pace Speed; Guard = Action & Move)
                 </div>
-                <div class="box">
-                    <strong>PRIMARY ATTACK & DERIVED DEFENSE</strong><br />
-                    Weapon: <span class="line-input" style="width: 110px;"></span> | Range: ____<br />
-                    Base Dmg: ____ + Attr Mod: +____<br />
-                    <strong>TOTAL FLAT DAMAGE: [ ______ ]</strong><br />
-                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 3px 0;" />
-                    <strong>EVADE MOD: [ _____ ]</strong> (Roll 1d20 + Evade vs 14)<br />
-                    <strong>SPEED MOD: [ _____ ] Paces</strong> (Base 3 + Armor, Min 1)
+                <div class="box" style="padding: 6px 8px; line-height: 1.55;">
+                    <strong style="font-size: 10px; color: var(--accent-color);">PRIMARY ATTACK & DERIVED DEFENSE</strong><br />
+                    Weapon: <span class="line-input" style="width: 130px;"></span> | Range: <span class="write-box" style="min-width: 40px;"></span><br />
+                    Base Dmg: <span class="write-box" style="min-width: 35px;"></span> + Attr Mod: +<span class="write-box" style="min-width: 35px;"></span><br />
+                    <strong style="font-size: 10px;">TOTAL FLAT DAMAGE: [ <span class="write-box" style="min-width: 50px;"></span> ]</strong><br />
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 5px 0 4px 0;" />
+                    <strong style="font-size: 9.8px;">EVADE MOD: [ <span class="write-box" style="min-width: 45px;"></span> ]</strong> <span style="font-size: 8.5px;">(Roll 1d20 + Evade vs 14)</span><br />
+                    <strong style="font-size: 9.8px;">SPEED MOD: [ <span class="write-box" style="min-width: 45px;"></span> ] Paces</strong> <span style="font-size: 8.5px;">(Base 3 + Armor, Min 1)</span>
                 </div>
             </div>
 
