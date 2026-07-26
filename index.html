@@ -265,8 +265,8 @@
                     <strong>AGILITY</strong><br />
                     <small>Reflexes / Speed / Finesse</small><br /><br />
                     <strong>MODIFIER: +[ ____ ]</strong><br /><br />
-                    Base Speed: 3 Paces + Armor Mod<br />
-                    <strong>Max Paces: [ ________ ]</strong>
+                    Initiative Check:<br />
+                    <strong>1d20 + Agility Mod</strong>
                 </div>
                 <div class="box" style="text-align: center;">
                     <strong>WILL</strong><br />
@@ -280,20 +280,21 @@
             <h2>COMBAT ENGINE and DEFENSE</h2>
             <div class="sheet-grid">
                 <div class="box">
-                    <strong>ARMOR and TRADEOFF SELECTION</strong><br />
+                    <strong>ARMOR SELECTION & TRADEOFFS</strong><br />
                     [ ] Unarmored (+0 Evade, +1 Pace Speed)<br />
                     [ ] Light Armor (+1 Evade, +0 Speed, Disadv Stealth)<br />
                     [ ] Medium Armor (+2 Evade, -1 Pace, Req 2 Might)<br />
                     [ ] Heavy Armor (+3 Evade, -2 Paces, Req 3 Might)<br />
-                    [ ] Shield (-1 Pace Speed; Guard = Action & Move)<br />
-                    <strong>EVADE MOD: [ _____ ] | SPEED MOD: [ _____ ]</strong>
+                    [ ] Shield (-1 Pace Speed; Guard = Action & Move)
                 </div>
                 <div class="box">
-                    <strong>PRIMARY ATTACK ENGINE</strong><br /><br />
-                    Weapon: <span class="line-input" style="width: 110px;"></span><br />
-                    Base Dmg: ____ + Attr Mod: +____ | Range: ____<br />
+                    <strong>PRIMARY ATTACK & DERIVED DEFENSE</strong><br />
+                    Weapon: <span class="line-input" style="width: 110px;"></span> | Range: ____<br />
+                    Base Dmg: ____ + Attr Mod: +____<br />
                     <strong>TOTAL FLAT DAMAGE: [ ______ ]</strong><br />
-                    <small><i>Nat 20: Overdrive | Nat 1: Disadv on next Evasion</i></small>
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 3px 0;" />
+                    <strong>EVADE MOD: [ _____ ]</strong> (Roll 1d20 + Evade vs 14)<br />
+                    <strong>SPEED MOD: [ _____ ] Paces</strong> (Base 3 + Armor, Min 1)
                 </div>
             </div>
 
@@ -351,7 +352,7 @@
                         <li><strong>Derived Vitals:</strong>
                             <ul>
                                 <li><em>HP:</em> (Might x 4) + 15 (Pure base math; gear never touches HP)</li>
-                                <li><em>Movement:</em> 3 Base Paces + Armor/Shield Speed Mod</li>
+                                <li><em>Movement:</em> Base 3 Paces + Armor/Shield Speed Mod (Minimum Movement Floor = 1 Pace)</li>
                                 <li><em>RP:</em> Will x 2</li>
                             </ul>
                         </li>
@@ -378,7 +379,7 @@
                     <p>Rounds represent 6 seconds of simultaneous action. System is 100% Player-Facing: no out-of-turn reactions.</p>
                     <ul>
                         <li><strong>Dynamic Guide Initiative:</strong> The Guide rolls 1d20 (+ Tier Mod) to set the encounter's <strong>Initiative Target</strong>. Players roll 1d20 + Agility vs this target. Meet/beat = Fast Phase (before enemies); lower = Slow Phase (after enemies). Players win ties.</li>
-                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (1 pace = 5 ft / 1 grid square).</li>
+                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (1 pace = 5 ft / 1 grid square; Min Floor = 1 Pace).</li>
                         <li><strong>2. Action Phase:</strong> Attack, use ability, drink potion, or execute a maneuver (1d20 + Attr vs 14).</li>
                         <li><strong>3. Evasion Phase:</strong> When targeted on enemy turn, roll 1d20 + Armor Evasion Mod vs 14. 14+ = 0 damage. Fail = take enemy flat damage directly.</li>
                     </ul>
@@ -435,7 +436,7 @@
                             <tr><td>Unarmored</td><td>+0 Evade</td><td>+1 Pace</td><td>None. Max mobility (4 Paces base).</td></tr>
                             <tr><td>Light Armor</td><td>+1 Evade</td><td>+0 Paces</td><td>Req 1 Might/Agility. Disadv on Stealth.</td></tr>
                             <tr><td>Medium Armor</td><td>+2 Evade</td><td>-1 Pace</td><td>Req 2 Might. Speed tradeoff.</td></tr>
-                            <tr><td>Heavy Armor</td><td>+3 Evade</td><td>-2 Paces</td><td>Req 3 Might. Tank anchor speed.</td></tr>
+                            <tr><td>Heavy Armor</td><td>+3 Evade</td><td>-2 Paces</td><td>Req 3 Might. Tank anchor speed (Min 1 Pace Floor).</td></tr>
                             <tr><td>Shield</td><td>Guard</td><td>-1 Pace</td><td>1 Hand. Active Guard uses Action AND Move Phase for Adv Evasion.</td></tr>
                         </tbody>
                     </table>
@@ -471,7 +472,7 @@
                         <li><strong>L7: Sunder / Disarm [2 RP]:</strong> Spend 2 RP on hit to wrench target's weapon away OR deal +3 bonus flat damage.</li>
                         <li><strong>L8: Brawl Mastery [4 RP]:</strong> Spend 4 RP on hit to grapple foe within 1 pace as physical cover (+Advantage on Evasion) OR pin a beast to remove its Action Phase.</li>
                     </ul>
-                    <div class="pro-tip"><strong>Rule Clarification:</strong> Active Guard with a Shield uses both your Action and Move Phases. Vanguard Guard triggers at the end of your turn as long as you are standing next to an ally.</div>
+                    <div class="pro-tip"><strong>Rule Clarification:</strong> Active Guard with a Shield uses both your Action and Move Phases. Vanguard Guard triggers at the end of your turn as long as you are standing next to an ally. Minimum movement speed is 1 Pace.</div>
 
                     <h3>THE BREAKER</h3>
                     <p><em>Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.</em></p>
@@ -501,7 +502,7 @@
                         <li><strong>L1 Specialty: Twin Fangs (Passive):</strong> Dual-wielding Light Melee adds +1 to flat damage output.</li>
                         <li><strong>L1: Backstab [1 RP]:</strong> Positioned behind an engaged target within 1 pace, spend 1 RP for Advantage on attack and +2 flat damage.</li>
                         <li><strong>L2: Prowler's Eye [1 RP]:</strong> Scan 3-pace area with Advantage vs 14 to spot hidden hazards and mechanisms.</li>
-                        <li><strong>L3: Nerve Strike [2 RP]:</strong> Spend 2 RP on hit. Target passes Might check vs 14 or becomes Pinned.</li>
+                        <li><strong>L3: Nerve Strike [2 RP]:</strong> Spend 2 RP on hit. Target passes Might check vs 14 or becomes Grappled.</li>
                         <li><strong>L4: Shadow Strike [2 RP]:</strong> Strike from concealment with Advantage; add Agility mod to flat damage a second time.</li>
                         <li><strong>L5: Absolute Camouflage [3 RP]:</strong> In cover, enemies suffer Disadvantage on perception and attack rolls against you.</li>
                         <li><strong>L6: Ghost Step (Passive):</strong> Advantage on silent movement; leave no physical footprints on natural terrain.</li>
@@ -532,7 +533,7 @@
                     <ul>
                         <li><strong>L1 Specialty: Aimed Shot (Passive):</strong> Forfeit Move Phase to gain Advantage on your Ranged attack roll vs 14.</li>
                         <li><strong>L1: Rig Chokepoint [1 RP]:</strong> Set tripwire in adjacent space; first enemy entering has movement reduced to 0 for that turn.</li>
-                        <li><strong>L2: Pinning Volley [2 RP]:</strong> Hail of fire covering a 2-pace chokepoint up to 8 paces away; first enemy passing through automatically takes flat weapon damage.</li>
+                        <li><strong>L2: Pinning Volley [2 RP]:</strong> Hail of fire covering a 2-pace chokepoint up to 8 paces away; first enemy passing through is Pinned Down.</li>
                         <li><strong>L3: Crippling Shot [1 RP]:</strong> Spend 1 RP before attack. On hit within range, target's movement is halved on their next turn.</li>
                         <li><strong>L4: Elevated Advantage [1 RP]:</strong> Firing from vertical elevation completely ignores target cover bonuses.</li>
                         <li><strong>L5: Piercing Strike [3 RP]:</strong> Hit primary target with 2-Handed Ranged weapon up to 8 paces away and deal equal flat damage to secondary enemy directly behind them.</li>
@@ -540,7 +541,7 @@
                         <li><strong>L7: Funneling Fire [2 RP]:</strong> Rapid burst forces target within range to immediately move 1 pace in a direction of your choice.</li>
                         <li><strong>L8: Perfect Aim [4 RP]:</strong> Forfeit Move Phase; roll attack up to 8 paces with Advantage, ignore cover, and add Will mod to flat damage.</li>
                     </ul>
-                    <div class="pro-tip"><strong>Rule Clarification:</strong> To trigger Elevated Advantage, you must physically be positioned at least 1 full pace (5 feet) higher than your target, such as firing from a rooftop, a staircase, or a hovering vehicle.</div>
+                    <div class="pro-tip"><strong>Rule Clarification:</strong> To trigger Elevated Advantage, you must physically be positioned at least 1 full pace (5 feet) higher than your target, such as firing from a rooftop, a staircase, or a hovering vehicle. Hard max range for standard Ranged Weapons is 8 Paces.</div>
 
                     <h3>THE SABOTEUR</h3>
                     <p><em>Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.</em></p>
@@ -569,7 +570,7 @@
                     <ul>
                         <li><strong>L1 Specialty: Combat Medic (Passive):</strong> Stabilize dying ally within 1 pace using Move Phase (Will check vs 14).</li>
                         <li><strong>L1: Drag to Safety [1 RP]:</strong> Grab unconscious or prone ally during Move Phase and drag them full movement paces.</li>
-                        <li><strong>L2: Aggressive Rouse [1 RP]:</strong> Action Phase instantly removes one physical condition (like Dazed) from an adjacent ally within 1 pace.</li>
+                        <li><strong>L2: Aggressive Rouse [1 RP]:</strong> Action Phase instantly removes one physical condition (like Dazed or Grappled) from an adjacent ally within 1 pace.</li>
                         <li><strong>L3: Pressure Dressing [2 RP]:</strong> Bind wound of yourself or an adjacent ally within 1 pace; restores 3 HP immediately (up to Max HP) OR grants Advantage on their next Evasion roll.</li>
                         <li><strong>L4: Forage [1 RP]:</strong> Spend 1 RP outside combat to automatically locate sustenance to sustain party for one day.</li>
                         <li><strong>L5: Field Surgery [3 RP]:</strong> Short Breather procedure restores ally HP equal to twice your Will modifier.</li>
@@ -671,7 +672,8 @@
                     <ul>
                         <li><strong>Prone:</strong> Halves movement; actions taken while Prone suffer Disadvantage.</li>
                         <li><strong>Dazed:</strong> Disadvantage on all rolls until end of turn; movement halved.</li>
-                        <li><strong>Pinned:</strong> Cannot move until spending Action Phase for Might check vs 14 to break free.</li>
+                        <li><strong>Grappled (Physical):</strong> Cannot move. Must spend Action Phase for Might check vs 14 to break free.</li>
+                        <li><strong>Pinned Down (Suppressive):</strong> Moving outside cover triggers automatic flat damage. Spend Move Phase or pass Agility/Will check vs 14 to clear.</li>
                         <li><strong>Stunned:</strong> Forfeits all Move and Action Phases on next turn.</li>
                     </ul>
                     <p><strong>Rest & Recovery:</strong></p>
@@ -784,7 +786,7 @@
                     <h2>4. CONSUMABLE and UTILITY LOOT MECHANICS</h2>
                     <p>Assign setting-flavored consumables to one of three standardized mechanical templates. Using any consumable during combat costs an <strong>Action Phase</strong>:</p>
                     <ul>
-                        <li><strong>Restoratives (Potions, Hyper-Med Kits, Stim-Packs):</strong> Restores 5 HP, regains 1 RP, OR clears one physical condition (such as Dazed or Pinned).</li>
+                        <li><strong>Restoratives (Potions, Hyper-Med Kits, Stim-Packs):</strong> Restores 5 HP, regains 1 RP, OR clears one physical condition (such as Dazed or Grappled).</li>
                         <li><strong>Enhancers (Black Market Ammo, Experimental Serums, Plasma Charges):</strong> Grants +2 Flat Damage to your next hit, OR forces your next attack to ignore cover.</li>
                         <li><strong>Utility and Survival (Warding Components, Scavenged Parts, Rations):</strong> Grants Advantage on a specific Out-of-Combat check, OR fulfills food/water requirements needed to safely complete a <em>Rough Sleep</em> or <em>Sanctuary Rest</em> without taking hazard damage.</li>
                     </ul>
