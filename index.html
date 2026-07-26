@@ -320,7 +320,7 @@
 
             <div class="box" style="margin-top: 3px;">
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
-                • <strong>The 14+ Rule:</strong> Any check, attack, or defense totaling 14+ after modifiers is a complete success. Anything under 14 is a failure.<br />
+                • <strong>The 14+ Rule:</strong> Any check, attack, or defense totaling 14+ after modifiers is a complete success. Anything under 14 is a failure. Always round fractions down (Min 1).<br />
                 • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling for <strong>Advantage</strong> (2d20, keep high; max 1/turn). Disadvantage = 2d20, keep low.<br />
                 • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attr vs 14 within weapon range (Hard Max 8 Paces for Ranged Weapons). Success deals Flat Damage directly to HP. Nat 1 = automatic miss + Disadvantage on next Evasion.<br />
                 • <strong>Evasion Phase (Defending):</strong> Roll 1d20 + Armor Evasion Mod vs 14. 14+ = 0 damage. Fail = take full flat enemy damage.<br />
@@ -369,7 +369,7 @@
                     <h2>2. THE ACTION ENGINE (FLAT 14)</h2>
                     <p>All risky tasks, skill checks, attack rolls, and evasions target a static <strong>Universal Baseline Threshold of 14</strong>.</p>
                     <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
-                        <strong style="color: #2b5b84;">THE 14+ RULE:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure.
+                        <strong style="color: #2b5b84;">THE 14+ RULE & ROUNDING:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure. Always round fractions down to the nearest whole number (minimum 1 Pace/HP).
                     </div>
                     <ul>
                         <li><strong>Resolution:</strong> Roll 1d20 + Attribute Modifier. Sum of 14+ succeeds.</li>
@@ -387,7 +387,7 @@
                     <p>Rounds represent 6 seconds of simultaneous action. System is 100% Player-Facing: no out-of-turn reactions.</p>
                     <ul>
                         <li><strong>Dynamic Guide Initiative:</strong> The Guide rolls 1d20 (+ Tier Mod) to set the encounter's <strong>Initiative Target</strong>. Players roll 1d20 + Agility vs this target. Meet/beat = Fast Phase (before enemies); lower = Slow Phase (after enemies). Players win ties.</li>
-                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (1 pace = 5 ft / 1 grid square; Min Floor = 1 Pace).</li>
+                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (1 pace = 5 ft / 1 grid square; Min Floor = 1 Pace). Halved movement is rounded down (Min 1 Pace).</li>
                         <li><strong>2. Action Phase:</strong> Attack, use ability, drink potion, or execute a maneuver (1d20 + Attr vs 14).</li>
                         <li><strong>3. Evasion Phase:</strong> When targeted on enemy turn, roll 1d20 + Armor Evasion Mod vs 14. 14+ = 0 damage. Fail = take enemy flat damage directly.</li>
                     </ul>
@@ -448,7 +448,7 @@
                             <tr><td>Shield</td><td>Guard</td><td>-1 Pace</td><td>1 Hand. Active Guard uses Action AND Move Phase for Adv Evasion.</td></tr>
                         </tbody>
                     </table>
-                    <p><strong>Inventory Limit & Backpacks:</strong> Total slots = <strong>4 + Might modifier</strong>. Each slot holds 1 equipped item OR 1 Pouch of up to 3 unequipped consumables/tools. Exceeding total slots causes <strong>Over-Encumbrance</strong> (Disadvantage on physical actions, movement halved).</p>
+                    <p><strong>Inventory Limit & Backpacks:</strong> Total slots = <strong>4 + Might modifier</strong>. Each slot holds 1 equipped item OR 1 Pouch of up to 3 unequipped consumables/tools. Exceeding total slots causes <strong>Over-Encumbrance</strong> (Disadvantage on physical actions, movement halved rounded down to min 1 Pace).</p>
                 </div>
             </div>
 
@@ -634,6 +634,7 @@
                     </table>
 
                     <h2>3. MOB ROLES (PLUG-AND-PLAY)</h2>
+                    <p><em>Assign 1 role to any Tier above to stack its trait onto the enemy's base stats:</em></p>
                     <table>
                         <thead>
                             <tr><th>Mob Archetype</th><th>Tactical Trait (One-Liner Rule)</th></tr>
@@ -678,8 +679,8 @@
                     <h2>5. TACTICAL CONDITIONS & REST</h2>
                     <p><strong>Status Conditions (Players & Enemies):</strong></p>
                     <ul>
-                        <li><strong>Prone:</strong> Halves movement; actions taken while Prone suffer Disadvantage.</li>
-                        <li><strong>Dazed:</strong> Disadvantage on all rolls until end of turn; movement halved.</li>
+                        <li><strong>Prone:</strong> Halves movement (round down, min 1); actions suffer Disadvantage.</li>
+                        <li><strong>Dazed:</strong> Disadvantage on all rolls until end of turn; movement halved (round down).</li>
                         <li><strong>Grappled (Physical):</strong> Cannot move. Must spend Action Phase for Might check vs 14 to break free.</li>
                         <li><strong>Pinned Down (Suppressive):</strong> Moving outside cover triggers automatic flat damage. Spend Move Phase or pass Agility/Will check vs 14 to clear.</li>
                         <li><strong>Stunned:</strong> Forfeits all Move and Action Phases on next turn.</li>
@@ -687,7 +688,7 @@
                     <p><strong>Rest & Recovery:</strong></p>
                     <ul>
                         <li><strong>Short Breather (10 min):</strong> HP = (Might mod x 2), RP = Will mod.</li>
-                        <li><strong>Rough Sleep (Overnight):</strong> HP = Half Max HP, full RP restore.</li>
+                        <li><strong>Rough Sleep (Overnight):</strong> HP = Half Max HP (round down), full RP restore.</li>
                         <li><strong>Sanctuary Rest (Town):</strong> Full HP/RP restore + clear conditions. Cost: 1 Minor Tag/player.</li>
                     </ul>
                 </div>
