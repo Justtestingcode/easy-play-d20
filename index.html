@@ -622,26 +622,37 @@
                     <h2>3. THREAT TIERS and PLAYER-FACING STATS</h2>
                     <table>
                         <thead>
-                            <tr><th>Threat Tier</th><th>HP</th><th>Incoming Dmg</th></tr>
+                            <tr><th>Threat Tier</th><th>HP</th><th>Incoming Dmg</th><th>Move</th><th>Tier Trait</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>Tier 1: Minions</td><td>3 HP</td><td>4 Dmg</td></tr>
-                            <tr><td>Tier 2: Standard</td><td>12 HP</td><td>6 Dmg</td></tr>
-                            <tr><td>Tier 3: Elite</td><td>25 HP</td><td>8 Dmg</td></tr>
-                            <tr><td>Tier 4: Boss / Leader</td><td>55 HP</td><td>10 Dmg</td></tr>
+                            <tr><td><strong>Tier 1: Minions</strong></td><td>3 HP</td><td>4 Dmg</td><td>3 Paces</td><td><strong>Swarm:</strong> Drops in 1 hit. Groups of 2+ force Disadvantage on Evasion.</td></tr>
+                            <tr><td><strong>Tier 2: Standard</strong></td><td>12 HP</td><td>6 Dmg</td><td>3 Paces</td><td><strong>Standard:</strong> Standard frontline combatant. Base stats.</td></tr>
+                            <tr><td><strong>Tier 3: Elite</strong></td><td>25 HP</td><td>8 Dmg</td><td>4 Paces</td><td><strong>Hard Target:</strong> Player attacks against them suffer Disadvantage.</td></tr>
+                            <tr><td><strong>Tier 4: Boss / Leader</strong></td><td>55 HP</td><td>10 Dmg</td><td>4 Paces</td><td><strong>Frenzy:</strong> Takes 2 Actions/turn (players roll Evasion twice).</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>4. MOB ROLE ARCHETYPES (PLUG-AND-PLAY)</h2>
+                    <p>Slap one simple Role onto any Threat Tier above to create instant enemy variety:</p>
+                    <table>
+                        <thead>
+                            <tr><th>Mob Archetype</th><th>Tactical Trait (One-Liner Rule)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1. Brute / Brawler</strong></td><td><strong>Heavy Hitter:</strong> Melee attacks deal +2 Flat Damage (-1 Movement Pace).</td></tr>
+                            <tr><td><strong>2. Skirmisher</strong></td><td><strong>Hit & Run:</strong> Can move both before and after making an attack without penalty.</td></tr>
+                            <tr><td><strong>3. Sniper</strong></td><td><strong>Dead Eye:</strong> Fires up to 8 Paces away. Targets out in the open take +2 Flat Dmg.</td></tr>
+                            <tr><td><strong>4. Disruptor</strong></td><td><strong>Crowd Control:</strong> Successful hit forces player Might check vs 14 or Dazed.</td></tr>
+                            <tr><td><strong>5. Protector</strong></td><td><strong>Intercept:</strong> Takes incoming flat damage intended for an adjacent ally.</td></tr>
+                            <tr><td><strong>6. Commander</strong></td><td><strong>Aura:</strong> Allies within 3 paces gain +1 Movement Pace and ignore first Rout check.</td></tr>
+                            <tr><td><strong>7. Lurker</strong></td><td><strong>Ambush:</strong> Attacks from concealment force Disadvantage on player Evasion.</td></tr>
+                            <tr><td><strong>8. Swarmer</strong></td><td><strong>Swarm:</strong> Drops in 1 hit (3 HP). Pairs force Disadvantage on player Evasion.</td></tr>
                         </tbody>
                     </table>
                 </div>
                 
                 <div class="column-box">
-                    <p><strong>Combat Traits and Evasion Rules:</strong></p>
-                    <ul>
-                        <li><strong>Tier 1 and 2:</strong> Standard Evasion vs 14. Minions drop in 1 hit.</li>
-                        <li><strong>Tier 3 (Elite):</strong> <em>Hard Target:</em> Player attacks suffer Disadvantage unless striking from concealment. <em>Tactical:</em> Forces Disadvantage on player Evasion if target is Prone or Dazed.</li>
-                        <li><strong>Tier 4 (Boss):</strong> <em>Legendary Defense:</em> Bosses force Disadvantage on basic player attacks. Spending RP to buy Advantage cancels Legendary Defense to a standard 1d20 roll and satisfies class ability prerequisites (like Shadow Strike). <em>Frenzy:</em> Bosses take 2 Actions/turn (players roll Evasion twice).</li>
-                    </ul>
-
-                    <h2>4. LEVEL SCALING & ENCOUNTER BUILDING</h2>
+                    <h2>5. LEVEL SCALING & ENCOUNTER BUILDING</h2>
                     <p><strong>Level Scaling Brackets (Enemies):</strong></p>
                     <ul>
                         <li><strong>Level 1–2 (Standard):</strong> Base Tier Stats (Minions = 3 HP / 4 Dmg).</li>
@@ -658,13 +669,13 @@
                         <li><strong>Party Size Scaling:</strong> Add or subtract 1 Standard enemy for each player above or below 4.</li>
                     </ul>
 
-                    <p><strong>Enemy Modifiers & Morale:</strong></p>
+                    <p><strong>Enemy Modifiers & Dynamic Morale:</strong></p>
                     <ul>
                         <li><strong>Heavy:</strong> +5 HP (halve movement). <strong>Agile:</strong> Disadv on player Evasion (+2 move, -2 HP). <strong>Lethal:</strong> +2 Flat Dmg (-3 HP, min 5 HP).</li>
                         <li><strong>Dynamic Morale:</strong> When a squad loses half its numbers or its leader, roll 1d20 vs the <strong>highest Threat Tier remaining</strong>: Rout on <strong>10–20</strong> (Minions), <strong>13–20</strong> (Standard), <strong>16–20</strong> (Elite). Bosses never flee.</li>
                     </ul>
 
-                    <h2>5. TACTICAL, STATUS CONDITIONS & REST</h2>
+                    <h2>6. TACTICAL CONDITIONS & REST</h2>
                     <ul>
                         <li><strong>Status Conditions (Players & Enemies):</strong>
                             <ul>
@@ -678,7 +689,7 @@
                             <ul>
                                 <li><em>Short Breather (10 min):</em> HP = (Might mod x 2), RP = Will mod.</li>
                                 <li><em>Rough Sleep (Overnight):</em> HP = Half Max HP, full RP restore.</li>
-                                <li><em>Sanctuary Rest (Town):</em> Full HP/RP restore + clear conditions. Standard Cost: 1 Minor Loot Tag per player (or 1 Major Tag for the party).</li>
+                                <li><em>Sanctuary Rest (Town):</em> Full HP/RP restore + clear conditions. Standard Cost: 1 Minor Loot Tag per player (or 1 Major Tag for party).</li>
                             </ul>
                         </li>
                     </ul>
