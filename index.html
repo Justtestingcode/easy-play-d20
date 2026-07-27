@@ -210,8 +210,9 @@
             font-size: 10px;
             font-weight: bold;
             color: #000;
-            padding: 0 2px;
+            padding: 2px 4px;
             outline: none;
+            min-height: 18px;
         }
 
         input[type="text"]:focus, input[type="number"]:focus {
@@ -340,7 +341,7 @@
             <h1>EASY PLAY D20 - CHARACTER PLAY SHEET</h1>
             
             <div class="box">
-                <div class="sheet-grid">
+                <div class="sheet-grid" style="row-gap: 8px;">
                     <div><strong>CHARACTER NAME:</strong> <input type="text" id="charName" style="width: 130px;" /></div>
                     <div><strong>COMBAT ARCHETYPE:</strong> <input type="text" id="charClass" style="width: 120px;" /></div>
                     <div><strong>DRIVE / MOTIVATION:</strong> <input type="text" id="charDrive" style="width: 120px;" /></div>
@@ -352,54 +353,54 @@
 
             <h2>CORE ATTRIBUTES & 3-RESOURCE ENGINE (Min +1 / Absolute Max +4 EVER)</h2>
             <div class="sheet-grid-3">
-                <div class="box" style="text-align: center;">
+                <div class="box" style="text-align: center; padding: 8px 5px;">
                     <strong>MIGHT</strong><br />
                     <small>Brawn / Force / Endurance</small><br /><br />
-                    <strong>MODIFIER: +[ <input type="text" id="attrMight" class="center-input" style="width: 30px;" /> ]</strong><br /><br />
-                    Max HP: 20 + Might Mod<br />
-                    <strong>Current HP: [ <input type="text" id="currHP" class="center-input" style="width: 45px;" /> ]</strong><br /><br />
+                    <strong>MODIFIER: +[ <input type="text" id="attrMight" class="center-input" style="width: 35px;" /> ]</strong><br /><br />
                     Force Pool: (Might x 2) + Lvl<br />
-                    <strong>Current Force: [ <input type="text" id="currForce" class="center-input" style="width: 45px;" /> ]</strong>
+                    <strong>Current Force: [ <input type="text" id="currForce" class="center-input" style="width: 50px;" /> ]</strong>
                 </div>
-                <div class="box" style="text-align: center;">
+                <div class="box" style="text-align: center; padding: 8px 5px;">
                     <strong>AGILITY</strong><br />
                     <small>Reflexes / Speed / Finesse</small><br /><br />
-                    <strong>MODIFIER: +[ <input type="text" id="attrAgility" class="center-input" style="width: 30px;" /> ]</strong><br /><br />
+                    <strong>MODIFIER: +[ <input type="text" id="attrAgility" class="center-input" style="width: 35px;" /> ]</strong><br /><br />
                     Reflex Pool: (Agility x 2) + Lvl<br />
-                    <strong>Current Reflex: [ <input type="text" id="currReflex" class="center-input" style="width: 45px;" /> ]</strong>
+                    <strong>Current Reflex: [ <input type="text" id="currReflex" class="center-input" style="width: 50px;" /> ]</strong>
                 </div>
-                <div class="box" style="text-align: center;">
+                <div class="box" style="text-align: center; padding: 8px 5px;">
                     <strong>WILL</strong><br />
                     <small>Mind / Perception / Focus</small><br /><br />
-                    <strong>MODIFIER: +[ <input type="text" id="attrWill" class="center-input" style="width: 30px;" /> ]</strong><br /><br />
+                    <strong>MODIFIER: +[ <input type="text" id="attrWill" class="center-input" style="width: 35px;" /> ]</strong><br /><br />
                     Resolute Pool: (Will x 2) + Lvl<br />
-                    <strong>Current RP: [ <input type="text" id="currRP" class="center-input" style="width: 45px;" /> ]</strong>
+                    <strong>Current RP: [ <input type="text" id="currRP" class="center-input" style="width: 50px;" /> ]</strong>
                 </div>
             </div>
 
             <h2>COMBAT ENGINE and DEFENSE</h2>
             <div class="sheet-grid">
-                <div class="box" style="padding: 6px 8px;">
-                    <strong>ARMOR SELECTION & TRADEOFFS</strong><br />
-                    <label><input type="checkbox" id="armorUnarmored" /> Unarmored (+0 Evade, +1 Pace Speed)</label><br />
-                    <label><input type="checkbox" id="armorLight" /> Light Armor (+1 Evade, +0 Speed, Disadv Stealth)</label><br />
-                    <label><input type="checkbox" id="armorMed" /> Medium Armor (+2 Evade, -1 Pace, Req 2 Might)</label><br />
-                    <label><input type="checkbox" id="armorHeavy" /> Heavy Armor (+3 Evade, -2 Paces, Req 3 Might)</label><br />
-                    <label><input type="checkbox" id="armorShield" /> Shield (-1 Pace Speed; Guard = Action & Move; Req 1 Hand)</label>
+                <div class="box" style="padding: 8px;">
+                    <strong>ARMOR SELECTION & TRADEOFFS</strong><br /><br />
+                    <label style="display: block; margin-bottom: 3px;"><input type="checkbox" id="armorUnarmored" /> Unarmored (+0 Evade, +1 Pace Speed)</label>
+                    <label style="display: block; margin-bottom: 3px;"><input type="checkbox" id="armorLight" /> Light Armor (+1 Evade, +0 Speed, Disadv Stealth)</label>
+                    <label style="display: block; margin-bottom: 3px;"><input type="checkbox" id="armorMed" /> Medium Armor (+2 Evade, -1 Pace, Req 2 Might)</label>
+                    <label style="display: block; margin-bottom: 3px;"><input type="checkbox" id="armorHeavy" /> Heavy Armor (+3 Evade, -2 Paces, Req 3 Might)</label>
+                    <label style="display: block;"><input type="checkbox" id="armorShield" /> Shield (-1 Pace Speed; Guard = Action & Move; Req 1 Hand)</label>
                 </div>
-                <div class="box" style="padding: 6px 8px; line-height: 1.55;">
-                    <strong style="font-size: 10px; color: var(--accent-color);">PRIMARY ATTACK & DERIVED DEFENSE</strong><br />
-                    Weapon: <input type="text" id="weapName" style="width: 130px;" /> | Range: <input type="text" id="weapRange" class="center-input" style="width: 45px;" /><br />
-                    Base Dmg: <input type="text" id="weapBase" class="center-input" style="width: 35px;" /> + Attr Mod: +<input type="text" id="weapAttrMod" class="center-input" style="width: 35px;" /><br />
-                    <strong style="font-size: 10px;">TOTAL FLAT DAMAGE: [ <input type="text" id="totalFlatDmg" class="center-input" style="width: 50px;" /> ]</strong><br />
-                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 5px 0 4px 0;" />
-                    <strong style="font-size: 9.8px;">EVADE MOD: [ <input type="text" id="totalEvade" class="center-input" style="width: 45px;" /> ]</strong> <span style="font-size: 8.5px;">(Roll 1d20 + Evade vs 14)</span><br />
-                    <strong style="font-size: 9.8px;">SPEED MOD: [ <input type="text" id="totalSpeed" class="center-input" style="width: 45px;" /> ] Paces</strong> <span style="font-size: 8.5px;">(Base 3 + Armor, Min 1)</span>
+                <div class="box" style="padding: 8px; line-height: 1.6;">
+                    <strong style="font-size: 10px; color: var(--accent-color);">DERIVED VITAL STATS & DEFENSE</strong><br />
+                    <strong>Max HP: 20 + Might Mod</strong> | Current HP: [ <input type="text" id="currHP" class="center-input" style="width: 55px;" /> ]<br />
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 4px 0;" />
+                    Primary Weapon: <input type="text" id="weapName" style="width: 120px;" /> | Range: <input type="text" id="weapRange" class="center-input" style="width: 40px;" /><br />
+                    Base Dmg: <input type="text" id="weapBase" class="center-input" style="width: 30px;" /> + Attr Mod: +<input type="text" id="weapAttrMod" class="center-input" style="width: 30px;" /><br />
+                    <strong style="font-size: 10px;">TOTAL FLAT DAMAGE: [ <input type="text" id="totalFlatDmg" class="center-input" style="width: 45px;" /> ]</strong><br />
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 4px 0;" />
+                    <strong style="font-size: 9.8px;">EVADE MOD: [ <input type="text" id="totalEvade" class="center-input" style="width: 40px;" /> ]</strong> <span style="font-size: 8.5px;">(Roll 1d20 + Evade vs 14)</span><br />
+                    <strong style="font-size: 9.8px;">SPEED MOD: [ <input type="text" id="totalSpeed" class="center-input" style="width: 40px;" /> ] Paces</strong> <span style="font-size: 8.5px;">(Base 3 + Armor, Min 1)</span>
                 </div>
             </div>
 
             <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod)</h2>
-            <div class="sheet-grid">
+            <div class="sheet-grid" style="row-gap: 6px;">
                 <div>[ 1 ] Armor: <input type="text" id="inv1" style="width: 150px;" /></div>
                 <div>[ 5 ] Item/Pouch: <input type="text" id="inv5" style="width: 130px;" /></div>
                 <div>[ 2 ] Shield: <input type="text" id="inv2" style="width: 150px;" /></div>
@@ -410,7 +411,7 @@
                 <div>[ 8 ] Item/Pouch: <input type="text" id="inv8" style="width: 130px;" /></div>
             </div>
 
-            <div class="box" style="margin-top: 3px;">
+            <div class="box" style="margin-top: 4px; padding: 6px 8px; line-height: 1.45;">
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
                 • <strong>The 14+ Rule:</strong> Any check, attack, or defense totaling 14+ after modifiers is a complete success. Anything under 14 is a failure. Always round fractions down (Min 1).<br />
                 • <strong>The Twin Die Engine (Advantage):</strong> Spend <strong>1 Force (Overpower)</strong> for Advantage on Might checks/physical contests. Spend <strong>1 Reflex (Dodge)</strong> for Advantage on Evasion or Agility checks. Spend <strong>1 RP (Focus)</strong> for Advantage on Attack rolls or Will checks.<br />
@@ -419,7 +420,7 @@
                 • <strong>Dying & Bleed Out (0 HP):</strong> Counter starts at <strong>Will Mod + 1 (Min 1 turn)</strong>. Decrement by 1 at start of turn. Reaching 0 = permanent death. Ally spending Action Phase passes Will vs 14 to revive at 1 HP.
             </div>
 
-            <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 3px;">
+            <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 4px; padding: 6px 8px; line-height: 1.45;">
                 <strong style="color: #2b5b84;">ACTION PHASE MANEUVERS (NON-ATTACK)</strong><br />
                 • <strong>Active Guard:</strong> Raise Shield (forfeits Action AND Move Phase) to gain Advantage on all Evasion rolls until next turn.<br />
                 • <strong>Dash:</strong> Forfeit attack to move total Movement paces a second time.<br />
