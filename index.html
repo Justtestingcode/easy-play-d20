@@ -363,8 +363,8 @@
                     <strong>AGILITY</strong><br />
                     <small>Reflexes / Speed / Finesse</small><br /><br />
                     <strong>MODIFIER: +[ <input type="text" id="attrAgility" class="center-input" style="width: 30px;" /> ]</strong><br /><br />
-                    Initiative Check:<br />
-                    <strong>1d20 + Agility Mod</strong>
+                    Reflex Pool: Agility + 2<br />
+                    <strong>Current Reflex: [ <input type="text" id="currReflex" class="center-input" style="width: 60px;" /> ]</strong>
                 </div>
                 <div class="box" style="text-align: center;">
                     <strong>WILL</strong><br />
@@ -412,9 +412,9 @@
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
                 • <strong>The 14+ Rule:</strong> Any check, attack, or defense totaling 14+ after modifiers is a complete success. Anything under 14 is a failure. Always round fractions down (Min 1).<br />
                 • <strong>The Twin Die Engine:</strong> Spend 1 RP before rolling for <strong>Advantage</strong> (2d20, keep high; max 1/turn). Disadvantage = 2d20, keep low.<br />
-                • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attr vs 14 within weapon range (Hard Max 8 Paces for Ranged Weapons). Success deals Flat Damage directly to HP. Nat 1 = automatic miss + Disadvantage on next Evasion.<br />
-                • <strong>Evasion Phase (Defending):</strong> Roll 1d20 + Armor Evasion Mod vs 14. 14+ = 0 damage. Fail = take full flat enemy damage.<br />
-                • <strong>Dying and Bleed Out (0 HP):</strong> Decrement Bleed Out counter by 1 at start of your turn. Reaching 0 = die. Ally spending Action Phase passes Will vs 14 to revive at 1 HP.
+                • <strong>Universal Reflex Actions:</strong> Spend 1 Reflex Point for: <strong>Burst Step</strong> (+1 Pace), <strong>Quick Stand</strong> (Stand from Prone free), or <strong>Break Free</strong> (Clear Grappled/Pinned Down without losing Action Phase).<br />
+                • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attr vs 14 within range (Hard Max 8 Paces for Ranged Weapons). Success deals Flat Damage directly to HP.<br />
+                • <strong>Dying and Bleed Out (0 HP):</strong> Decrement Bleed Out counter by 1 at start of turn. Reaching 0 = die. Ally spending Action Phase passes Will vs 14 to revive at 1 HP.
             </div>
 
             <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 3px;">
@@ -451,8 +451,9 @@
                         <li><strong>Derived Vitals:</strong>
                             <ul>
                                 <li><em>HP:</em> (Might x 4) + 15 (Pure base math; gear never touches HP)</li>
+                                <li><em>Reflex Pool:</em> Agility + 2 (Used for speed bursts, dodging, and finesse abilities)</li>
+                                <li><em>Resolute RP:</em> Will x 2 (Used for Advantage and mental class powers)</li>
                                 <li><em>Movement:</em> Base 3 Paces + Armor/Shield Speed Mod (Minimum Movement Floor = 1 Pace)</li>
-                                <li><em>RP:</em> Will x 2</li>
                             </ul>
                         </li>
                     </ul>
@@ -469,9 +470,9 @@
                     </ul>
 
                     <div class="box">
-                        <strong>THE TWIN DIE ENGINE</strong><br />
-                        Spend 1 RP before rolling to buy <strong>Advantage</strong> (2d20, keep high; max 1/turn). Severe hazards impose <strong>Disadvantage</strong> (2d20, keep low).<br />
-                        <em>Cancellation Rule:</em> Advantage + Disadvantage cancel out to a standard single 1d20 roll.
+                        <strong>THE TWIN DIE ENGINE & REFLEX POOL</strong><br />
+                        Spend 1 RP before rolling to buy <strong>Advantage</strong> (2d20, keep high; max 1/turn). Disadvantage = 2d20, keep low. Advantage + Disadvantage cancel out.<br />
+                        <em>Reflex Actions:</em> Spend 1 Reflex Point for <strong>Burst Step</strong> (+1 Pace), <strong>Quick Stand</strong> (Prone recovery), or <strong>Break Free</strong> (Clear Grappled/Pinned Down).
                     </div>
 
                     <h2>3. COMBAT STRUCTURE and TURN FLOW</h2>
@@ -501,11 +502,11 @@
                         <tbody>
                             <tr><td>1</td><td>0</td><td>Establish base vitals and Level 1 class features.</td></tr>
                             <tr><td>2</td><td>10</td><td>+1 to any Attribute (Max +4 cap). Unlock L2 ability.</td></tr>
-                            <tr><td>3</td><td>20</td><td>Max RP increases by +1. Unlock L3 ability.</td></tr>
+                            <tr><td>3</td><td>20</td><td>+3 Max HP. Unlock L3 ability.</td></tr>
                             <tr><td>4</td><td>30</td><td>+1 to any Attribute (Max +4 cap). Unlock L4 ability.</td></tr>
-                            <tr><td>5</td><td>40</td><td>Max RP increases by +1. Unlock L5 ability.</td></tr>
+                            <tr><td>5</td><td>40</td><td>+1 Max Reflex. Unlock L5 ability.</td></tr>
                             <tr><td>6</td><td>50</td><td>+1 to any Attribute (Max +4 cap). Unlock L6 ability.</td></tr>
-                            <tr><td>7</td><td>60</td><td>Max RP increases by +1. Unlock L7 ability.</td></tr>
+                            <tr><td>7</td><td>60</td><td>+1 Max RP. Unlock L7 ability.</td></tr>
                             <tr><td>8</td><td>70</td><td>Unlock Apex Level 8 ability (Max Level).</td></tr>
                         </tbody>
                     </table>
@@ -580,7 +581,7 @@
                     <ul>
                         <li><strong>L1 Specialty: Breacher (Passive):</strong> Never suffer movement penalties kicking open doors or smashing barricades.</li>
                         <li><strong>L1: Drive Back [1 RP]:</strong> On Heavy Melee hit, shove target 1 pace back. Wall collision deals +2 crush damage.</li>
-                        <li><strong>L2: Adrenaline Surge [2 RP]:</strong> Double total movement paces for this turn.</li>
+                        <li><strong>L2: Adrenaline Surge [2 Reflex]:</strong> Double total movement paces for this turn.</li>
                         <li><strong>L3: Concussive Blow [1 RP]:</strong> Spend 1 RP on hit. Target passes Might check vs 14 or becomes Dazed.</li>
                         <li><strong>L4: Linebreaker [2 RP]:</strong> Move directly through enemy spaces, forcing them 1 pace aside (backed against wall = 2 crush damage).</li>
                     </ul>
@@ -601,12 +602,12 @@
                     <ul>
                         <li><strong>L1 Specialty: Twin Fangs (Passive):</strong> Dual-wielding Light Melee adds +1 to flat damage output.</li>
                         <li><strong>L1: Backstab [1 RP]:</strong> Positioned behind an engaged target within 1 pace, spend 1 RP for Advantage on attack and +2 flat damage.</li>
-                        <li><strong>L2: Prowler's Eye [1 RP]:</strong> Scan 3-pace area with Advantage vs 14 to spot hidden hazards and mechanisms.</li>
-                        <li><strong>L3: Nerve Strike [2 RP]:</strong> Spend 2 RP on hit. Target passes Might check vs 14 or becomes Grappled.</li>
+                        <li><strong>L2: Prowler's Eye [1 Reflex]:</strong> Scan 3-pace area with Advantage vs 14 to spot hidden hazards and mechanisms.</li>
+                        <li><strong>L3: Nerve Strike [2 Reflex]:</strong> Spend 2 Reflex on hit. Target passes Might check vs 14 or becomes Grappled.</li>
                         <li><strong>L4: Shadow Strike [2 RP]:</strong> Strike from concealment with Advantage; add Agility mod to flat damage a second time.</li>
                         <li><strong>L5: Absolute Camouflage [3 RP]:</strong> In cover, enemies suffer Disadvantage on perception and attack rolls against you.</li>
                         <li><strong>L6: Ghost Step (Passive):</strong> Advantage on silent movement; leave no physical footprints on natural terrain.</li>
-                        <li><strong>L7: Hamstring [2 RP]:</strong> Sever a tendon on hit; target movement permanently reduced to 1 pace until treated.</li>
+                        <li><strong>L7: Hamstring [2 Reflex]:</strong> Sever a tendon on hit; target movement permanently reduced to 1 pace until treated.</li>
                         <li><strong>L8: Lethal Strike [4 RP]:</strong> Strike unaware non-boss target from behind within 1 pace to instantly drop them to 0 HP.</li>
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> To attack from Concealment for Shadow Strike, you must be in dim light, behind full cover, or have successfully used your Action Phase to roll the Hide maneuver on a previous turn. Spending RP on Advantage abilities cancels Boss Legendary Defense down to a standard 1d20 roll and satisfies ability prerequisites.</div>
@@ -650,14 +651,14 @@
                     <ul>
                         <li><strong>L1 Specialty: Saboteur (Passive):</strong> Automatically dismantle simple mechanical locks and traps given 1 full minute outside combat.</li>
                         <li><strong>L1: Structural Weakness [1 RP]:</strong> Action Phase Will check vs 14 against target within 3 paces; next successful attack against target by any ally deals +2 Flat Damage.</li>
-                        <li><strong>L2: Blinding Debris [1 RP]:</strong> Throw ash/debris up to 3 paces; Agility check vs 14 grants target ally Advantage on their next Evasion roll against that enemy.</li>
+                        <li><strong>L2: Blinding Debris [1 Reflex]:</strong> Throw ash/debris up to 3 paces; Agility check vs 14 grants target ally Advantage on their next Evasion roll against that enemy.</li>
                         <li><strong>L3: Cripple Target [2 RP]:</strong> Action Phase check vs 14 forces target within 3 paces to grant Advantage on all player Evasion rolls against it until it forfeits an Action Phase to recover.</li>
                     </ul>
                 </div>
                 
                 <div class="column-box">
                     <ul>
-                        <li><strong>L4: Rig Trap [2 RP]:</strong> Rig environmental object; Agility check vs 14 drops object for 8 flat damage and knocks Prone.</li>
+                        <li><strong>L4: Rig Trap [2 Reflex]:</strong> Rig environmental object; Agility check vs 14 drops object for 8 flat damage and knocks Prone.</li>
                         <li><strong>L5: Master of Ruin [3 RP]:</strong> Exploit structural flaws in building/vehicle to cause localized physical collapse.</li>
                         <li><strong>L6: Scavenger's Eye (Passive):</strong> Identify mechanical components to salvage usable tools from disabled technology.</li>
                         <li><strong>L7: Noxious Irritant [2 RP]:</strong> Throw chemical vial up to 3 paces to coat a 1-pace spot; enemies starting turn in space grant Advantage on all player attacks and Evasion rolls.</li>
@@ -670,7 +671,7 @@
                     <p><strong>Recommended Loadout:</strong> Ranged/Thrown weapons (1 Dmg, 3 Paces Range), Light Armor (+1 Evade), survival and medical gear.</p>
                     <ul>
                         <li><strong>L1 Specialty: Combat Medic (Passive):</strong> Stabilize dying ally within 1 pace using Move Phase (Will check vs 14).</li>
-                        <li><strong>L1: Drag to Safety [1 RP]:</strong> Grab unconscious or prone ally during Move Phase and drag them full movement paces.</li>
+                        <li><strong>L1: Drag to Safety [1 Reflex]:</strong> Grab unconscious or prone ally during Move Phase and drag them full movement paces.</li>
                         <li><strong>L2: Aggressive Rouse [1 RP]:</strong> Action Phase instantly removes one physical condition (like Dazed or Grappled) from an adjacent ally within 1 pace.</li>
                         <li><strong>L3: Pressure Dressing [2 RP]:</strong> Bind wound of yourself or an adjacent ally within 1 pace; restores 3 HP immediately (up to Max HP) OR grants Advantage on their next Evasion roll.</li>
                         <li><strong>L4: Forage [1 RP]:</strong> Spend 1 RP outside combat to automatically locate sustenance to sustain party for one day.</li>
@@ -781,9 +782,9 @@
                     </ul>
                     <p><strong>Rest & Recovery:</strong></p>
                     <ul>
-                        <li><strong>Short Breather (10 min):</strong> HP = (Might mod x 2), RP = Will mod.</li>
-                        <li><strong>Rough Sleep (Overnight):</strong> HP = Half Max HP (round down), full RP restore.</li>
-                        <li><strong>Sanctuary Rest (Town):</strong> Full HP/RP restore + clear conditions. Cost: 1 Minor Tag/player.</li>
+                        <li><strong>Short Breather (10 min):</strong> HP = (Might mod x 2), RP = Will mod, Reflex = Agility mod.</li>
+                        <li><strong>Rough Sleep (Overnight):</strong> HP = Half Max HP (round down), full RP and Reflex restore.</li>
+                        <li><strong>Sanctuary Rest (Town):</strong> Full HP/RP/Reflex restore + clear conditions. Cost: 1 Minor Tag/player.</li>
                     </ul>
                 </div>
             </div>
@@ -890,7 +891,7 @@
                     <h2>4. CONSUMABLE and UTILITY LOOT MECHANICS</h2>
                     <p>Assign setting-flavored consumables to one of three standardized mechanical templates. Using any consumable during combat costs an <strong>Action Phase</strong>:</p>
                     <ul>
-                        <li><strong>Restoratives (Potions, Hyper-Med Kits, Stim-Packs):</strong> Restores 5 HP, regains 1 RP, OR clears one physical condition (such as Dazed or Grappled).</li>
+                        <li><strong>Restoratives (Potions, Hyper-Med Kits, Stim-Packs):</strong> Restores 5 HP, regains 1 RP/Reflex, OR clears one physical condition (such as Dazed or Grappled).</li>
                         <li><strong>Enhancers (Black Market Ammo, Experimental Serums, Plasma Charges):</strong> Grants +2 Flat Damage to your next hit, OR forces your next attack to ignore cover.</li>
                         <li><strong>Utility and Survival (Warding Components, Scavenged Parts, Rations):</strong> Grants Advantage on a specific Out-of-Combat check, OR fulfills food/water requirements needed to safely complete a <em>Rough Sleep</em> or <em>Sanctuary Rest</em> without taking hazard damage.</li>
                     </ul>
