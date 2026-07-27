@@ -759,13 +759,11 @@
                         </thead>
                         <tbody>
                             <tr><td><strong>1. Brute</strong></td><td><strong>Heavy Hitter:</strong> +2 Flat Dmg (-1 Movement Pace).</td></tr>
-                            <tr><td><strong>2. Skirmisher</strong></td><td><strong>Hit & Run:</strong> Move pre/post attack without penalty.</td></tr>
-                            <tr><td><strong>3. Sniper</strong></td><td><strong>Dead Eye:</strong> Range 8 Paces (+2 Dmg vs target in open).</td></tr>
-                            <tr><td><strong>4. Disruptor</strong></td><td><strong>Crowd Control:</strong> Hit forces Might check vs 14 or Dazed.</td></tr>
-                            <tr><td><strong>5. Protector</strong></td><td><strong>Intercept:</strong> Takes flat damage for adjacent ally.</td></tr>
-                            <tr><td><strong>6. Commander</strong></td><td><strong>Aura:</strong> Allies in 3 Paces +1 Pace / ignore 1st Rout.</td></tr>
-                            <tr><td><strong>7. Lurker</strong></td><td><strong>Ambush:</strong> Attack from cover forces Disadv on Evade.</td></tr>
-                            <tr><td><strong>8. Swarmer</strong></td><td><strong>Swarm:</strong> Drops in 1 hit (3 HP). Pairs force Disadv.</td></tr>
+                            <tr><td><strong>2. Sniper</strong></td><td><strong>Dead Eye:</strong> Range 8 Paces (+2 Dmg vs target in open).</td></tr>
+                            <tr><td><strong>3. Disruptor</strong></td><td><strong>Crowd Control:</strong> Hit forces Might check vs 14 or Dazed.</td></tr>
+                            <tr><td><strong>4. Protector</strong></td><td><strong>Intercept:</strong> Takes flat damage for adjacent ally.</td></tr>
+                            <tr><td><strong>5. Commander</strong></td><td><strong>Aura:</strong> Allies in 3 Paces +1 Pace / ignore 1st Rout.</td></tr>
+                            <tr><td><strong>6. Swarmer</strong></td><td><strong>Swarm:</strong> Drops in 1 hit (3 HP). Pairs force Disadv.</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -788,26 +786,21 @@
                         <li><strong>Party Scaling:</strong> +/- 1 Standard enemy per player above/below 4.</li>
                     </ul>
 
-                    <p><strong>Modifiers & Dynamic Morale:</strong></p>
-                    <ul>
-                        <li><strong>Heavy:</strong> +5 HP (halve speed). <strong>Agile:</strong> Disadv on Evade (+2 speed, -2 HP). <strong>Lethal:</strong> +2 Dmg (-3 HP).</li>
-                        <li><strong>Dynamic Morale:</strong> At 50% squad loss, roll vs highest remaining Tier: Rout on <strong>10+</strong> (Minion), <strong>13+</strong> (Standard), <strong>16+</strong> (Elite).</li>
-                    </ul>
-
                     <h2>5. TACTICAL CONDITIONS & REST</h2>
                     <p><strong>Status Conditions (Players & Enemies):</strong></p>
                     <ul>
-                        <li><strong>Prone:</strong> Halves movement (round down, min 1); actions suffer Disadvantage.</li>
-                        <li><strong>Dazed:</strong> Disadvantage on all rolls until end of turn; movement halved (round down).</li>
-                        <li><strong>Grappled (Physical):</strong> Cannot move. Must spend Action Phase for Might check vs 14 to break free.</li>
-                        <li><strong>Pinned Down (Suppressive):</strong> Moving outside cover triggers automatic flat damage. Spend Move Phase or pass Agility/Will check vs 14 to clear.</li>
-                        <li><strong>Stunned:</strong> Forfeits all Move and Action Phases on next turn.</li>
+                        <li><strong>Prone:</strong> Halves movement speed (round down, min 1 Pace). All physical attacks and maneuver rolls suffer Disadvantage.</li>
+                        <li><strong>Dazed:</strong> Suffer Disadvantage on all rolls (attacks, checks, evasions) until end of next turn; movement speed is halved (min 1 Pace).</li>
+                        <li><strong>Grappled (Physical):</strong> Completely immobilized (Movement = 0). Must spend Action Phase and pass Might check vs 14 to break free.</li>
+                        <li><strong>Pinned Down (Suppressive):</strong> Trapped behind cover. Moving outside cover triggers automatic enemy flat damage. Spend Move Phase OR pass Agility/Will check vs 14 to clear.</li>
+                        <li><strong>Stunned:</strong> Completely incapacitated. Forfeits all Move and Action Phases on next turn (can still roll Evasion when attacked).</li>
                     </ul>
-                    <p><strong>Rest & Recovery:</strong></p>
+
+                    <p><strong>Rest & Recovery Mechanics:</strong></p>
                     <ul>
-                        <li><strong>Short Breather (10 min):</strong> HP = (Might mod x 2), RP = Will mod, Reflex = Agility mod.</li>
-                        <li><strong>Rough Sleep (Overnight):</strong> HP = Half Max HP (round down), full RP and Reflex restore.</li>
-                        <li><strong>Sanctuary Rest (Town):</strong> Full HP/RP/Reflex restore + clear conditions. Cost: 1 Minor Tag/player.</li>
+                        <li><strong>Short Breather (10 min):</strong> Regain HP equal to (Might Mod x 2), RP equal to Will Mod, and Reflex equal to Agility Mod.</li>
+                        <li><strong>Rough Sleep (Overnight in Wilds):</strong> Regain Half Max HP (round down); completely refuels RP and Reflex pools to max.</li>
+                        <li><strong>Sanctuary Rest (Town/Base):</strong> Full 100% restore of HP, RP, and Reflex + clears all conditions. Cost: 1 Minor Tag per player.</li>
                     </ul>
                 </div>
             </div>
