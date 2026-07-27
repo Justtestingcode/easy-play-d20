@@ -363,14 +363,14 @@
                     <strong>AGILITY</strong><br />
                     <small>Reflexes / Speed / Finesse</small><br /><br />
                     <strong>MODIFIER: +[ <input type="text" id="attrAgility" class="center-input" style="width: 30px;" /> ]</strong><br /><br />
-                    Reflex Pool: Agility x 2<br />
+                    Reflex Pool: (Agility x 2) + Lvl Bonus<br />
                     <strong>Current Reflex: [ <input type="text" id="currReflex" class="center-input" style="width: 60px;" /> ]</strong>
                 </div>
                 <div class="box" style="text-align: center;">
                     <strong>WILL</strong><br />
                     <small>Mind / Perception / Focus</small><br /><br />
                     <strong>MODIFIER: +[ <input type="text" id="attrWill" class="center-input" style="width: 30px;" /> ]</strong><br /><br />
-                    Resolute Pool: Will x 2<br />
+                    Resolute Pool: (Will x 2) + Lvl Bonus<br />
                     <strong>Current RP: [ <input type="text" id="currRP" class="center-input" style="width: 60px;" /> ]</strong>
                 </div>
             </div>
@@ -383,7 +383,7 @@
                     <label><input type="checkbox" id="armorLight" /> Light Armor (+1 Evade, +0 Speed, Disadv Stealth)</label><br />
                     <label><input type="checkbox" id="armorMed" /> Medium Armor (+2 Evade, -1 Pace, Req 2 Might)</label><br />
                     <label><input type="checkbox" id="armorHeavy" /> Heavy Armor (+3 Evade, -2 Paces, Req 3 Might)</label><br />
-                    <label><input type="checkbox" id="armorShield" /> Shield (-1 Pace Speed; Guard = Action & Move)</label>
+                    <label><input type="checkbox" id="armorShield" /> Shield (-1 Pace Speed; Guard = Action & Move; Req 1 Hand)</label>
                 </div>
                 <div class="box" style="padding: 6px 8px; line-height: 1.55;">
                     <strong style="font-size: 10px; color: var(--accent-color);">PRIMARY ATTACK & DERIVED DEFENSE</strong><br />
@@ -414,7 +414,7 @@
                 • <strong>The Twin Die Engine (Advantage):</strong> Spend <strong>1 RP (Focus)</strong> for Advantage on Attack, Might, or Will checks. Spend <strong>1 Reflex (Dodge)</strong> for Advantage on Evasion or Agility checks. Disadvantage = 2d20, keep low.<br />
                 • <strong>Universal Reflex Actions:</strong> Spend <strong>1 Reflex Point</strong> for: <strong>Burst Step</strong> (+1 Pace) or <strong>Quick Stand</strong> (Stand from Prone free).<br />
                 • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attr vs 14 within range (Hard Max 8 Paces for Ranged Weapons). Success deals Flat Damage directly to HP.<br />
-                • <strong>Dying and Bleed Out (0 HP):</strong> Decrement Bleed Out counter by 1 at start of turn. Reaching 0 = die. Ally spending Action Phase passes Will vs 14 to revive at 1 HP.
+                • <strong>Dying & Bleed Out (0 HP):</strong> Counter starts at <strong>Will Mod + 1 (Min 1 turn)</strong>. Decrement by 1 at start of turn. Reaching 0 = permanent death. Ally spending Action Phase passes Will vs 14 to revive at 1 HP.
             </div>
 
             <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 3px;">
@@ -422,8 +422,8 @@
                 • <strong>Active Guard:</strong> Raise Shield (forfeits Action AND Move Phase) to gain Advantage on all Evasion rolls until next turn.<br />
                 • <strong>Dash:</strong> Forfeit attack to move total Movement paces a second time.<br />
                 • <strong>Assist Ally:</strong> Grant an adjacent ally Advantage on their very next check or attack roll.<br />
-                • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical Concealment.<br />
-                • <strong>Interact:</strong> Pick lock, pull lever, or hand a consumable item to a teammate.
+                • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical <strong>Concealment</strong> (Enemies cannot target you with ranged attacks; attacking from Concealment grants Advantage and ends Concealment).<br />
+                • <strong>Interact / Weapon Swap:</strong> Pick lock, pull lever, or hand item. Drawing or swapping weapons is a Free Action once per turn during Move Phase.
             </div>
 
             <div class="notes-box">
@@ -451,8 +451,8 @@
                         <li><strong>Derived Vitals:</strong>
                             <ul>
                                 <li><em>HP:</em> (Might x 4) + 15 (Pure base math; gear never touches HP)</li>
-                                <li><em>Reflex Pool:</em> Agility x 2 (Used for speed bursts, dodging, and finesse abilities)</li>
-                                <li><em>Resolute RP:</em> Will x 2 (Used for focus, attacks, and mental class powers)</li>
+                                <li><em>Reflex Pool:</em> (Agility x 2) + Leveling Bonuses</li>
+                                <li><em>Resolute RP:</em> (Will x 2) + Leveling Bonuses</li>
                                 <li><em>Movement:</em> Base 3 Paces + Armor/Shield Speed Mod (Minimum Movement Floor = 1 Pace)</li>
                             </ul>
                         </li>
@@ -465,7 +465,7 @@
                     </div>
                     <ul>
                         <li><strong>Resolution:</strong> Roll 1d20 + Attribute Modifier. Sum of 14+ succeeds.</li>
-                        <li><strong>Critical Hit (Nat 20):</strong> Overdrive Strike—add Attribute Mod to flat damage a second time.</li>
+                        <li><strong>Critical Hit (Nat 20):</strong> Overdrive Strike—add Attribute Mod to flat damage a second time. <em>Ability Stacking:</em> If an ability also adds Attribute Mod a second time, a Nat 20 stacks them for a third addition (Base + Attr Mod x 3).</li>
                         <li><strong>Critical Failure (Nat 1):</strong> Automatic miss; you suffer Disadvantage on your very next Evasion roll.</li>
                     </ul>
 
@@ -482,11 +482,19 @@
                     <h2>3. COMBAT STRUCTURE and TURN FLOW</h2>
                     <p>Rounds represent 6 seconds of simultaneous action. System is 100% Player-Facing: no out-of-turn reactions.</p>
                     <ul>
-                        <li><strong>Dynamic Guide Initiative:</strong> The Guide rolls 1d20 (+ Tier Mod) to set the encounter's <strong>Initiative Target</strong>. Players roll 1d20 + Agility vs this target. Meet/beat = Fast Phase (before enemies); lower = Slow Phase (after enemies). Players win ties.</li>
-                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (1 pace = 5 ft / 1 grid square; Min Floor = 1 Pace). Halved movement is rounded down (Min 1 Pace).</li>
+                        <li><strong>Dynamic Guide Initiative:</strong> The Guide rolls 1d20 (+ Tier Mod) to set the encounter's <strong>Initiative Target</strong>. Players roll 1d20 + Agility vs this target. Meet/beat = Fast Phase (before enemies); lower = Slow Phase (after enemies). Players win ties. <em>Player Turn Order:</em> Players in the same phase (Fast or Slow) may act in any order they choose.</li>
+                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (1 pace = 5 ft / 1 grid square; Min Floor = 1 Pace). Halved movement is rounded down (Min 1 Pace). Drawing or swapping weapons is a Free Action once per turn.</li>
                         <li><strong>2. Action Phase:</strong> Attack, use ability, drink potion, or execute a maneuver (1d20 + Attr vs 14).</li>
                         <li><strong>3. Evasion Phase:</strong> When targeted on enemy turn, roll 1d20 + Armor Evasion Mod vs 14. 14+ = 0 damage. Fail = take enemy flat damage directly.</li>
                     </ul>
+
+                    <div class="box" style="background-color: #fce8e8; border-color: var(--accent-color);">
+                        <strong style="color: var(--accent-color);">DEATH and STABILIZATION (0 HP)</strong><br />
+                        At 0 HP you collapse Prone and become <strong>Unconscious</strong>.<br />
+                        • <strong>Bleed Out Timer:</strong> Starts at <strong>Will Modifier + 1 (Min 1 turn)</strong>. At the start of your turn while at 0 HP, decrement timer by 1. Reaching 0 causes permanent death.<br />
+                        • <strong>Stabilization:</strong> Adjacent ally spends Action Phase for Will check vs 14 to revive you at 1 HP.<br />
+                        • <strong>Execution:</strong> Direct damage taken while at 0 HP causes instant permanent death.
+                    </div>
 
                     <h2>4. CHARACTER LEVELING PROGRESSION</h2>
                     <table>
@@ -498,39 +506,34 @@
                             <tr><td>2</td><td>10</td><td>+1 to any Attribute (Max +4 cap). Unlock L2 ability.</td></tr>
                             <tr><td>3</td><td>20</td><td>+3 Max HP. Unlock L3 ability.</td></tr>
                             <tr><td>4</td><td>30</td><td>+1 to any Attribute (Max +4 cap). Unlock L4 ability.</td></tr>
-                            <tr><td>5</td><td>40</td><td>+1 Max Reflex. Unlock L5 ability.</td></tr>
+                            <tr><td>5</td><td>40</td><td>+1 Max Reflex (Flat pool increase). Unlock L5 ability.</td></tr>
                             <tr><td>6</td><td>50</td><td>+1 to any Attribute (Max +4 cap). Unlock L6 ability.</td></tr>
-                            <tr><td>7</td><td>60</td><td>+1 Max RP. Unlock L7 ability.</td></tr>
+                            <tr><td>7</td><td>60</td><td>+1 Max RP (Flat pool increase). Unlock L7 ability.</td></tr>
                             <tr><td>8</td><td>70</td><td>Unlock Apex Level 8 ability (Max Level).</td></tr>
-                        </tbody>
-                    </table>
-
-                    <h2>5. WEAPON CLASSES, RANGES and FLAT DAMAGE</h2>
-                    <p><strong>Formula:</strong> Weapon Base Damage + Attribute Modifier = Total Flat Damage.</p>
-                    <table>
-                        <thead>
-                            <tr><th>Weapon Style and Examples</th><th>Base</th><th>Range</th><th>Hands</th><th>Attribute</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td><strong>Unarmed Strike</strong> (Fists, kicks)</td><td>1</td><td>1 Pace</td><td>1 Hand</td><td>Might / Agility</td></tr>
-                            <tr><td><strong>Improvised Tool</strong> (Chairs, chains)</td><td>2</td><td>1 Pace</td><td>1 or 2</td><td>Might</td></tr>
-                            <tr><td><strong>Ranged/Thrown</strong> (Daggers, flasks)</td><td>1</td><td>3 Paces</td><td>1 Hand</td><td>Agility / Will</td></tr>
-                            <tr><td><strong>Ranged Weapon</strong> (Bows, rifles)</td><td>2</td><td>8 Paces (Max)</td><td>2 Hands</td><td>Will</td></tr>
-                            <tr><td><strong>Light Melee</strong> (Shortswords, knives)</td><td>3</td><td>1 Pace</td><td>1 Hand</td><td>Might / Agility</td></tr>
-                            <tr><td><strong>Heavy Melee</strong> (Greatswords, hammers)</td><td>4</td><td>1 Pace</td><td>2 Hands</td><td>Might</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             
-            <div class="box" style="margin-top: 3px;">
-                <strong>6. ARMOR TRADEOFFS and INVENTORY CAPACITY</strong><br />
-                • <strong>Unarmored:</strong> +0 Evade, +1 Pace Speed. Max mobility.<br />
-                • <strong>Light Armor:</strong> +1 Evade, +0 Paces. Req 1 Might/Agility. Disadv on Stealth.<br />
-                • <strong>Medium Armor:</strong> +2 Evade, -1 Pace. Req 2 Might.<br />
-                • <strong>Heavy Armor:</strong> +3 Evade, -2 Paces. Req 3 Might. Tank anchor speed (Min 1 Pace Floor).<br />
-                • <strong>Shield:</strong> Guard, -1 Pace. 1 Hand. Active Guard uses Action AND Move Phase for Adv Evasion.<br />
-                <strong>Inventory Limit & Backpacks:</strong> Total slots = <strong>4 + Might modifier</strong>. Each slot holds 1 equipped item OR 1 Pouch of up to 3 unequipped consumables/tools. Exceeding total slots causes <strong>Over-Encumbrance</strong> (Disadvantage on physical actions, movement halved rounded down to min 1 Pace).
+            <div class="sheet-grid" style="margin-top: 3px;">
+                <div class="box">
+                    <strong>5. WEAPON CLASSES & FLAT DAMAGE</strong><br />
+                    • <strong>Unarmed Strike:</strong> Base 1 Dmg | 1 Pace | 1 Hand (Might/Agility)<br />
+                    • <strong>Improvised Tool:</strong> Base 2 Dmg | 1 Pace | 1-2 Hands (Might)<br />
+                    • <strong>Ranged/Thrown:</strong> Base 1 Dmg | 3 Paces | 1 Hand (Agility/Will)<br />
+                    • <strong>Ranged Weapon:</strong> Base 2 Dmg | 8 Paces Max | 2 Hands (Will)<br />
+                    • <strong>Light Melee:</strong> Base 3 Dmg | 1 Pace | 1 Hand (Might/Agility)<br />
+                    • <strong>Heavy Melee:</strong> Base 4 Dmg | 1 Pace | 2 Hands (Might)
+                </div>
+                <div class="box">
+                    <strong>6. ARMOR TRADEOFFS & CAPACITY</strong><br />
+                    • <strong>Unarmored:</strong> +0 Evade, +1 Pace Speed.<br />
+                    • <strong>Light Armor:</strong> +1 Evade, +0 Speed. Disadv Stealth.<br />
+                    • <strong>Medium Armor:</strong> +2 Evade, -1 Pace. Req 2 Might.<br />
+                    • <strong>Heavy Armor:</strong> +3 Evade, -2 Paces. Req 3 Might (Min 1 Pace Floor).<br />
+                    • <strong>Shield:</strong> Guard, -1 Pace. Req 1 Hand. Active Guard = Action & Move.<br />
+                    <em>Shield Restriction: You cannot gain Shield benefits while wielding a 2-Handed weapon. Inventory limit = 4 + Might Mod slots.</em>
+                </div>
             </div>
 
             <div class="notes-box">
