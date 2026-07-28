@@ -300,7 +300,8 @@
             letter-spacing: 0.5px;
             background-color: #ffffff;
             display: inline-block;
-            padding-right: 4px; line-height: 12px;
+            padding-right: 4px;
+            line-height: 12px;
         }
 
         .genre-table th:nth-child(1), .genre-table td:nth-child(1) { width: 25%; }
@@ -598,7 +599,7 @@
 
             <div class="two-column">
                 <div class="column-box">
-                    <h3>THE WARDEN (3 Force / 2 Reflex / 2 RP)</h3>
+                    <h3>THE WARDEN (Resource Focus: Might / Force Specialist)</h3>
                     <p><em>Narrative Role: The unmovable shield of the party. You secure physical space, hold the line, and endure what others cannot survive.</em></p>
                     <p><strong>Recommended Loadout:</strong> Heavy Armor (+3 Evade, -2 Paces), Shield (-1 Pace), Light Melee (3 Dmg, 1 Pace Range).</p>
                     <ul>
@@ -614,7 +615,7 @@
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> Active Guard with a Shield uses both your Action and Move Phases. Vanguard Guard triggers at the end of your turn as long as you are standing next to an ally. Minimum movement speed is 1 Pace.</div>
 
-                    <h3>THE BREAKER (3 Force / 2 Reflex / 2 RP)</h3>
+                    <h3>THE BREAKER (Resource Focus: Might & Reflex Specialist)</h3>
                     <p><em>Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.</em></p>
                     <p><strong>Recommended Loadout:</strong> Heavy Melee (4 Dmg, 1 Pace Range), Medium Armor (+2 Evade, -1 Pace), Improvised Tools.</p>
                     <ul>
@@ -635,7 +636,7 @@
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> Crush Damage requires the enemy to be physically slammed into a heavy, unmoving barrier, such as a stone wall, a large vehicle, or a massive tree trunk.</div>
 
-                    <h3>THE PROWLER (2 Force / 3 Reflex / 2 RP)</h3>
+                    <h3>THE PROWLER (Resource Focus: Agility / Reflex Specialist)</h3>
                     <p><em>Narrative Role: The scalpel. Bypassing security, flanking, and executing devastating close-quarters strikes.</em></p>
                     <p><strong>Recommended Loadout:</strong> Twin Light Melee (3 Dmg +1 from Twin Fangs, 1 Pace Range), Unarmored (+1 Pace) or Light Armor (+1 Evade), Ranged/Thrown Daggers (3 Paces Range).</p>
                     <ul>
@@ -668,7 +669,7 @@
 
             <div class="two-column">
                 <div class="column-box">
-                    <h3>THE MARKSMAN (2 Force / 2 Reflex / 3 RP)</h3>
+                    <h3>THE MARKSMAN (Resource Focus: Will / RP Specialist)</h3>
                     <p><em>Narrative Role: Ranged overwatch. Securing angles, controlling enemy movement, and eliminating targets from afar.</em></p>
                     <p><strong>Recommended Loadout:</strong> Ranged Weapon (2 Dmg, 8 Paces Range Max), Unarmored (+1 Pace) or Light Armor (+1 Evade), Light Melee backup weapon (1 Pace Range).</p>
                     <ul>
@@ -684,7 +685,7 @@
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> To trigger Elevated Advantage, you must physically be positioned at least 1 full pace (5 feet) higher than your target, such as firing from a rooftop, a staircase, or a hovering vehicle. Hard max range for standard Ranged Weapons is 8 Paces.</div>
 
-                    <h3>THE SABOTEUR (2 Force / 2 Reflex / 3 RP)</h3>
+                    <h3>THE SABOTEUR (Resource Focus: Tactical RP & Reflex Specialist)</h3>
                     <p><em>Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.</em></p>
                     <p><strong>Recommended Loadout:</strong> Light Melee (3 Dmg, 1 Pace Range), Light Armor (+1 Evade), Ranged/Thrown explosives (3 Paces Range).</p>
                     <ul>
@@ -705,7 +706,7 @@
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> Valid environmental objects for Rig Trap include heavy chandeliers, stacked cargo crates, loose rock formations, or unstable scaffolding directly above the target.</div>
 
-                    <h3>THE SURVIVALIST (2 Force / 2 Reflex / 3 RP)</h3>
+                    <h3>THE SURVIVALIST (Resource Focus: Hybrid Medic / Support)</h3>
                     <p><em>Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions.</em></p>
                     <p><strong>Recommended Loadout:</strong> Ranged/Thrown weapons (1 Dmg, 3 Paces Range), Light Armor (+1 Evade), survival and medical gear.</p>
                     <ul>
@@ -748,8 +749,8 @@
                     <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
                         <strong style="color: #2b5b84;">WHEN DOES THE GUIDE ROLL A D20?</strong><br />
                         1. <strong>Initiative Target:</strong> Roll 1d20 (+ Tier Mod) at combat start.<br />
-                        2. <strong>Morale Checks:</strong> Roll 1d20 when enemy squad loses 50% numbers/leader.<br />
-                        3. <strong>Boss Escalation:</strong> Roll 1d20 at 50% Boss HP (1-10: 2 Minions, 11-20: Hazard).<br />
+                        2. <strong>Morale Checks (Squad Break):</strong> Roll 1d20 vs 14 when an enemy squad loses 50% numbers or its Commander dies. Fail = enemies surrender or flee.<br />
+                        3. <strong>Boss Escalation (50% HP):</strong> At 50% Boss HP, roll 1d20: <strong>1–10 (Reinforcements):</strong> 2 Tier 1 Minions spawn at map edge. <strong>11–20 (Lair Hazard):</strong> Major Hazard (6 Flat Dmg) detonates in a 2-pace area.<br />
                         4. <strong>Failing Forward:</strong> Roll 1d20 for narrative complication severity.
                     </div>
 
@@ -778,7 +779,7 @@
                             <tr><td><strong>2. Sniper</strong></td><td><strong>Dead Eye:</strong> Range 8 Paces (+2 Dmg vs target in open).</td></tr>
                             <tr><td><strong>3. Disruptor</strong></td><td><strong>Crowd Control:</strong> Hit forces Might check vs 14 or Dazed.</td></tr>
                             <tr><td><strong>4. Protector</strong></td><td><strong>Intercept:</strong> Takes flat damage for adjacent ally.</td></tr>
-                            <tr><td><strong>5. Commander</strong></td><td><strong>Aura:</strong> Allies in 3 Paces +1 Pace / ignore 1st Rout.</td></tr>
+                            <tr><td><strong>5. Commander</strong></td><td><strong>Aura:</strong> Allies in 3 Paces +1 Pace & auto-succeed 1st Morale Check.</td></tr>
                             <tr><td><strong>6. Swarmer</strong></td><td><strong>Swarm:</strong> Drops in 1 hit (3 HP). Pairs force Disadv.</td></tr>
                         </tbody>
                     </table>
