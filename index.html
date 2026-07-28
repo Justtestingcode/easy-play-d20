@@ -323,10 +323,6 @@
             line-height: 12px;
         }
 
-        .genre-table th:nth-child(1), .genre-table td:nth-child(1) { width: 25%; }
-        .genre-table th:nth-child(2), .genre-table td:nth-child(2) { width: 38%; }
-        .genre-table th:nth-child(3), .genre-table td:nth-child(3) { width: 37%; }
-
         @media print {
             body {
                 background-color: #fff;
@@ -357,7 +353,7 @@
 
     <!-- TOOLBAR -->
     <div class="toolbar">
-        <div class="toolbar-title">EASY PLAY D20 — INTERACTIVE CHARACTER SHEET</div>
+        <div class="toolbar-title">EASY PLAY D20 — INTERACTIVE RULEBOOK & SHEET</div>
         <div class="toolbar-buttons">
             <span class="genre-label">SETTING:</span>
             <select id="genreSelect" class="genre-select" onchange="switchGenre(this.value)">
@@ -368,7 +364,7 @@
                 <option value="steampunk">Steampunk</option>
                 <option value="spacewest">Space West</option>
             </select>
-            <button class="btn" onclick="exportCharacter()">💾 Save to File (.json)</button>
+            <button class="btn" onclick="exportCharacter()">💾 Save File (.json)</button>
             <button class="btn" onclick="document.getElementById('importFile').click()">📂 Load File</button>
             <button class="btn btn-danger" onclick="resetSheet()">🧹 Clear Sheet</button>
             <input type="file" id="importFile" style="display: none;" onchange="importCharacter(event)" accept=".json" />
@@ -870,184 +866,74 @@
         <div class="page-num">Page 5</div>
     </div>
 
-    <!-- PAGE 6: APPENDIX: UNIVERSAL GENRE ADAPTATION -->
+    <!-- PAGE 6: DYNAMIC SETTING ADAPTATION & VEHICLES -->
     <div class="page">
         <div class="content-wrap">
-            <h1>APPENDIX: UNIVERSAL GENRE ADAPTATION</h1>
+            <h1>APPENDIX: DYNAMIC SETTING ADAPTATION</h1>
 
-            <p style="margin-bottom: 2px; font-size: 8.5px;">Easy Play D20 functions as a universal narrative chassis. Because all mechanics rely on static flat damage, uniform baseline thresholds, and abstract <strong>Loot Tags</strong> rather than complex currency math, the system adapts instantly to any setting.</p>
+            <p style="margin-bottom: 2px; font-size: 8.5px;">Easy Play D20 adapts instantly using active setting flavoring. All mechanics rely on static flat damage, uniform baseline thresholds, and abstract <strong>Loot Tags</strong> rather than complex currency math.</p>
 
             <div class="two-column">
                 <!-- LEFT COLUMN: SECTIONS 1, 2, AND 3 -->
                 <div class="column-box">
-                    <h2>1. WEALTH, LOOT and NARRATIVE ECONOMY</h2>
-                    <p>Wealth is tracked using abstract <strong>Loot Tags</strong> divided into two categories:</p>
+                    <h2>1. ACTIVE WEALTH & LOOT ECONOMY</h2>
+                    <p>Current Setting: <strong style="color: var(--accent-color);" data-key="genre_name">Fantasy</strong></p>
                     <ul style="font-size: 7.6px;">
-                        <li><strong>Minor Loot Tags (Currency / Spending Money):</strong> Standard liquid wealth (coins, cred-sticks, scavenged cash). <em>Uses:</em> <strong>1 Minor Tag/player</strong> = Sanctuary Rest (100% reset); <strong>1 Minor Tag</strong> = Restock 1 consumable, buy basic gear, or pay low-level bribes.</li>
-                        <li><strong>Major Loot Tags (Special Assets / Rare Relics):</strong> Unique, highly valuable items (rare gems, dragon scales, ancient artifacts, prototype tech). <em>Uses:</em> Traded directly for primary weapons/armor, legendary gear, vehicle repairs, or major faction leverage.</li>
+                        <li><strong>Minor Loot Tags (Spending Money):</strong> <span data-key="minor_loot_ex">Pouch of Silver, Bandit Bounty</span>. <em>Uses:</em> 1 Minor Tag/player = Sanctuary Rest (100% reset); 1 Tag = Restock 1 consumable, buy basic gear, or low-level bribe.</li>
+                        <li><strong>Major Loot Tags (Special Assets / Relics):</strong> <span data-key="major_loot_ex">Dragon Scale, Ancient Relic</span>. <em>Uses:</em> Traded directly for primary weapons/armor, legendary gear, vehicle repairs, or major faction leverage.</li>
                     </ul>
-                    
-                    <table class="genre-table" style="font-size: 6.8px; margin-top: 1px; margin-bottom: 2px;">
-                        <thead>
-                            <tr>
-                                <th style="padding: 1px 2px;">Genre</th>
-                                <th style="padding: 1px 2px;">Minor Loot Tag Example</th>
-                                <th style="padding: 1px 2px;">Major Loot Tag Example</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>Fantasy</strong></td>
-                                <td style="padding: 1px 2px;">Pouch of Silver, Bandit Bounty</td>
-                                <td style="padding: 1px 2px;">Dragon Scale, Ancient Relic</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>Cyberpunk</strong></td>
-                                <td style="padding: 1px 2px;">Cred-Stick, Black Market Cash</td>
-                                <td style="padding: 1px 2px;">AI Core Chip, Prototype Cyberware</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>Sci-Fi</strong></td>
-                                <td style="padding: 1px 2px;">Fuel Credits, Cargo Pass</td>
-                                <td style="padding: 1px 2px;">Alien Artifact, Pure Plasma Gem</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>Post-Apoc</strong></td>
-                                <td style="padding: 1px 2px;">Bottlecap Pouch, Unspent Ammo</td>
-                                <td style="padding: 1px 2px;">Intact Pre-War Engine, Water Filter</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>Steampunk</strong></td>
-                                <td style="padding: 1px 2px;">Brass Sovereign Coins, Aether Token</td>
-                                <td style="padding: 1px 2px;">Clockwork Core, Flawless Diamond</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>Space West</strong></td>
-                                <td style="padding: 1px 2px;">Bounty Dollars, Saloon Poker Chips</td>
-                                <td style="padding: 1px 2px;">Stolen Hyper-Drive, Alien Skull Relic</td>
-                            </tr>
-                        </tbody>
-                    </table>
 
                     <h2>2. ADAPTING THE THRESHOLD</h2>
-                    <p>The Guide can adjust the universal baseline threshold of 14 to set the campaign's tone:</p>
+                    <p>The Guide can adjust the baseline threshold of 14 to set campaign tone:</p>
                     <ul>
                         <li><strong>Super-Heroic (Target 12):</strong> Easy success without spending RP. High action.</li>
                         <li><strong>Survival Horror (Target 16):</strong> High failure rate. Forces players to burn RP constantly.</li>
                     </ul>
 
-                    <h2>3. ADAPTING EQUIPMENT & ARMORY</h2>
-                    <p>Reskin item names during Character Creation to fit your setting:</p>
-                    <ul style="font-size: 7.5px;">
-                        <li><strong>Unarmored (+1 Pace):</strong> Civilian clothes (Fantasy), flight suit (Sci-Fi).</li>
-                        <li><strong>Light Armor (+1 Evade):</strong> Leather jerkin (Fantasy), Kevlar vest (Modern).</li>
-                        <li><strong>Medium Armor (+2 Evade):</strong> Chainmail (Fantasy), combat weave (Cyberpunk).</li>
-                        <li><strong>Heavy Armor (+3 Evade):</strong> Plate mail (Fantasy), Exosuit (Sci-Fi).</li>
-                        <li><strong>Shield (Guard):</strong> Wooden shield (Fantasy), riot shield (Modern).</li>
-                        <li><strong>Light Melee (3 Dmg):</strong> Dagger (Fantasy), vibro-blade (Cyberpunk).</li>
-                        <li><strong>Heavy Melee (4 Dmg):</strong> Greataxe (Fantasy), power sword (Sci-Fi).</li>
-                        <li><strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Bow (Fantasy), plasma rifle (Sci-Fi).</li>
+                    <h2>3. SETTING ARMORY RESKINS</h2>
+                    <p>Gear names automatically reskinned for <strong data-key="genre_name">Fantasy</strong>:</p>
+                    <ul style="font-size: 7.3px;" id="armoryExampleList">
+                        <!-- Populated by JS -->
+                    </ul>
+
+                    <h2 data-key="magic_title">5. MAGIC, PSIONICS AND SPECIAL POWERS</h2>
+                    <p data-key="magic_desc">Spells and powers use standard class features and weapon math dressed in setting flavor:</p>
+                    <ul style="font-size: 7.3px;" id="magicExampleList">
+                        <!-- Populated by JS -->
                     </ul>
                 </div>
 
-                <!-- RIGHT COLUMN: SECTIONS 4, 5, AND 6 -->
+                <!-- RIGHT COLUMN: SECTIONS 4 AND 6 -->
                 <div class="column-box">
-                    <h2>4. CONSUMABLE & UTILITY LOOT</h2>
-                    <p>Using any consumable costs <strong>1 Action Phase</strong>. Roll 1d20 for random loot drops:</p>
+                    <h2>4. CONSUMABLE & UTILITY LOOT (<span data-key="genre_name">Fantasy</span>)</h2>
+                    <p>Using any consumable costs <strong>1 Action Phase</strong>. Roll 1d20 for loot drops:</p>
 
                     <table style="font-size: 6.8px; margin-top: 1px; margin-bottom: 2px;">
                         <thead>
                             <tr>
-                                <th style="padding: 1px 2px;">d20 Roll</th>
-                                <th style="padding: 1px 2px;">Fantasy</th>
-                                <th style="padding: 1px 2px;">Sci-Fi / Cyber</th>
-                                <th style="padding: 1px 2px;">Post-Apoc</th>
-                                <th style="padding: 1px 2px;">Mechanical Effect</th>
+                                <th style="padding: 1px 2px; width: 18%;">d20 Roll</th>
+                                <th style="padding: 1px 2px; width: 32%;">Item Drop</th>
+                                <th style="padding: 1px 2px; width: 50%;">Mechanical Effect</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>1–2</strong></td>
-                                <td style="padding: 1px 2px;">Healing Salve</td>
-                                <td style="padding: 1px 2px;">Hypo-Med</td>
-                                <td style="padding: 1px 2px;">Bandages</td>
-                                <td style="padding: 1px 2px;">Restores 5 HP OR clears 1 Condition.</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>3–4</strong></td>
-                                <td style="padding: 1px 2px;">Focus Elixir</td>
-                                <td style="padding: 1px 2px;">Neural Stim</td>
-                                <td style="padding: 1px 2px;">Chems/Pills</td>
-                                <td style="padding: 1px 2px;">Regains 1 Force, Reflex, or RP pool point.</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>5–6</strong></td>
-                                <td style="padding: 1px 2px;">Fire Oil</td>
-                                <td style="padding: 1px 2px;">Overcharge Cell</td>
-                                <td style="padding: 1px 2px;">Hollow-Point</td>
-                                <td style="padding: 1px 2px;">+2 Flat Damage on next successful hit.</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>7–8</strong></td>
-                                <td style="padding: 1px 2px;">Flash Powder</td>
-                                <td style="padding: 1px 2px;">EMP Grenade</td>
-                                <td style="padding: 1px 2px;">Pipe Bomb</td>
-                                <td style="padding: 1px 2px;">Throw 3 Paces: Target Agility vs 14 or Dazed.</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>9–10</strong></td>
-                                <td style="padding: 1px 2px;">Smoke Vial</td>
-                                <td style="padding: 1px 2px;">Holo-Screen</td>
-                                <td style="padding: 1px 2px;">Smoke Canister</td>
-                                <td style="padding: 1px 2px;">Creates 1-Pace cloud for Concealment.</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>11–12</strong></td>
-                                <td style="padding: 1px 2px;">Skeleton Key</td>
-                                <td style="padding: 1px 2px;">Bypass Chip</td>
-                                <td style="padding: 1px 2px;">Pry-Bar</td>
-                                <td style="padding: 1px 2px;">Advantage on 1 lock, hack, or forced entry.</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>13–14</strong></td>
-                                <td style="padding: 1px 2px;">Grapple Hook</td>
-                                <td style="padding: 1px 2px;">Grapnel Gun</td>
-                                <td style="padding: 1px 2px;">Rope Launcher</td>
-                                <td style="padding: 1px 2px;">Ignores vertical move cost up to 4 Paces.</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>15–16</strong></td>
-                                <td style="padding: 1px 2px;">True-Strike Dust</td>
-                                <td style="padding: 1px 2px;">Targeting Link</td>
-                                <td style="padding: 1px 2px;">Tracer Rounds</td>
-                                <td style="padding: 1px 2px;">Next attack completely ignores target cover.</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>17–18</strong></td>
-                                <td style="padding: 1px 2px;">Shield Patch</td>
-                                <td style="padding: 1px 2px;">Hard-Light Rig</td>
-                                <td style="padding: 1px 2px;">Scrap Plate</td>
-                                <td style="padding: 1px 2px;">+2 Evade vs next 1 incoming attack.</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1px 2px;"><strong>19–20</strong></td>
-                                <td style="padding: 1px 2px;">Hunter's Tag</td>
-                                <td style="padding: 1px 2px;">Tracker Dart</td>
-                                <td style="padding: 1px 2px;">Paint Marking</td>
-                                <td style="padding: 1px 2px;">All party attacks vs marked target gain Advantage.</td>
-                            </tr>
+                        <tbody id="dynamicLootBody">
+                            <!-- Populated by JS -->
                         </tbody>
                     </table>
 
-                    <h2>5. MAGIC, PSIONICS and CYBERWARE</h2>
-                    <p>Spells/cybernetics use standard class features & weapon math in setting flavor:</p>
-                    <ul>
-                        <li><strong>Spells as Weapons:</strong> Ranged (8 Paces) = Firebolt. Heavy Melee (1 Pace) = Telekinetic crush.</li>
-                        <li><strong>Abilities as Magic:</strong> <em>Concussive Blow</em> = shockwave spell. <em>Structural Weakness</em> = acid vial.</li>
+                    <h2>6. VEHICLES, MOUNTS AND CHASES</h2>
+                    <p style="font-size: 8px;"><strong>Mounted & Vehicle Vitals:</strong></p>
+                    <ul style="font-size: 7.3px;">
+                        <li><strong>Light Mount / Hover-Bike (15 HP):</strong> Speed 5 Paces. Driver gains <strong>+2 Evade</strong>.</li>
+                        <li><strong>Heavy Truck / War Wagon (35 HP):</strong> Speed 4 Paces. Occupants gain <strong>Full Cover</strong> (+Advantage on Evasion).</li>
+                        <li><strong>Ram / Board:</strong> Driver check vs 14 deals <strong>6 Flat Dmg (Major Hazard)</strong> to both vehicles, or forces enemy Agility check vs 14 or Crash.</li>
                     </ul>
-
-                    <h2>6. VEHICLES, MOUNTS and CHASES</h2>
-                    <p>Movement equals vehicle speed (+2 Evade). Destruction (0 HP) = Lethal Hazard (10 Dmg). Crash = Major Hazard (6 Dmg) on fail Agility vs 14.</p>
+                    <p style="font-size: 8px; margin-top: 2px;"><strong>The Chase Engine (Separation Paces 1 to 5):</strong></p>
+                    <ul style="font-size: 7.3px;">
+                        <li><strong>Driver Action (Gain Ground):</strong> Pass Agility/Might vs 14 to shift separation track by 1 Pace (1 = Bumper-to-Bumper, 5 = Escaped).</li>
+                        <li><strong>Passenger Actions:</strong> Shoot (Ranged vs 14), board adjacent vehicle (at 1 Pace), or sabotage components.</li>
+                        <li><strong>Crash (0 HP or Failed Obstacle):</strong> Driver fails check vs 14 = Major Hazard (6 Dmg). Vehicle at 0 HP flips = Lethal Hazard (10 Dmg) & Prone.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -1065,6 +951,7 @@
 
         const GENRE_DATA = {
             fantasy: {
+                genre_name: "Fantasy",
                 class1_title: "THE WARDEN",
                 class1_desc: "Narrative Role: The unmovable shield of the party. You secure physical space, hold the line, and endure what others cannot survive.",
                 class1_ab1: "Cleave",
@@ -1078,9 +965,40 @@
                 class5_title: "THE SABOTEUR",
                 class5_desc: "Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.",
                 class6_title: "THE SURVIVALIST",
-                class6_desc: "Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions."
+                class6_desc: "Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions.",
+                minor_loot_ex: "Pouch of Silver, Bandit Bounty",
+                major_loot_ex: "Dragon Scale, Ancient Relic",
+                magic_title: "5. MAGIC, CANTRIPS AND INCANTATIONS",
+                magic_desc: "Spells and prayers use standard class features & weapon math dressed in arcana:",
+                armory_examples: [
+                    "<strong>Unarmored (+1 Pace):</strong> Robes / Civilian Clothes",
+                    "<strong>Light Armor (+1 Evade):</strong> Leather Jerkin",
+                    "<strong>Medium Armor (+2 Evade):</strong> Chainmail Shirt",
+                    "<strong>Heavy Armor (+3 Evade):</strong> Full Plate Mail",
+                    "<strong>Shield (Guard):</strong> Wooden / Steel Shield",
+                    "<strong>Light Melee (3 Dmg):</strong> Shortsword / Dagger",
+                    "<strong>Heavy Melee (4 Dmg):</strong> Greataxe / Warhammer",
+                    "<strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Longbow / Crossbow"
+                ],
+                magic_examples: [
+                    "<strong>Spells as Weapons:</strong> Ranged Weapon (8 Paces) = Firebolt. Heavy Melee (1 Pace) = Arcane Hammer.",
+                    "<strong>Abilities as Magic:</strong> <em>Concussive Blow</em> = Thunderwave spell. <em>Structural Weakness</em> = Acid Splash."
+                ],
+                loot_table: [
+                    { roll: "1–2", item: "Healing Salve", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Focus Elixir", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Fire Oil", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Flash Powder", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Smoke Vial", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Skeleton Key", effect: "Advantage on 1 lock picking or forced door check." },
+                    { roll: "13–14", item: "Grapple Hook", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "True-Strike Dust", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Shield Patch", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Hunter's Tag", effect: "All party attacks vs marked target gain Advantage." }
+                ]
             },
             cyberpunk: {
+                genre_name: "Cyberpunk",
                 class1_title: "THE ENFORCER",
                 class1_desc: "Narrative Role: Sub-dermal chrome tank. You anchor corporate corridors, absorb heavy fire, and breach doorframes first.",
                 class1_ab1: "Monofilament Sweep",
@@ -1094,9 +1012,40 @@
                 class5_title: "THE TECH-RUNNER",
                 class5_desc: "Narrative Role: Hardware decker and demolitionist. Overloading local power grids, tripping security traps, and tearing down structures.",
                 class6_title: "THE DOC",
-                class6_desc: "Narrative Role: Back-alley ripperdoc and street medic. Patching cyberware leaks, administering combat stims, and stabilizing trauma."
+                class6_desc: "Narrative Role: Back-alley ripperdoc and street medic. Patching cyberware leaks, administering combat stims, and stabilizing trauma.",
+                minor_loot_ex: "Cred-Stick, Black Market Cash",
+                major_loot_ex: "AI Core Chip, Prototype Cyberware",
+                magic_title: "5. CYBERWARE, DAEMONS AND QUICKHACKS",
+                magic_desc: "Cyberware programs and quickhacks use standard weapon/ability math in chrome flavor:",
+                armory_examples: [
+                    "<strong>Unarmored (+1 Pace):</strong> Streetwear / Kevlar Hoodie",
+                    "<strong>Light Armor (+1 Evade):</strong> Sub-dermal Weave / Tactical Vest",
+                    "<strong>Medium Armor (+2 Evade):</strong> Corp Ballistic Jacket",
+                    "<strong>Heavy Armor (+3 Evade):</strong> SWAT Composite Armor / Exo-Frame",
+                    "<strong>Shield (Guard):</strong> Hard-Light Riot Shield",
+                    "<strong>Light Melee (3 Dmg):</strong> Vibro-Blade / Mantis Blade",
+                    "<strong>Heavy Melee (4 Dmg):</strong> Thermal Katana / Sledge-Rig",
+                    "<strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Smart SMG / Heavy Pistol"
+                ],
+                magic_examples: [
+                    "<strong>Quickhacks as Weapons:</strong> Ranged Weapon (8 Paces) = Overheat Daemon. Heavy Melee (1 Pace) = Cyber-Arm Shock.",
+                    "<strong>Programs as Magic:</strong> <em>Concussive Blow</em> = System Shock Hack. <em>Structural Weakness</em> = ICE-Breaker Malware."
+                ],
+                loot_table: [
+                    { roll: "1–2", item: "Hypo-Med Injector", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Neural Stim Patch", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Overcharge Battery", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "EMP Flash Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Holo-Screen Projector", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Bypass Cipher Chip", effect: "Advantage on 1 hack or digital override." },
+                    { roll: "13–14", item: "Grapnel Launcher", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "Smart-Targeting Link", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Sub-Dermal Barrier", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Tracker Dart Signal", effect: "All party attacks vs marked target gain Advantage." }
+                ]
             },
             scifi: {
+                genre_name: "Sci-Fi",
                 class1_title: "THE SENTINEL",
                 class1_desc: "Narrative Role: Hard-light barrier specialist. You lock down airlocks, absorb void hazards, and shield squadmates in vacuum breaches.",
                 class1_ab1: "Plasma Arc",
@@ -1110,9 +1059,40 @@
                 class5_title: "THE ENGINEER",
                 class5_desc: "Narrative Role: Systems demolitions expert. Rigging grav-generators, dismantling starship thrusters, and detonating plasma charges.",
                 class6_title: "THE MEDIC",
-                class6_desc: "Narrative Role: Trauma specialist and biologist. Synthesizing bio-gel, clearing alien toxins, and keeping the crew operational."
+                class6_desc: "Narrative Role: Trauma specialist and biologist. Synthesizing bio-gel, clearing alien toxins, and keeping the crew operational.",
+                minor_loot_ex: "Fuel Credits, Cargo Pass",
+                major_loot_ex: "Alien Artifact, Pure Plasma Gem",
+                magic_title: "5. PSIONICS, BIOTICS AND TECH POWERS",
+                magic_desc: "Psionic faculties and biotic amps use standard combat math in high-tech flavor:",
+                armory_examples: [
+                    "<strong>Unarmored (+1 Pace):</strong> Flight Jumpsuit / Duty Uniform",
+                    "<strong>Light Armor (+1 Evade):</strong> Scout Vacuum Suit",
+                    "<strong>Medium Armor (+2 Evade):</strong> Marines Battle-Mesh",
+                    "<strong>Heavy Armor (+3 Evade):</strong> Mechanized Powered Exo-Suit",
+                    "<strong>Shield (Guard):</strong> Hard-Light Energy Shield",
+                    "<strong>Light Melee (3 Dmg):</strong> Plasma Blade / Arc Dagger",
+                    "<strong>Heavy Melee (4 Dmg):</strong> Gravity Hammer / Shock Pike",
+                    "<strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Plasma Rifle / Gauss Gun"
+                ],
+                magic_examples: [
+                    "<strong>Psionics as Weapons:</strong> Ranged Weapon (8 Paces) = Telekinetic Bolt. Heavy Melee = Biotic Crush.",
+                    "<strong>Tech Powers as Magic:</strong> <em>Concussive Blow</em> = Grav-Pulse. <em>Structural Weakness</em> = Corrosive Spray."
+                ],
+                loot_table: [
+                    { roll: "1–2", item: "Bio-Gel Injector", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Adrenaline Battery", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Plasma Amp Cell", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Stun Pulse Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Refractor Cloud", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Decryption Link", effect: "Advantage on 1 console hack or door override." },
+                    { roll: "13–14", item: "Grav-Hook Rig", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "Thermal Target Link", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Energy Barrier Emitter", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Targeting Beacon", effect: "All party attacks vs marked target gain Advantage." }
+                ]
             },
             postapoc: {
+                genre_name: "Post-Apoc",
                 class1_title: "THE IRONHIDE",
                 class1_desc: "Narrative Role: Scrap-armored wasteland guardian. You anchor choked ruins, absorb raider bursts, and hold the perimeter line.",
                 class1_ab1: "Scrap-Blade Slash",
@@ -1126,9 +1106,40 @@
                 class5_title: "THE TINKER",
                 class5_desc: "Narrative Role: Wasteland trap master. Rigging pipe-bombs, dismantling old machinery, and causing collapse in unstable ruins.",
                 class6_title: "THE SCAVENGER",
-                class6_desc: "Narrative Role: Wasteland field surgeon. Purging radiation, bandaging shrapnel wounds, and foraging clean sustenance."
+                class6_desc: "Narrative Role: Wasteland field surgeon. Purging radiation, bandaging shrapnel wounds, and foraging clean sustenance.",
+                minor_loot_ex: "Bottlecap Pouch, Unspent Ammo",
+                major_loot_ex: "Intact Pre-War Engine, Water Filter",
+                magic_title: "5. MUTATIONS, CHEMICALS AND PRE-WAR TECH",
+                magic_desc: "Mutant strains and scavenged tech function as abilities with wasteland flair:",
+                armory_examples: [
+                    "<strong>Unarmored (+1 Pace):</strong> Tattered Rags / Scavenger Leathers",
+                    "<strong>Light Armor (+1 Evade):</strong> Tire-Tread Armor / Padded Vest",
+                    "<strong>Medium Armor (+2 Evade):</strong> Scrap Metal Plating",
+                    "<strong>Heavy Armor (+3 Evade):</strong> Welded Boiler Plate / Pre-War Armor",
+                    "<strong>Shield (Guard):</strong> Street Sign Shield / Car Door",
+                    "<strong>Light Melee (3 Dmg):</strong> Machete / Spiked Club",
+                    "<strong>Heavy Melee (4 Dmg):</strong> Sledgehammer / Chainsaw",
+                    "<strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Pipe Rifle / Sawed-Off Shotgun"
+                ],
+                magic_examples: [
+                    "<strong>Mutations as Weapons:</strong> Ranged Weapon (8 Paces) = Acid Spit. Heavy Melee = Mutant Claw Sweep.",
+                    "<strong>Chems as Magic:</strong> <em>Concussive Blow</em> = Kinetic Shock Chem. <em>Structural Weakness</em> = Corrosive Sludge."
+                ],
+                loot_table: [
+                    { roll: "1–2", item: "Clean Bandages & Salve", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Pre-War Chem Pills", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Hollow-Point Ammo", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Scrap Pipe Bomb", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Smoke Canister", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Rusty Pry-Bar", effect: "Advantage on 1 lock, crate, or forced entry." },
+                    { roll: "13–14", item: "Kevlar Rope Launcher", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "Tracer Rounds", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Scrap Metal Shield", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Paint Marking Flare", effect: "All party attacks vs marked target gain Advantage." }
+                ]
             },
             steampunk: {
+                genre_name: "Steampunk",
                 class1_title: "THE AUTOMATON",
                 class1_desc: "Narrative Role: Steam-powered ironclad sentinel. You hold factory chokepoints, deflect boiler shrapnel, and absorb heavy punishment.",
                 class1_ab1: "Steam-Piston Strike",
@@ -1142,9 +1153,40 @@
                 class5_title: "THE CLOCKMAKER",
                 class5_desc: "Narrative Role: Saboteur and alchemist. Overpressurizing steam pipes, triggering gear-traps, and exploding volatile aether vials.",
                 class6_title: "THE ALCHEMIST",
-                class6_desc: "Narrative Role: Ether physician. Administering restorative tinctures, neutralizing toxic vapors, and reviving fallen allies."
+                class6_desc: "Narrative Role: Ether physician. Administering restorative tinctures, neutralizing toxic vapors, and reviving fallen allies.",
+                minor_loot_ex: "Brass Sovereign Coins, Aether Token",
+                major_loot_ex: "Clockwork Core, Flawless Diamond",
+                magic_title: "5. ALCHEMY, STEAM DEVICES AND AETHER TECH",
+                magic_desc: "Aetherial contraptions and alchemy use standard math with Victorian steam flair:",
+                armory_examples: [
+                    "<strong>Unarmored (+1 Pace):</strong> Tailored Suit / Aristocrat Gown",
+                    "<strong>Light Armor (+1 Evade):</strong> Leather Duster / Work Apron",
+                    "<strong>Medium Armor (+2 Evade):</strong> Riveted Leather & Brass Weave",
+                    "<strong>Heavy Armor (+3 Evade):</strong> Full Steel Steam-Suit",
+                    "<strong>Shield (Guard):</strong> Brass Buckler / Iron Guard",
+                    "<strong>Light Melee (3 Dmg):</strong> Cane-Sword / Clockwork Blade",
+                    "<strong>Heavy Melee (4 Dmg):</strong> Steam Hammer / Piston Axe",
+                    "<strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Flintlock Rifle / Pneumatic Gun"
+                ],
+                magic_examples: [
+                    "<strong>Devices as Weapons:</strong> Ranged Weapon (8 Paces) = Lightning Ray. Heavy Melee = Piston Crush.",
+                    "<strong>Alchemy as Magic:</strong> <em>Concussive Blow</em> = Vapor Explosion. <em>Structural Weakness</em> = Acid Vial."
+                ],
+                loot_table: [
+                    { roll: "1–2", item: "Ether Tonic Vials", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Smelling Salts", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Aether Infused Powder", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Volatile Steam Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Soot Cloud Bottle", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Skeleton Key Pick Set", effect: "Advantage on 1 lock pick or clockwork mechanism." },
+                    { roll: "13–14", item: "Brass Grapple Hook", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "Telescopic Scope", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Spring-Loaded Plate", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Pneumatic Marker", effect: "All party attacks vs marked target gain Advantage." }
+                ]
             },
             spacewest: {
+                genre_name: "Space West",
                 class1_title: "THE MARSHAL",
                 class1_desc: "Narrative Role: Frontier lawkeeper. Holding the saloon entrance, drawing heavy fire, and protecting innocents from outlaw bands.",
                 class1_ab1: "Heavy Rifle Whip",
@@ -1158,19 +1200,76 @@
                 class5_title: "THE PROSPECTOR",
                 class5_desc: "Narrative Role: Demolitions and mining expert. Rigging dynamite charges, collapsing mine shafts, and sabotaging hover-train tracks.",
                 class6_title: "THE SAWBONE",
-                class6_desc: "Narrative Role: Frontier doctor. Digging out slug rounds, cauterizing laser burns, and brewing potent saloon tonics."
+                class6_desc: "Narrative Role: Frontier doctor. Digging out slug rounds, cauterizing laser burns, and brewing potent saloon tonics.",
+                minor_loot_ex: "Bounty Dollars, Saloon Poker Chips",
+                major_loot_ex: "Stolen Hyper-Drive, Alien Skull Relic",
+                magic_title: "5. FRONTLINE TECH, DYNAMITE & ALIEN RELICS",
+                magic_desc: "Alien gadgets and frontier explosives use standard combat rules with dust-and-laser flavor:",
+                armory_examples: [
+                    "<strong>Unarmored (+1 Pace):</strong> Poncho & Duster / Cowboy Clothes",
+                    "<strong>Light Armor (+1 Evade):</strong> Hardened Hide Vest",
+                    "<strong>Medium Armor (+2 Evade):</strong> Frontier Dragoon Weave",
+                    "<strong>Heavy Armor (+3 Evade):</strong> Heavy Iron Prospector Plate",
+                    "<strong>Shield (Guard):</strong> Hover-Bulls-Eye Shield",
+                    "<strong>Light Melee (3 Dmg):</strong> Bowie Knife / Thermal Machete",
+                    "<strong>Heavy Melee (4 Dmg):</strong> Pickaxe / Heavy Club",
+                    "<strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Repeater Rifle / Plasma Colt"
+                ],
+                magic_examples: [
+                    "<strong>Relics as Weapons:</strong> Ranged Weapon (8 Paces) = Beam Carbine. Heavy Melee = Mining Drill.",
+                    "<strong>Dynamite as Magic:</strong> <em>Concussive Blow</em> = Blast Charge. <em>Structural Weakness</em> = Corrosive Solvent."
+                ],
+                loot_table: [
+                    { roll: "1–2", item: "Saloon Tonic & Bandages", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Frontier Coffee Brew", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "High-Caliber Slugs", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Stick of Dynamite", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Dust-Storm Flask", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Lock-Busting Crowbar", effect: "Advantage on 1 lock, safe, or forced entry." },
+                    { roll: "13–14", item: "Rope Lasso & Hook", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "Deadeye Sight Link", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Iron Scrap Shielding", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Bounty Tag Signal", effect: "All party attacks vs marked target gain Advantage." }
+                ]
             }
         };
 
         // Switch Genre function
         function switchGenre(genreKey) {
             const data = GENRE_DATA[genreKey] || GENRE_DATA.fantasy;
+            
+            // Text keys
             Object.keys(data).forEach(key => {
                 const elements = document.querySelectorAll(`[data-key="${key}"]`);
                 elements.forEach(el => {
                     el.textContent = data[key];
                 });
             });
+
+            // Update Page 6 Armory list
+            const armoryList = document.getElementById('armoryExampleList');
+            if (armoryList && data.armory_examples) {
+                armoryList.innerHTML = data.armory_examples.map(ex => `<li>${ex}</li>`).join('');
+            }
+
+            // Update Page 6 Magic list
+            const magicList = document.getElementById('magicExampleList');
+            if (magicList && data.magic_examples) {
+                magicList.innerHTML = data.magic_examples.map(ex => `<li>${ex}</li>`).join('');
+            }
+
+            // Update Page 6 Loot Table
+            const lootBody = document.getElementById('dynamicLootBody');
+            if (lootBody && data.loot_table) {
+                lootBody.innerHTML = data.loot_table.map(row => `
+                    <tr>
+                        <td style="padding: 1px 2px;"><strong>${row.roll}</strong></td>
+                        <td style="padding: 1px 2px; font-weight: bold; color: #2b5b84;">${row.item}</td>
+                        <td style="padding: 1px 2px;">${row.effect}</td>
+                    </tr>
+                `).join('');
+            }
+
             saveSheet();
         }
 
@@ -1205,6 +1304,8 @@
             });
             if (data.genreSelect) {
                 switchGenre(data.genreSelect);
+            } else {
+                switchGenre('fantasy');
             }
         }
 
