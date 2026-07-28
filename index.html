@@ -357,6 +357,7 @@
         <div class="toolbar-buttons">
             <span class="genre-label">SETTING:</span>
             <select id="genreSelect" class="genre-select" onchange="switchGenre(this.value)">
+                <option value="none">NONE (Universal Standard)</option>
                 <option value="fantasy">Fantasy</option>
                 <option value="cyberpunk">Cyberpunk</option>
                 <option value="scifi">Sci-Fi</option>
@@ -877,10 +878,10 @@
                 <!-- LEFT COLUMN: SECTIONS 1, 2, AND 3 -->
                 <div class="column-box">
                     <h2>1. ACTIVE WEALTH & LOOT ECONOMY</h2>
-                    <p>Current Setting: <strong style="color: var(--accent-color);" data-key="genre_name">Fantasy</strong></p>
+                    <p>Current Setting: <strong style="color: var(--accent-color);" data-key="genre_name">Universal Standard</strong></p>
                     <ul style="font-size: 7.6px;">
-                        <li><strong>Minor Loot Tags (Spending Money):</strong> <span data-key="minor_loot_ex">Pouch of Silver, Bandit Bounty</span>. <em>Uses:</em> 1 Minor Tag/player = Sanctuary Rest (100% reset); 1 Tag = Restock 1 consumable, buy basic gear, or low-level bribe.</li>
-                        <li><strong>Major Loot Tags (Special Assets / Relics):</strong> <span data-key="major_loot_ex">Dragon Scale, Ancient Relic</span>. <em>Uses:</em> Traded directly for primary weapons/armor, legendary gear, vehicle repairs, or major faction leverage.</li>
+                        <li><strong>Minor Loot Tags (Spending Money):</strong> <span data-key="minor_loot_ex">Standard Coins, Common Bounties, Scavenged Cash</span>. <em>Uses:</em> 1 Minor Tag/player = Sanctuary Rest (100% reset); 1 Tag = Restock 1 consumable, buy basic gear, or low-level bribe.</li>
+                        <li><strong>Major Loot Tags (Special Assets / Relics):</strong> <span data-key="major_loot_ex">Rare Artifacts, Corporate Data, Boss Trophies</span>. <em>Uses:</em> Traded directly for primary weapons/armor, legendary gear, vehicle repairs, or major faction leverage.</li>
                     </ul>
 
                     <h2>2. ADAPTING THE THRESHOLD</h2>
@@ -891,7 +892,7 @@
                     </ul>
 
                     <h2>3. SETTING ARMORY RESKINS</h2>
-                    <p>Gear names automatically reskinned for <strong data-key="genre_name">Fantasy</strong>:</p>
+                    <p>Gear names automatically reskinned for <strong data-key="genre_name">Universal Standard</strong>:</p>
                     <ul style="font-size: 7.3px;" id="armoryExampleList">
                         <!-- Populated by JS -->
                     </ul>
@@ -905,7 +906,7 @@
 
                 <!-- RIGHT COLUMN: SECTIONS 4 AND 6 -->
                 <div class="column-box">
-                    <h2>4. CONSUMABLE & UTILITY LOOT (<span data-key="genre_name">Fantasy</span>)</h2>
+                    <h2>4. CONSUMABLE & UTILITY LOOT (<span data-key="genre_name">Universal Standard</span>)</h2>
                     <p>Using any consumable costs <strong>1 Action Phase</strong>. Roll 1d20 for loot drops:</p>
 
                     <table style="font-size: 6.8px; margin-top: 1px; margin-bottom: 2px;">
@@ -950,6 +951,53 @@
         const STORAGE_KEY = 'EasyPlayD20_CharacterData';
 
         const GENRE_DATA = {
+            none: {
+                genre_name: "Universal Standard",
+                class1_title: "THE WARDEN",
+                class1_desc: "Narrative Role: The unmovable shield of the party. You secure physical space, hold the line, and endure what others cannot survive.",
+                class1_ab1: "Cleave",
+                class2_title: "THE BREAKER",
+                class2_desc: "Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.",
+                class2_ab3: "Concussive Blow",
+                class3_title: "THE PROWLER",
+                class3_desc: "Narrative Role: The scalpel. Bypassing security, flanking, and executing devastating close-quarters strikes.",
+                class4_title: "THE MARKSMAN",
+                class4_desc: "Narrative Role: Ranged overwatch. Securing angles, controlling enemy movement, and eliminating targets from afar.",
+                class5_title: "THE SABOTEUR",
+                class5_desc: "Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.",
+                class6_title: "THE SURVIVALIST",
+                class6_desc: "Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions.",
+                minor_loot_ex: "Standard Coins, Common Bounties, Scavenged Cash",
+                major_loot_ex: "Rare Artifacts, Corporate Data, Boss Trophies",
+                magic_title: "5. MAGIC, PSIONICS AND SPECIAL POWERS",
+                magic_desc: "Spells and powers use standard class features and weapon math dressed in setting flavor:",
+                armory_examples: [
+                    "<strong>Unarmored (+1 Pace):</strong> Civilian Clothing / Jumpsuit (+1 Pace Speed)",
+                    "<strong>Light Armor (+1 Evade):</strong> Light Vest / Leather Armor (+1 Evade, Disadv Stealth)",
+                    "<strong>Medium Armor (+2 Evade):</strong> Heavy Jacket / Chainmail (+2 Evade, -1 Speed Pace)",
+                    "<strong>Heavy Armor (+3 Evade):</strong> Plate Mail / Combat Exo-Suit (+3 Evade, -2 Speed Paces)",
+                    "<strong>Shield (Guard):</strong> Shield / Riot Guard (-1 Speed Pace; Active Guard Action)",
+                    "<strong>Light Melee (3 Dmg):</strong> Dagger / Short Blade / Vibro-Cutter (1 Pace Range)",
+                    "<strong>Heavy Melee (4 Dmg):</strong> Greatsword / Power Axe / Sledgehammer (2 Hands)",
+                    "<strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Bow / Rifle / Blaster (8 Paces Max Range)"
+                ],
+                magic_examples: [
+                    "<strong>Spells/Powers as Weapons:</strong> Ranged Weapon (8 Paces) = Firebolt / Plasma Beam. Heavy Melee = Kinetic Crush.",
+                    "<strong>Abilities as Magic:</strong> <em>Concussive Blow</em> = Shockwave. <em>Structural Weakness</em> = Acid Splash / Corrosive Hack."
+                ],
+                loot_table: [
+                    { roll: "1–2", item: "Healing Potion / Med-Kit", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Focus Elixir / Stim Patch", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Fire Oil / Ammo Amp", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Flash Powder / EMP Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Smoke Vial / Holo-Screen", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Skeleton Key / Bypass Chip", effect: "Advantage on 1 lock picking or forced door check." },
+                    { roll: "13–14", item: "Grapple Hook / Grapnel Gun", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "True-Strike Dust / Targeting Link", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Shield Patch / Scrap Plate", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Hunter's Tag / Tracker Dart", effect: "All party attacks vs marked target gain Advantage." }
+                ]
+            },
             fantasy: {
                 genre_name: "Fantasy",
                 class1_title: "THE WARDEN",
@@ -1236,7 +1284,7 @@
 
         // Switch Genre function
         function switchGenre(genreKey) {
-            const data = GENRE_DATA[genreKey] || GENRE_DATA.fantasy;
+            const data = GENRE_DATA[genreKey] || GENRE_DATA.none;
             
             // Text keys
             Object.keys(data).forEach(key => {
@@ -1305,7 +1353,7 @@
             if (data.genreSelect) {
                 switchGenre(data.genreSelect);
             } else {
-                switchGenre('fantasy');
+                switchGenre('none');
             }
         }
 
@@ -1347,8 +1395,8 @@
                         input.value = '';
                     }
                 });
-                document.getElementById('genreSelect').value = 'fantasy';
-                switchGenre('fantasy');
+                document.getElementById('genreSelect').value = 'none';
+                switchGenre('none');
             }
         }
 
