@@ -58,7 +58,26 @@
 
         .toolbar-buttons {
             display: flex;
+            align-items: center;
             gap: 8px;
+        }
+
+        .genre-label {
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .genre-select {
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 6px;
+            border-radius: 3px;
+            border: none;
+            background-color: #ffffff;
+            color: #2b5b84;
+            cursor: pointer;
+            outline: none;
         }
 
         .btn {
@@ -340,6 +359,15 @@
     <div class="toolbar">
         <div class="toolbar-title">EASY PLAY D20 — INTERACTIVE CHARACTER SHEET</div>
         <div class="toolbar-buttons">
+            <span class="genre-label">SETTING:</span>
+            <select id="genreSelect" class="genre-select" onchange="switchGenre(this.value)">
+                <option value="fantasy">Fantasy</option>
+                <option value="cyberpunk">Cyberpunk</option>
+                <option value="scifi">Sci-Fi</option>
+                <option value="postapoc">Post-Apoc</option>
+                <option value="steampunk">Steampunk</option>
+                <option value="spacewest">Space West</option>
+            </select>
             <button class="btn" onclick="exportCharacter()">💾 Save to File (.json)</button>
             <button class="btn" onclick="document.getElementById('importFile').click()">📂 Load File</button>
             <button class="btn btn-danger" onclick="resetSheet()">🧹 Clear Sheet</button>
@@ -604,12 +632,12 @@
 
             <div class="two-column">
                 <div class="column-box">
-                    <h3>THE WARDEN (Resource Focus: Might / Force Specialist)</h3>
-                    <p><em>Narrative Role: The unmovable shield of the party. You secure physical space, hold the line, and endure what others cannot survive.</em></p>
+                    <h3><span data-key="class1_title">THE WARDEN</span> (Resource Focus: Might / Force Specialist)</h3>
+                    <p><em data-key="class1_desc">Narrative Role: The unmovable shield of the party. You secure physical space, hold the line, and endure what others cannot survive.</em></p>
                     <p><strong>Recommended Loadout:</strong> Heavy Armor (+3 Evade, -2 Paces), Shield (-1 Pace), Light Melee (3 Dmg, 1 Pace Range).</p>
                     <ul>
                         <li><strong>L1 Specialty: Vanguard Guard (Passive):</strong> If you end your turn adjacent to an ally, grant them Advantage on Evasion rolls until your next turn.</li>
-                        <li><strong>L1: Cleave [1 Force]:</strong> After a Heavy Weapon hit, spend 1 Force to deal 2 flat damage to an adjacent secondary foe within 1 pace.</li>
+                        <li><strong>L1: <span data-key="class1_ab1">Cleave</span> [1 Force]:</strong> After a Heavy Weapon hit, spend 1 Force to deal 2 flat damage to an adjacent secondary foe within 1 pace.</li>
                         <li><strong>L2: Iron Stance [1 Reflex]:</strong> Spend 1 Reflex during Action Phase. Auto-succeed on your next Evasion roll before your next turn.</li>
                         <li><strong>L3: Brutal Force [1 Force]:</strong> Spend 1 Force on hit to add Might modifier to flat damage a second time.</li>
                         <li><strong>L4: Steel Stance [2 RP]:</strong> Spend 2 RP during Action Phase. Cap maximum incoming flat damage from the very next successful hit against you at 2 points.</li>
@@ -620,14 +648,14 @@
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> Active Guard with a Shield uses both your Action and Move Phases. Vanguard Guard triggers at the end of your turn as long as you are standing next to an ally. Minimum movement speed is 1 Pace.</div>
 
-                    <h3>THE BREAKER (Resource Focus: Might & Reflex Specialist)</h3>
-                    <p><em>Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.</em></p>
+                    <h3><span data-key="class2_title">THE BREAKER</span> (Resource Focus: Might & Reflex Specialist)</h3>
+                    <p><em data-key="class2_desc">Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.</em></p>
                     <p><strong>Recommended Loadout:</strong> Heavy Melee (4 Dmg, 1 Pace Range), Medium Armor (+2 Evade, -1 Pace), Improvised Tools.</p>
                     <ul>
                         <li><strong>L1 Specialty: Breacher (Passive):</strong> Never suffer movement penalties kicking open doors or smashing barricades.</li>
                         <li><strong>L1: Drive Back [1 Force]:</strong> On Heavy Melee hit, spend 1 Force to shove target 1 pace back. Wall collision deals +2 crush damage.</li>
                         <li><strong>L2: Adrenaline Surge [2 Reflex]:</strong> Double total movement paces for this turn.</li>
-                        <li><strong>L3: Concussive Blow [1 Force]:</strong> Spend 1 Force on hit. Target passes Might check vs 14 or becomes Dazed.</li>
+                        <li><strong>L3: <span data-key="class2_ab3">Concussive Blow</span> [1 Force]:</strong> Spend 1 Force on hit. Target passes Might check vs 14 or becomes Dazed.</li>
                         <li><strong>L4: Linebreaker [2 Reflex]:</strong> Move directly through enemy spaces, forcing them 1 pace aside (backed against wall = 2 crush damage).</li>
                     </ul>
                 </div>
@@ -641,8 +669,8 @@
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> Crush Damage requires the enemy to be physically slammed into a heavy, unmoving barrier, such as a stone wall, a large vehicle, or a massive tree trunk.</div>
 
-                    <h3>THE PROWLER (Resource Focus: Agility / Reflex Specialist)</h3>
-                    <p><em>Narrative Role: The scalpel. Bypassing security, flanking, and executing devastating close-quarters strikes.</em></p>
+                    <h3><span data-key="class3_title">THE PROWLER</span> (Resource Focus: Agility / Reflex Specialist)</h3>
+                    <p><em data-key="class3_desc">Narrative Role: The scalpel. Bypassing security, flanking, and executing devastating close-quarters strikes.</em></p>
                     <p><strong>Recommended Loadout:</strong> Twin Light Melee (3 Dmg +1 from Twin Fangs, 1 Pace Range), Unarmored (+1 Pace) or Light Armor (+1 Evade), Ranged/Thrown Daggers (3 Paces Range).</p>
                     <ul>
                         <li><strong>L1 Specialty: Twin Fangs (Passive):</strong> Dual-wielding Light Melee adds +1 to flat damage output.</li>
@@ -674,8 +702,8 @@
 
             <div class="two-column">
                 <div class="column-box">
-                    <h3>THE MARKSMAN (Resource Focus: Will / RP Specialist)</h3>
-                    <p><em>Narrative Role: Ranged overwatch. Securing angles, controlling enemy movement, and eliminating targets from afar.</em></p>
+                    <h3><span data-key="class4_title">THE MARKSMAN</span> (Resource Focus: Will / RP Specialist)</h3>
+                    <p><em data-key="class4_desc">Narrative Role: Ranged overwatch. Securing angles, controlling enemy movement, and eliminating targets from afar.</em></p>
                     <p><strong>Recommended Loadout:</strong> Ranged Weapon (2 Dmg, 8 Paces Range Max), Unarmored (+1 Pace) or Light Armor (+1 Evade), Light Melee backup weapon (1 Pace Range).</p>
                     <ul>
                         <li><strong>L1 Specialty: Aimed Shot (Passive):</strong> Forfeit Move Phase to gain Advantage on your Ranged attack roll vs 14.</li>
@@ -690,8 +718,8 @@
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> To trigger Elevated Advantage, you must physically be positioned at least 1 full pace (5 feet) higher than your target, such as firing from a rooftop, a staircase, or a hovering vehicle. Hard max range for standard Ranged Weapons is 8 Paces.</div>
 
-                    <h3>THE SABOTEUR (Resource Focus: Tactical RP & Reflex Specialist)</h3>
-                    <p><em>Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.</em></p>
+                    <h3><span data-key="class5_title">THE SABOTEUR</span> (Resource Focus: Tactical RP & Reflex Specialist)</h3>
+                    <p><em data-key="class5_desc">Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.</em></p>
                     <p><strong>Recommended Loadout:</strong> Light Melee (3 Dmg, 1 Pace Range), Light Armor (+1 Evade), Ranged/Thrown explosives (3 Paces Range).</p>
                     <ul>
                         <li><strong>L1 Specialty: Saboteur (Passive):</strong> Automatically dismantle simple mechanical locks and traps given 1 full minute outside combat.</li>
@@ -711,8 +739,8 @@
                     </ul>
                     <div class="pro-tip"><strong>Rule Clarification:</strong> Valid environmental objects for Rig Trap include heavy chandeliers, stacked cargo crates, loose rock formations, or unstable scaffolding directly above the target.</div>
 
-                    <h3>THE SURVIVALIST (Resource Focus: Hybrid Medic / Support)</h3>
-                    <p><em>Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions.</em></p>
+                    <h3><span data-key="class6_title">THE SURVIVALIST</span> (Resource Focus: Hybrid Medic / Support)</h3>
+                    <p><em data-key="class6_desc">Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions.</em></p>
                     <p><strong>Recommended Loadout:</strong> Ranged/Thrown weapons (1 Dmg, 3 Paces Range), Light Armor (+1 Evade), survival and medical gear.</p>
                     <ul>
                         <li><strong>L1 Specialty: Combat Medic (Passive):</strong> Stabilize dying ally within 1 pace using Move Phase (Will check vs 14).</li>
@@ -1031,14 +1059,125 @@
         <div class="page-num">Page 6</div>
     </div>
 
-    <!-- AUTO-SAVE & IMPORT/EXPORT JAVASCRIPT -->
+    <!-- DYNAMIC GENRE DICTIONARY & AUTO-SAVE JAVASCRIPT -->
     <script>
         const STORAGE_KEY = 'EasyPlayD20_CharacterData';
 
-        // Save all input values to LocalStorage
+        const GENRE_DATA = {
+            fantasy: {
+                class1_title: "THE WARDEN",
+                class1_desc: "Narrative Role: The unmovable shield of the party. You secure physical space, hold the line, and endure what others cannot survive.",
+                class1_ab1: "Cleave",
+                class2_title: "THE BREAKER",
+                class2_desc: "Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.",
+                class2_ab3: "Concussive Blow",
+                class3_title: "THE PROWLER",
+                class3_desc: "Narrative Role: The scalpel. Bypassing security, flanking, and executing devastating close-quarters strikes.",
+                class4_title: "THE MARKSMAN",
+                class4_desc: "Narrative Role: Ranged overwatch. Securing angles, controlling enemy movement, and eliminating targets from afar.",
+                class5_title: "THE SABOTEUR",
+                class5_desc: "Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.",
+                class6_title: "THE SURVIVALIST",
+                class6_desc: "Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions."
+            },
+            cyberpunk: {
+                class1_title: "THE ENFORCER",
+                class1_desc: "Narrative Role: Sub-dermal chrome tank. You anchor corporate corridors, absorb heavy fire, and breach doorframes first.",
+                class1_ab1: "Monofilament Sweep",
+                class2_title: "THE SOLO",
+                class2_desc: "Narrative Role: High-impact street reflex mercenary. You shatter barricades and breach security checkpoints with raw momentum.",
+                class2_ab3: "Neural Shock Punch",
+                class3_title: "THE INFILTRATOR",
+                class3_desc: "Narrative Role: Cloaked ghost executioner. Bypassing optical sensors, hacking ICE, and executing lethal point-blank ambushes.",
+                class4_title: "THE DEADEYE",
+                class4_desc: "Narrative Role: Smart-gun overwatch sniper. Tagging corporate targets, painting angles, and suppressing room exits.",
+                class5_title: "THE TECH-RUNNER",
+                class5_desc: "Narrative Role: Hardware decker and demolitionist. Overloading local power grids, tripping security traps, and tearing down structures.",
+                class6_title: "THE DOC",
+                class6_desc: "Narrative Role: Back-alley ripperdoc and street medic. Patching cyberware leaks, administering combat stims, and stabilizing trauma."
+            },
+            scifi: {
+                class1_title: "THE SENTINEL",
+                class1_desc: "Narrative Role: Hard-light barrier specialist. You lock down airlocks, absorb void hazards, and shield squadmates in vacuum breaches.",
+                class1_ab1: "Plasma Arc",
+                class2_title: "THE VANGUARD",
+                class2_desc: "Narrative Role: Heavy exo-suit shock trooper. You crush blast doors, force momentum through enemy lines, and hurl heavy debris.",
+                class2_ab3: "Kinetic Shockwave",
+                class3_title: "THE SPEC-OPS",
+                class3_desc: "Narrative Role: Optical-camo assassin. Bypassing laser grids, flanking alien threats, and executing precision weakness strikes.",
+                class4_title: "THE SHARPSHOOTER",
+                class4_desc: "Narrative Role: Long-range thermal marksman. Controlling corridors, puncturing hull armor, and providing orbital overwatch.",
+                class5_title: "THE ENGINEER",
+                class5_desc: "Narrative Role: Systems demolitions expert. Rigging grav-generators, dismantling starship thrusters, and detonating plasma charges.",
+                class6_title: "THE MEDIC",
+                class6_desc: "Narrative Role: Trauma specialist and biologist. Synthesizing bio-gel, clearing alien toxins, and keeping the crew operational."
+            },
+            postapoc: {
+                class1_title: "THE IRONHIDE",
+                class1_desc: "Narrative Role: Scrap-armored wasteland guardian. You anchor choked ruins, absorb raider bursts, and hold the perimeter line.",
+                class1_ab1: "Scrap-Blade Slash",
+                class2_title: "THE WRECKER",
+                class2_desc: "Narrative Role: Primitive shock charger. Smashing through barricades, throwing rubble, and pummeling mutated beasts.",
+                class2_ab3: "Sledgehammer Smash",
+                class3_title: "THE STALKER",
+                class3_desc: "Narrative Role: Ruin-crawler hunter. Moving silently through toxic ash, ambushing caravans, and striking undetected from dark corners.",
+                class4_title: "THE SCRAPPER",
+                class4_desc: "Narrative Role: Pipe-rifle overwatch. Holding high water towers, sniping scavengers, and suppressing open wasteland terrain.",
+                class5_title: "THE TINKER",
+                class5_desc: "Narrative Role: Wasteland trap master. Rigging pipe-bombs, dismantling old machinery, and causing collapse in unstable ruins.",
+                class6_title: "THE SCAVENGER",
+                class6_desc: "Narrative Role: Wasteland field surgeon. Purging radiation, bandaging shrapnel wounds, and foraging clean sustenance."
+            },
+            steampunk: {
+                class1_title: "THE AUTOMATON",
+                class1_desc: "Narrative Role: Steam-powered ironclad sentinel. You hold factory chokepoints, deflect boiler shrapnel, and absorb heavy punishment.",
+                class1_ab1: "Steam-Piston Strike",
+                class2_title: "THE BOILER",
+                class2_desc: "Narrative Role: Pressure-driven entry specialist. Kicking in vault doors, throwing heavy gears, and charging with steam-boosted speed.",
+                class2_ab3: "Pneumatic Slam",
+                class3_title: "THE SHADOW",
+                class3_desc: "Narrative Role: Gaslight alley assassin. Scaling brick facades, bypassing clockwork locks, and executing silent blade strikes.",
+                class4_title: "THE JAEGER",
+                class4_desc: "Narrative Role: Long-barrel rifle overwatch. Firing from clocktower perches, penetrating brass plating, and picking off targets.",
+                class5_title: "THE CLOCKMAKER",
+                class5_desc: "Narrative Role: Saboteur and alchemist. Overpressurizing steam pipes, triggering gear-traps, and exploding volatile aether vials.",
+                class6_title: "THE ALCHEMIST",
+                class6_desc: "Narrative Role: Ether physician. Administering restorative tinctures, neutralizing toxic vapors, and reviving fallen allies."
+            },
+            spacewest: {
+                class1_title: "THE MARSHAL",
+                class1_desc: "Narrative Role: Frontier lawkeeper. Holding the saloon entrance, drawing heavy fire, and protecting innocents from outlaw bands.",
+                class1_ab1: "Heavy Rifle Whip",
+                class2_title: "THE BRAWLER",
+                class2_desc: "Narrative Role: Frontier pit fighter. Smashing through wagon barricades, throwing heavy supply crates, and brutalizing outlaws.",
+                class2_ab3: "Shotgun Stun",
+                class3_title: "THE GUNSLINGER",
+                class3_desc: "Narrative Role: Quick-draw scalpel. Flanking behind cover, executing blinding fast hip-fire strikes, and slipping through canyon shadows.",
+                class4_title: "THE BOUNTY HUNTER",
+                class4_desc: "Narrative Role: Lever-action overwatch. Tracking outlaw pucks across ridge lines, shooting from high ground, and pinning targets.",
+                class5_title: "THE PROSPECTOR",
+                class5_desc: "Narrative Role: Demolitions and mining expert. Rigging dynamite charges, collapsing mine shafts, and sabotaging hover-train tracks.",
+                class6_title: "THE SAWBONE",
+                class6_desc: "Narrative Role: Frontier doctor. Digging out slug rounds, cauterizing laser burns, and brewing potent saloon tonics."
+            }
+        };
+
+        // Switch Genre function
+        function switchGenre(genreKey) {
+            const data = GENRE_DATA[genreKey] || GENRE_DATA.fantasy;
+            Object.keys(data).forEach(key => {
+                const elements = document.querySelectorAll(`[data-key="${key}"]`);
+                elements.forEach(el => {
+                    el.textContent = data[key];
+                });
+            });
+            saveSheet();
+        }
+
+        // Save all input values & active genre to LocalStorage
         function saveSheet() {
             const data = {};
-            const inputs = document.querySelectorAll('input, textarea');
+            const inputs = document.querySelectorAll('input, textarea, select');
             inputs.forEach(input => {
                 if (input.type === 'checkbox') {
                     data[input.id] = input.checked;
@@ -1049,7 +1188,7 @@
             localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
         }
 
-        // Load saved values from LocalStorage
+        // Load saved values & active genre from LocalStorage
         function loadSheet() {
             const saved = localStorage.getItem(STORAGE_KEY);
             if (!saved) return;
@@ -1064,6 +1203,9 @@
                     }
                 }
             });
+            if (data.genreSelect) {
+                switchGenre(data.genreSelect);
+            }
         }
 
         // Export Character to JSON file
@@ -1104,13 +1246,15 @@
                         input.value = '';
                     }
                 });
+                document.getElementById('genreSelect').value = 'fantasy';
+                switchGenre('fantasy');
             }
         }
 
         // Event listeners for auto-saving on change/input
         document.addEventListener('DOMContentLoaded', () => {
             loadSheet();
-            const inputs = document.querySelectorAll('input, textarea');
+            const inputs = document.querySelectorAll('input, textarea, select');
             inputs.forEach(input => {
                 input.addEventListener('input', saveSheet);
                 input.addEventListener('change', saveSheet);
