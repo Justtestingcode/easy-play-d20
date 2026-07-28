@@ -426,10 +426,11 @@
                 • <strong>Dash:</strong> Forfeit attack to move total Movement paces a second time.<br />
                 • <strong>Assist Ally:</strong> Grant an adjacent ally Advantage on their very next check or attack roll.<br />
                 • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical <strong>Concealment</strong> (Enemies cannot target you with ranged attacks; attacking from Concealment grants Advantage and ends Concealment).<br />
-                • <strong>Interact / Weapon Swap:</strong> Pick lock, pull lever, or hand item. Drawing or swapping weapons is a Free Action once per turn during Move Phase.
+                • <strong>Interact / Weapon Swap:</strong> Pick lock, pull lever, or hand item. Drawing or swapping weapons from Active Slots is a Free Action once per turn during Move Phase. (Swapping from Passive Backpack costs 1 Action Phase).
             </div>
 
-            <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod)</h2>
+            <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod | Ready Gear)</h2>
+            <p style="font-size: 8px; margin-top: -2px; margin-bottom: 3px;"><em>Active Slots hold worn armor, shield, weapons, and belt consumables (instant combat access). Stowed/backpack items belong in Passive Inventory (Notes Box; costs 1 Action Phase to retrieve in combat). Exceeding Active Slots forces Disadvantage on Evasion.</em></p>
             <div class="sheet-grid" style="row-gap: 6px; column-gap: 16px;">
                 <div class="inv-slot">[ 1 ] Armor: <input type="text" id="inv1" /></div>
                 <div class="inv-slot">[ 5 ] Item/Pouch: <input type="text" id="inv5" /></div>
@@ -442,8 +443,8 @@
             </div>
 
             <div class="notes-box">
-                <span class="notes-title">SESSION & CHARACTER NOTES:</span>
-                <textarea class="notes-input" id="p1Notes" placeholder="Type character background, campaign milestones, or session notes here..."></textarea>
+                <span class="notes-title">PASSIVE INVENTORY (BACKPACK / STASH) & SESSION NOTES:</span>
+                <textarea class="notes-input" id="p1Notes" placeholder="Type stowed backpack items, extra gear, campaign milestones, or session notes here..."></textarea>
             </div>
         </div>
         <div class="page-num">Page 1</div>
@@ -500,8 +501,8 @@
                     <p>Rounds represent 6 seconds of simultaneous action. System is 100% Player-Facing: no out-of-turn reactions.</p>
                     <ul>
                         <li><strong>Dynamic Guide Initiative:</strong> The Guide rolls 1d20 (+ Tier Mod) to set the encounter's <strong>Initiative Target</strong>. Players roll 1d20 + Agility vs this target. Meet/beat = Fast Phase (before enemies); lower = Slow Phase (after enemies). Players win ties. <em>Player Turn Order:</em> Players in the same phase (Fast or Slow) may act in any order they choose.</li>
-                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (1 pace = 5 ft / 1 grid square; Min Floor = 1 Pace). Halved movement is rounded down (Min 1 Pace). Drawing or swapping weapons is a Free Action once per turn.</li>
-                        <li><strong>2. Action Phase:</strong> Attack, use ability, drink potion, or execute a maneuver (1d20 + Attr vs 14).</li>
+                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (1 pace = 5 ft / 1 grid square; Min Floor = 1 Pace). Halved movement is rounded down (Min 1 Pace). Drawing or swapping weapons from Active Slots is a Free Action once per turn.</li>
+                        <li><strong>2. Action Phase:</strong> Attack, use ability, drink potion, or execute a maneuver (1d20 + Attr vs 14). Rummaging into Passive Backpack for an item costs 1 Action Phase.</li>
                         <li><strong>3. Evasion Phase:</strong> When targeted on enemy turn, roll 1d20 + Armor Evasion Mod vs 14. 14+ = 0 damage. Fail = take enemy flat damage directly.</li>
                     </ul>
 
@@ -559,10 +560,10 @@
                     </table>
                 </div>
 
-                <!-- RIGHT COLUMN: ARMOR -->
+                <!-- RIGHT COLUMN: ARMOR & INVENTORY RULES -->
                 <div class="column-box">
-                    <h3>6. ARMOR TRADEOFFS & CAPACITY</h3>
-                    <p style="font-size: 8px; margin-bottom: 2px;"><strong>Slots:</strong> 4 + Might Mod | Over-Encumbered = Disadv</p>
+                    <h3>6. ARMOR & INVENTORY CAPACITY</h3>
+                    <p style="font-size: 8px; margin-bottom: 2px;"><strong>Active Capacity:</strong> 4 + Might Mod Slots | Over-Encumbered = Disadv</p>
                     <table style="font-size: 8.2px;">
                         <thead>
                             <tr>
@@ -580,6 +581,9 @@
                             <tr><td><strong>Shield</strong></td><td>Guard</td><td>-1 Pace</td><td>1 Hand. Active Guard = Action + Move.</td></tr>
                         </tbody>
                     </table>
+                    <div class="pro-tip" style="font-size: 8px; margin-top: 2px;">
+                        <strong>Active vs. Passive Inventory:</strong> Active Slots (Max 4 + Might Mod) represent holstered weapons, worn armor, shields, and belt potions ready for instant combat use (Free Action swap 1/turn during Move Phase). Passive Inventory represents stowed gear in a backpack or wagon—pulling an item from Passive Storage during combat costs 1 Action Phase.
+                    </div>
                 </div>
             </div>
             <p style="font-size: 8px; font-style: italic; margin-top: 2px;">*<strong>Shield Restriction:</strong> You cannot gain Shield Evasion/Guard benefits while wielding a 2-Handed weapon.</p>
@@ -630,7 +634,7 @@
                 <div class="column-box">
                     <ul>
                         <li><strong>L5: Relentless Assault [3 RP]:</strong> Spend 3 RP during Action Phase to make a second attack against a different adjacent target within 1 pace.</li>
-                        <li><strong>L6: Pack Mule (Passive):</strong> Maximum active inventory slots permanently increased by 2.</li>
+                        <li><strong>L6: Pack Mule (Passive):</strong> Active Inventory Capacity permanently increased by 2 slots (Base 6 + Might Mod).</li>
                         <li><strong>L7: Heave [2 Force]:</strong> Lift and throw heavy object up to 2 paces. Target passes Agility check vs 14 or takes 4 flat damage and falls Prone.</li>
                         <li><strong>L8: Crash the Gates [4 RP]:</strong> Smash barrier on Move Phase to take immediate Action Phase with Advantage against unaware targets.</li>
                     </ul>
@@ -826,7 +830,7 @@
                 <strong style="color: #2b5b84;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</strong><br />
                 A roll under 14 <strong>never means nothing happened. Never say nothing happened!</strong> A failed check always pushes the narrative forward through <em>Success at a Cost</em> or <em>Escalation</em> (the player achieves the goal or moves the scene, but suffers a setback). The Guide rolls <strong>1d20</strong> for severity:<br />
                 • <strong>1–10 (Minor Complication):</strong> Alarm/alert, lost time, social slip, or Minor Hazard (3 Flat Dmg).<br />
-                • <strong>11–20 (Major Complication):</strong> Tool/weapon breaks (destroys 1 item slot), enemy ambush, or Major Hazard (6 Flat Dmg + Prone).
+                • <strong>11–20 (Major Complication):</strong> Tool/weapon breaks (destroys 1 active item slot), enemy ambush, or Major Hazard (6 Flat Dmg + Prone).
             </div>
 
             <div class="notes-box">
