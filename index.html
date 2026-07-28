@@ -323,6 +323,10 @@
             line-height: 12px;
         }
 
+        .genre-table th:nth-child(1), .genre-table td:nth-child(1) { width: 25%; }
+        .genre-table th:nth-child(2), .genre-table td:nth-child(2) { width: 38%; }
+        .genre-table th:nth-child(3), .genre-table td:nth-child(3) { width: 37%; }
+
         @media print {
             body {
                 background-color: #fff;
@@ -874,67 +878,256 @@
 
             <p style="margin-bottom: 2px; font-size: 8.5px;">Easy Play D20 adapts instantly using active setting flavoring. All mechanics rely on static flat damage, uniform baseline thresholds, and abstract <strong>Loot Tags</strong> rather than complex currency math.</p>
 
-            <div class="two-column">
-                <!-- LEFT COLUMN: SECTIONS 1, 2, AND 3 -->
-                <div class="column-box">
-                    <h2>1. ACTIVE WEALTH & LOOT ECONOMY</h2>
-                    <p>Current Setting: <strong style="color: var(--accent-color);" id="genreNameText">Universal Standard</strong></p>
-                    <ul style="font-size: 7.6px;">
-                        <li><strong>Minor Loot Tags (Spending Money):</strong> <span id="minorLootText">Standard Coins, Common Bounties, Scavenged Cash</span>. <em>Uses:</em> 1 Minor Tag/player = Sanctuary Rest (100% reset); 1 Tag = Restock 1 consumable, buy basic gear, or low-level bribe.</li>
-                        <li><strong>Major Loot Tags (Special Assets / Relics):</strong> <span id="majorLootText">Rare Artifacts, Corporate Data, Boss Trophies</span>. <em>Uses:</em> Traded directly for primary weapons/armor, legendary gear, vehicle repairs, or major faction leverage.</li>
-                    </ul>
+            <!-- NONE (ORIGINAL MULTI-GENRE) VIEW -->
+            <div id="page6-none" style="display: block;">
+                <div class="two-column">
+                    <div class="column-box">
+                        <h2>1. WEALTH, LOOT and NARRATIVE ECONOMY</h2>
+                        <p>Wealth is tracked using abstract <strong>Loot Tags</strong> divided into two categories:</p>
+                        <ul style="font-size: 7.6px;">
+                            <li><strong>Minor Loot Tags (Currency / Spending Money):</strong> Standard liquid wealth (coins, cred-sticks, scavenged cash). <em>Uses:</em> <strong>1 Minor Tag/player</strong> = Sanctuary Rest (100% reset); <strong>1 Minor Tag</strong> = Restock 1 consumable, buy basic gear, or pay low-level bribes.</li>
+                            <li><strong>Major Loot Tags (Special Assets / Rare Relics):</strong> Unique, highly valuable items (rare gems, dragon scales, ancient artifacts, prototype tech). <em>Uses:</em> Traded directly for primary weapons/armor, legendary gear, vehicle repairs, or major faction leverage.</li>
+                        </ul>
+                        
+                        <table class="genre-table" style="font-size: 6.8px; margin-top: 1px; margin-bottom: 2px;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 1px 2px;">Genre</th>
+                                    <th style="padding: 1px 2px;">Minor Loot Tag Example</th>
+                                    <th style="padding: 1px 2px;">Major Loot Tag Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Fantasy</strong></td>
+                                    <td style="padding: 1px 2px;">Pouch of Silver, Bandit Bounty</td>
+                                    <td style="padding: 1px 2px;">Dragon Scale, Ancient Relic</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Cyberpunk</strong></td>
+                                    <td style="padding: 1px 2px;">Cred-Stick, Black Market Cash</td>
+                                    <td style="padding: 1px 2px;">AI Core Chip, Prototype Cyberware</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Sci-Fi</strong></td>
+                                    <td style="padding: 1px 2px;">Fuel Credits, Cargo Pass</td>
+                                    <td style="padding: 1px 2px;">Alien Artifact, Pure Plasma Gem</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Post-Apoc</strong></td>
+                                    <td style="padding: 1px 2px;">Bottlecap Pouch, Unspent Ammo</td>
+                                    <td style="padding: 1px 2px;">Intact Pre-War Engine, Water Filter</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Steampunk</strong></td>
+                                    <td style="padding: 1px 2px;">Brass Sovereign Coins, Aether Token</td>
+                                    <td style="padding: 1px 2px;">Clockwork Core, Flawless Diamond</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Space West</strong></td>
+                                    <td style="padding: 1px 2px;">Bounty Dollars, Saloon Poker Chips</td>
+                                    <td style="padding: 1px 2px;">Stolen Hyper-Drive, Alien Skull Relic</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <h2>2. ADAPTING THE THRESHOLD</h2>
-                    <p>The Guide can adjust the baseline threshold of 14 to set campaign tone:</p>
-                    <ul>
-                        <li><strong>Super-Heroic (Target 12):</strong> Easy success without spending RP. High action.</li>
-                        <li><strong>Survival Horror (Target 16):</strong> High failure rate. Forces players to burn RP constantly.</li>
-                    </ul>
+                        <h2>2. ADAPTING THE THRESHOLD</h2>
+                        <p>The Guide can adjust the baseline threshold of 14 to set campaign tone:</p>
+                        <ul>
+                            <li><strong>Super-Heroic (Target 12):</strong> Easy success without spending RP. High action.</li>
+                            <li><strong>Survival Horror (Target 16):</strong> High failure rate. Forces players to burn RP constantly.</li>
+                        </ul>
 
-                    <h2>3. SETTING ARMORY RESKINS</h2>
-                    <p>Gear examples reskinned for <strong id="armoryGenreText">Universal Standard</strong>:</p>
-                    <ul style="font-size: 7.3px;" id="armoryExampleList">
-                        <!-- Populated by JS -->
-                    </ul>
+                        <h2>3. SETTING ARMORY RESKINS</h2>
+                        <p>Gear names automatically reskinned for Universal Rules:</p>
+                        <ul style="font-size: 7.5px;">
+                            <li><strong>Unarmored (+1 Pace):</strong> Civilian clothes (Fantasy), flight suit (Sci-Fi).</li>
+                            <li><strong>Light Armor (+1 Evade):</strong> Leather jerkin (Fantasy), Kevlar vest (Modern).</li>
+                            <li><strong>Medium Armor (+2 Evade):</strong> Chainmail (Fantasy), combat weave (Cyberpunk).</li>
+                            <li><strong>Heavy Armor (+3 Evade):</strong> Plate mail (Fantasy), Exosuit (Sci-Fi).</li>
+                            <li><strong>Shield (Guard):</strong> Wooden shield (Fantasy), riot shield (Modern).</li>
+                            <li><strong>Light Melee (3 Dmg):</strong> Dagger (Fantasy), vibro-blade (Cyberpunk).</li>
+                            <li><strong>Heavy Melee (4 Dmg):</strong> Greataxe (Fantasy), power sword (Sci-Fi).</li>
+                            <li><strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Bow (Fantasy), plasma rifle (Sci-Fi).</li>
+                        </ul>
+                    </div>
 
-                    <h2 id="magicTitleText">5. MAGIC, PSIONICS AND SPECIAL POWERS</h2>
-                    <p id="magicDescText">Spells and powers use standard class features and weapon math dressed in setting flavor:</p>
-                    <ul style="font-size: 7.3px;" id="magicExampleList">
-                        <!-- Populated by JS -->
-                    </ul>
+                    <div class="column-box">
+                        <h2>4. CONSUMABLE & UTILITY LOOT</h2>
+                        <p>Using any consumable costs <strong>1 Action Phase</strong>. Roll 1d20 for random loot drops:</p>
+
+                        <table style="font-size: 6.8px; margin-top: 1px; margin-bottom: 2px;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 0px 2px;">d20 Roll</th>
+                                    <th style="padding: 0px 2px;">Fantasy</th>
+                                    <th style="padding: 0px 2px;">Sci-Fi / Cyber</th>
+                                    <th style="padding: 0px 2px;">Post-Apoc</th>
+                                    <th style="padding: 0px 2px;">Mechanical Effect</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>1–2</strong></td>
+                                    <td style="padding: 0px 2px;">Healing Salve</td>
+                                    <td style="padding: 0px 2px;">Hypo-Med</td>
+                                    <td style="padding: 0px 2px;">Bandages</td>
+                                    <td style="padding: 0px 2px;">Restores 5 HP OR clears 1 Condition.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>3–4</strong></td>
+                                    <td style="padding: 0px 2px;">Focus Elixir</td>
+                                    <td style="padding: 0px 2px;">Neural Stim</td>
+                                    <td style="padding: 0px 2px;">Chems/Pills</td>
+                                    <td style="padding: 0px 2px;">Regains 1 Force, Reflex, or RP pool point.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>5–6</strong></td>
+                                    <td style="padding: 0px 2px;">Fire Oil</td>
+                                    <td style="padding: 0px 2px;">Overcharge Cell</td>
+                                    <td style="padding: 0px 2px;">Hollow-Point</td>
+                                    <td style="padding: 0px 2px;">+2 Flat Damage on next successful hit.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>7–8</strong></td>
+                                    <td style="padding: 0px 2px;">Flash Powder</td>
+                                    <td style="padding: 0px 2px;">EMP Grenade</td>
+                                    <td style="padding: 0px 2px;">Pipe Bomb</td>
+                                    <td style="padding: 0px 2px;">Throw 3 Paces: Target Agility vs 14 or Dazed.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>9–10</strong></td>
+                                    <td style="padding: 0px 2px;">Smoke Vial</td>
+                                    <td style="padding: 0px 2px;">Holo-Screen</td>
+                                    <td style="padding: 0px 2px;">Smoke Canister</td>
+                                    <td style="padding: 0px 2px;">Creates 1-Pace cloud for Concealment.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>11–12</strong></td>
+                                    <td style="padding: 0px 2px;">Skeleton Key</td>
+                                    <td style="padding: 0px 2px;">Bypass Chip</td>
+                                    <td style="padding: 0px 2px;">Pry-Bar</td>
+                                    <td style="padding: 0px 2px;">Advantage on 1 lock, hack, or forced entry.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>13–14</strong></td>
+                                    <td style="padding: 0px 2px;">Grapple Hook</td>
+                                    <td style="padding: 0px 2px;">Grapnel Gun</td>
+                                    <td style="padding: 0px 2px;">Rope Launcher</td>
+                                    <td style="padding: 0px 2px;">Ignores vertical move cost up to 4 Paces.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>15–16</strong></td>
+                                    <td style="padding: 0px 2px;">True-Strike Dust</td>
+                                    <td style="padding: 0px 2px;">Targeting Link</td>
+                                    <td style="padding: 0px 2px;">Tracer Rounds</td>
+                                    <td style="padding: 0px 2px;">Next attack completely ignores target cover.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>17–18</strong></td>
+                                    <td style="padding: 0px 2px;">Shield Patch</td>
+                                    <td style="padding: 0px 2px;">Hard-Light Rig</td>
+                                    <td style="padding: 0px 2px;">Scrap Plate</td>
+                                    <td style="padding: 0px 2px;">+2 Evade vs next 1 incoming attack.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>19–20</strong></td>
+                                    <td style="padding: 0px 2px;">Hunter's Tag</td>
+                                    <td style="padding: 0px 2px;">Tracker Dart</td>
+                                    <td style="padding: 0px 2px;">Paint Marking</td>
+                                    <td style="padding: 0px 2px;">All party attacks vs marked target gain Advantage.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>5. MAGIC, PSIONICS and CYBERWARE</h2>
+                        <p>Spells/cybernetics use standard class features & weapon math in setting flavor:</p>
+                        <ul>
+                            <li><strong>Spells as Weapons:</strong> Ranged (8 Paces) = Firebolt. Heavy Melee (1 Pace) = Telekinetic crush.</li>
+                            <li><strong>Abilities as Magic:</strong> <em>Concussive Blow</em> = shockwave spell. <em>Structural Weakness</em> = acid vial.</li>
+                        </ul>
+
+                        <h2>6. VEHICLES, MOUNTS AND CHASES</h2>
+                        <p style="font-size: 8px;"><strong>Mounted & Vehicle Vitals:</strong></p>
+                        <ul style="font-size: 7.3px;">
+                            <li><strong>Light Mount / Hover-Bike (15 HP):</strong> Speed 5 Paces. Driver gains <strong>+2 Evade</strong>.</li>
+                            <li><strong>Heavy Truck / War Wagon (35 HP):</strong> Speed 4 Paces. Occupants gain <strong>Full Cover</strong> (+Advantage on Evasion).</li>
+                            <li><strong>Ram / Board:</strong> Driver check vs 14 deals <strong>6 Flat Dmg (Major Hazard)</strong> to both vehicles, or forces enemy Agility check vs 14 or Crash.</li>
+                        </ul>
+                        <p style="font-size: 8px; margin-top: 2px;"><strong>The Chase Engine (Separation Paces 1 to 5):</strong></p>
+                        <ul style="font-size: 7.3px;">
+                            <li><strong>Driver Action (Gain Ground):</strong> Pass Agility/Might vs 14 to shift separation track by 1 Pace (1 = Bumper-to-Bumper, 5 = Escaped).</li>
+                            <li><strong>Passenger Actions:</strong> Shoot (Ranged vs 14), board adjacent vehicle (at 1 Pace), or sabotage components.</li>
+                            <li><strong>Crash (0 HP or Failed Obstacle):</strong> Driver fails check vs 14 = Major Hazard (6 Dmg). Vehicle at 0 HP flips = Lethal Hazard (10 Dmg) & Prone.</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
 
-                <!-- RIGHT COLUMN: SECTIONS 4 AND 6 -->
-                <div class="column-box">
-                    <h2>4. CONSUMABLE & UTILITY LOOT (<span id="lootGenreText">Universal Standard</span>)</h2>
-                    <p>Using any consumable costs <strong>1 Action Phase</strong>. Roll 1d20 for loot drops:</p>
+            <!-- DYNAMIC SINGLE-GENRE VIEW -->
+            <div id="page6-dynamic" style="display: none;">
+                <div class="two-column">
+                    <!-- LEFT COLUMN: SECTIONS 1, 2, AND 3 -->
+                    <div class="column-box">
+                        <h2>1. ACTIVE WEALTH & LOOT ECONOMY</h2>
+                        <p>Current Setting: <strong style="color: var(--accent-color);" data-key="genre_name">Fantasy</strong></p>
+                        <ul style="font-size: 7.6px;">
+                            <li><strong>Minor Loot Tags (Spending Money):</strong> <span data-key="minor_loot_ex">Pouch of Silver, Bandit Bounty</span>. <em>Uses:</em> 1 Minor Tag/player = Sanctuary Rest (100% reset); 1 Tag = Restock 1 consumable, buy basic gear, or low-level bribe.</li>
+                            <li><strong>Major Loot Tags (Special Assets / Relics):</strong> <span data-key="major_loot_ex">Dragon Scale, Ancient Relic</span>. <em>Uses:</em> Traded directly for primary weapons/armor, legendary gear, vehicle repairs, or major faction leverage.</li>
+                        </ul>
 
-                    <table style="font-size: 6.8px; margin-top: 1px; margin-bottom: 2px;">
-                        <thead>
-                            <tr>
-                                <th style="padding: 1px 2px; width: 18%;">d20 Roll</th>
-                                <th style="padding: 1px 2px; width: 32%;">Item Drop</th>
-                                <th style="padding: 1px 2px; width: 50%;">Mechanical Effect</th>
-                            </tr>
-                        </thead>
-                        <tbody id="dynamicLootBody">
+                        <h2>2. ADAPTING THE THRESHOLD</h2>
+                        <p>The Guide can adjust the baseline threshold of 14 to set campaign tone:</p>
+                        <ul>
+                            <li><strong>Super-Heroic (Target 12):</strong> Easy success without spending RP. High action.</li>
+                            <li><strong>Survival Horror (Target 16):</strong> High failure rate. Forces players to burn RP constantly.</li>
+                        </ul>
+
+                        <h2>3. SETTING ARMORY RESKINS</h2>
+                        <p>Gear examples reskinned for <strong data-key="genre_name">Fantasy</strong>:</p>
+                        <ul style="font-size: 7.3px;" id="armoryExampleList">
                             <!-- Populated by JS -->
-                        </tbody>
-                    </table>
+                        </ul>
 
-                    <h2>6. VEHICLES, MOUNTS AND CHASES</h2>
-                    <p style="font-size: 8px;"><strong>Mounted & Vehicle Vitals:</strong></p>
-                    <ul style="font-size: 7.3px;">
-                        <li><strong>Light Mount / Hover-Bike (15 HP):</strong> Speed 5 Paces. Driver gains <strong>+2 Evade</strong>.</li>
-                        <li><strong>Heavy Truck / War Wagon (35 HP):</strong> Speed 4 Paces. Occupants gain <strong>Full Cover</strong> (+Advantage on Evasion).</li>
-                        <li><strong>Ram / Board:</strong> Driver check vs 14 deals <strong>6 Flat Dmg (Major Hazard)</strong> to both vehicles, or forces enemy Agility check vs 14 or Crash.</li>
-                    </ul>
-                    <p style="font-size: 8px; margin-top: 2px;"><strong>The Chase Engine (Separation Paces 1 to 5):</strong></p>
-                    <ul style="font-size: 7.3px;">
-                        <li><strong>Driver Action (Gain Ground):</strong> Pass Agility/Might vs 14 to shift separation track by 1 Pace (1 = Bumper-to-Bumper, 5 = Escaped).</li>
-                        <li><strong>Passenger Actions:</strong> Shoot (Ranged vs 14), board adjacent vehicle (at 1 Pace), or sabotage components.</li>
-                        <li><strong>Crash (0 HP or Failed Obstacle):</strong> Driver fails check vs 14 = Major Hazard (6 Dmg). Vehicle at 0 HP flips = Lethal Hazard (10 Dmg) & Prone.</li>
-                    </ul>
+                        <h2 data-key="magic_title">5. MAGIC, PSIONICS AND SPECIAL POWERS</h2>
+                        <p data-key="magic_desc">Spells and powers use standard class features and weapon math dressed in setting flavor:</p>
+                        <ul style="font-size: 7.3px;" id="magicExampleList">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+
+                    <!-- RIGHT COLUMN: SECTIONS 4 AND 6 -->
+                    <div class="column-box">
+                        <h2>4. CONSUMABLE & UTILITY LOOT (<span data-key="genre_name">Fantasy</span>)</h2>
+                        <p>Using any consumable costs <strong>1 Action Phase</strong>. Roll 1d20 for loot drops:</p>
+
+                        <table style="font-size: 6.8px; margin-top: 1px; margin-bottom: 2px;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 1px 2px; width: 18%;">d20 Roll</th>
+                                    <th style="padding: 1px 2px; width: 32%;">Item Drop</th>
+                                    <th style="padding: 1px 2px; width: 50%;">Mechanical Effect</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dynamicLootBody">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+
+                        <h2>6. VEHICLES, MOUNTS AND CHASES</h2>
+                        <p style="font-size: 8px;"><strong>Mounted & Vehicle Vitals:</strong></p>
+                        <ul style="font-size: 7.3px;">
+                            <li><strong>Light Mount / Hover-Bike (15 HP):</strong> Speed 5 Paces. Driver gains <strong>+2 Evade</strong>.</li>
+                            <li><strong>Heavy Truck / War Wagon (35 HP):</strong> Speed 4 Paces. Occupants gain <strong>Full Cover</strong> (+Advantage on Evasion).</li>
+                            <li><strong>Ram / Board:</strong> Driver check vs 14 deals <strong>6 Flat Dmg (Major Hazard)</strong> to both vehicles, or forces enemy Agility check vs 14 or Crash.</li>
+                        </ul>
+                        <p style="font-size: 8px; margin-top: 2px;"><strong>The Chase Engine (Separation Paces 1 to 5):</strong></p>
+                        <ul style="font-size: 7.3px;">
+                            <li><strong>Driver Action (Gain Ground):</strong> Pass Agility/Might vs 14 to shift separation track by 1 Pace (1 = Bumper-to-Bumper, 5 = Escaped).</li>
+                            <li><strong>Passenger Actions:</strong> Shoot (Ranged vs 14), board adjacent vehicle (at 1 Pace), or sabotage components.</li>
+                            <li><strong>Crash (0 HP or Failed Obstacle):</strong> Driver fails check vs 14 = Major Hazard (6 Dmg). Vehicle at 0 HP flips = Lethal Hazard (10 Dmg) & Prone.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -953,10 +1146,6 @@
         const GENRE_DATA = {
             none: {
                 genre_name: "Universal Standard",
-                minor_ex: "Standard Coins, Common Bounties, Scavenged Cash",
-                major_ex: "Rare Artifacts, Corporate Data, Boss Trophies",
-                magic_title: "5. MAGIC, PSIONICS AND SPECIAL POWERS",
-                magic_desc: "Spells and powers use standard class features and weapon math dressed in setting flavor:",
                 
                 arm_unarmored_lb: "Unarmored",
                 arm_light_lb: "Light Armor",
@@ -1012,39 +1201,12 @@
                 mob3: "3. Disruptor",
                 mob4: "4. Protector",
                 mob5: "5. Commander",
-                mob6: "6. Swarmer",
-
-                armory: [
-                    "<strong>Unarmored (+1 Pace):</strong> Civilian Clothing / Jumpsuit",
-                    "<strong>Light Armor (+1 Evade):</strong> Light Vest / Leather Armor",
-                    "<strong>Medium Armor (+2 Evade):</strong> Heavy Jacket / Chainmail",
-                    "<strong>Heavy Armor (+3 Evade):</strong> Plate Mail / Combat Exo-Suit",
-                    "<strong>Shield (Guard):</strong> Shield / Riot Guard",
-                    "<strong>Light Melee (3 Dmg):</strong> Short Blade / Vibro-Cutter",
-                    "<strong>Heavy Melee (4 Dmg):</strong> Greatsword / Sledgehammer",
-                    "<strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Bow / Rifle / Blaster"
-                ],
-                magic: [
-                    "<strong>Spells/Powers as Weapons:</strong> Ranged Weapon (8 Paces) = Firebolt / Plasma Beam. Heavy Melee = Kinetic Crush.",
-                    "<strong>Abilities as Magic:</strong> <em>Concussive Blow</em> = Shockwave. <em>Structural Weakness</em> = Corrosive Spray."
-                ],
-                loot: [
-                    { roll: "1–2", item: "Healing Potion / Med-Kit", effect: "Restores 5 HP OR clears 1 Condition." },
-                    { roll: "3–4", item: "Focus Elixir / Stim Patch", effect: "Regains 1 Force, Reflex, or RP pool point." },
-                    { roll: "5–6", item: "Fire Oil / Ammo Amp", effect: "+2 Flat Damage on next successful hit." },
-                    { roll: "7–8", item: "Flash Powder / EMP Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
-                    { roll: "9–10", item: "Smoke Vial / Holo-Screen", effect: "Creates 1-Pace cloud for Concealment." },
-                    { roll: "11–12", item: "Skeleton Key / Bypass Chip", effect: "Advantage on 1 lock picking or forced door check." },
-                    { roll: "13–14", item: "Grapple Hook / Grapnel Gun", effect: "Ignores vertical move cost up to 4 Paces." },
-                    { roll: "15–16", item: "True-Strike Dust / Targeting Link", effect: "Next attack completely ignores target cover." },
-                    { roll: "17–18", item: "Shield Patch / Scrap Plate", effect: "+2 Evade vs next 1 incoming attack." },
-                    { roll: "19–20", item: "Hunter's Tag / Tracker Dart", effect: "All party attacks vs marked target gain Advantage." }
-                ]
+                mob6: "6. Swarmer"
             },
             fantasy: {
                 genre_name: "Fantasy",
-                minor_ex: "Pouch of Silver, Bandit Bounty",
-                major_ex: "Dragon Scale, Ancient Relic",
+                minor_loot_ex: "Pouch of Silver, Bandit Bounty",
+                major_loot_ex: "Dragon Scale, Ancient Relic",
                 magic_title: "5. MAGIC, CANTRIPS AND INCANTATIONS",
                 magic_desc: "Spells and prayers use standard class features & weapon math dressed in arcana:",
 
@@ -1133,8 +1295,8 @@
             },
             cyberpunk: {
                 genre_name: "Cyberpunk",
-                minor_ex: "Cred-Stick, Black Market Cash",
-                major_ex: "AI Core Chip, Prototype Cyberware",
+                minor_loot_ex: "Cred-Stick, Black Market Cash",
+                major_loot_ex: "AI Core Chip, Prototype Cyberware",
                 magic_title: "5. CYBERWARE, DAEMONS AND QUICKHACKS",
                 magic_desc: "Cyberware programs and quickhacks use standard weapon/ability math in chrome flavor:",
 
@@ -1223,8 +1385,8 @@
             },
             scifi: {
                 genre_name: "Sci-Fi",
-                minor_ex: "Fuel Credits, Cargo Pass",
-                major_ex: "Alien Artifact, Pure Plasma Gem",
+                minor_loot_ex: "Fuel Credits, Cargo Pass",
+                major_loot_ex: "Alien Artifact, Pure Plasma Gem",
                 magic_title: "5. PSIONICS, BIOTICS AND TECH POWERS",
                 magic_desc: "Psionic faculties and biotic amps use standard combat math in high-tech flavor:",
 
@@ -1313,8 +1475,8 @@
             },
             postapoc: {
                 genre_name: "Post-Apoc",
-                minor_ex: "Bottlecap Pouch, Unspent Ammo",
-                major_ex: "Intact Pre-War Engine, Water Filter",
+                minor_loot_ex: "Bottlecap Pouch, Unspent Ammo",
+                major_loot_ex: "Intact Pre-War Engine, Water Filter",
                 magic_title: "5. MUTATIONS, CHEMICALS AND PRE-WAR TECH",
                 magic_desc: "Mutant strains and scavenged tech function as abilities with wasteland flair:",
 
@@ -1403,8 +1565,8 @@
             },
             steampunk: {
                 genre_name: "Steampunk",
-                minor_ex: "Brass Sovereign Coins, Aether Token",
-                major_ex: "Clockwork Core, Flawless Diamond",
+                minor_loot_ex: "Brass Sovereign Coins, Aether Token",
+                major_loot_ex: "Clockwork Core, Flawless Diamond",
                 magic_title: "5. ALCHEMY, STEAM DEVICES AND AETHER TECH",
                 magic_desc: "Aetherial contraptions and alchemy use standard math with Victorian steam flair:",
 
@@ -1493,8 +1655,8 @@
             },
             spacewest: {
                 genre_name: "Space West",
-                minor_ex: "Bounty Dollars, Saloon Poker Chips",
-                major_ex: "Stolen Hyper-Drive, Alien Skull Relic",
+                minor_loot_ex: "Bounty Dollars, Saloon Poker Chips",
+                major_loot_ex: "Stolen Hyper-Drive, Alien Skull Relic",
                 magic_title: "5. FRONTLINE TECH, DYNAMITE & ALIEN RELICS",
                 magic_desc: "Alien gadgets and frontier explosives use standard combat rules with dust-and-laser flavor:",
 
@@ -1586,40 +1748,43 @@
         // Switch Genre function
         function switchGenre(genreKey) {
             const data = GENRE_DATA[genreKey] || GENRE_DATA.none;
+
+            // Handle Page 6 Views (Show original multi-table if none, otherwise show dynamic)
+            if (genreKey === 'none') {
+                document.getElementById('page6-none').style.display = 'block';
+                document.getElementById('page6-dynamic').style.display = 'none';
+            } else {
+                document.getElementById('page6-none').style.display = 'none';
+                document.getElementById('page6-dynamic').style.display = 'block';
+
+                // Populate Dynamic Page 6
+                const armoryList = document.getElementById('armoryExampleList');
+                if (armoryList && data.armory) armoryList.innerHTML = data.armory.map(ex => `<li>${ex}</li>`).join('');
+
+                const magicList = document.getElementById('magicExampleList');
+                if (magicList && data.magic) magicList.innerHTML = data.magic.map(ex => `<li>${ex}</li>`).join('');
+
+                const lootBody = document.getElementById('dynamicLootBody');
+                if (lootBody && data.loot) {
+                    lootBody.innerHTML = data.loot.map(row => `
+                        <tr>
+                            <td style="padding: 1px 2px;"><strong>${row.roll}</strong></td>
+                            <td style="padding: 1px 2px; font-weight: bold; color: #2b5b84;">${row.item}</td>
+                            <td style="padding: 1px 2px;">${row.effect}</td>
+                        </tr>
+                    `).join('');
+                }
+            }
             
-            // Text keys dynamically update anywhere on the page
+            // Text keys dynamically update anywhere on the page (Pages 1-5)
             Object.keys(data).forEach(key => {
                 if (key !== 'armory' && key !== 'magic' && key !== 'loot') {
                     const elements = document.querySelectorAll(`[data-key="${key}"]`);
                     elements.forEach(el => {
-                        el.textContent = data[key];
+                        el.innerHTML = data[key];
                     });
                 }
             });
-
-            // Update Page 6 Armory list
-            const armoryList = document.getElementById('armoryExampleList');
-            if (armoryList && data.armory) {
-                armoryList.innerHTML = data.armory.map(ex => `<li>${ex}</li>`).join('');
-            }
-
-            // Update Page 6 Magic list
-            const magicList = document.getElementById('magicExampleList');
-            if (magicList && data.magic) {
-                magicList.innerHTML = data.magic.map(ex => `<li>${ex}</li>`).join('');
-            }
-
-            // Update Page 6 Loot Table
-            const lootBody = document.getElementById('dynamicLootBody');
-            if (lootBody && data.loot) {
-                lootBody.innerHTML = data.loot.map(row => `
-                    <tr>
-                        <td style="padding: 1px 2px;"><strong>${row.roll}</strong></td>
-                        <td style="padding: 1px 2px; font-weight: bold; color: #2b5b84;">${row.item}</td>
-                        <td style="padding: 1px 2px;">${row.effect}</td>
-                    </tr>
-                `).join('');
-            }
 
             saveSheet();
         }
