@@ -24,6 +24,11 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
         body {
             background-color: var(--bg-color);
             margin: 0;
@@ -38,13 +43,16 @@
 
         /* TOOLBAR STYLES */
         .toolbar {
-            width: 8.5in;
+            width: 100%;
+            max-width: 8.5in;
             background-color: #2b5b84;
             color: #fff;
             padding: 10px 15px;
             margin-bottom: 15px;
             border-radius: 4px;
             display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -58,6 +66,7 @@
 
         .toolbar-buttons {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: 8px;
         }
@@ -107,14 +116,14 @@
 
         /* PAGE STYLES */
         .page {
-            width: 8.5in;
-            height: 11in;
+            width: 100%;
+            max-width: 8.5in;
+            min-height: 11in;
             background-color: var(--page-color);
             padding: 0.38in 0.4in 0.48in 0.4in;
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             position: relative;
-            overflow: hidden;
             display: flex;
             flex-direction: column;
         }
@@ -123,6 +132,7 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            width: 100%;
         }
 
         h1 {
@@ -232,6 +242,7 @@
             padding: 2px 4px;
             outline: none;
             min-height: 18px;
+            max-width: 100%;
         }
 
         input[type="text"]:focus, input[type="number"]:focus {
@@ -306,7 +317,7 @@
             width: 100%;
             box-sizing: border-box;
             flex: 1 1 auto;
-            min-height: 40px;
+            min-height: 50px;
             display: flex;
             flex-direction: column;
         }
@@ -327,6 +338,36 @@
         .genre-table th:nth-child(2), .genre-table td:nth-child(2) { width: 38%; }
         .genre-table th:nth-child(3), .genre-table td:nth-child(3) { width: 37%; }
 
+        /* RESPONSIVE BREAKPOINT FOR PHONES / TABLETS */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 6px;
+            }
+            .page {
+                padding: 12px;
+                min-height: auto;
+            }
+            .two-column, .sheet-grid-3, .sheet-grid {
+                grid-template-columns: 1fr;
+            }
+            .inv-slot {
+                flex-wrap: wrap;
+            }
+            .toolbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .toolbar-buttons {
+                justify-content: flex-start;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        /* PRINT STYLES */
         @media print {
             body {
                 background-color: #fff;
@@ -342,6 +383,7 @@
                 height: 10.2in;
                 width: 7.7in;
                 padding: 0;
+                overflow: hidden;
             }
             .page-num {
                 bottom: 0;
