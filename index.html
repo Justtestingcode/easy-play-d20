@@ -38,7 +38,7 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.32;
+            line-height: 1.35;
         }
 
         /* TOOLBAR STYLES */
@@ -120,7 +120,7 @@
             max-width: 8.5in;
             height: 11in;
             background-color: var(--page-color);
-            padding: 0.35in 0.4in 0.45in 0.4in;
+            padding: 0.35in 0.4in 0.42in 0.4in;
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             position: relative;
@@ -140,7 +140,7 @@
 
         h1 {
             text-align: center;
-            font-size: 17px;
+            font-size: 17.5px;
             color: var(--accent-color);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -151,16 +151,16 @@
         }
 
         h2 {
-            font-size: 11px;
+            font-size: 11.5px;
             color: var(--accent-color);
             text-transform: uppercase;
             margin-top: 5px;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 9.8px;
+            font-size: 10.2px;
             color: #2b5b84;
             margin-top: 4px;
             margin-bottom: 2px;
@@ -168,7 +168,7 @@
         }
 
         p, li, div, td, th {
-            font-size: 8.9px;
+            font-size: 9.2px;
         }
 
         p, li {
@@ -179,7 +179,7 @@
         ul {
             padding-left: 13px;
             margin-top: 1px;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         table {
@@ -191,7 +191,7 @@
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 2px 4px;
+            padding: 2.5px 4px;
             text-align: left;
         }
 
@@ -213,13 +213,13 @@
         .sheet-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5px;
+            gap: 6px;
         }
 
         .sheet-grid-3 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 5px;
+            gap: 6px;
         }
 
         .two-column {
@@ -239,7 +239,7 @@
             border-bottom: 1.5px solid #000;
             background: transparent;
             font-family: inherit;
-            font-size: 9.5px;
+            font-size: 9.8px;
             font-weight: bold;
             color: #000;
             padding: 1px 3px;
@@ -275,7 +275,7 @@
             border: none;
             background: transparent;
             font-family: 'Georgia', serif;
-            font-size: 9.5px;
+            font-size: 9.6px;
             line-height: 18px;
             resize: none;
             outline: none;
@@ -301,7 +301,7 @@
             margin-top: 2px;
             margin-bottom: 3px;
             font-style: italic;
-            font-size: 8.4px;
+            font-size: 8.6px;
         }
 
         .notes-box {
@@ -321,14 +321,14 @@
             width: 100%;
             box-sizing: border-box;
             flex: 1 1 auto;
-            min-height: 60px;
+            min-height: 50px;
             display: flex;
             flex-direction: column;
         }
 
         .notes-title {
             font-weight: bold;
-            font-size: 8.2px;
+            font-size: 8.5px;
             color: #333;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -444,15 +444,15 @@
                     <label style="display: block;"><input type="checkbox" id="armorShield" /> <span data-key="arm_shield_lb">Shield</span> (-1 Pace Speed; Guard = Action & Move; Req 1 Hand)</label>
                 </div>
                 <div class="box" style="padding: 6px; line-height: 1.5;">
-                    <strong style="font-size: 9.5px; color: var(--accent-color);">DERIVED VITAL STATS & DEFENSE</strong><br />
+                    <strong style="font-size: 9.8px; color: var(--accent-color);">DERIVED VITAL STATS & DEFENSE</strong><br />
                     <strong>Max HP: [ <input type="text" id="maxHP" class="center-input" style="width: 40px;" /> ]</strong> (20 + Might Mod) | <strong>Current HP: [ <input type="text" id="currHP" class="center-input" style="width: 55px;" /> ]</strong><br />
                     <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 3px 0;" />
                     Primary Weapon: <input type="text" id="weapName" style="width: 120px;" /> | Range: [ <input type="text" id="weapRange" class="center-input" style="width: 35px;" /> ] Paces<br />
                     Base Dmg (Melee): [ <input type="text" id="weapBase" class="center-input" style="width: 30px;" /> ] | Base Dmg (Ranged): [ <input type="text" id="weapBaseRanged" class="center-input" style="width: 30px;" /> ] + Attr Mod: +[ <input type="text" id="weapAttrMod" class="center-input" style="width: 30px;" /> ]<br />
-                    <strong style="font-size: 9.5px;">TOTAL FLAT DAMAGE: [ <input type="text" id="totalFlatDmg" class="center-input" style="width: 45px;" /> ]</strong><br />
+                    <strong style="font-size: 9.8px;">TOTAL FLAT DAMAGE: [ <input type="text" id="totalFlatDmg" class="center-input" style="width: 45px;" /> ]</strong><br />
                     <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 3px 0;" />
-                    <strong style="font-size: 9.2px;">EVADE MOD: [ <input type="text" id="totalEvade" class="center-input" style="width: 40px;" /> ]</strong> <span style="font-size: 8px;">(Roll 1d20 + Evade vs 14)</span><br />
-                    <strong style="font-size: 9.2px;">SPEED MOD: [ <input type="text" id="totalSpeed" class="center-input" style="width: 40px;" /> ] Paces</strong> <span style="font-size: 8px;">(Base 3 + Armor, Min 1)</span>
+                    <strong style="font-size: 9.5px;">EVADE MOD: [ <input type="text" id="totalEvade" class="center-input" style="width: 40px;" /> ]</strong> <span style="font-size: 8.5px;">(Roll 1d20 + Evade vs 14)</span><br />
+                    <strong style="font-size: 9.5px;">SPEED MOD: [ <input type="text" id="totalSpeed" class="center-input" style="width: 40px;" /> ] Paces</strong> <span style="font-size: 8.5px;">(Base 3 + Armor, Min 1)</span>
                 </div>
             </div>
 
@@ -504,7 +504,7 @@
                 <div class="column-box">
                     <h2>1. HEROIC GENESIS (CHARACTER CREATION)</h2>
                     <ul>
-                        <li><strong>Background and Drive:</strong> Select a former narrative trade and core personal motivation (see sample tables). These define your narrative contacts and roleplay without modifying combat stats.</li>
+                        <li><strong>Background and Drive:</strong> Select a former narrative trade and core personal motivation from the table below. These define your narrative contacts, personality, and roleplay identity (they provide story depth and never grant combat bonuses or skills).</li>
                         <li><strong>Class Selection:</strong> Choose 1 Combat Archetype from the Playbook Codex to set your tactical abilities.</li>
                         <li><strong>Attributes:</strong> Base score +1 in Might, Agility, Will. Allocate +2 points across these (Absolute Max +4 EVER).</li>
                         <li><strong>Derived Vitals:</strong>
@@ -518,20 +518,13 @@
                         </li>
                     </ul>
 
-                    <h2>UNIVERSAL DRIVES & BACKGROUNDS (NARRATIVE ONLY)</h2>
-                    <table style="font-size: 7.6px; margin-bottom: 2px;">
+                    <h2><span data-key="genre_name">UNIVERSAL</span> DRIVES & BACKGROUNDS (NARRATIVE ONLY)</h2>
+                    <table style="font-size: 8.2px; margin-bottom: 2px;">
                         <thead>
-                            <tr><th>d8</th><th>Universal Drive Choice</th><th>Universal Background Choice</th></tr>
+                            <tr><th style="width: 12%;">d8</th><th style="width: 44%;">Thematic Drive Choice</th><th style="width: 44%;">Thematic Background Choice</th></tr>
                         </thead>
-                        <tbody>
-                            <tr><td><strong>1</strong></td><td>Clear a lingering family debt</td><td>Disgraced Guild Artisan</td></tr>
-                            <tr><td><strong>2</strong></td><td>Hunt down an escaped rival</td><td>Frontier Caravan Guard</td></tr>
-                            <tr><td><strong>3</strong></td><td>Recover a stolen heirloom</td><td>Temple or Archive Scribe</td></tr>
-                            <tr><td><strong>4</strong></td><td>Uncover an elite conspiracy</td><td>Wilderness Scout / Trapper</td></tr>
-                            <tr><td><strong>5</strong></td><td>Earn official royal/faction pardon</td><td>Former Convict / Outlaw</td></tr>
-                            <tr><td><strong>6</strong></td><td>Protect an endangered settlement</td><td>Ship / Void Hauler Sailor</td></tr>
-                            <tr><td><strong>7</strong></td><td>Fulfill a dying mentor's vow</td><td>City Watch / Labor Enforcer</td></tr>
-                            <tr><td><strong>8</strong></td><td>Master a forgotten ancient craft</td><td>Academic / Hedge Scholar</td></tr>
+                        <tbody id="p2DriveBgBody">
+                            <!-- Populated dynamically by JS based on active genre -->
                         </tbody>
                     </table>
 
@@ -588,8 +581,8 @@
             <div class="two-column">
                 <div class="column-box">
                     <h3>5. WEAPONS & FLAT DAMAGE</h3>
-                    <p style="font-size: 8px; margin-bottom: 2px;"><strong>Formula:</strong> Base Dmg + Attr Mod = Total Flat Dmg</p>
-                    <table style="font-size: 8px;">
+                    <p style="font-size: 8.5px; margin-bottom: 2px;"><strong>Formula:</strong> Base Dmg + Attr Mod = Total Flat Dmg</p>
+                    <table style="font-size: 8.5px;">
                         <thead>
                             <tr><th>Weapon Style</th><th>Base</th><th>Range</th><th>Hands</th><th>Attr</th></tr>
                         </thead>
@@ -606,8 +599,8 @@
 
                 <div class="column-box">
                     <h3>6. ARMOR & INVENTORY CAPACITY</h3>
-                    <p style="font-size: 8px; margin-bottom: 2px;"><strong>Active Capacity:</strong> 4 + Might Mod Slots | Over-Encumbered = Disadv</p>
-                    <table style="font-size: 8px;">
+                    <p style="font-size: 8.5px; margin-bottom: 2px;"><strong>Active Capacity:</strong> 4 + Might Mod Slots | Over-Encumbered = Disadv</p>
+                    <table style="font-size: 8.5px;">
                         <thead>
                             <tr><th>Armor Type</th><th>Evade</th><th>Speed</th><th>Requirements / Rules</th></tr>
                         </thead>
@@ -876,19 +869,19 @@
         <div class="content-wrap">
             <h1>APPENDIX: DYNAMIC SETTING ADAPTATION</h1>
 
-            <p style="margin-bottom: 2px; font-size: 8.5px;">Easy Play D20 adapts instantly across themes while keeping core math static.</p>
+            <p style="margin-bottom: 2px; font-size: 8.8px;">Easy Play D20 adapts instantly across themes while keeping core math static.</p>
 
             <!-- NONE (ORIGINAL MULTI-GENRE) VIEW -->
             <div id="page6-none" style="display: block;">
                 <div class="two-column">
                     <div class="column-box">
                         <h2>1. WEALTH, LOOT and NARRATIVE ECONOMY</h2>
-                        <ul style="font-size: 7.4px;">
+                        <ul style="font-size: 7.8px;">
                             <li><strong>Minor Loot Tags (Spending Money):</strong> Standard liquid currency for rests and supplies.</li>
                             <li><strong>Major Loot Tags (Special Assets / Relics):</strong> High-value trade goods for primary gear and favor.</li>
                         </ul>
                         
-                        <table class="genre-table" style="font-size: 6.6px; margin-top: 1px; margin-bottom: 2px;">
+                        <table class="genre-table" style="font-size: 7px; margin-top: 1px; margin-bottom: 2px;">
                             <thead>
                                 <tr>
                                     <th>Genre</th>
@@ -907,7 +900,7 @@
                         </table>
 
                         <h2>2. SETTING ARMORY RESKINS</h2>
-                        <ul style="font-size: 7.2px;">
+                        <ul style="font-size: 7.6px;">
                             <li><strong>Unarmored (+1 Pace):</strong> Civilian clothing / Light Robes.</li>
                             <li><strong>Light Armor (+1 Evade, Disadv Stealth):</strong> Leather Jerkin / Concealed Vest.</li>
                             <li><strong>Medium Armor (+2 Evade, Disadv Stealth):</strong> Chainmail / Ballistic Jacket.</li>
@@ -916,7 +909,7 @@
                         </ul>
 
                         <h2>3. MAGIC, PSIONICS AND SPECIAL POWERS</h2>
-                        <ul style="font-size: 7.2px;">
+                        <ul style="font-size: 7.6px;">
                             <li><strong>Spells as Weapons:</strong> Ranged Weapon (8 Paces) = Firebolt / Laser. Heavy Melee = Kinetic Crush.</li>
                             <li><strong>Abilities as Magic:</strong> <em>Concussive Blow</em> = Shockwave. <em>Structural Weakness</em> = Acid Vial.</li>
                         </ul>
@@ -924,7 +917,7 @@
 
                     <div class="column-box">
                         <h2>4. CONSUMABLE & UTILITY LOOT</h2>
-                        <table style="font-size: 6.6px; margin-top: 1px; margin-bottom: 2px;">
+                        <table style="font-size: 7px; margin-top: 1px; margin-bottom: 2px;">
                             <thead>
                                 <tr>
                                     <th>d20</th>
@@ -943,7 +936,7 @@
                         </table>
 
                         <h2>5. VEHICLES, MOUNTS AND CHASES</h2>
-                        <ul style="font-size: 7.2px;">
+                        <ul style="font-size: 7.6px;">
                             <li><strong>Light Mount / Bike (15 HP):</strong> Speed 5 Paces. Driver gains +2 Evade.</li>
                             <li><strong>Heavy Wagon / Truck (35 HP):</strong> Speed 4 Paces. Occupants gain Full Cover.</li>
                             <li><strong>Chase Engine (Paces 1 to 5):</strong> Driver Agility/Might vs 14 shifts track (1 = Melee, 5 = Escaped).</li>
@@ -958,30 +951,30 @@
                     <div class="column-box">
                         <h2>1. ACTIVE SETTING DRIVES & BACKGROUNDS</h2>
                         <p>Setting: <strong style="color: var(--accent-color);" data-key="genre_name">Fantasy</strong></p>
-                        <table style="font-size: 6.8px; margin-bottom: 3px;">
+                        <table style="font-size: 7.2px; margin-bottom: 3px;">
                             <thead>
-                                <tr><th>d8</th><th>Thematic Drive Choice</th><th>Thematic Background Choice</th></tr>
+                                <tr><th style="width: 12%;">d8</th><th style="width: 44%;">Thematic Drive Choice</th><th style="width: 44%;">Thematic Background Choice</th></tr>
                             </thead>
-                            <tbody id="dynamicDriveBgBody">
+                            <tbody id="p6DriveBgBody">
                                 <!-- Populated by JS -->
                             </tbody>
                         </table>
 
                         <h2>2. SETTING ARMORY RESKINS</h2>
-                        <ul style="font-size: 7.2px;" id="armoryExampleList">
+                        <ul style="font-size: 7.6px;" id="armoryExampleList">
                             <!-- Populated by JS -->
                         </ul>
 
                         <h2 data-key="magic_title">3. MAGIC, PSIONICS AND SPECIAL POWERS</h2>
-                        <p data-key="magic_desc" style="font-size: 7.5px;">Reskinned abilities and spells for this setting:</p>
-                        <ul style="font-size: 7.2px;" id="magicExampleList">
+                        <p data-key="magic_desc" style="font-size: 7.8px;">Reskinned abilities and spells for this setting:</p>
+                        <ul style="font-size: 7.6px;" id="magicExampleList">
                             <!-- Populated by JS -->
                         </ul>
                     </div>
 
                     <div class="column-box">
                         <h2>4. CONSUMABLE & UTILITY LOOT (<span data-key="genre_name">Fantasy</span>)</h2>
-                        <table style="font-size: 6.6px; margin-top: 1px; margin-bottom: 2px;">
+                        <table style="font-size: 7px; margin-top: 1px; margin-bottom: 2px;">
                             <thead>
                                 <tr>
                                     <th style="width: 15%;">d20</th>
@@ -995,7 +988,7 @@
                         </table>
 
                         <h2>5. VEHICLES, MOUNTS AND CHASES</h2>
-                        <ul style="font-size: 7.2px;">
+                        <ul style="font-size: 7.6px;">
                             <li><strong>Light Mount / Hover-Bike (15 HP):</strong> Speed 5 Paces. Driver gains +2 Evade.</li>
                             <li><strong>Heavy Truck / War Wagon (35 HP):</strong> Speed 4 Paces. Occupants gain Full Cover.</li>
                             <li><strong>Ram / Board:</strong> Driver check vs 14 deals 6 Flat Dmg to both vehicles.</li>
@@ -1073,7 +1066,18 @@
                 mob3: "3. Disruptor",
                 mob4: "4. Protector",
                 mob5: "5. Commander",
-                mob6: "6. Swarmer"
+                mob6: "6. Swarmer",
+
+                driveBg: [
+                    { d: "Clear a lingering family debt", b: "Disgraced Guild Artisan" },
+                    { d: "Hunt down an escaped rival", b: "Frontier Caravan Guard" },
+                    { d: "Recover a stolen heirloom", b: "Temple or Archive Scribe" },
+                    { d: "Uncover an elite conspiracy", b: "Wilderness Scout / Trapper" },
+                    { d: "Earn official royal/faction pardon", b: "Former Convict / Outlaw" },
+                    { d: "Protect an endangered settlement", b: "Ship / Void Hauler Sailor" },
+                    { d: "Fulfill a dying mentor's vow", b: "City Watch / Labor Enforcer" },
+                    { d: "Master a forgotten ancient craft", b: "Academic / Hedge Scholar" }
+                ]
             },
             fantasy: {
                 genre_name: "Fantasy",
@@ -1632,6 +1636,19 @@
         function switchGenre(genreKey) {
             const data = GENRE_DATA[genreKey] || GENRE_DATA.none;
 
+            // Update Page 2 Drives & Backgrounds Table
+            const p2DriveBgBody = document.getElementById('p2DriveBgBody');
+            if (p2DriveBgBody && data.driveBg) {
+                p2DriveBgBody.innerHTML = data.driveBg.map((row, idx) => `
+                    <tr>
+                        <td style="text-align: center;"><strong>${idx + 1}</strong></td>
+                        <td style="color: #2b5b84; font-weight: bold;">${row.d}</td>
+                        <td>${row.b}</td>
+                    </tr>
+                `).join('');
+            }
+
+            // Page 6 Views
             if (genreKey === 'none') {
                 document.getElementById('page6-none').style.display = 'block';
                 document.getElementById('page6-dynamic').style.display = 'none';
@@ -1639,11 +1656,11 @@
                 document.getElementById('page6-none').style.display = 'none';
                 document.getElementById('page6-dynamic').style.display = 'block';
 
-                const driveBgBody = document.getElementById('dynamicDriveBgBody');
-                if (driveBgBody && data.driveBg) {
-                    driveBgBody.innerHTML = data.driveBg.map((row, idx) => `
+                const p6DriveBgBody = document.getElementById('p6DriveBgBody');
+                if (p6DriveBgBody && data.driveBg) {
+                    p6DriveBgBody.innerHTML = data.driveBg.map((row, idx) => `
                         <tr>
-                            <td><strong>${idx + 1}</strong></td>
+                            <td style="text-align: center;"><strong>${idx + 1}</strong></td>
                             <td style="color: #2b5b84; font-weight: bold;">${row.d}</td>
                             <td>${row.b}</td>
                         </tr>
@@ -1660,7 +1677,7 @@
                 if (lootBody && data.loot) {
                     lootBody.innerHTML = data.loot.map(row => `
                         <tr>
-                            <td><strong>${row.roll}</strong></td>
+                            <td style="text-align: center;"><strong>${row.roll}</strong></td>
                             <td style="font-weight: bold; color: #2b5b84;">${row.item}</td>
                             <td>${row.effect}</td>
                         </tr>
