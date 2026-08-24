@@ -38,7 +38,7 @@
             align-items: center;
             font-family: 'Georgia', serif;
             color: var(--text-color);
-            line-height: 1.35;
+            line-height: 1.32;
         }
 
         /* TOOLBAR STYLES */
@@ -120,7 +120,7 @@
             max-width: 8.5in;
             height: 11in;
             background-color: var(--page-color);
-            padding: 0.35in 0.4in 0.42in 0.4in;
+            padding: 0.38in 0.4in 0.48in 0.4in;
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             position: relative;
@@ -145,7 +145,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0;
-            margin-bottom: 4px;
+            margin-bottom: 5px;
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 2px;
         }
@@ -154,21 +154,21 @@
             font-size: 11.5px;
             color: var(--accent-color);
             text-transform: uppercase;
-            margin-top: 5px;
+            margin-top: 6px;
             margin-bottom: 3px;
             border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
-            font-size: 10.2px;
+            font-size: 10px;
             color: #2b5b84;
-            margin-top: 4px;
+            margin-top: 5px;
             margin-bottom: 2px;
             text-transform: uppercase;
         }
 
         p, li, div, td, th {
-            font-size: 9.2px;
+            font-size: 9.1px;
         }
 
         p, li {
@@ -185,13 +185,13 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 2px;
-            margin-bottom: 3px;
+            margin-top: 3px;
+            margin-bottom: 4px;
         }
 
         th, td {
             border: 1px solid var(--border-color);
-            padding: 2.5px 4px;
+            padding: 3px 5px;
             text-align: left;
         }
 
@@ -204,9 +204,9 @@
         .box {
             border: 1px solid var(--border-color);
             background-color: var(--box-bg);
-            padding: 4px 6px;
-            margin-top: 2px;
-            margin-bottom: 2px;
+            padding: 5px 7px;
+            margin-top: 3px;
+            margin-bottom: 3px;
             border-radius: 2px;
         }
 
@@ -225,7 +225,7 @@
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 12px;
             align-items: start;
         }
 
@@ -239,12 +239,12 @@
             border-bottom: 1.5px solid #000;
             background: transparent;
             font-family: inherit;
-            font-size: 9.8px;
+            font-size: 10px;
             font-weight: bold;
             color: #000;
-            padding: 1px 3px;
+            padding: 2px 4px;
             outline: none;
-            min-height: 16px;
+            min-height: 18px;
             max-width: 100%;
         }
 
@@ -275,7 +275,7 @@
             border: none;
             background: transparent;
             font-family: 'Georgia', serif;
-            font-size: 9.6px;
+            font-size: 10px;
             line-height: 18px;
             resize: none;
             outline: none;
@@ -297,11 +297,11 @@
         .pro-tip {
             background-color: #f8f9fa;
             border-left: 3px solid #2b5b84;
-            padding: 2px 5px;
-            margin-top: 2px;
-            margin-bottom: 3px;
+            padding: 3px 5px;
+            margin-top: 3px;
+            margin-bottom: 4px;
             font-style: italic;
-            font-size: 8.6px;
+            font-size: 8.8px;
         }
 
         .notes-box {
@@ -315,7 +315,7 @@
             );
             background-position: 0 16px;
             padding: 2px 6px;
-            margin-top: 5px;
+            margin-top: 6px;
             margin-bottom: 0;
             border-radius: 2px;
             width: 100%;
@@ -338,9 +338,9 @@
             line-height: 12px;
         }
 
-        .genre-table th:nth-child(1), .genre-table td:nth-child(1) { width: 22%; }
-        .genre-table th:nth-child(2), .genre-table td:nth-child(2) { width: 39%; }
-        .genre-table th:nth-child(3), .genre-table td:nth-child(3) { width: 39%; }
+        .genre-table th:nth-child(1), .genre-table td:nth-child(1) { width: 25%; }
+        .genre-table th:nth-child(2), .genre-table td:nth-child(2) { width: 38%; }
+        .genre-table th:nth-child(3), .genre-table td:nth-child(3) { width: 37%; }
 
         @media screen and (max-width: 768px) {
             body { padding: 6px; }
@@ -398,7 +398,7 @@
             <h1>EASY PLAY D20 - CHARACTER PLAY SHEET</h1>
             
             <div class="box">
-                <div class="sheet-grid" style="row-gap: 6px;">
+                <div class="sheet-grid" style="row-gap: 8px;">
                     <div><strong>CHARACTER NAME:</strong> <input type="text" id="charName" style="width: 130px;" /></div>
                     <div><strong>COMBAT ARCHETYPE:</strong> <input type="text" id="charClass" style="width: 120px;" /></div>
                     <div><strong>DRIVE / MOTIVATION:</strong> <input type="text" id="charDrive" style="width: 120px;" /></div>
@@ -410,21 +410,21 @@
 
             <h2>CORE ATTRIBUTES & 3-RESOURCE ENGINE (Min +1 / Absolute Max +4 EVER)</h2>
             <div class="sheet-grid-3">
-                <div class="box" style="text-align: center; padding: 6px 4px;">
+                <div class="box" style="text-align: center; padding: 8px 5px;">
                     <strong>MIGHT</strong><br />
                     <small>Brawn / Force / Endurance</small><br /><br />
                     <strong>MODIFIER: +[ <input type="text" id="attrMight" class="center-input" style="width: 35px;" /> ]</strong><br /><br />
                     Force Pool: (Might Mod x 2) + L3<br />
                     <strong>Current Force: [ <input type="text" id="currForce" class="center-input" style="width: 50px;" /> ]</strong>
                 </div>
-                <div class="box" style="text-align: center; padding: 6px 4px;">
+                <div class="box" style="text-align: center; padding: 8px 5px;">
                     <strong>AGILITY</strong><br />
                     <small>Reflexes / Speed / Finesse</small><br /><br />
                     <strong>MODIFIER: +[ <input type="text" id="attrAgility" class="center-input" style="width: 35px;" /> ]</strong><br /><br />
                     Reflex Pool: (Agility Mod x 2) + L5<br />
                     <strong>Current Reflex: [ <input type="text" id="currReflex" class="center-input" style="width: 50px;" /> ]</strong>
                 </div>
-                <div class="box" style="text-align: center; padding: 6px 4px;">
+                <div class="box" style="text-align: center; padding: 8px 5px;">
                     <strong>WILL</strong><br />
                     <small>Mind / Perception / Focus</small><br /><br />
                     <strong>MODIFIER: +[ <input type="text" id="attrWill" class="center-input" style="width: 35px;" /> ]</strong><br /><br />
@@ -435,47 +435,48 @@
 
             <h2>COMBAT ENGINE and DEFENSE</h2>
             <div class="sheet-grid">
-                <div class="box" style="padding: 6px;">
+                <div class="box" style="padding: 8px;">
                     <strong>ARMOR SELECTION & TRADEOFFS</strong><br /><br />
-                    <label style="display: block; margin-bottom: 2px;"><input type="checkbox" id="armorUnarmored" /> <span data-key="arm_unarmored_lb">Unarmored</span> (+0 Evade, +1 Pace Speed)</label>
-                    <label style="display: block; margin-bottom: 2px;"><input type="checkbox" id="armorLight" /> <span data-key="arm_light_lb">Light Armor</span> (+1 Evade, +0 Speed, Disadv Stealth)</label>
-                    <label style="display: block; margin-bottom: 2px;"><input type="checkbox" id="armorMed" /> <span data-key="arm_med_lb">Medium Armor</span> (+2 Evade, -1 Pace, Req 2 Might, Disadv Stealth)</label>
-                    <label style="display: block; margin-bottom: 2px;"><input type="checkbox" id="armorHeavy" /> <span data-key="arm_heavy_lb">Heavy Armor</span> (+3 Evade, -2 Paces, Req 3 Might, Disadv Stealth)</label>
+                    <label style="display: block; margin-bottom: 3px;"><input type="checkbox" id="armorUnarmored" /> <span data-key="arm_unarmored_lb">Unarmored</span> (+0 Evade, +1 Pace Speed)</label>
+                    <label style="display: block; margin-bottom: 3px;"><input type="checkbox" id="armorLight" /> <span data-key="arm_light_lb">Light Armor</span> (+1 Evade, +0 Speed, Disadv Stealth)</label>
+                    <label style="display: block; margin-bottom: 3px;"><input type="checkbox" id="armorMed" /> <span data-key="arm_med_lb">Medium Armor</span> (+2 Evade, -1 Pace, Req 2 Might, Disadv Stealth)</label>
+                    <label style="display: block; margin-bottom: 3px;"><input type="checkbox" id="armorHeavy" /> <span data-key="arm_heavy_lb">Heavy Armor</span> (+3 Evade, -2 Paces, Req 3 Might, Disadv Stealth)</label>
                     <label style="display: block;"><input type="checkbox" id="armorShield" /> <span data-key="arm_shield_lb">Shield</span> (-1 Pace Speed; Guard = Action & Move; Req 1 Hand)</label>
                 </div>
-                <div class="box" style="padding: 6px; line-height: 1.5;">
-                    <strong style="font-size: 9.8px; color: var(--accent-color);">DERIVED VITAL STATS & DEFENSE</strong><br />
+                <div class="box" style="padding: 8px; line-height: 1.6;">
+                    <strong style="font-size: 10px; color: var(--accent-color);">DERIVED VITAL STATS & DEFENSE</strong><br />
                     <strong>Max HP: [ <input type="text" id="maxHP" class="center-input" style="width: 40px;" /> ]</strong> (20 + Might Mod) | <strong>Current HP: [ <input type="text" id="currHP" class="center-input" style="width: 55px;" /> ]</strong><br />
-                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 3px 0;" />
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 4px 0;" />
                     Primary Weapon: <input type="text" id="weapName" style="width: 120px;" /> | Range: [ <input type="text" id="weapRange" class="center-input" style="width: 35px;" /> ] Paces<br />
                     Base Dmg (Melee): [ <input type="text" id="weapBase" class="center-input" style="width: 30px;" /> ] | Base Dmg (Ranged): [ <input type="text" id="weapBaseRanged" class="center-input" style="width: 30px;" /> ] + Attr Mod: +[ <input type="text" id="weapAttrMod" class="center-input" style="width: 30px;" /> ]<br />
-                    <strong style="font-size: 9.8px;">TOTAL FLAT DAMAGE: [ <input type="text" id="totalFlatDmg" class="center-input" style="width: 45px;" /> ]</strong><br />
-                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 3px 0;" />
-                    <strong style="font-size: 9.5px;">EVADE MOD: [ <input type="text" id="totalEvade" class="center-input" style="width: 40px;" /> ]</strong> <span style="font-size: 8.5px;">(Roll 1d20 + Evade vs 14)</span><br />
-                    <strong style="font-size: 9.5px;">SPEED MOD: [ <input type="text" id="totalSpeed" class="center-input" style="width: 40px;" /> ] Paces</strong> <span style="font-size: 8.5px;">(Base 3 + Armor, Min 1)</span>
+                    <strong style="font-size: 10px;">TOTAL FLAT DAMAGE: [ <input type="text" id="totalFlatDmg" class="center-input" style="width: 45px;" /> ]</strong><br />
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 4px 0;" />
+                    <strong style="font-size: 9.8px;">EVADE MOD: [ <input type="text" id="totalEvade" class="center-input" style="width: 40px;" /> ]</strong> <span style="font-size: 8.5px;">(Roll 1d20 + Evade vs 14)</span><br />
+                    <strong style="font-size: 9.8px;">SPEED MOD: [ <input type="text" id="totalSpeed" class="center-input" style="width: 40px;" /> ] Paces</strong> <span style="font-size: 8.5px;">(Base 3 + Armor, Min 1)</span>
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 3px; padding: 4px 6px; line-height: 1.4;">
+            <div class="box" style="margin-top: 4px; padding: 6px 8px; line-height: 1.45;">
                 <strong>QUICK-REF SYSTEM CHECKS (UNIVERSAL THRESHOLD = 14)</strong><br />
-                • <strong>The 14+ Rule:</strong> Any check, attack, or defense totaling 14+ after modifiers is a complete success. Under 14 is a failure. Always round fractions down (Min 1).<br />
-                • <strong>The Twin Die Engine (Advantage):</strong> Spend <strong>1 Force</strong> for Advantage on Might checks. Spend <strong>1 Reflex</strong> for Advantage on Evasion or Agility. Spend <strong>1 RP</strong> for Advantage on Attacks or Will.<br />
+                • <strong>The 14+ Rule:</strong> Any check, attack, or defense totaling 14+ after modifiers is a complete success. Anything under 14 is a failure. Always round fractions down (Min 1).<br />
+                • <strong>The Twin Die Engine (Advantage):</strong> Spend <strong>1 Force (Overpower)</strong> for Advantage on Might checks/physical contests. Spend <strong>1 Reflex (Dodge)</strong> for Advantage on Evasion or Agility checks. Spend <strong>1 RP (Focus)</strong> for Advantage on Attack rolls or Will checks.<br />
                 • <strong>Universal Reflex Actions:</strong> Spend <strong>1 Reflex Point</strong> for: <strong>Burst Step</strong> (+1 Pace) or <strong>Quick Stand</strong> (Stand from Prone free).<br />
-                • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attr vs 14 within range (Hard Max 8 Paces). Success deals Flat Damage directly to HP.<br />
-                • <strong>Dying & Bleed Out (0 HP):</strong> Counter starts at <strong>Will Mod + 1 (Min 1 turn)</strong>. Reaching 0 = death. Ally spending Action Phase revives at 1 HP on Will vs 14.
+                • <strong>Action Phase (Attacking):</strong> Roll 1d20 + Weapon Attr vs 14 within range (Hard Max 8 Paces for Ranged Weapons). Success deals Flat Damage directly to HP.<br />
+                • <strong>Dying & Bleed Out (0 HP):</strong> Counter starts at <strong>Will Mod + 1 (Min 1 turn)</strong>. Decrement by 1 at start of turn. Reaching 0 = permanent death. Ally spending Action Phase passes Will vs 14 to revive at 1 HP.
             </div>
 
-            <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 3px; padding: 4px 6px; line-height: 1.4;">
+            <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84; margin-top: 4px; padding: 6px 8px; line-height: 1.45;">
                 <strong style="color: #2b5b84;">ACTION PHASE MANEUVERS (NON-ATTACK)</strong><br />
-                • <strong>Active Guard:</strong> Raise Shield (forfeits Action AND Move) to gain Advantage on all Evasion rolls until next turn.<br />
+                • <strong>Active Guard:</strong> Raise Shield (forfeits Action AND Move Phase) to gain Advantage on all Evasion rolls until next turn.<br />
                 • <strong>Dash:</strong> Forfeit attack to move total Movement paces a second time.<br />
                 • <strong>Assist Ally:</strong> Grant an adjacent ally Advantage on their very next check or attack roll.<br />
-                • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical <strong>Concealment</strong> (Target cannot be shot at range; attacking from Concealment grants Advantage and ends status).<br />
-                • <strong>Interact / Weapon Swap:</strong> Pick lock, pull lever, or swap ready weapons (Free Action 1/turn during Move Phase).
+                • <strong>Hide / Sneak:</strong> Roll Agility vs 14 to gain physical <strong>Concealment</strong> (Enemies cannot target you with ranged attacks; attacking from Concealment grants Advantage and ends Concealment).<br />
+                • <strong>Interact / Weapon Swap:</strong> Pick lock, pull lever, or hand item. Drawing or swapping weapons from Active Slots is a Free Action once per turn during Move Phase. (Swapping from Passive Backpack costs 1 Action Phase).
             </div>
 
             <h2>ACTIVE INVENTORY (Max Slots = 4 + Might Mod | Ready Gear)</h2>
-            <div class="sheet-grid" style="row-gap: 4px; column-gap: 14px;">
+            <p style="font-size: 8px; margin-top: -2px; margin-bottom: 3px;"><em>Active Slots hold worn armor, shield, weapons, and belt consumables (instant combat access). Stowed/backpack items belong in Passive Inventory (Notes Box; costs 1 Action Phase to retrieve in combat). Exceeding Active Slots forces Disadvantage on Evasion.</em></p>
+            <div class="sheet-grid" style="row-gap: 6px; column-gap: 16px;">
                 <div class="inv-slot">[ 1 ] Armor: <input type="text" id="inv1" /></div>
                 <div class="inv-slot">[ 5 ] Item/Pouch: <input type="text" id="inv5" /></div>
                 <div class="inv-slot">[ 2 ] Shield: <input type="text" id="inv2" /></div>
@@ -503,6 +504,7 @@
             <div class="two-column">
                 <div class="column-box">
                     <h2>1. HEROIC GENESIS (CHARACTER CREATION)</h2>
+                    <p>Building an Adventurer requires four foundational steps:</p>
                     <ul>
                         <li><strong>Background and Drive:</strong> Select a former narrative trade and core personal motivation from the table below. These define your narrative contacts, personality, and roleplay identity (they provide story depth and never grant combat bonuses or skills).</li>
                         <li><strong>Class Selection:</strong> Choose 1 Combat Archetype from the Playbook Codex to set your tactical abilities.</li>
@@ -519,61 +521,67 @@
                     </ul>
 
                     <h2><span data-key="genre_name">UNIVERSAL</span> DRIVES & BACKGROUNDS (NARRATIVE ONLY)</h2>
-                    <table style="font-size: 8.2px; margin-bottom: 2px;">
+                    <table>
                         <thead>
                             <tr><th style="width: 12%;">d8</th><th style="width: 44%;">Thematic Drive Choice</th><th style="width: 44%;">Thematic Background Choice</th></tr>
                         </thead>
                         <tbody id="p2DriveBgBody">
-                            <!-- Populated dynamically by JS based on active genre -->
+                            <!-- Populated dynamically by JS -->
                         </tbody>
                     </table>
 
                     <h2>2. THE ACTION ENGINE (FLAT 14)</h2>
                     <p>All risky tasks, skill checks, attack rolls, and evasions target a static <strong>Universal Baseline Threshold of 14</strong>.</p>
                     <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
-                        <strong style="color: #2b5b84;">THE 14+ RULE & ROUNDING:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Under 14 is a failure. Round fractions down (Min 1 Pace/HP).
+                        <strong style="color: #2b5b84;">THE 14+ RULE & ROUNDING:</strong> Any check, attack, or defense that totals 14 or higher after modifiers is a complete success. Anything under 14 is a failure. Always round fractions down to the nearest whole number (minimum 1 Pace/HP).
                     </div>
                     <ul>
                         <li><strong>Resolution:</strong> Roll 1d20 + Attribute Modifier. Sum of 14+ succeeds.</li>
                         <li><strong>Critical Hit (Nat 20):</strong> Overdrive Strike—add Attribute Mod to flat damage a second time.</li>
-                        <li><strong>Critical Failure (Nat 1):</strong> Automatic miss; suffer Disadvantage on your next Evasion roll.</li>
+                        <li><strong>Critical Failure (Nat 1):</strong> Automatic miss; you suffer Disadvantage on your very next Evasion roll.</li>
                     </ul>
                 </div>
 
                 <div class="column-box">
                     <h2>3. COMBAT STRUCTURE and TURN FLOW</h2>
-                    <p>Rounds represent 6 seconds. System is 100% Player-Facing with no out-of-turn reactions.</p>
+                    <p>Rounds represent 6 seconds of simultaneous action. System is 100% Player-Facing: no out-of-turn reactions.</p>
                     <ul>
-                        <li><strong>Initiative:</strong> Guide rolls 1d20 (+ Tier Mod). Players roll 1d20 + Agility vs target. Meet/beat = Fast Phase; lower = Slow Phase. Players win ties.</li>
-                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (Floor = 1 Pace). Swapping ready gear is a Free Action 1/turn.</li>
-                        <li><strong>2. Action Phase:</strong> Attack, use ability, or maneuver (1d20 + Attr vs 14). Stowed pack search costs 1 Action Phase.</li>
-                        <li><strong>3. Evasion Phase:</strong> When targeted, roll 1d20 + Armor Evasion Mod vs 14. 14+ = 0 damage. Fail = take enemy flat damage directly.</li>
+                        <li><strong>Dynamic Guide Initiative:</strong> The Guide rolls 1d20 (+ Tier Mod) to set the encounter's <strong>Initiative Target</strong>. Players roll 1d20 + Agility vs this target. Meet/beat = Fast Phase (before enemies); lower = Slow Phase (after enemies). Players win ties.</li>
+                        <li><strong>1. Move Phase:</strong> Travel up to Movement speed in paces (Floor = 1 Pace). Swapping ready gear from Active Slots is a Free Action once per turn.</li>
+                        <li><strong>2. Action Phase:</strong> Attack, use ability, drink potion, or execute a maneuver (1d20 + Attr vs 14). Searching passive backpack costs 1 Action Phase.</li>
+                        <li><strong>3. Evasion Phase:</strong> When targeted on enemy turn, roll 1d20 + Armor Evasion Mod vs 14. 14+ = 0 damage. Fail = take enemy flat damage directly.</li>
                     </ul>
 
                     <div class="box" style="background-color: #fce8e8; border-color: var(--accent-color);">
                         <strong style="color: var(--accent-color);">DEATH and STABILIZATION (0 HP)</strong><br />
-                        At 0 HP you collapse Prone and Unconscious.<br />
-                        • <strong>Bleed Out:</strong> Starts at Will Mod + 1. Decrement by 1 each turn. 0 = Death.<br />
-                        • <strong>Stabilize:</strong> Adjacent ally passes Will vs 14 to revive you at 1 HP.<br />
-                        • <strong>Execution:</strong> Direct damage taken at 0 HP causes instant death.
+                        At 0 HP you collapse Prone and become <strong>Unconscious</strong>.<br />
+                        • <strong>Bleed Out Timer:</strong> Starts at <strong>Will Modifier + 1 (Min 1 turn)</strong>. Decrement by 1 each turn. 0 = permanent death.<br />
+                        • <strong>Stabilization:</strong> Adjacent ally spends Action Phase for Will check vs 14 to revive you at 1 HP.<br />
+                        • <strong>Execution:</strong> Direct damage taken while at 0 HP causes instant permanent death.
                     </div>
 
                     <h2>4. CHARACTER LEVELING PROGRESSION</h2>
                     <table>
                         <thead>
-                            <tr><th>Lvl</th><th>XP</th><th>Permanent Upgrades (Max +4 Cap EVER)</th></tr>
+                            <tr><th>Lvl</th><th>XP</th><th>Permanent Upgrades Unlocked (Max +4 Cap EVER)</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>1</td><td>0</td><td>Base vitals and Level 1 class features.</td></tr>
-                            <tr><td>2</td><td>10</td><td>+1 to any Attribute. Unlock L2 ability.</td></tr>
-                            <tr><td>3</td><td>20</td><td>+3 Max HP & +1 Max Force. Unlock L3 ability.</td></tr>
-                            <tr><td>4</td><td>30</td><td>+1 to any Attribute. Unlock L4 ability.</td></tr>
-                            <tr><td>5</td><td>40</td><td>+1 Max Reflex. Unlock L5 ability.</td></tr>
-                            <tr><td>6</td><td>50</td><td>+1 to any Attribute. Unlock L6 ability.</td></tr>
-                            <tr><td>7</td><td>60</td><td>+1 Max RP. Unlock L7 ability.</td></tr>
+                            <tr><td>1</td><td>0</td><td>Establish base vitals and Level 1 class features.</td></tr>
+                            <tr><td>2</td><td>10</td><td>+1 to any Attribute (Max +4 cap). Unlock L2 ability.</td></tr>
+                            <tr><td>3</td><td>20</td><td>+3 Max HP & +1 Max Force (Flat pool increase). Unlock L3 ability.</td></tr>
+                            <tr><td>4</td><td>30</td><td>+1 to any Attribute (Max +4 cap). Unlock L4 ability.</td></tr>
+                            <tr><td>5</td><td>40</td><td>+1 Max Reflex (Flat pool increase). Unlock L5 ability.</td></tr>
+                            <tr><td>6</td><td>50</td><td>+1 to any Attribute (Max +4 cap). Unlock L6 ability.</td></tr>
+                            <tr><td>7</td><td>60</td><td>+1 Max RP (Flat pool increase). Unlock L7 ability.</td></tr>
                             <tr><td>8</td><td>70</td><td>Unlock Apex Level 8 ability (Max Level).</td></tr>
                         </tbody>
                     </table>
+
+                    <div class="box">
+                        <strong>CORE RULE CLARIFICATIONS</strong><br />
+                        • <strong>The Static 14 Target:</strong> Every check, attack, and defense targets a static baseline of <strong>14</strong>. The target number never shifts—your attributes, situational bonuses, and gear modify your roll, not the difficulty. A total of 14 or higher is a complete success.<br />
+                        • <strong>Spending Resource Pools:</strong> Spend <strong>1 Force, 1 Reflex, or 1 Resolute Point (RP)</strong> before rolling to buy Advantage (2d20, keep high) on Might, Agility, or Will checks. Spent points only recover during a Short Breather or Rest.
+                    </div>
                 </div>
             </div>
 
@@ -581,10 +589,16 @@
             <div class="two-column">
                 <div class="column-box">
                     <h3>5. WEAPONS & FLAT DAMAGE</h3>
-                    <p style="font-size: 8.5px; margin-bottom: 2px;"><strong>Formula:</strong> Base Dmg + Attr Mod = Total Flat Dmg</p>
-                    <table style="font-size: 8.5px;">
+                    <p style="font-size: 8px; margin-bottom: 2px;"><strong>Formula:</strong> Base Dmg + Attr Mod = Total Flat Dmg</p>
+                    <table style="font-size: 8.2px;">
                         <thead>
-                            <tr><th>Weapon Style</th><th>Base</th><th>Range</th><th>Hands</th><th>Attr</th></tr>
+                            <tr>
+                                <th>Weapon Style</th>
+                                <th>Base</th>
+                                <th>Range</th>
+                                <th>Hands</th>
+                                <th>Attr</th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr><td><strong data-key="wep_unarmed">Unarmed Strike</strong></td><td>1</td><td>1 Pace</td><td>1 Hand</td><td>Might/Agility</td></tr>
@@ -599,10 +613,15 @@
 
                 <div class="column-box">
                     <h3>6. ARMOR & INVENTORY CAPACITY</h3>
-                    <p style="font-size: 8.5px; margin-bottom: 2px;"><strong>Active Capacity:</strong> 4 + Might Mod Slots | Over-Encumbered = Disadv</p>
-                    <table style="font-size: 8.5px;">
+                    <p style="font-size: 8px; margin-bottom: 2px;"><strong>Active Capacity:</strong> 4 + Might Mod Slots | Over-Encumbered = Disadv</p>
+                    <table style="font-size: 8.2px;">
                         <thead>
-                            <tr><th>Armor Type</th><th>Evade</th><th>Speed</th><th>Requirements / Rules</th></tr>
+                            <tr>
+                                <th>Armor Type</th>
+                                <th>Evade</th>
+                                <th>Speed</th>
+                                <th>Requirements / Rules</th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr><td><strong data-key="arm_unarmored">Unarmored</strong></td><td>+0</td><td>+1 Pace</td><td>Max mobility (4 Paces base).</td></tr>
@@ -777,8 +796,8 @@
                     <div class="box" style="background-color: #f0f4f8; border-color: #2b5b84;">
                         <strong style="color: #2b5b84;">WHEN DOES THE GUIDE ROLL A D20?</strong><br />
                         1. <strong>Initiative Target:</strong> Roll 1d20 (+ Tier Mod) at combat start.<br />
-                        2. <strong>Morale Checks (Squad Break):</strong> Roll 1d20 vs 14 when squad loses 50% numbers or Commander dies.<br />
-                        3. <strong>Boss Escalation (50% HP):</strong> Roll 1d20: <strong>1–10:</strong> 2 Minions spawn. <strong>11–20:</strong> Major Hazard (6 Dmg).<br />
+                        2. <strong>Morale Checks (Squad Break):</strong> Roll 1d20 vs 14 when an enemy squad loses 50% numbers or its Commander dies. Fail = enemies surrender or flee.<br />
+                        3. <strong>Boss Escalation (50% HP):</strong> At 50% Boss HP, roll 1d20: <strong>1–10 (Reinforcements):</strong> 2 Tier 1 Minions spawn at map edge. <strong>11–20 (Lair Hazard):</strong> Major Hazard (6 Flat Dmg) detonates in a 2-pace area.<br />
                         4. <strong>Failing Forward:</strong> Roll 1d20 for narrative complication severity.
                     </div>
 
@@ -797,6 +816,7 @@
                     </table>
 
                     <h2>3. MOB ROLES (PLUG-AND-PLAY)</h2>
+                    <p><em>Assign 1 role to any Tier above to stack its trait onto the enemy's base stats:</em></p>
                     <table>
                         <thead>
                             <tr><th>Mob Archetype</th><th>Tactical Trait (One-Liner Rule)</th></tr>
@@ -831,29 +851,35 @@
                     </ul>
 
                     <h2>5. TACTICAL CONDITIONS & REST</h2>
-                    <p><strong>Status Conditions:</strong></p>
+                    <p><strong>Status Conditions (Players & Enemies):</strong></p>
                     <ul>
-                        <li><strong>Prone:</strong> Halves movement speed. Attacks suffer Disadvantage.</li>
-                        <li><strong>Dazed:</strong> Disadvantage on all rolls; speed halved.</li>
-                        <li><strong>Grappled:</strong> Speed = 0. Action Phase Might vs 14 to escape.</li>
-                        <li><strong>Pinned Down:</strong> Leaving cover takes auto-hit. Move Phase or Agility/Will vs 14 to clear.</li>
-                        <li><strong>Stunned:</strong> Forfeits Move and Action Phases (can still Evade).</li>
+                        <li><strong>Prone:</strong> Halves movement speed (round down, min 1 Pace). All physical attacks and maneuver rolls suffer Disadvantage.</li>
+                        <li><strong>Dazed:</strong> Suffer Disadvantage on all rolls (attacks, checks, evasions) until end of next turn; movement speed is halved (min 1 Pace).</li>
+                        <li><strong>Grappled (Physical):</strong> Completely immobilized (Movement = 0). Must spend Action Phase and pass Might check vs 14 to break free.</li>
+                        <li><strong>Pinned Down (Suppressive):</strong> Trapped behind cover. Moving outside cover triggers automatic enemy flat damage. Spend Move Phase OR pass Agility/Will check vs 14 to clear.</li>
+                        <li><strong>Stunned:</strong> Completely incapacitated. Forfeits all Move and Action Phases on next turn (can still roll Evasion when attacked).</li>
                     </ul>
 
                     <p><strong>Rest & Recovery Mechanics:</strong></p>
                     <ul>
-                        <li><strong>Short Breather (10 min):</strong> Regain HP = Might Mod x 2, and 1 Resource Point per relevant Attribute Mod.</li>
-                        <li><strong>Rough Sleep (Wilds):</strong> Half Max HP; full restore on Force, Reflex, and RP.</li>
-                        <li><strong>Sanctuary Rest (Town):</strong> Full 100% restore. Cost: 1 Minor Tag per player.</li>
+                        <li><strong>Short Breather (10 min):</strong> Regain HP equal to (Might Mod x 2), Force equal to Might Mod, Reflex equal to Agility Mod, and RP equal to Will Mod.</li>
+                        <li><strong>Rough Sleep (Overnight in Wilds):</strong> Regain Half Max HP (round down); completely refuels Force, Reflex, and RP pools to max.</li>
+                        <li><strong>Sanctuary Rest (Town/Base):</strong> Full 100% restore of HP, Force, Reflex, and RP + clears all conditions. Cost: 1 Minor Tag per player.</li>
                     </ul>
+
+                    <div class="box">
+                        <strong>RUNNING CHECKS & ADVANTAGE</strong><br />
+                        • <strong>When to Call for a Check:</strong> Never roll for routine, risk-free actions. If an Adventurer has the right background, proper tools, and plenty of time, they succeed automatically. Only call for a d20 roll when there is active danger, time pressure, or meaningful consequences on a failure.<br />
+                        • <strong>Advantage & Disadvantage in Play:</strong> Advantage = 2d20 keep high; Disadvantage = 2d20 keep low. Multiple sources never stack extra dice (always 1d20 or 2d20). Having both cancels out to a single 1d20 roll.
+                    </div>
                 </div>
             </div>
 
-            <div class="box" style="margin-top: 3px; background-color: #f0f4f8; border-color: #2b5b84; padding: 4px 6px; line-height: 1.35;">
+            <div class="box" style="margin-top: 3px; background-color: #f0f4f8; border-color: #2b5b84; padding: 5px 7px; line-height: 1.35;">
                 <strong style="color: #2b5b84;">THE GUIDE'S GOLDEN RULE: FAILING FORWARD</strong><br />
-                A roll under 14 never stalls the game. The scene advances with a setback. Guide rolls 1d20:<br />
-                • <strong>1–10 (Minor):</strong> Alarm/alert, lost time, social friction, or Minor Hazard (3 Dmg).<br />
-                • <strong>11–20 (Major):</strong> Item breaks, ambush, or Major Hazard (6 Dmg + Prone).
+                A roll under 14 <strong>never means nothing happened. Never say nothing happened!</strong> A failed check always pushes the narrative forward through <em>Success at a Cost</em> or <em>Escalation</em> (the player achieves the goal or moves the scene, but suffers a setback). The Guide rolls <strong>1d20</strong> for severity:<br />
+                • <strong>1–10 (Minor Complication):</strong> Alarm/alert, lost time, social slip, or Minor Hazard (3 Flat Dmg).<br />
+                • <strong>11–20 (Major Complication):</strong> Tool/weapon breaks (destroys 1 active item slot), enemy ambush, or Major Hazard (6 Flat Dmg + Prone).
             </div>
 
             <div class="notes-box">
@@ -869,77 +895,182 @@
         <div class="content-wrap">
             <h1>APPENDIX: DYNAMIC SETTING ADAPTATION</h1>
 
-            <p style="margin-bottom: 2px; font-size: 8.8px;">Easy Play D20 adapts instantly across themes while keeping core math static.</p>
+            <p style="margin-bottom: 2px; font-size: 8.5px;">Easy Play D20 adapts instantly using active setting flavoring. All mechanics rely on static flat damage, uniform baseline thresholds, and abstract <strong>Loot Tags</strong> rather than complex currency math.</p>
 
             <!-- NONE (ORIGINAL MULTI-GENRE) VIEW -->
             <div id="page6-none" style="display: block;">
                 <div class="two-column">
                     <div class="column-box">
                         <h2>1. WEALTH, LOOT and NARRATIVE ECONOMY</h2>
-                        <ul style="font-size: 7.8px;">
-                            <li><strong>Minor Loot Tags (Spending Money):</strong> Standard liquid currency for rests and supplies.</li>
-                            <li><strong>Major Loot Tags (Special Assets / Relics):</strong> High-value trade goods for primary gear and favor.</li>
+                        <p>Wealth is tracked using abstract <strong>Loot Tags</strong> divided into two categories:</p>
+                        <ul style="font-size: 7.6px;">
+                            <li><strong>Minor Loot Tags (Currency / Spending Money):</strong> Standard liquid wealth (coins, cred-sticks, scavenged cash). <em>Uses:</em> <strong>1 Minor Tag/player</strong> = Sanctuary Rest (100% reset); <strong>1 Minor Tag</strong> = Restock 1 consumable, buy basic gear, or pay low-level bribes.</li>
+                            <li><strong>Major Loot Tags (Special Assets / Rare Relics):</strong> Unique, highly valuable items (rare gems, dragon scales, ancient artifacts, prototype tech). <em>Uses:</em> Traded directly for primary weapons/armor, legendary gear, vehicle repairs, or major faction leverage.</li>
                         </ul>
                         
-                        <table class="genre-table" style="font-size: 7px; margin-top: 1px; margin-bottom: 2px;">
+                        <table class="genre-table" style="font-size: 6.8px; margin-top: 1px; margin-bottom: 2px;">
                             <thead>
                                 <tr>
-                                    <th>Genre</th>
-                                    <th>Minor Loot Tag Example</th>
-                                    <th>Major Loot Tag Example</th>
+                                    <th style="padding: 1px 2px;">Genre</th>
+                                    <th style="padding: 1px 2px;">Minor Loot Tag Example</th>
+                                    <th style="padding: 1px 2px;">Major Loot Tag Example</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td><strong>Fantasy</strong></td><td>Pouch of Silver, Bounty Slip</td><td>Dragon Scale, Ancient Relic</td></tr>
-                                <tr><td><strong>Cyberpunk</strong></td><td>Cred-Stick, Slum Cash</td><td>AI Core Chip, Prototype Cyberware</td></tr>
-                                <tr><td><strong>Sci-Fi</strong></td><td>Fuel Credits, Cargo Voucher</td><td>Alien Artifact, Pure Plasma Gem</td></tr>
-                                <tr><td><strong>Post-Apoc</strong></td><td>Bottlecaps, Lead Slugs</td><td>Intact Pre-War Engine, Water Filter</td></tr>
-                                <tr><td><strong>Steampunk</strong></td><td>Brass Sovereigns, Aether Token</td><td>Clockwork Core, Flawless Diamond</td></tr>
-                                <tr><td><strong>Space West</strong></td><td>Bounty Dollars, Poker Chips</td><td>Stolen Hyper-Drive, Alien Skull</td></tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Fantasy</strong></td>
+                                    <td style="padding: 1px 2px;">Pouch of Silver, Bandit Bounty</td>
+                                    <td style="padding: 1px 2px;">Dragon Scale, Ancient Relic</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Cyberpunk</strong></td>
+                                    <td style="padding: 1px 2px;">Cred-Stick, Black Market Cash</td>
+                                    <td style="padding: 1px 2px;">AI Core Chip, Prototype Cyberware</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Sci-Fi</strong></td>
+                                    <td style="padding: 1px 2px;">Fuel Credits, Cargo Pass</td>
+                                    <td style="padding: 1px 2px;">Alien Artifact, Pure Plasma Gem</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Post-Apoc</strong></td>
+                                    <td style="padding: 1px 2px;">Bottlecap Pouch, Unspent Ammo</td>
+                                    <td style="padding: 1px 2px;">Intact Pre-War Engine, Water Filter</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Steampunk</strong></td>
+                                    <td style="padding: 1px 2px;">Brass Sovereign Coins, Aether Token</td>
+                                    <td style="padding: 1px 2px;">Clockwork Core, Flawless Diamond</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 1px 2px;"><strong>Space West</strong></td>
+                                    <td style="padding: 1px 2px;">Bounty Dollars, Saloon Poker Chips</td>
+                                    <td style="padding: 1px 2px;">Stolen Hyper-Drive, Alien Skull Relic</td>
+                                </tr>
                             </tbody>
                         </table>
 
-                        <h2>2. SETTING ARMORY RESKINS</h2>
-                        <ul style="font-size: 7.6px;">
-                            <li><strong>Unarmored (+1 Pace):</strong> Civilian clothing / Light Robes.</li>
-                            <li><strong>Light Armor (+1 Evade, Disadv Stealth):</strong> Leather Jerkin / Concealed Vest.</li>
-                            <li><strong>Medium Armor (+2 Evade, Disadv Stealth):</strong> Chainmail / Ballistic Jacket.</li>
-                            <li><strong>Heavy Armor (+3 Evade, Disadv Stealth):</strong> Plate Mail / Exosuit Frame.</li>
-                            <li><strong>Shield (Guard):</strong> Wooden Shield / Riot Shield.</li>
+                        <h2>2. ADAPTING THE THRESHOLD</h2>
+                        <p>The Guide can adjust the baseline threshold of 14 to set campaign tone:</p>
+                        <ul>
+                            <li><strong>Super-Heroic (Target 12):</strong> Easy success without spending RP. High action.</li>
+                            <li><strong>Survival Horror (Target 16):</strong> High failure rate. Forces players to burn RP constantly.</li>
                         </ul>
 
-                        <h2>3. MAGIC, PSIONICS AND SPECIAL POWERS</h2>
-                        <ul style="font-size: 7.6px;">
-                            <li><strong>Spells as Weapons:</strong> Ranged Weapon (8 Paces) = Firebolt / Laser. Heavy Melee = Kinetic Crush.</li>
-                            <li><strong>Abilities as Magic:</strong> <em>Concussive Blow</em> = Shockwave. <em>Structural Weakness</em> = Acid Vial.</li>
+                        <h2>3. SETTING ARMORY RESKINS</h2>
+                        <p>Gear names automatically reskinned for Universal Rules:</p>
+                        <ul style="font-size: 7.5px;">
+                            <li><strong>Unarmored (+1 Pace):</strong> Civilian clothes (Fantasy), flight suit (Sci-Fi).</li>
+                            <li><strong>Light Armor (+1 Evade, Disadv Stealth):</strong> Leather jerkin (Fantasy), Kevlar vest (Modern).</li>
+                            <li><strong>Medium Armor (+2 Evade, Disadv Stealth):</strong> Chainmail (Fantasy), combat weave (Cyberpunk).</li>
+                            <li><strong>Heavy Armor (+3 Evade, Disadv Stealth):</strong> Plate mail (Fantasy), Exosuit (Sci-Fi).</li>
+                            <li><strong>Shield (Guard):</strong> Wooden shield (Fantasy), riot shield (Modern).</li>
+                            <li><strong>Light Melee (3 Dmg):</strong> Dagger (Fantasy), vibro-blade (Cyberpunk).</li>
+                            <li><strong>Heavy Melee (4 Dmg):</strong> Greataxe (Fantasy), power sword (Sci-Fi).</li>
+                            <li><strong>Ranged Weapon (2 Dmg, 8 Paces):</strong> Bow (Fantasy), plasma rifle (Sci-Fi).</li>
                         </ul>
                     </div>
 
                     <div class="column-box">
                         <h2>4. CONSUMABLE & UTILITY LOOT</h2>
-                        <table style="font-size: 7px; margin-top: 1px; margin-bottom: 2px;">
+                        <p>Using any consumable costs <strong>1 Action Phase</strong>. Roll 1d20 for random loot drops:</p>
+
+                        <table style="font-size: 6.8px; margin-top: 1px; margin-bottom: 2px;">
                             <thead>
                                 <tr>
-                                    <th>d20</th>
-                                    <th>Fantasy</th>
-                                    <th>Sci-Fi / Cyber</th>
-                                    <th>Mechanical Effect</th>
+                                    <th style="padding: 0px 2px;">d20 Roll</th>
+                                    <th style="padding: 0px 2px;">Fantasy</th>
+                                    <th style="padding: 0px 2px;">Sci-Fi / Cyber</th>
+                                    <th style="padding: 0px 2px;">Post-Apoc</th>
+                                    <th style="padding: 0px 2px;">Mechanical Effect</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td><strong>1–4</strong></td><td>Healing Salve</td><td>Hypo-Med Injector</td><td>Restores 5 HP OR clears 1 Condition.</td></tr>
-                                <tr><td><strong>5–8</strong></td><td>Focus Elixir</td><td>Neural Stim Patch</td><td>Regains 1 Force, Reflex, or RP pool point.</td></tr>
-                                <tr><td><strong>9–12</strong></td><td>Fire Oil</td><td>Overcharge Cell</td><td>+2 Flat Damage on next successful hit.</td></tr>
-                                <tr><td><strong>13–16</strong></td><td>Flash Powder</td><td>EMP Grenade</td><td>Throw 3 Paces: Target Agility vs 14 or Dazed.</td></tr>
-                                <tr><td><strong>17–20</strong></td><td>True-Strike Dust</td><td>Targeting Link</td><td>Next attack completely ignores target cover.</td></tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>1–2</strong></td>
+                                    <td style="padding: 0px 2px;">Healing Salve</td>
+                                    <td style="padding: 0px 2px;">Hypo-Med</td>
+                                    <td style="padding: 0px 2px;">Bandages</td>
+                                    <td style="padding: 0px 2px;">Restores 5 HP OR clears 1 Condition.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>3–4</strong></td>
+                                    <td style="padding: 0px 2px;">Focus Elixir</td>
+                                    <td style="padding: 0px 2px;">Neural Stim</td>
+                                    <td style="padding: 0px 2px;">Chems/Pills</td>
+                                    <td style="padding: 0px 2px;">Regains 1 Force, Reflex, or RP pool point.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>5–6</strong></td>
+                                    <td style="padding: 0px 2px;">Fire Oil</td>
+                                    <td style="padding: 0px 2px;">Overcharge Cell</td>
+                                    <td style="padding: 0px 2px;">Hollow-Point</td>
+                                    <td style="padding: 0px 2px;">+2 Flat Damage on next successful hit.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>7–8</strong></td>
+                                    <td style="padding: 0px 2px;">Flash Powder</td>
+                                    <td style="padding: 0px 2px;">EMP Grenade</td>
+                                    <td style="padding: 0px 2px;">Pipe Bomb</td>
+                                    <td style="padding: 0px 2px;">Throw 3 Paces: Target Agility vs 14 or Dazed.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>9–10</strong></td>
+                                    <td style="padding: 0px 2px;">Smoke Vial</td>
+                                    <td style="padding: 0px 2px;">Holo-Screen</td>
+                                    <td style="padding: 0px 2px;">Smoke Canister</td>
+                                    <td style="padding: 0px 2px;">Creates 1-Pace cloud for Concealment.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>11–12</strong></td>
+                                    <td style="padding: 0px 2px;">Skeleton Key</td>
+                                    <td style="padding: 0px 2px;">Bypass Chip</td>
+                                    <td style="padding: 0px 2px;">Pry-Bar</td>
+                                    <td style="padding: 0px 2px;">Advantage on 1 lock, hack, or forced entry.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>13–14</strong></td>
+                                    <td style="padding: 0px 2px;">Grapple Hook</td>
+                                    <td style="padding: 0px 2px;">Grapnel Gun</td>
+                                    <td style="padding: 0px 2px;">Rope Launcher</td>
+                                    <td style="padding: 0px 2px;">Ignores vertical move cost up to 4 Paces.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>15–16</strong></td>
+                                    <td style="padding: 0px 2px;">True-Strike Dust</td>
+                                    <td style="padding: 0px 2px;">Targeting Link</td>
+                                    <td style="padding: 0px 2px;">Tracer Rounds</td>
+                                    <td style="padding: 0px 2px;">Next attack completely ignores target cover.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>17–18</strong></td>
+                                    <td style="padding: 0px 2px;">Shield Patch</td>
+                                    <td style="padding: 0px 2px;">Hard-Light Rig</td>
+                                    <td style="padding: 0px 2px;">Scrap Plate</td>
+                                    <td style="padding: 0px 2px;">+2 Evade vs next 1 incoming attack.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0px 2px;"><strong>19–20</strong></td>
+                                    <td style="padding: 0px 2px;">Hunter's Tag</td>
+                                    <td style="padding: 0px 2px;">Tracker Dart</td>
+                                    <td style="padding: 0px 2px;">Paint Marking</td>
+                                    <td style="padding: 0px 2px;">All party attacks vs marked target gain Advantage.</td>
+                                </tr>
                             </tbody>
                         </table>
 
-                        <h2>5. VEHICLES, MOUNTS AND CHASES</h2>
-                        <ul style="font-size: 7.6px;">
-                            <li><strong>Light Mount / Bike (15 HP):</strong> Speed 5 Paces. Driver gains +2 Evade.</li>
-                            <li><strong>Heavy Wagon / Truck (35 HP):</strong> Speed 4 Paces. Occupants gain Full Cover.</li>
-                            <li><strong>Chase Engine (Paces 1 to 5):</strong> Driver Agility/Might vs 14 shifts track (1 = Melee, 5 = Escaped).</li>
+                        <h2>5. MAGIC, PSIONICS and CYBERWARE</h2>
+                        <p>Spells/cybernetics use standard class features & weapon math in setting flavor:</p>
+                        <ul>
+                            <li><strong>Spells as Weapons:</strong> Ranged (8 Paces) = Firebolt. Heavy Melee (1 Pace) = Telekinetic crush.</li>
+                            <li><strong>Abilities as Magic:</strong> <em>Concussive Blow</em> = shockwave spell. <em>Structural Weakness</em> = acid vial.</li>
+                        </ul>
+
+                        <h2>6. VEHICLES, MOUNTS AND CHASES</h2>
+                        <ul style="font-size: 7.3px;">
+                            <li><strong>Travel & Cover:</strong> A vehicle or mount carries the party together and provides mobile cover during combat.</li>
+                            <li><strong>Chases:</strong> The driver rolls <strong>Agility or Might vs 14</strong> on their turn to close distance or break away. Passengers take their normal Move and Action Phases to fire weapons or use gear.</li>
+                            <li><strong>Crashes:</strong> If a vehicle is disabled or destroyed, occupants make an <strong>Agility check vs 14</strong> to jump clear safely or take hazard damage and fall Prone.</li>
                         </ul>
                     </div>
                 </div>
@@ -949,37 +1080,43 @@
             <div id="page6-dynamic" style="display: none;">
                 <div class="two-column">
                     <div class="column-box">
-                        <h2>1. ACTIVE SETTING DRIVES & BACKGROUNDS</h2>
-                        <p>Setting: <strong style="color: var(--accent-color);" data-key="genre_name">Fantasy</strong></p>
-                        <table style="font-size: 7.2px; margin-bottom: 3px;">
-                            <thead>
-                                <tr><th style="width: 12%;">d8</th><th style="width: 44%;">Thematic Drive Choice</th><th style="width: 44%;">Thematic Background Choice</th></tr>
-                            </thead>
-                            <tbody id="p6DriveBgBody">
-                                <!-- Populated by JS -->
-                            </tbody>
-                        </table>
+                        <h2>1. ACTIVE WEALTH & LOOT ECONOMY</h2>
+                        <p>Current Setting: <strong style="color: var(--accent-color);" data-key="genre_name">Fantasy</strong></p>
+                        <ul style="font-size: 7.6px;">
+                            <li><strong>Minor Loot Tags (Spending Money):</strong> <span data-key="minor_loot_ex">Pouch of Silver, Bandit Bounty</span>. <em>Uses:</em> 1 Minor Tag/player = Sanctuary Rest (100% reset); 1 Tag = Restock 1 consumable, buy basic gear, or low-level bribe.</li>
+                            <li><strong>Major Loot Tags (Special Assets / Relics):</strong> <span data-key="major_loot_ex">Dragon Scale, Ancient Relic</span>. <em>Uses:</em> Traded directly for primary weapons/armor, legendary gear, vehicle repairs, or major faction leverage.</li>
+                        </ul>
 
-                        <h2>2. SETTING ARMORY RESKINS</h2>
-                        <ul style="font-size: 7.6px;" id="armoryExampleList">
+                        <h2>2. ADAPTING THE THRESHOLD</h2>
+                        <p>The Guide can adjust the baseline threshold of 14 to set campaign tone:</p>
+                        <ul>
+                            <li><strong>Super-Heroic (Target 12):</strong> Easy success without spending RP. High action.</li>
+                            <li><strong>Survival Horror (Target 16):</strong> High failure rate. Forces players to burn RP constantly.</li>
+                        </ul>
+
+                        <h2>3. SETTING ARMORY RESKINS</h2>
+                        <p>Gear examples reskinned for <strong data-key="genre_name">Fantasy</strong>:</p>
+                        <ul style="font-size: 7.3px;" id="armoryExampleList">
                             <!-- Populated by JS -->
                         </ul>
 
-                        <h2 data-key="magic_title">3. MAGIC, PSIONICS AND SPECIAL POWERS</h2>
-                        <p data-key="magic_desc" style="font-size: 7.8px;">Reskinned abilities and spells for this setting:</p>
-                        <ul style="font-size: 7.6px;" id="magicExampleList">
+                        <h2 data-key="magic_title">5. MAGIC, PSIONICS AND SPECIAL POWERS</h2>
+                        <p data-key="magic_desc">Spells and powers use standard class features and weapon math dressed in setting flavor:</p>
+                        <ul style="font-size: 7.3px;" id="magicExampleList">
                             <!-- Populated by JS -->
                         </ul>
                     </div>
 
                     <div class="column-box">
                         <h2>4. CONSUMABLE & UTILITY LOOT (<span data-key="genre_name">Fantasy</span>)</h2>
-                        <table style="font-size: 7px; margin-top: 1px; margin-bottom: 2px;">
+                        <p>Using any consumable costs <strong>1 Action Phase</strong>. Roll 1d20 for loot drops:</p>
+
+                        <table style="font-size: 6.8px; margin-top: 1px; margin-bottom: 2px;">
                             <thead>
                                 <tr>
-                                    <th style="width: 15%;">d20</th>
-                                    <th style="width: 35%;">Item Drop</th>
-                                    <th style="width: 50%;">Mechanical Effect</th>
+                                    <th style="padding: 1px 2px; width: 18%;">d20 Roll</th>
+                                    <th style="padding: 1px 2px; width: 32%;">Item Drop</th>
+                                    <th style="padding: 1px 2px; width: 50%;">Mechanical Effect</th>
                                 </tr>
                             </thead>
                             <tbody id="dynamicLootBody">
@@ -987,11 +1124,11 @@
                             </tbody>
                         </table>
 
-                        <h2>5. VEHICLES, MOUNTS AND CHASES</h2>
-                        <ul style="font-size: 7.6px;">
-                            <li><strong>Light Mount / Hover-Bike (15 HP):</strong> Speed 5 Paces. Driver gains +2 Evade.</li>
-                            <li><strong>Heavy Truck / War Wagon (35 HP):</strong> Speed 4 Paces. Occupants gain Full Cover.</li>
-                            <li><strong>Ram / Board:</strong> Driver check vs 14 deals 6 Flat Dmg to both vehicles.</li>
+                        <h2>6. VEHICLES, MOUNTS AND CHASES</h2>
+                        <ul style="font-size: 7.3px;">
+                            <li><strong>Travel & Cover:</strong> A vehicle or mount carries the party together and provides mobile cover during combat.</li>
+                            <li><strong>Chases:</strong> The driver rolls <strong>Agility or Might vs 14</strong> on their turn to close distance or break away. Passengers take their normal Move and Action Phases to fire weapons or use gear.</li>
+                            <li><strong>Crashes:</strong> If a vehicle is disabled or destroyed, occupants make an <strong>Agility check vs 14</strong> to jump clear safely or take hazard damage and fall Prone.</li>
                         </ul>
                     </div>
                 </div>
@@ -1081,8 +1218,11 @@
             },
             fantasy: {
                 genre_name: "Fantasy",
-                magic_title: "3. MAGIC, CANTRIPS AND INCANTATIONS",
+                minor_loot_ex: "Pouch of Silver, Bandit Bounty",
+                major_loot_ex: "Dragon Scale, Ancient Relic",
+                magic_title: "5. MAGIC, CANTRIPS AND INCANTATIONS",
                 magic_desc: "Spells and prayers use standard class features & weapon math dressed in arcana:",
+
                 arm_unarmored_lb: "Unarmored (Robes)",
                 arm_light_lb: "Light Armor (Leather)",
                 arm_med_lb: "Medium Armor (Chainmail)",
@@ -1164,17 +1304,25 @@
                     "<strong>Abilities as Magic:</strong> <em>Concussive Blow</em> = Thunderwave. <em>Structural Weakness</em> = Acid Splash."
                 ],
                 loot: [
-                    { roll: "1–4", item: "Healing Salve", effect: "Restores 5 HP OR clears 1 Condition." },
-                    { roll: "5–8", item: "Focus Elixir", effect: "Regains 1 Force, Reflex, or RP pool point." },
-                    { roll: "9–12", item: "Fire Oil", effect: "+2 Flat Damage on next successful hit." },
-                    { roll: "13–16", item: "Flash Powder", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
-                    { roll: "17–20", item: "True-Strike Dust", effect: "Next attack completely ignores target cover." }
+                    { roll: "1–2", item: "Healing Salve", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Focus Elixir", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Fire Oil", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Flash Powder", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Smoke Vial", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Skeleton Key", effect: "Advantage on 1 lock picking or forced door check." },
+                    { roll: "13–14", item: "Grapple Hook", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "True-Strike Dust", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Shield Patch", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Hunter's Tag", effect: "All party attacks vs marked target gain Advantage." }
                 ]
             },
             cyberpunk: {
                 genre_name: "Cyberpunk",
-                magic_title: "3. CYBERWARE, DAEMONS AND QUICKHACKS",
+                minor_loot_ex: "Cred-Stick, Black Market Cash",
+                major_loot_ex: "AI Core Chip, Prototype Cyberware",
+                magic_title: "5. CYBERWARE, DAEMONS AND QUICKHACKS",
                 magic_desc: "Cyberware programs and quickhacks use standard weapon/ability math in chrome flavor:",
+
                 arm_unarmored_lb: "Unarmored (Streetwear)",
                 arm_light_lb: "Light Armor (Sub-dermal Weave)",
                 arm_med_lb: "Medium Armor (Corp Jacket)",
@@ -1256,17 +1404,25 @@
                     "<strong>Programs as Magic:</strong> <em>Concussive Blow</em> = System Shock Hack. <em>Structural Weakness</em> = ICE-Breaker Malware."
                 ],
                 loot: [
-                    { roll: "1–4", item: "Hypo-Med Injector", effect: "Restores 5 HP OR clears 1 Condition." },
-                    { roll: "5–8", item: "Neural Stim Patch", effect: "Regains 1 Force, Reflex, or RP pool point." },
-                    { roll: "9–12", item: "Overcharge Battery", effect: "+2 Flat Damage on next successful hit." },
-                    { roll: "13–16", item: "EMP Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
-                    { roll: "17–20", item: "Smart-Targeting Link", effect: "Next attack completely ignores target cover." }
+                    { roll: "1–2", item: "Hypo-Med Injector", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Neural Stim Patch", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Overcharge Battery", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "EMP Flash Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Holo-Screen Projector", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Bypass Cipher Chip", effect: "Advantage on 1 hack or digital override." },
+                    { roll: "13–14", item: "Grapnel Launcher", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "Smart-Targeting Link", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Sub-Dermal Barrier", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Tracker Dart Signal", effect: "All party attacks vs marked target gain Advantage." }
                 ]
             },
             scifi: {
                 genre_name: "Sci-Fi",
-                magic_title: "3. PSIONICS, BIOTICS AND TECH POWERS",
+                minor_loot_ex: "Fuel Credits, Cargo Pass",
+                major_loot_ex: "Alien Artifact, Pure Plasma Gem",
+                magic_title: "5. PSIONICS, BIOTICS AND TECH POWERS",
                 magic_desc: "Psionic faculties and biotic amps use standard combat math in high-tech flavor:",
+
                 arm_unarmored_lb: "Unarmored (Jumpsuit)",
                 arm_light_lb: "Light Armor (Vac-Suit)",
                 arm_med_lb: "Medium Armor (Battle-Mesh)",
@@ -1287,25 +1443,25 @@
                 wep_heavy: "Heavy Melee (Gravity Hammer)",
 
                 c1_title: "THE SENTINEL",
-                c1_desc: "Narrative Role: Hard-light barrier specialist. You lock down airlocks, absorb void hazards, and shield squadmates.",
+                c1_desc: "Narrative Role: Hard-light barrier specialist. You lock down airlocks, absorb void hazards, and shield squadmates in vacuum breaches.",
                 c1_loadout: "Powered Exo-Suit (+3 Evade, -2 Paces), Energy Shield (-1 Pace), Plasma Blade (3 Dmg, 1 Pace Range).",
                 c1_spec: "Hard-Light Phalanx",
                 c1_ab1: "Plasma Arc",
                 c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to discharge a plasma arc dealing 2 flat damage to an adjacent secondary foe.",
 
                 c2_title: "THE VANGUARD",
-                c2_desc: "Narrative Role: Heavy exo-suit shock trooper. You crush blast doors, force momentum through enemy lines, and hurl debris.",
+                c2_desc: "Narrative Role: Heavy exo-suit shock trooper. You crush blast doors, force momentum through enemy lines, and hurl heavy debris.",
                 c2_loadout: "Gravity Hammer (4 Dmg, 1 Pace Range), Marines Battle-Mesh (+2 Evade, -1 Pace), Fusion Torch.",
                 c2_spec: "Breach Protocol",
                 c2_ab3: "Kinetic Shockwave",
                 c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or is thrown off balance (Dazed).",
 
                 c3_title: "THE SPEC-OPS",
-                c3_desc: "Narrative Role: Optical-camo assassin. Bypassing laser grids, flanking alien threats, and executing precision strikes.",
+                c3_desc: "Narrative Role: Optical-camo assassin. Bypassing laser grids, flanking alien threats, and executing precision weakness strikes.",
                 c3_loadout: "Twin Arc Blades (3 Dmg +1 from Twin Fangs, 1 Pace Range), Scout Vacuum Suit (+1 Evade), Energy Darts.",
 
                 c4_title: "THE SHARPSHOOTER",
-                c4_desc: "Narrative Role: Long-range thermal marksman. Controlling corridors, puncturing hull armor, and providing overwatch.",
+                c4_desc: "Narrative Role: Long-range thermal marksman. Controlling corridors, puncturing hull armor, and providing orbital overwatch.",
                 c4_loadout: "Gauss Railgun (2 Dmg, 8 Paces Range), Scout Vac-Suit (+1 Evade), Arc Dagger backup.",
 
                 c5_title: "THE ENGINEER",
@@ -1348,17 +1504,25 @@
                     "<strong>Tech Powers as Magic:</strong> <em>Concussive Blow</em> = Grav-Pulse. <em>Structural Weakness</em> = Corrosive Spray."
                 ],
                 loot: [
-                    { roll: "1–4", item: "Bio-Gel Injector", effect: "Restores 5 HP OR clears 1 Condition." },
-                    { roll: "5–8", item: "Adrenaline Battery", effect: "Regains 1 Force, Reflex, or RP pool point." },
-                    { roll: "9–12", item: "Plasma Amp Cell", effect: "+2 Flat Damage on next successful hit." },
-                    { roll: "13–16", item: "Stun Pulse Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
-                    { roll: "17–20", item: "Thermal Target Link", effect: "Next attack completely ignores target cover." }
+                    { roll: "1–2", item: "Bio-Gel Injector", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Adrenaline Battery", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Plasma Amp Cell", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Stun Pulse Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Refractor Cloud", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Decryption Link", effect: "Advantage on 1 console hack or door override." },
+                    { roll: "13–14", item: "Grav-Hook Rig", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "Thermal Target Link", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Energy Barrier Emitter", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Targeting Beacon", effect: "All party attacks vs marked target gain Advantage." }
                 ]
             },
             postapoc: {
                 genre_name: "Post-Apoc",
-                magic_title: "3. MUTATIONS, CHEMICALS AND PRE-WAR TECH",
+                minor_loot_ex: "Bottlecap Pouch, Unspent Ammo",
+                major_loot_ex: "Intact Pre-War Engine, Water Filter",
+                magic_title: "5. MUTATIONS, CHEMICALS AND PRE-WAR TECH",
                 magic_desc: "Mutant strains and scavenged tech function as abilities with wasteland flair:",
+
                 arm_unarmored_lb: "Unarmored (Rags)",
                 arm_light_lb: "Light Armor (Tire-Tread)",
                 arm_med_lb: "Medium Armor (Scrap Plate)",
@@ -1379,33 +1543,33 @@
                 wep_heavy: "Heavy Melee (Sledgehammer)",
 
                 c1_title: "THE IRONHIDE",
-                c1_desc: "Narrative Role: Scrap-armored wasteland guardian. You anchor choked ruins and hold the perimeter line.",
+                c1_desc: "Narrative Role: Scrap-armored wasteland guardian. You anchor choked ruins, absorb raider bursts, and hold the perimeter line.",
                 c1_loadout: "Welded Boiler Plate (+3 Evade, -2 Paces), Car Door Shield (-1 Pace), Machete (3 Dmg, 1 Pace Range).",
                 c1_spec: "Scrap-Wall Guard",
                 c1_ab1: "Scrap-Blade Slash",
                 c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to cleave through scrap metal, dealing 2 flat damage to an adjacent secondary enemy.",
 
                 c2_title: "THE WRECKER",
-                c2_desc: "Narrative Role: Primitive shock charger. Smashing through barricades, throwing rubble, and pummeling beasts.",
+                c2_desc: "Narrative Role: Primitive shock charger. Smashing through barricades, throwing rubble, and pummeling mutated beasts.",
                 c2_loadout: "Spiked Sledgehammer (4 Dmg, 1 Pace Range), Scrap Plating (+2 Evade, -1 Pace), Pry-Bar.",
                 c2_spec: "Rubble Crasher",
                 c2_ab3: "Sledgehammer Smash",
                 c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or is rattled (Dazed).",
 
                 c3_title: "THE STALKER",
-                c3_desc: "Narrative Role: Ruin-crawler hunter. Moving silently through toxic ash and ambushing raiders undetected.",
-                c3_loadout: "Twin Machetes (3 Dmg +1 from Twin Fangs, 1 Pace Range), Tire-Tread Leathers (+1 Evade), Throwing Knives.",
+                c3_desc: "Narrative Role: Ruin-crawler hunter. Moving silently through toxic ash, ambushing caravans, and striking undetected from dark corners.",
+                c3_loadout: "Twin Machetes (3 Dmg +1 from Twin Fangs, 1 Pace Range), Tire-Tread Leathers (+1 Evade), Scavenged Throwing Knives.",
 
                 c4_title: "THE SCRAPPER",
-                c4_desc: "Narrative Role: Pipe-rifle overwatch. Holding high water towers and suppressing open wasteland terrain.",
+                c4_desc: "Narrative Role: Pipe-rifle overwatch. Holding high water towers, sniping scavengers, and suppressing open wasteland terrain.",
                 c4_loadout: "Scope Pipe Rifle (2 Dmg, 8 Paces Range), Scavenger Vest (+1 Evade), Spiked Club backup.",
 
                 c5_title: "THE TINKER",
-                c5_desc: "Narrative Role: Wasteland trap master. Rigging pipe-bombs, dismantling old machinery, and causing collapses.",
+                c5_desc: "Narrative Role: Wasteland trap master. Rigging pipe-bombs, dismantling old machinery, and causing collapse in unstable ruins.",
                 c5_loadout: "Scrap Blade (3 Dmg, 1 Pace Range), Padded Vest (+1 Evade), Pipe Bombs.",
 
                 c6_title: "THE SCAVENGER",
-                c6_desc: "Narrative Role: Wasteland field surgeon. Purging radiation, bandaging shrapnel wounds, and foraging sustenance.",
+                c6_desc: "Narrative Role: Wasteland field surgeon. Purging radiation, bandaging shrapnel wounds, and foraging clean sustenance.",
                 c6_loadout: "Scrap Crossbow (1 Dmg, 3 Paces Range), Scavenger Leathers (+1 Evade), Chem Bag & Bandages.",
 
                 mob1: "1. Brute (Wastes Mutant)",
@@ -1440,17 +1604,25 @@
                     "<strong>Chems as Magic:</strong> <em>Concussive Blow</em> = Kinetic Shock Chem. <em>Structural Weakness</em> = Corrosive Sludge."
                 ],
                 loot: [
-                    { roll: "1–4", item: "Clean Bandages", effect: "Restores 5 HP OR clears 1 Condition." },
-                    { roll: "5–8", item: "Pre-War Chem Pills", effect: "Regains 1 Force, Reflex, or RP pool point." },
-                    { roll: "9–12", item: "Hollow-Point Ammo", effect: "+2 Flat Damage on next successful hit." },
-                    { roll: "13–16", item: "Scrap Pipe Bomb", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
-                    { roll: "17–20", item: "Tracer Rounds", effect: "Next attack completely ignores target cover." }
+                    { roll: "1–2", item: "Clean Bandages & Salve", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Pre-War Chem Pills", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Hollow-Point Ammo", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Scrap Pipe Bomb", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Smoke Canister", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Rusty Pry-Bar", effect: "Advantage on 1 lock, crate, or forced entry." },
+                    { roll: "13–14", item: "Kevlar Rope Launcher", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "Tracer Rounds", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Scrap Metal Shield", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Paint Marking Flare", effect: "All party attacks vs marked target gain Advantage." }
                 ]
             },
             steampunk: {
                 genre_name: "Steampunk",
-                magic_title: "3. ALCHEMY, STEAM DEVICES AND AETHER TECH",
+                minor_loot_ex: "Brass Sovereign Coins, Aether Token",
+                major_loot_ex: "Clockwork Core, Flawless Diamond",
+                magic_title: "5. ALCHEMY, STEAM DEVICES AND AETHER TECH",
                 magic_desc: "Aetherial contraptions and alchemy use standard math with Victorian steam flair:",
+
                 arm_unarmored_lb: "Unarmored (Suit/Gown)",
                 arm_light_lb: "Light Armor (Leather Duster)",
                 arm_med_lb: "Medium Armor (Brass Weave)",
@@ -1471,33 +1643,33 @@
                 wep_heavy: "Heavy Melee (Steam Hammer)",
 
                 c1_title: "THE AUTOMATON",
-                c1_desc: "Narrative Role: Steam-powered ironclad sentinel. You hold factory chokepoints and absorb punishment.",
+                c1_desc: "Narrative Role: Steam-powered ironclad sentinel. You hold factory chokepoints, deflect boiler shrapnel, and absorb heavy punishment.",
                 c1_loadout: "Full Steel Steam-Suit (+3 Evade, -2 Paces), Brass Buckler (-1 Pace), Clockwork Blade (3 Dmg, 1 Pace Range).",
                 c1_spec: "Ironclad Guard",
                 c1_ab1: "Steam-Piston Strike",
                 c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to vent high-pressure steam dealing 2 flat damage to an adjacent secondary foe.",
 
                 c2_title: "THE BOILER",
-                c2_desc: "Narrative Role: Pressure-driven entry specialist. Kicking in vault doors and charging with steam-boosted speed.",
+                c2_desc: "Narrative Role: Pressure-driven entry specialist. Kicking in vault doors, throwing heavy gears, and charging with steam-boosted speed.",
                 c2_loadout: "Steam Hammer (4 Dmg, 1 Pace Range), Brass Riveted Weave (+2 Evade, -1 Pace), Heavy Gears.",
                 c2_spec: "Pneumatic Breach",
                 c2_ab3: "Pneumatic Slam",
                 c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or is stunned by pneumatic force (Dazed).",
 
                 c3_title: "THE SHADOW",
-                c3_desc: "Narrative Role: Gaslight alley assassin. Scaling brick facades and executing silent blade strikes.",
+                c3_desc: "Narrative Role: Gaslight alley assassin. Scaling brick facades, bypassing clockwork locks, and executing silent blade strikes.",
                 c3_loadout: "Twin Clockwork Daggers (3 Dmg +1 from Twin Fangs, 1 Pace Range), Leather Duster (+1 Evade), Throwing Cards.",
 
                 c4_title: "THE JAEGER",
-                c4_desc: "Narrative Role: Long-barrel rifle overwatch. Firing from clocktower perches and picking off targets.",
+                c4_desc: "Narrative Role: Long-barrel rifle overwatch. Firing from clocktower perches, penetrating brass plating, and picking off targets.",
                 c4_loadout: "Flintlock Precision Rifle (2 Dmg, 8 Paces Range), Leather Work Apron (+1 Evade), Cane-Sword backup.",
 
                 c5_title: "THE CLOCKMAKER",
-                c5_desc: "Narrative Role: Saboteur and alchemist. Overpressurizing steam pipes and triggering gear-traps.",
+                c5_desc: "Narrative Role: Saboteur and alchemist. Overpressurizing steam pipes, triggering gear-traps, and exploding volatile aether vials.",
                 c5_loadout: "Clockwork Blade (3 Dmg, 1 Pace Range), Leather Apron (+1 Evade), Volatile Vials.",
 
                 c6_title: "THE ALCHEMIST",
-                c6_desc: "Narrative Role: Ether physician. Administering restorative tinctures and reviving fallen allies.",
+                c6_desc: "Narrative Role: Ether physician. Administering restorative tinctures, neutralizing toxic vapors, and reviving fallen allies.",
                 c6_loadout: "Pneumatic Dart-Gun (1 Dmg, 3 Paces Range), Work Apron (+1 Evade), Ether Tinctures.",
 
                 mob1: "1. Brute (Brass Golem)",
@@ -1532,17 +1704,25 @@
                     "<strong>Alchemy as Magic:</strong> <em>Concussive Blow</em> = Vapor Explosion. <em>Structural Weakness</em> = Acid Vial."
                 ],
                 loot: [
-                    { roll: "1–4", item: "Ether Tonic Vials", effect: "Restores 5 HP OR clears 1 Condition." },
-                    { roll: "5–8", item: "Smelling Salts", effect: "Regains 1 Force, Reflex, or RP pool point." },
-                    { roll: "9–12", item: "Aether Infused Powder", effect: "+2 Flat Damage on next successful hit." },
-                    { roll: "13–16", item: "Volatile Steam Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
-                    { roll: "17–20", item: "Telescopic Scope", effect: "Next attack completely ignores target cover." }
+                    { roll: "1–2", item: "Ether Tonic Vials", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Smelling Salts", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "Aether Infused Powder", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Volatile Steam Grenade", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Soot Cloud Bottle", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Skeleton Key Pick Set", effect: "Advantage on 1 lock pick or clockwork mechanism." },
+                    { roll: "13–14", item: "Brass Grapple Hook", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "Telescopic Scope", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Spring-Loaded Plate", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Pneumatic Marker", effect: "All party attacks vs marked target gain Advantage." }
                 ]
             },
             spacewest: {
                 genre_name: "Space West",
-                magic_title: "3. FRONTLINE TECH, DYNAMITE & ALIEN RELICS",
+                minor_loot_ex: "Bounty Dollars, Saloon Poker Chips",
+                major_loot_ex: "Stolen Hyper-Drive, Alien Skull Relic",
+                magic_title: "5. FRONTLINE TECH, DYNAMITE & ALIEN RELICS",
                 magic_desc: "Alien gadgets and frontier explosives use standard combat rules with dust-and-laser flavor:",
+
                 arm_unarmored_lb: "Unarmored (Duster)",
                 arm_light_lb: "Light Armor (Hide Vest)",
                 arm_med_lb: "Medium Armor (Dragoon Weave)",
@@ -1563,33 +1743,33 @@
                 wep_heavy: "Heavy Melee (Pickaxe)",
 
                 c1_title: "THE MARSHAL",
-                c1_desc: "Narrative Role: Frontier lawkeeper. Holding the saloon entrance and protecting innocents.",
+                c1_desc: "Narrative Role: Frontier lawkeeper. Holding the saloon entrance, drawing heavy fire, and protecting innocents from outlaw bands.",
                 c1_loadout: "Heavy Prospector Armor (+3 Evade, -2 Paces), Hover-Shield (-1 Pace), Bowie Knife (3 Dmg, 1 Pace Range).",
                 c1_spec: "Posse Guard",
                 c1_ab1: "Heavy Rifle Whip",
                 c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to crack an adjacent secondary outlaw with your rifle stock for 2 flat damage.",
 
                 c2_title: "THE BRAWLER",
-                c2_desc: "Narrative Role: Frontier pit fighter. Smashing through wagon barricades and brutalizing outlaws.",
+                c2_desc: "Narrative Role: Frontier pit fighter. Smashing through wagon barricades, throwing heavy supply crates, and brutalizing outlaws.",
                 c2_loadout: "Heavy Pickaxe (4 Dmg, 1 Pace Range), Dragoon Leather (+2 Evade, -1 Pace), Mining Tools.",
                 c2_spec: "Saloon Crasher",
                 c2_ab3: "Shotgun Stun",
                 c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or takes a blast to the chest (Dazed).",
 
                 c3_title: "THE GUNSLINGER",
-                c3_desc: "Narrative Role: Quick-draw scalpel. Flanking behind cover and executing blinding fast hip-fire strikes.",
+                c3_desc: "Narrative Role: Quick-draw scalpel. Flanking behind cover, executing blinding fast hip-fire strikes, and slipping through canyon shadows.",
                 c3_loadout: "Twin Bowie Blades (3 Dmg +1 from Twin Fangs, 1 Pace Range), Hardened Hide Vest (+1 Evade), Throwing Hatchets.",
 
                 c4_title: "THE BOUNTY HUNTER",
-                c4_desc: "Narrative Role: Lever-action overwatch. Tracking outlaw pucks across ridge lines and pinning targets.",
+                c4_desc: "Narrative Role: Lever-action overwatch. Tracking outlaw pucks across ridge lines, shooting from high ground, and pinning targets.",
                 c4_loadout: "Lever-Action Repeater (2 Dmg, 8 Paces Range), Duster Vest (+1 Evade), Bowie Knife backup.",
 
                 c5_title: "THE PROSPECTOR",
-                c5_desc: "Narrative Role: Demolitions and mining expert. Rigging dynamite charges and sabotaging hover-train tracks.",
+                c5_desc: "Narrative Role: Demolitions and mining expert. Rigging dynamite charges, collapsing mine shafts, and sabotaging hover-train tracks.",
                 c5_loadout: "Pickaxe (3 Dmg, 1 Pace Range), Hide Vest (+1 Evade), Sticks of Dynamite.",
 
                 c6_title: "THE SAWBONE",
-                c6_desc: "Narrative Role: Frontier doctor. Digging out slug rounds and brewing potent saloon tonics.",
+                c6_desc: "Narrative Role: Frontier doctor. Digging out slug rounds, cauterizing laser burns, and brewing potent saloon tonics.",
                 c6_loadout: "Derringer Pistol (1 Dmg, 3 Paces Range), Hide Vest (+1 Evade), Doctor's Bag & Tonics.",
 
                 mob1: "1. Brute (Outlaw Bruiser)",
@@ -1624,11 +1804,16 @@
                     "<strong>Dynamite as Magic:</strong> <em>Concussive Blow</em> = Blast Charge. <em>Structural Weakness</em> = Corrosive Solvent."
                 ],
                 loot: [
-                    { roll: "1–4", item: "Saloon Tonic", effect: "Restores 5 HP OR clears 1 Condition." },
-                    { roll: "5–8", item: "Frontier Coffee Brew", effect: "Regains 1 Force, Reflex, or RP pool point." },
-                    { roll: "9–12", item: "High-Caliber Slugs", effect: "+2 Flat Damage on next successful hit." },
-                    { roll: "13–16", item: "Stick of Dynamite", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
-                    { roll: "17–20", item: "Deadeye Sight Link", effect: "Next attack completely ignores target cover." }
+                    { roll: "1–2", item: "Saloon Tonic & Bandages", effect: "Restores 5 HP OR clears 1 Condition." },
+                    { roll: "3–4", item: "Frontier Coffee Brew", effect: "Regains 1 Force, Reflex, or RP pool point." },
+                    { roll: "5–6", item: "High-Caliber Slugs", effect: "+2 Flat Damage on next successful hit." },
+                    { roll: "7–8", item: "Stick of Dynamite", effect: "Throw 3 Paces: Target Agility vs 14 or Dazed." },
+                    { roll: "9–10", item: "Dust-Storm Flask", effect: "Creates 1-Pace cloud for Concealment." },
+                    { roll: "11–12", item: "Lock-Busting Crowbar", effect: "Advantage on 1 lock, safe, or forced entry." },
+                    { roll: "13–14", item: "Rope Lasso & Hook", effect: "Ignores vertical move cost up to 4 Paces." },
+                    { roll: "15–16", item: "Deadeye Sight Link", effect: "Next attack completely ignores target cover." },
+                    { roll: "17–18", item: "Iron Scrap Shielding", effect: "+2 Evade vs next 1 incoming attack." },
+                    { roll: "19–20", item: "Bounty Tag Signal", effect: "All party attacks vs marked target gain Advantage." }
                 ]
             }
         };
@@ -1656,17 +1841,6 @@
                 document.getElementById('page6-none').style.display = 'none';
                 document.getElementById('page6-dynamic').style.display = 'block';
 
-                const p6DriveBgBody = document.getElementById('p6DriveBgBody');
-                if (p6DriveBgBody && data.driveBg) {
-                    p6DriveBgBody.innerHTML = data.driveBg.map((row, idx) => `
-                        <tr>
-                            <td style="text-align: center;"><strong>${idx + 1}</strong></td>
-                            <td style="color: #2b5b84; font-weight: bold;">${row.d}</td>
-                            <td>${row.b}</td>
-                        </tr>
-                    `).join('');
-                }
-
                 const armoryList = document.getElementById('armoryExampleList');
                 if (armoryList && data.armory) armoryList.innerHTML = data.armory.map(ex => `<li>${ex}</li>`).join('');
 
@@ -1677,9 +1851,9 @@
                 if (lootBody && data.loot) {
                     lootBody.innerHTML = data.loot.map(row => `
                         <tr>
-                            <td style="text-align: center;"><strong>${row.roll}</strong></td>
-                            <td style="font-weight: bold; color: #2b5b84;">${row.item}</td>
-                            <td>${row.effect}</td>
+                            <td style="padding: 1px 2px;"><strong>${row.roll}</strong></td>
+                            <td style="padding: 1px 2px; font-weight: bold; color: #2b5b84;">${row.item}</td>
+                            <td style="padding: 1px 2px;">${row.effect}</td>
                         </tr>
                     `).join('');
                 }
