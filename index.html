@@ -140,7 +140,12 @@
 
         /* DEDICATED FULL-PAGE CODEX STYLES (PAGE 3) */
         .codex-page {
-            padding: 0.28in 0.38in 0.32in 0.38in;
+            padding: 0.26in 0.36in 0.3in 0.36in;
+        }
+
+        .codex-page h2 {
+            margin-top: 4px;
+            margin-bottom: 2px;
         }
 
         .codex-page h3 {
@@ -156,13 +161,13 @@
         .codex-page ul {
             margin-top: 0px;
             margin-bottom: 2px;
-            padding-left: 12px;
+            padding-left: 11px;
         }
 
         .codex-page li {
             margin-top: 0px;
             margin-bottom: 1px;
-            line-height: 1.25;
+            line-height: 1.22;
         }
 
         h1 {
@@ -534,7 +539,7 @@
                     <p>Building an Adventurer requires four foundational steps:</p>
                     <ul>
                         <li><strong>Background and Drive:</strong> Select a former narrative trade and core personal motivation from the table below. These define your narrative contacts, personality, and roleplay identity (they provide story depth and never grant combat bonuses or skills).</li>
-                        <li><strong>Class Selection:</strong> Choose 1 Combat Archetype from the Playbook Codex to set your tactical abilities.</li>
+                        <li><strong>Archetype & Talent Selection:</strong> Choose 1 Starting Combat Archetype on Page 3 (or pick 1 Passive and 1 Tier 1 Talent) to set your tactical abilities.</li>
                         <li><strong>Attributes:</strong> Base score +1 in Might, Agility, Will. Allocate +2 points across these (Absolute Max +4 EVER).</li>
                         <li><strong>Derived Vitals:</strong>
                             <ul>
@@ -593,14 +598,14 @@
                             <tr><th>Lvl</th><th>XP</th><th>Permanent Upgrades Unlocked (Max +4 Cap EVER)</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>1</td><td>0</td><td>Establish base vitals and Level 1 class features.</td></tr>
-                            <tr><td>2</td><td>10</td><td>+1 to any Attribute (Max +4 cap). Unlock L2 ability.</td></tr>
-                            <tr><td>3</td><td>20</td><td>+3 Max HP & +1 Max Force (Flat pool increase). Unlock L3 ability.</td></tr>
-                            <tr><td>4</td><td>30</td><td>+1 to any Attribute (Max +4 cap). Unlock L4 ability.</td></tr>
-                            <tr><td>5</td><td>40</td><td>+1 Max Reflex (Flat pool increase). Unlock L5 ability.</td></tr>
-                            <tr><td>6</td><td>50</td><td>+1 to any Attribute (Max +4 cap). Unlock L6 ability.</td></tr>
-                            <tr><td>7</td><td>60</td><td>+1 Max RP (Flat pool increase). Unlock L7 ability.</td></tr>
-                            <tr><td>8</td><td>70</td><td>Unlock Apex Level 8 ability (Max Level).</td></tr>
+                            <tr><td>1</td><td>0</td><td>Base vitals, 1 Starting Archetype Passive & 1 Tier 1 Talent.</td></tr>
+                            <tr><td>2</td><td>10</td><td>+1 to any Attribute (Max +4 cap). Unlock 1 Tier 1 Talent.</td></tr>
+                            <tr><td>3</td><td>20</td><td>+3 Max HP & +1 Max Force (Flat increase). Unlock 1 Tier 1 Talent.</td></tr>
+                            <tr><td>4</td><td>30</td><td>+1 to any Attribute (Max +4 cap). Unlock 1 Tier 2 Talent.</td></tr>
+                            <tr><td>5</td><td>40</td><td>+1 Max Reflex (Flat pool increase). Unlock 1 Tier 2 Talent.</td></tr>
+                            <tr><td>6</td><td>50</td><td>+1 to any Attribute (Max +4 cap). Unlock 1 Tier 2 Talent.</td></tr>
+                            <tr><td>7</td><td>60</td><td>+1 Max RP (Flat pool increase). Unlock 1 Tier 3 Apex Talent.</td></tr>
+                            <tr><td>8</td><td>70</td><td>Unlock 1 Tier 3 Apex Talent (Max Level Cap).</td></tr>
                         </tbody>
                     </table>
 
@@ -669,105 +674,118 @@
         <div class="page-num">Page 2</div>
     </div>
 
-    <!-- PAGE 3: UNIFIED PLAYBOOK CODEX (ALL 6 ARCHETYPES) -->
+    <!-- PAGE 3: UNIFIED PLAYBOOK & UNIVERSAL TALENT CODEX -->
     <div class="page codex-page">
         <div class="content-wrap">
-            <h1>UNIFIED PLAYBOOK CODEX</h1>
+            <h1>UNIFIED PLAYBOOK & TALENT CODEX</h1>
 
-            <div class="two-column">
-                <!-- LEFT COLUMN: CLASSES 1, 2, 3 -->
+            <h2>1. STARTING ARCHETYPES (CHOOSE 1 AT LEVEL 1)</h2>
+            <div class="two-column" style="gap: 8px; margin-bottom: 3px;">
                 <div class="column-box">
-                    <h3><span data-key="c1_title">THE WARDEN</span> (Resource Focus: Might / Force Specialist)</h3>
-                    <p><em data-key="c1_desc">Narrative Role: The unmovable shield of the party. You secure physical space, hold the line, and endure what others cannot survive.</em></p>
-                    <p><strong>Recommended Loadout:</strong> <span data-key="c1_loadout">Heavy Armor (+3 Evade, -2 Paces), Shield (-1 Pace), Light Melee (3 Dmg, 1 Pace Range).</span></p>
-                    <ul>
-                        <li><strong>L1 Specialty: <span data-key="c1_spec">Vanguard Guard</span> (Passive):</strong> If you end your turn adjacent to an ally, grant them Advantage on Evasion rolls until your next turn.</li>
-                        <li><strong>L1: <span data-key="c1_ab1">Cleave</span> [1 Force]:</strong> <span data-key="c1_ab1_desc">After a Heavy Weapon hit, spend 1 Force to deal 2 flat damage to an adjacent secondary foe within 1 pace.</span></li>
-                        <li><strong>L2: Iron Stance [1 Reflex]:</strong> Spend 1 Reflex during Action Phase. Auto-succeed on your next Evasion roll before your next turn.</li>
-                        <li><strong>L3: Brutal Force [1 Force]:</strong> Spend 1 Force on hit to add Might modifier to flat damage a second time.</li>
-                        <li><strong>L4: Steel Stance [2 RP]:</strong> Spend 2 RP during Action Phase. Cap maximum incoming flat damage from the very next successful hit against you at 2 points.</li>
-                        <li><strong>L5: Unstoppable Defiance [2 RP]:</strong> When dropped to 0 HP, spend 2 RP to remain standing at 1 HP.</li>
-                        <li><strong>L6: Hardened Conditioning (Passive):</strong> Advantage on Might and Will checks vs environmental weather; rest in heavy armor without penalty.</li>
-                        <li><strong>L7: Sunder / Disarm [2 Reflex]:</strong> Spend 2 Reflex on hit to wrench target's weapon away OR deal +3 bonus flat damage.</li>
-                        <li><strong>L8: Brawl Mastery [4 Force]:</strong> Spend 4 Force on hit to grapple foe within 1 pace as physical cover (+Advantage on Evasion) OR pin a beast to remove its Action Phase.</li>
-                    </ul>
-
-                    <h3><span data-key="c2_title">THE BREAKER</span> (Resource Focus: Might & Reflex Specialist)</h3>
-                    <p><em data-key="c2_desc">Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.</em></p>
-                    <p><strong>Recommended Loadout:</strong> <span data-key="c2_loadout">Heavy Melee (4 Dmg, 1 Pace Range), Medium Armor (+2 Evade, -1 Pace), Improvised Tools.</span></p>
-                    <ul>
-                        <li><strong>L1 Specialty: <span data-key="c2_spec">Breacher</span> (Passive):</strong> Never suffer movement penalties kicking open doors or smashing barricades.</li>
-                        <li><strong>L1: Drive Back [1 Force]:</strong> On Heavy Melee hit, spend 1 Force to shove target 1 pace back. Wall collision deals +2 crush damage.</li>
-                        <li><strong>L2: Adrenaline Surge [2 Reflex]:</strong> Double total movement paces for this turn.</li>
-                        <li><strong>L3: <span data-key="c2_ab3">Concussive Blow</span> [1 Force]:</strong> <span data-key="c2_ab3_desc">Spend 1 Force on hit. Target passes Might check vs 14 or becomes Dazed.</span></li>
-                        <li><strong>L4: Linebreaker [2 Reflex]:</strong> Move directly through enemy spaces, forcing them 1 pace aside (backed against wall = 2 crush damage).</li>
-                        <li><strong>L5: Relentless Assault [3 RP]:</strong> Spend 3 RP during Action Phase to make a second attack against a different adjacent target within 1 pace.</li>
-                        <li><strong>L6: Pack Mule (Passive):</strong> Active Inventory Capacity permanently increased by 2 slots (Base 6 + Might Mod).</li>
-                        <li><strong>L7: Heave [2 Force]:</strong> Lift and throw heavy object up to 2 paces. Target passes Agility check vs 14 or takes 4 flat damage and falls Prone.</li>
-                        <li><strong>L8: Crash the Gates [4 RP]:</strong> Smash barrier on Move Phase to take immediate Action Phase with Advantage against unaware targets.</li>
-                    </ul>
-
-                    <h3><span data-key="c3_title">THE PROWLER</span> (Resource Focus: Agility / Reflex Specialist)</h3>
-                    <p><em data-key="c3_desc">Narrative Role: The scalpel. Bypassing security, flanking, and executing devastating close-quarters strikes.</em></p>
-                    <p><strong>Recommended Loadout:</strong> <span data-key="c3_loadout">Twin Light Melee (3 Dmg +1 from Twin Fangs, 1 Pace Range), Unarmored (+1 Pace) or Light Armor (+1 Evade), Ranged/Thrown Daggers (3 Paces Range).</span></p>
-                    <ul>
-                        <li><strong>L1 Specialty: Twin Fangs (Passive):</strong> Dual-wielding Light Melee adds +1 to flat damage output.</li>
-                        <li><strong>L1: Backstab [1 Reflex]:</strong> Positioned behind an engaged target within 1 pace, spend 1 Reflex for Advantage on attack and +2 flat damage.</li>
-                        <li><strong>L2: Prowler's Eye [1 RP]:</strong> Scan 3-pace area with Advantage vs 14 to spot hidden hazards and mechanisms.</li>
-                        <li><strong>L3: Nerve Strike [2 Reflex]:</strong> Spend 2 Reflex on hit. Target passes Might check vs 14 or becomes Grappled.</li>
-                        <li><strong>L4: Shadow Strike [2 Reflex]:</strong> Strike from concealment with Advantage; add Agility mod to flat damage a second time.</li>
-                        <li><strong>L5: Absolute Camouflage [3 RP]:</strong> In cover, enemies suffer Disadvantage on perception and attack rolls against you.</li>
-                        <li><strong>L6: Ghost Step (Passive):</strong> Advantage on silent movement; leave no physical footprints on natural terrain.</li>
-                        <li><strong>L7: Hamstring [2 Force]:</strong> Sever a tendon on hit; spend 2 Force to permanently reduce target movement to 1 pace until treated.</li>
-                        <li><strong>L8: Lethal Strike [4 Force]:</strong> Strike unaware non-boss target from behind within 1 pace; spend 4 Force to instantly drop them to 0 HP.</li>
+                    <ul style="font-size: 8.2px; padding-left: 10px; margin: 0;">
+                        <li><strong>1. <span data-key="c1_title">THE WARDEN</span>:</strong> <em>Passive:</em> <span data-key="c1_spec">Vanguard Guard</span> (Req Shield) — End turn adjacent to an ally to grant them Advantage on Evasion. <span data-key="c1_loadout">Heavy Armor, Shield, Light Melee.</span></li>
+                        <li><strong>2. <span data-key="c2_title">THE BREAKER</span>:</strong> <em>Passive:</em> <span data-key="c2_spec">Breacher</span> — Never suffer movement penalties kicking doors, breaking barricades, or clearing rubble. <span data-key="c2_loadout">Heavy Melee, Medium Armor, Tools.</span></li>
+                        <li><strong>3. <span data-key="c3_title">THE PROWLER</span>:</strong> <em>Passive:</em> Twin Fangs (Req Dual-Wield) — Dual-wielding Light Melee adds +1 Flat Damage. <span data-key="c3_loadout">Twin Light Melee, Light Armor, Throwing Daggers.</span></li>
                     </ul>
                 </div>
-                
-                <!-- RIGHT COLUMN: CLASSES 4, 5, 6 -->
                 <div class="column-box">
-                    <h3><span data-key="c4_title">THE MARKSMAN</span> (Resource Focus: Will / RP Specialist)</h3>
-                    <p><em data-key="c4_desc">Narrative Role: Ranged overwatch. Securing angles, controlling enemy movement, and eliminating targets from afar.</em></p>
-                    <p><strong>Recommended Loadout:</strong> <span data-key="c4_loadout">Ranged Weapon (2 Dmg, 8 Paces Range Max), Unarmored (+1 Pace) or Light Armor (+1 Evade), Light Melee backup weapon (1 Pace Range).</span></p>
-                    <ul>
-                        <li><strong>L1 Specialty: Aimed Shot (Passive):</strong> Forfeit Move Phase to gain Advantage on your Ranged attack roll vs 14.</li>
-                        <li><strong>L1: Rig Chokepoint [1 Reflex]:</strong> Set tripwire in adjacent space; first enemy entering has movement reduced to 0 for that turn.</li>
-                        <li><strong>L2: Pinning Volley [2 RP]:</strong> Hail of fire covering a 2-pace chokepoint up to 8 paces away; first enemy passing through is Pinned Down.</li>
-                        <li><strong>L3: Crippling Shot [1 Force]:</strong> Spend 1 Force before attack. On hit within range, target's movement is halved on their next turn.</li>
-                        <li><strong>L4: Elevated Advantage [1 Reflex]:</strong> Scale vertical elevation quickly to fire from high ground, completely ignoring target cover bonuses.</li>
-                        <li><strong>L5: Piercing Strike [3 RP]:</strong> Hit primary target with 2-Handed Ranged weapon up to 8 paces away and deal equal flat damage to secondary enemy directly behind them.</li>
-                        <li><strong>L6: Eagle Eye (Passive):</strong> Effective range extended by +2 paces across all ranged weapon categories (Ranged/Thrown = 5 Paces, Ranged Weapon = 10 Paces Max).</li>
-                        <li><strong>L7: Funneling Fire [2 Force]:</strong> Rapid burst forces target within range to immediately move 1 pace in a direction of your choice.</li>
-                        <li><strong>L8: Perfect Aim [4 RP]:</strong> Forfeit Move Phase; roll attack up to 8 paces with Advantage, ignore cover, and add Will mod to flat damage.</li>
+                    <ul style="font-size: 8.2px; padding-left: 10px; margin: 0;">
+                        <li><strong>4. <span data-key="c4_title">THE MARKSMAN</span>:</strong> <em>Passive:</em> Aimed Shot (Req Ranged) — Forfeit Move Phase for Advantage on Ranged attack vs 14. <span data-key="c4_loadout">Ranged Weapon, Light Armor, Light Melee.</span></li>
+                        <li><strong>5. <span data-key="c5_title">THE SABOTEUR</span>:</strong> <em>Passive:</em> Saboteur — Dismantle simple locks and traps outside combat in 1 min without rolling. <span data-key="c5_loadout">Light Melee, Light Armor, Explosives.</span></li>
+                        <li><strong>6. <span data-key="c6_title">THE SURVIVALIST</span>:</strong> <em>Passive:</em> Combat Medic — Stabilize adjacent dying ally (Will vs 14) on Move Phase. <span data-key="c6_loadout">Ranged/Thrown, Light Armor, Medical Gear.</span></li>
                     </ul>
+                </div>
+            </div>
 
-                    <h3><span data-key="c5_title">THE SABOTEUR</span> (Resource Focus: Tactical RP & Reflex Specialist)</h3>
-                    <p><em data-key="c5_desc">Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.</em></p>
-                    <p><strong>Recommended Loadout:</strong> <span data-key="c5_loadout">Light Melee (3 Dmg, 1 Pace Range), Light Armor (+1 Evade), Ranged/Thrown explosives (3 Paces Range).</span></p>
-                    <ul>
-                        <li><strong>L1 Specialty: Saboteur (Passive):</strong> Automatically dismantle simple mechanical locks and traps given 1 full minute outside combat.</li>
-                        <li><strong>L1: Structural Weakness [1 RP]:</strong> Action Phase Will check vs 14 against target within 3 paces; next successful attack against target by any ally deals +2 Flat Damage.</li>
-                        <li><strong>L2: Blinding Debris [1 Reflex]:</strong> Throw ash/debris up to 3 paces; Agility check vs 14 grants target ally Advantage on their next Evasion roll against that enemy.</li>
-                        <li><strong>L3: Cripple Target [2 Force]:</strong> Wrench armor plates; spend 2 Force to force target within 3 paces to grant Advantage on all player Evasion rolls against it until it forfeits an Action Phase.</li>
-                        <li><strong>L4: Rig Trap [2 Reflex]:</strong> Rig environmental object; Agility check vs 14 drops object for 6 flat damage and knocks Prone.</li>
-                        <li><strong>L5: Master of Ruin [3 RP]:</strong> Exploit structural flaws in building/vehicle to cause localized physical collapse.</li>
-                        <li><strong>L6: Scavenger's Eye (Passive):</strong> Identify mechanical components to salvage usable tools from disabled technology.</li>
-                        <li><strong>L7: Noxious Irritant [2 Force]:</strong> Throw chemical vial up to 3 paces to coat a 1-pace spot; enemies starting turn in space grant Advantage on all player attacks and Evasion rolls.</li>
-                        <li><strong>L8: Volatile Reaction [4 RP]:</strong> Trigger explosive hazard dealing 8 flat damage and Dazed to everything within 2 paces.</li>
+            <h2>2. TIER 1 TALENTS (LEVELS 1–3: CORE TACTICS | PICK 1 PER LEVEL)</h2>
+            <div class="two-column" style="gap: 8px; margin-bottom: 3px;">
+                <div class="column-box">
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">MIGHT / FORCE (1-COST):</p>
+                    <ul style="font-size: 8.1px;">
+                        <li><strong><span data-key="c1_ab1">Cleave</span> [1 Force]:</strong> <em>On Hit (Heavy Melee).</em> <span data-key="c1_ab1_desc">Deal 2 flat damage to adjacent secondary enemy in 1 pace.</span></li>
+                        <li><strong>Drive Back [1 Force]:</strong> <em>On Hit (Heavy Melee).</em> Shove target 1 pace back (+2 crush damage if slammed into wall).</li>
+                        <li><strong><span data-key="c2_ab3">Concussive Blow</span> [1 Force]:</strong> <em>On Hit (Melee).</em> <span data-key="c2_ab3_desc">Target passes Might vs 14 or becomes Dazed.</span></li>
+                        <li><strong>Brutal Force [1 Force]:</strong> <em>On Hit (Melee).</em> Add Might modifier to flat damage a second time on this attack.</li>
+                        <li><strong>Forage [1 Force]:</strong> <em>Outside Combat.</em> Gather clean rations to sustain squad for 1 day.</li>
                     </ul>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">AGILITY / REFLEX (1-COST):</p>
+                    <ul style="font-size: 8.1px;">
+                        <li><strong>Backstab [1 Reflex]:</strong> <em>On Hit (Light Melee).</em> Behind engaged foe in 1 pace, gain Advantage on attack vs 14.</li>
+                        <li><strong>Rig Chokepoint [1 Reflex]:</strong> <em>Action Phase.</em> Set tripwire in adjacent space; first enemy entering has speed = 0.</li>
+                    </ul>
+                </div>
+                <div class="column-box">
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">AGILITY / REFLEX (CONTINUED):</p>
+                    <ul style="font-size: 8.1px;">
+                        <li><strong>Blinding Debris [1 Reflex]:</strong> <em>Action Phase.</em> Throw debris 3 paces (Agility vs 14); target has Disadvantage on next attack.</li>
+                        <li><strong>Drag to Safety [1 Reflex]:</strong> <em>Move Phase.</em> Grab unconscious/prone ally and drag full movement speed.</li>
+                    </ul>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">WILL / RESOLUTE RP (1-COST):</p>
+                    <ul style="font-size: 8.1px;">
+                        <li><strong>Structural Weakness [1 RP]:</strong> <em>Action Phase.</em> Will vs 14 in 3 paces; next ally hit on target deals +2 Flat Dmg.</li>
+                        <li><strong>Prowler’s Eye [1 RP]:</strong> <em>Action Phase.</em> Scan 3 paces with Advantage vs 14 for hidden traps/hazards.</li>
+                        <li><strong>Aggressive Rouse [1 RP]:</strong> <em>Action Phase.</em> Remove 1 condition (Dazed, Prone, Grappled) from adjacent ally.</li>
+                        <li><strong>Elevated Advantage [1 RP]:</strong> <em>Move Phase.</em> Scale to high ground rapidly to ignore target cover on next shot.</li>
+                    </ul>
+                </div>
+            </div>
 
-                    <h3><span data-key="c6_title">THE SURVIVALIST</span> (Resource Focus: Hybrid Medic / Support)</h3>
-                    <p><em data-key="c6_desc">Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions.</em></p>
-                    <p><strong>Recommended Loadout:</strong> <span data-key="c6_loadout">Ranged/Thrown weapons (1 Dmg, 3 Paces Range), Light Armor (+1 Evade), survival and medical gear.</span></p>
-                    <ul>
-                        <li><strong>L1 Specialty: Combat Medic (Passive):</strong> Stabilize dying ally within 1 pace using Move Phase (Will check vs 14).</li>
-                        <li><strong>L1: Drag to Safety [1 Reflex]:</strong> Grab unconscious or prone ally during Move Phase and drag them full movement paces.</li>
-                        <li><strong>L2: Aggressive Rouse [1 RP]:</strong> Action Phase instantly removes one physical condition (like Dazed or Grappled) from an adjacent ally within 1 pace.</li>
-                        <li><strong>L3: Pressure Dressing [2 Reflex]:</strong> Fast-hand combat bandage on self or adjacent ally restores 3 HP immediately (up to Max HP) OR grants Advantage on their next Evasion roll.</li>
-                        <li><strong>L4: Forage [1 Force]:</strong> Spend 1 Force outside combat to automatically locate sustenance to sustain party for one day.</li>
-                        <li><strong>L5: Field Surgery [3 RP]:</strong> Short Breather procedure restores ally HP equal to twice your Will modifier.</li>
-                        <li><strong>L6: Iron Gut (Passive):</strong> Advantage vs natural toxins/diseases; require half standard daily rations.</li>
-                        <li><strong>L7: Potent Stimulant [2 Force]:</strong> Administer brew to self or adjacent ally; spend 2 Force so target regains 1 RP and +2 flat damage on next attack (takes 2 crash damage at combat end).</li>
-                        <li><strong>L8: Extreme Triage [4 RP]:</strong> Save dying ally within 1 pace from lethal hit; instantly wake at 1 HP with permanent maiming.</li>
+            <h2>3. TIER 2 TALENTS (LEVELS 4–6: VETERAN MASTERY | PICK 1 PER LEVEL)</h2>
+            <div class="two-column" style="gap: 8px; margin-bottom: 3px;">
+                <div class="column-box">
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">MIGHT / FORCE (2-COST):</p>
+                    <ul style="font-size: 8.0px;">
+                        <li><strong>Heave [2 Force]:</strong> <em>Action Phase.</em> Throw heavy object 2 paces; target Agility vs 14 or takes 4 Dmg and Prone.</li>
+                        <li><strong>Cripple Target [2 Force]:</strong> <em>On Hit (Melee).</em> Target grants Advantage on all player attacks/Evasions until it clears it.</li>
+                        <li><strong>Hamstring [2 Force]:</strong> <em>On Hit (Melee).</em> Permanently reduce target speed to 1 pace until treated.</li>
+                        <li><strong>Noxious Irritant [2 Force]:</strong> <em>Action Phase.</em> Throw vial 3 paces; enemies starting turn in 1 pace have Disadvantage.</li>
+                        <li><strong>Potent Stimulant [2 Force]:</strong> <em>Action Phase.</em> Ally gains 1 RP and +2 Dmg on next hit (takes 2 crash Dmg at end).</li>
+                    </ul>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">AGILITY / REFLEX (2-COST):</p>
+                    <ul style="font-size: 8.0px;">
+                        <li><strong>Iron Stance [2 Reflex]:</strong> <em>Action Phase.</em> Focus defense to auto-succeed on next Evasion before next turn.</li>
+                        <li><strong>Adrenaline Surge [2 Reflex]:</strong> <em>Move Phase.</em> Double total movement paces for this turn.</li>
+                        <li><strong>Nerve Strike [2 Reflex]:</strong> <em>On Hit (Light/Unarmed).</em> Target Might vs 14 or becomes Grappled (0 speed).</li>
+                        <li><strong>Shadow Strike [2 Reflex]:</strong> <em>On Hit (Concealment).</em> Strike with Advantage and deal +2 bonus Flat Damage.</li>
+                    </ul>
+                </div>
+                <div class="column-box">
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">AGILITY / REFLEX (CONTINUED):</p>
+                    <ul style="font-size: 8.0px;">
+                        <li><strong>Linebreaker [2 Reflex]:</strong> <em>Move Phase.</em> Move through enemy spaces, pushing 1 pace (wall slam = 2 Dmg).</li>
+                        <li><strong>Rig Trap [2 Reflex]:</strong> <em>Action Phase.</em> Rig object 3 paces (Agility vs 14) for 6 Dmg and knock Prone.</li>
+                        <li><strong>Sunder / Disarm [2 Reflex]:</strong> <em>On Hit (Melee).</em> Wrench weapon 2 paces away OR deal +3 bonus Flat Dmg.</li>
+                    </ul>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">WILL / RESOLUTE RP (2-COST & 3-COST):</p>
+                    <ul style="font-size: 8.0px;">
+                        <li><strong>Steel Stance [2 RP]:</strong> <em>Action Phase.</em> Cap incoming flat damage from all hits at 2 max until next turn.</li>
+                        <li><strong>Pinning Volley [2 RP]:</strong> <em>Action Phase (Ranged).</em> Blanket 2 paces in 8 paces; first foe inside is Pinned Down.</li>
+                        <li><strong>Pressure Dressing [2 RP]:</strong> <em>Action Phase.</em> Restore 3 HP to self/ally OR grant Advantage on next Evasion.</li>
+                        <li><strong>Funneling Fire [2 RP]:</strong> <em>On Hit (Ranged).</em> Force target to reposition 1 pace in direction of your choice.</li>
+                        <li><strong>Relentless Assault [3 RP]:</strong> <em>Action Phase (Melee).</em> Make 2nd attack on different adjacent foe in 1 pace.</li>
+                        <li><strong>Absolute Camouflage [3 RP]:</strong> <em>Action Phase.</em> In cover, enemies suffer Disadvantage on attacks vs you.</li>
+                        <li><strong>Piercing Strike [3 RP]:</strong> <em>Action Phase (Ranged).</em> Hit target in 8 paces & deal equal Dmg to foe directly behind.</li>
+                        <li><strong>Master of Ruin [3 RP]:</strong> <em>Action Phase.</em> Trigger collapse dealing 6 Dmg and blocking the corridor.</li>
+                        <li><strong>Field Surgery [3 RP]:</strong> <em>Outside Combat (Breather).</em> Restore ally HP equal to twice your Will modifier.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>4. TIER 3 TALENTS (LEVELS 7–8: APEX FINISHERS | PICK 1 PER LEVEL)</h2>
+            <div class="two-column" style="gap: 8px;">
+                <div class="column-box">
+                    <ul style="font-size: 8.0px;">
+                        <li><strong>Brawl Mastery [4 Force]:</strong> <em>On Hit (1-Hand/Unarmed).</em> Grab foe as cover (+Adv on Evade) OR pin beast to remove its Action Phase.</li>
+                        <li><strong>Lethal Strike [4 Force]:</strong> <em>Action Phase (Light Melee).</em> Strike unaware non-boss from behind in 1 pace to drop them to 0 HP.</li>
+                        <li><strong>Unstoppable Defiance [4 RP]:</strong> <em>Reaction (at 0 HP).</em> Spend 4 RP when reduced to 0 HP to remain standing at 1 HP.</li>
+                    </ul>
+                </div>
+                <div class="column-box">
+                    <ul style="font-size: 8.0px;">
+                        <li><strong>Crash the Gates [4 RP]:</strong> <em>Move Phase.</em> Smash barrier to take immediate Action Phase with Adv vs surprised foes.</li>
+                        <li><strong>Perfect Aim [4 RP]:</strong> <em>Action Phase (Ranged).</em> Forfeit Move; fire in 8 paces with Adv, ignore cover, add Will Mod to Dmg.</li>
+                        <li><strong>Volatile Reaction [4 RP]:</strong> <em>Action Phase.</em> Detonate explosive dealing 8 Flat Dmg and Dazed in 2-pace radius.</li>
+                        <li><strong>Extreme Triage [4 RP]:</strong> <em>Action Phase.</em> Revive dying ally in 1 pace at 1 HP with a permanent scar/injury.</li>
                     </ul>
                 </div>
             </div>
@@ -1166,34 +1184,28 @@
                 wep_heavy: "Heavy Melee",
 
                 c1_title: "THE WARDEN",
-                c1_desc: "Narrative Role: The unmovable shield of the party. You secure physical space, hold the line, and endure what others cannot survive.",
-                c1_loadout: "Heavy Armor (+3 Evade, -2 Paces), Shield (-1 Pace), Light Melee (3 Dmg, 1 Pace Range).",
+                c1_loadout: "Heavy Armor, Shield, Light Melee",
                 c1_spec: "Vanguard Guard",
                 c1_ab1: "Cleave",
-                c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to deal 2 flat damage to an adjacent secondary foe within 1 pace.",
+                c1_ab1_desc: "Deal 2 flat damage to adjacent secondary enemy in 1 pace.",
 
                 c2_title: "THE BREAKER",
-                c2_desc: "Narrative Role: The aggressive entry specialist. You dictate battlefield positioning and punish enemies through sheer momentum.",
-                c2_loadout: "Heavy Melee (4 Dmg, 1 Pace Range), Medium Armor (+2 Evade, -1 Pace), Improvised Tools.",
+                c2_loadout: "Heavy Melee, Medium Armor, Tools",
                 c2_spec: "Breacher",
                 c2_ab3: "Concussive Blow",
-                c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or becomes Dazed.",
+                c2_ab3_desc: "Target passes Might vs 14 or becomes Dazed.",
 
                 c3_title: "THE PROWLER",
-                c3_desc: "Narrative Role: The scalpel. Bypassing security, flanking, and executing devastating close-quarters strikes.",
-                c3_loadout: "Twin Light Melee (3 Dmg +1 from Twin Fangs, 1 Pace Range), Unarmored (+1 Pace) or Light Armor (+1 Evade), Ranged/Thrown Daggers (3 Paces Range).",
+                c3_loadout: "Twin Light Melee, Light Armor, Throwing Daggers",
 
                 c4_title: "THE MARKSMAN",
-                c4_desc: "Narrative Role: Ranged overwatch. Securing angles, controlling enemy movement, and eliminating targets from afar.",
-                c4_loadout: "Ranged Weapon (2 Dmg, 8 Paces Range Max), Unarmored (+1 Pace) or Light Armor (+1 Evade), Light Melee backup weapon (1 Pace Range).",
+                c4_loadout: "Ranged Weapon, Light Armor, Light Melee",
 
                 c5_title: "THE SABOTEUR",
-                c5_desc: "Narrative Role: Environmental manipulator and demolitionist. Disabling gear and exploiting structural weaknesses.",
-                c5_loadout: "Light Melee (3 Dmg, 1 Pace Range), Light Armor (+1 Evade), Ranged/Thrown explosives (3 Paces Range).",
+                c5_loadout: "Light Melee, Light Armor, Explosives",
 
                 c6_title: "THE SURVIVALIST",
-                c6_desc: "Narrative Role: Field medic and tracker. Keeping squad alive through grueling conditions.",
-                c6_loadout: "Ranged/Thrown weapons (1 Dmg, 3 Paces Range), Light Armor (+1 Evade), survival and medical gear.",
+                c6_loadout: "Ranged/Thrown, Light Armor, Medical Gear",
 
                 mob1: "1. Brute",
                 mob2: "2. Sniper",
@@ -1240,34 +1252,28 @@
                 wep_heavy: "Heavy Melee (Greataxe)",
 
                 c1_title: "THE KNIGHT",
-                c1_desc: "Narrative Role: The armored bulwark. You hold the frontline, shield allies from dragon breath, and break enemy ranks.",
-                c1_loadout: "Heavy Plate (+3 Evade, -2 Paces), Tower Shield (-1 Pace), Arming Sword (3 Dmg, 1 Pace Range).",
+                c1_loadout: "Plate Mail, Shield, Shortsword",
                 c1_spec: "Shield Wall",
                 c1_ab1: "Cleave",
-                c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to deal 2 flat damage to an adjacent secondary foe within 1 pace.",
+                c1_ab1_desc: "Deal 2 flat damage to adjacent secondary enemy in 1 pace.",
 
                 c2_title: "THE BERSERKER",
-                c2_desc: "Narrative Role: The unstoppable force. You shatter shield walls and overwhelm monsters with raw, unbridled fury.",
-                c2_loadout: "Greataxe (4 Dmg, 1 Pace Range), Chainmail (+2 Evade, -1 Pace), Handaxes.",
+                c2_loadout: "Greataxe, Chainmail, Handaxes",
                 c2_spec: "Siege Breaker",
                 c2_ab3: "Stunning Strike",
-                c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or becomes Dazed.",
+                c2_ab3_desc: "Target passes Might vs 14 or becomes Dazed.",
 
                 c3_title: "THE NIGHTBLADE",
-                c3_desc: "Narrative Role: The unseen dagger. Bypassing castle security, executing lethal backstabs, and vanishing into shadows.",
-                c3_loadout: "Twin Daggers (3 Dmg +1 from Twin Fangs, 1 Pace Range), Leather Jerkin (+1 Evade), Throwing Knives.",
+                c3_loadout: "Twin Daggers, Leather Jerkin, Throwing Knives",
 
                 c4_title: "THE RANGER",
-                c4_desc: "Narrative Role: Master of the hunt. Controlling the battlefield with deadly accurate bow fire from the high ground.",
-                c4_loadout: "Longbow (2 Dmg, 8 Paces Range), Leather Armor (+1 Evade), Shortsword backup.",
+                c4_loadout: "Longbow, Leather Armor, Shortsword",
 
                 c5_title: "THE ALCHEMIST",
-                c5_desc: "Narrative Role: Potion master and trap-setter. Brewing volatile concoctions and exploiting elemental weaknesses.",
-                c5_loadout: "Shortsword (3 Dmg, 1 Pace Range), Leather Vest (+1 Evade), Alchemist Fire (3 Paces Range).",
+                c5_loadout: "Shortsword, Leather Vest, Alchemist Fire",
 
                 c6_title: "THE MENDER",
-                c6_desc: "Narrative Role: Battle-priest and healer. Mending grievous wounds and keeping the adventuring party standing.",
-                c6_loadout: "Throwing Hammers (1 Dmg, 3 Paces Range), Chain Shirt (+1 Evade), Healing Poultices.",
+                c6_loadout: "Throwing Hammers, Chain Shirt, Healing Poultices",
 
                 mob1: "1. Brute (Ogre / Troll)",
                 mob2: "2. Sniper (Elven Archer)",
@@ -1340,34 +1346,28 @@
                 wep_heavy: "Heavy Melee (Thermal Katana)",
 
                 c1_title: "THE ENFORCER",
-                c1_desc: "Narrative Role: Sub-dermal chrome tank. You anchor corporate corridors, absorb heavy fire, and breach doorframes first.",
-                c1_loadout: "Exo-Plate (+3 Evade, -2 Paces), Riot Guard (-1 Pace), Monofilament Blade (3 Dmg, 1 Pace Range).",
+                c1_loadout: "Exo-Plate, Riot Guard, Monofilament Blade",
                 c1_spec: "Riot Guard",
                 c1_ab1: "Monofilament Sweep",
-                c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to sweep monofilament wire, dealing 2 flat damage to an adjacent secondary target.",
+                c1_ab1_desc: "Deal 2 flat damage to adjacent secondary target with wire.",
 
                 c2_title: "THE SOLO",
-                c2_desc: "Narrative Role: High-impact street reflex mercenary. You shatter barricades and breach security checkpoints with raw momentum.",
-                c2_loadout: "Thermal Sledge-Rig (4 Dmg, 1 Pace Range), Corp Ballistic Jacket (+2 Evade, -1 Pace), Breaching Charges.",
+                c2_loadout: "Thermal Sledge, Ballistic Jacket, Breaching Charges",
                 c2_spec: "Door-Kicker",
                 c2_ab3: "Neural Shock Punch",
-                c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or suffers neural overload (Dazed).",
+                c2_ab3_desc: "Target passes Might vs 14 or suffers neural overload (Dazed).",
 
                 c3_title: "THE INFILTRATOR",
-                c3_desc: "Narrative Role: Cloaked ghost executioner. Bypassing optical sensors, hacking ICE, and executing lethal point-blank ambushes.",
-                c3_loadout: "Twin Mantis Blades (3 Dmg +1 from Twin Fangs, 1 Pace Range), Sub-Dermal Weave (+1 Evade), Throwing Needles.",
+                c3_loadout: "Twin Mantis Blades, Sub-Dermal Weave, Throwing Needles",
 
                 c4_title: "THE DEADEYE",
-                c4_desc: "Narrative Role: Smart-gun overwatch sniper. Tagging corporate targets, painting angles, and suppressing room exits.",
-                c4_loadout: "Smart Sniper Rifle (2 Dmg, 8 Paces Range), Tactical Vest (+1 Evade), Monofilament Knife backup.",
+                c4_loadout: "Smart Sniper Rifle, Tactical Vest, Vibro-Knife",
 
                 c5_title: "THE TECH-RUNNER",
-                c5_desc: "Narrative Role: Hardware decker and demolitionist. Overloading local power grids, tripping security traps, and tearing down structures.",
-                c5_loadout: "Vibro-Knife (3 Dmg, 1 Pace Range), Kevlar Hoodie (+1 Evade), EMP Grenades.",
+                c5_loadout: "Vibro-Knife, Kevlar Hoodie, EMP Grenades",
 
                 c6_title: "THE DOC",
-                c6_desc: "Narrative Role: Back-alley ripperdoc and street medic. Patching cyberware leaks, administering combat stims, and stabilizing trauma.",
-                c6_loadout: "Smart Pistol (1 Dmg, 3 Paces Range), Sub-Dermal Patch (+1 Evade), Trauma Kit & Stims.",
+                c6_loadout: "Smart Pistol, Sub-Dermal Patch, Trauma Stims",
 
                 mob1: "1. Brute (Cyber-Psycho)",
                 mob2: "2. Sniper (Corp Sniper)",
@@ -1440,34 +1440,28 @@
                 wep_heavy: "Heavy Melee (Gravity Hammer)",
 
                 c1_title: "THE SENTINEL",
-                c1_desc: "Narrative Role: Hard-light barrier specialist. You lock down airlocks, absorb void hazards, and shield squadmates in vacuum breaches.",
-                c1_loadout: "Powered Exo-Suit (+3 Evade, -2 Paces), Energy Shield (-1 Pace), Plasma Blade (3 Dmg, 1 Pace Range).",
+                c1_loadout: "Exo-Suit, Energy Shield, Plasma Blade",
                 c1_spec: "Hard-Light Phalanx",
                 c1_ab1: "Plasma Arc",
-                c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to discharge a plasma arc dealing 2 flat damage to an adjacent secondary foe.",
+                c1_ab1_desc: "Discharge plasma arc dealing 2 flat damage to adjacent foe.",
 
                 c2_title: "THE VANGUARD",
-                c2_desc: "Narrative Role: Heavy exo-suit shock trooper. You crush blast doors, force momentum through enemy lines, and hurl heavy debris.",
-                c2_loadout: "Gravity Hammer (4 Dmg, 1 Pace Range), Marines Battle-Mesh (+2 Evade, -1 Pace), Fusion Torch.",
+                c2_loadout: "Gravity Hammer, Marines Mesh, Fusion Torch",
                 c2_spec: "Breach Protocol",
                 c2_ab3: "Kinetic Shockwave",
-                c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or is thrown off balance (Dazed).",
+                c2_ab3_desc: "Target passes Might vs 14 or is thrown off balance (Dazed).",
 
                 c3_title: "THE SPEC-OPS",
-                c3_desc: "Narrative Role: Optical-camo assassin. Bypassing laser grids, flanking alien threats, and executing precision weakness strikes.",
-                c3_loadout: "Twin Arc Blades (3 Dmg +1 from Twin Fangs, 1 Pace Range), Scout Vacuum Suit (+1 Evade), Energy Darts.",
+                c3_loadout: "Twin Arc Blades, Vac-Suit, Energy Darts",
 
                 c4_title: "THE SHARPSHOOTER",
-                c4_desc: "Narrative Role: Long-range thermal marksman. Controlling corridors, puncturing hull armor, and providing orbital overwatch.",
-                c4_loadout: "Gauss Railgun (2 Dmg, 8 Paces Range), Scout Vac-Suit (+1 Evade), Arc Dagger backup.",
+                c4_loadout: "Gauss Railgun, Scout Vac-Suit, Arc Dagger",
 
                 c5_title: "THE ENGINEER",
-                c5_desc: "Narrative Role: Systems demolitions expert. Rigging grav-generators, dismantling starship thrusters, and detonating plasma charges.",
-                c5_loadout: "Plasma Torch (3 Dmg, 1 Pace Range), Duty Jumpsuit (+1 Evade), Thermal Charges.",
+                c5_loadout: "Plasma Torch, Duty Jumpsuit, Thermal Charges",
 
                 c6_title: "THE MEDIC",
-                c6_desc: "Narrative Role: Trauma specialist and biologist. Synthesizing bio-gel, clearing alien toxins, and keeping the crew operational.",
-                c6_loadout: "Laser Sidearm (1 Dmg, 3 Paces Range), Vac-Suit (+1 Evade), Med-Gel Synthesizer.",
+                c6_loadout: "Laser Sidearm, Vac-Suit, Med-Gel Kit",
 
                 mob1: "1. Brute (Alien Bruiser)",
                 mob2: "2. Sniper (Laser Sniper)",
@@ -1540,34 +1534,28 @@
                 wep_heavy: "Heavy Melee (Sledgehammer)",
 
                 c1_title: "THE IRONHIDE",
-                c1_desc: "Narrative Role: Scrap-armored wasteland guardian. You anchor choked ruins, absorb raider bursts, and hold the perimeter line.",
-                c1_loadout: "Welded Boiler Plate (+3 Evade, -2 Paces), Car Door Shield (-1 Pace), Machete (3 Dmg, 1 Pace Range).",
+                c1_loadout: "Boiler Plate, Car Door Shield, Machete",
                 c1_spec: "Scrap-Wall Guard",
                 c1_ab1: "Scrap-Blade Slash",
-                c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to cleave through scrap metal, dealing 2 flat damage to an adjacent secondary enemy.",
+                c1_ab1_desc: "Cleave scrap metal dealing 2 flat damage to adjacent foe.",
 
                 c2_title: "THE WRECKER",
-                c2_desc: "Narrative Role: Primitive shock charger. Smashing through barricades, throwing rubble, and pummeling mutated beasts.",
-                c2_loadout: "Spiked Sledgehammer (4 Dmg, 1 Pace Range), Scrap Plating (+2 Evade, -1 Pace), Pry-Bar.",
+                c2_loadout: "Spiked Sledge, Scrap Plating, Pry-Bar",
                 c2_spec: "Rubble Crasher",
                 c2_ab3: "Sledgehammer Smash",
-                c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or is rattled (Dazed).",
+                c2_ab3_desc: "Target passes Might vs 14 or is rattled (Dazed).",
 
                 c3_title: "THE STALKER",
-                c3_desc: "Narrative Role: Ruin-crawler hunter. Moving silently through toxic ash, ambushing caravans, and striking undetected from dark corners.",
-                c3_loadout: "Twin Machetes (3 Dmg +1 from Twin Fangs, 1 Pace Range), Tire-Tread Leathers (+1 Evade), Scavenged Throwing Knives.",
+                c3_loadout: "Twin Machetes, Tire Leathers, Throwing Knives",
 
                 c4_title: "THE SCRAPPER",
-                c4_desc: "Narrative Role: Pipe-rifle overwatch. Holding high water towers, sniping scavengers, and suppressing open wasteland terrain.",
-                c4_loadout: "Scope Pipe Rifle (2 Dmg, 8 Paces Range), Scavenger Vest (+1 Evade), Spiked Club backup.",
+                c4_loadout: "Pipe Rifle, Scavenger Vest, Spiked Club",
 
                 c5_title: "THE TINKER",
-                c5_desc: "Narrative Role: Wasteland trap master. Rigging pipe-bombs, dismantling old machinery, and causing collapse in unstable ruins.",
-                c5_loadout: "Scrap Blade (3 Dmg, 1 Pace Range), Padded Vest (+1 Evade), Pipe Bombs.",
+                c5_loadout: "Scrap Blade, Padded Vest, Pipe Bombs",
 
                 c6_title: "THE SCAVENGER",
-                c6_desc: "Narrative Role: Wasteland field surgeon. Purging radiation, bandaging shrapnel wounds, and foraging clean sustenance.",
-                c6_loadout: "Scrap Crossbow (1 Dmg, 3 Paces Range), Scavenger Leathers (+1 Evade), Chem Bag & Bandages.",
+                c6_loadout: "Scrap Crossbow, Scavenger Leathers, Chem Bag",
 
                 mob1: "1. Brute (Wastes Mutant)",
                 mob2: "2. Sniper (Scav Sniper)",
@@ -1640,34 +1628,28 @@
                 wep_heavy: "Heavy Melee (Steam Hammer)",
 
                 c1_title: "THE AUTOMATON",
-                c1_desc: "Narrative Role: Steam-powered ironclad sentinel. You hold factory chokepoints, deflect boiler shrapnel, and absorb heavy punishment.",
-                c1_loadout: "Full Steel Steam-Suit (+3 Evade, -2 Paces), Brass Buckler (-1 Pace), Clockwork Blade (3 Dmg, 1 Pace Range).",
+                c1_loadout: "Steam-Suit, Brass Buckler, Clockwork Blade",
                 c1_spec: "Ironclad Guard",
                 c1_ab1: "Steam-Piston Strike",
-                c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to vent high-pressure steam dealing 2 flat damage to an adjacent secondary foe.",
+                c1_ab1_desc: "Vent steam dealing 2 flat damage to adjacent secondary foe.",
 
                 c2_title: "THE BOILER",
-                c2_desc: "Narrative Role: Pressure-driven entry specialist. Kicking in vault doors, throwing heavy gears, and charging with steam-boosted speed.",
-                c2_loadout: "Steam Hammer (4 Dmg, 1 Pace Range), Brass Riveted Weave (+2 Evade, -1 Pace), Heavy Gears.",
+                c2_loadout: "Steam Hammer, Brass Weave, Heavy Gears",
                 c2_spec: "Pneumatic Breach",
                 c2_ab3: "Pneumatic Slam",
-                c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or is stunned by pneumatic force (Dazed).",
+                c2_ab3_desc: "Target passes Might vs 14 or is stunned by steam (Dazed).",
 
                 c3_title: "THE SHADOW",
-                c3_desc: "Narrative Role: Gaslight alley assassin. Scaling brick facades, bypassing clockwork locks, and executing silent blade strikes.",
-                c3_loadout: "Twin Clockwork Daggers (3 Dmg +1 from Twin Fangs, 1 Pace Range), Leather Duster (+1 Evade), Throwing Cards.",
+                c3_loadout: "Twin Clockwork Daggers, Leather Duster, Throwing Cards",
 
                 c4_title: "THE JAEGER",
-                c4_desc: "Narrative Role: Long-barrel rifle overwatch. Firing from clocktower perches, penetrating brass plating, and picking off targets.",
-                c4_loadout: "Flintlock Precision Rifle (2 Dmg, 8 Paces Range), Leather Work Apron (+1 Evade), Cane-Sword backup.",
+                c4_loadout: "Flintlock Rifle, Work Apron, Cane-Sword",
 
                 c5_title: "THE CLOCKMAKER",
-                c5_desc: "Narrative Role: Saboteur and alchemist. Overpressurizing steam pipes, triggering gear-traps, and exploding volatile aether vials.",
-                c5_loadout: "Clockwork Blade (3 Dmg, 1 Pace Range), Leather Apron (+1 Evade), Volatile Vials.",
+                c5_loadout: "Clockwork Blade, Leather Apron, Volatile Vials",
 
                 c6_title: "THE ALCHEMIST",
-                c6_desc: "Narrative Role: Ether physician. Administering restorative tinctures, neutralizing toxic vapors, and reviving fallen allies.",
-                c6_loadout: "Pneumatic Dart-Gun (1 Dmg, 3 Paces Range), Work Apron (+1 Evade), Ether Tinctures.",
+                c6_loadout: "Pneumatic Dart-Gun, Work Apron, Ether Tinctures",
 
                 mob1: "1. Brute (Brass Golem)",
                 mob2: "2. Sniper (Clocktower Sniper)",
@@ -1740,34 +1722,28 @@
                 wep_heavy: "Heavy Melee (Pickaxe)",
 
                 c1_title: "THE MARSHAL",
-                c1_desc: "Narrative Role: Frontier lawkeeper. Holding the saloon entrance, drawing heavy fire, and protecting innocents from outlaw bands.",
-                c1_loadout: "Heavy Prospector Armor (+3 Evade, -2 Paces), Hover-Shield (-1 Pace), Bowie Knife (3 Dmg, 1 Pace Range).",
+                c1_loadout: "Prospector Armor, Hover-Shield, Bowie Knife",
                 c1_spec: "Posse Guard",
                 c1_ab1: "Heavy Rifle Whip",
-                c1_ab1_desc: "After a Heavy Weapon hit, spend 1 Force to crack an adjacent secondary outlaw with your rifle stock for 2 flat damage.",
+                c1_ab1_desc: "Crack secondary target with rifle stock for 2 flat damage.",
 
                 c2_title: "THE BRAWLER",
-                c2_desc: "Narrative Role: Frontier pit fighter. Smashing through wagon barricades, throwing heavy supply crates, and brutalizing outlaws.",
-                c2_loadout: "Heavy Pickaxe (4 Dmg, 1 Pace Range), Dragoon Leather (+2 Evade, -1 Pace), Mining Tools.",
+                c2_loadout: "Pickaxe, Dragoon Leather, Mining Tools",
                 c2_spec: "Saloon Crasher",
                 c2_ab3: "Shotgun Stun",
-                c2_ab3_desc: "Spend 1 Force on hit. Target passes Might check vs 14 or takes a blast to the chest (Dazed).",
+                c2_ab3_desc: "Target passes Might vs 14 or takes blast to chest (Dazed).",
 
                 c3_title: "THE GUNSLINGER",
-                c3_desc: "Narrative Role: Quick-draw scalpel. Flanking behind cover, executing blinding fast hip-fire strikes, and slipping through canyon shadows.",
-                c3_loadout: "Twin Bowie Blades (3 Dmg +1 from Twin Fangs, 1 Pace Range), Hardened Hide Vest (+1 Evade), Throwing Hatchets.",
+                c3_loadout: "Twin Bowie Blades, Hard Hide Vest, Hatchets",
 
                 c4_title: "THE BOUNTY HUNTER",
-                c4_desc: "Narrative Role: Lever-action overwatch. Tracking outlaw pucks across ridge lines, shooting from high ground, and pinning targets.",
-                c4_loadout: "Lever-Action Repeater (2 Dmg, 8 Paces Range), Duster Vest (+1 Evade), Bowie Knife backup.",
+                c4_loadout: "Lever-Action Repeater, Duster Vest, Bowie Knife",
 
                 c5_title: "THE PROSPECTOR",
-                c5_desc: "Narrative Role: Demolitions and mining expert. Rigging dynamite charges, collapsing mine shafts, and sabotaging hover-train tracks.",
-                c5_loadout: "Pickaxe (3 Dmg, 1 Pace Range), Hide Vest (+1 Evade), Sticks of Dynamite.",
+                c5_loadout: "Pickaxe, Hide Vest, Sticks of Dynamite",
 
                 c6_title: "THE SAWBONE",
-                c6_desc: "Narrative Role: Frontier doctor. Digging out slug rounds, cauterizing laser burns, and brewing potent saloon tonics.",
-                c6_loadout: "Derringer Pistol (1 Dmg, 3 Paces Range), Hide Vest (+1 Evade), Doctor's Bag & Tonics.",
+                c6_loadout: "Derringer Pistol, Hide Vest, Saloon Tonics",
 
                 mob1: "1. Brute (Outlaw Bruiser)",
                 mob2: "2. Sniper (Ridge-line Sniper)",
