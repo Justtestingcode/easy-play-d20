@@ -413,7 +413,6 @@
 </head>
 <body>
 
-    <!-- TOOLBAR -->
     <div class="toolbar">
         <div class="toolbar-title">EASY PLAY D20 — INTERACTIVE RULEBOOK & SHEET</div>
         <div class="toolbar-buttons">
@@ -434,7 +433,6 @@
         </div>
     </div>
 
-    <!-- PAGE 1: CHARACTER PLAY SHEET -->
     <div class="page">
         <div class="content-wrap">
             <h1>EASY PLAY D20 - CHARACTER PLAY SHEET</h1>
@@ -470,7 +468,7 @@
                     <strong>WILL</strong><br />
                     <small>Mind / Perception / Focus</small><br /><br />
                     <strong>MODIFIER: +[ <input type="text" id="attrWill" class="center-input" style="width: 35px;" /> ]</strong><br /><br />
-                    Resolute Pool: (Will Mod x 2) + L7<br />
+                    Resolute Pool: (Will Mod x 2) + L7 Upgrade<br />
                     <strong>Current RP: [ <input type="text" id="currRP" class="center-input" style="width: 50px;" /> ]</strong>
                 </div>
             </div>
@@ -537,7 +535,6 @@
         <div class="page-num">Page 1</div>
     </div>
 
-    <!-- PAGE 2: SYSTEM CORE AND ARMORY -->
     <div class="page">
         <div class="content-wrap">
             <h1>EASY PLAY D20 - SYSTEM CORE and ARMORY</h1>
@@ -568,8 +565,7 @@
                             <tr><th style="width: 12%;">d8</th><th style="width: 44%;">Thematic Drive Choice</th><th style="width: 44%;">Thematic Background Choice</th></tr>
                         </thead>
                         <tbody id="p2DriveBgBody">
-                            <!-- Populated dynamically by JS -->
-                        </tbody>
+                            </tbody>
                     </table>
 
                     <h2>2. THE ACTION ENGINE (FLAT 14)</h2>
@@ -684,7 +680,6 @@
         <div class="page-num">Page 2</div>
     </div>
 
-    <!-- PAGE 3: UNIFIED PLAYBOOK & UNIVERSAL TALENT CODEX -->
     <div class="page codex-page">
         <div class="content-wrap">
             <h1>UNIFIED PLAYBOOK & TALENT CODEX</h1>
@@ -808,7 +803,6 @@
         <div class="page-num">Page 3</div>
     </div>
 
-    <!-- PAGE 4: THE GUIDE'S MANUAL -->
     <div class="page">
         <div class="content-wrap">
             <h1>THE GUIDE'S MANUAL</h1>
@@ -920,14 +914,12 @@
         <div class="page-num">Page 4</div>
     </div>
 
-    <!-- PAGE 5: DYNAMIC SETTING ADAPTATION & VEHICLES -->
     <div class="page">
         <div class="content-wrap">
             <h1>APPENDIX: DYNAMIC SETTING ADAPTATION</h1>
 
             <p style="margin-bottom: 2px; font-size: 8.5px;">Easy Play D20 adapts instantly using active setting flavoring. All mechanics rely on static flat damage, uniform baseline thresholds, and abstract <strong>Loot Tags</strong> rather than complex currency math.</p>
 
-            <!-- NONE (ORIGINAL MULTI-GENRE) VIEW -->
             <div id="page5-none" style="display: block;">
                 <div class="two-column">
                     <div class="column-box">
@@ -1106,7 +1098,6 @@
                 </div>
             </div>
 
-            <!-- DYNAMIC SINGLE-GENRE VIEW -->
             <div id="page5-dynamic" style="display: none;">
                 <div class="two-column">
                     <div class="column-box">
@@ -1127,14 +1118,12 @@
                         <h2>3. SETTING ARMORY RESKINS</h2>
                         <p>Gear examples reskinned for <strong data-key="genre_name">Fantasy</strong>:</p>
                         <ul style="font-size: 7.3px;" id="armoryExampleList">
-                            <!-- Populated by JS -->
-                        </ul>
+                            </ul>
 
                         <h2 data-key="magic_title">5. MAGIC, PSIONICS AND SPECIAL POWERS</h2>
                         <p data-key="magic_desc">Spells and powers use standard class features and weapon math dressed in setting flavor:</p>
                         <ul style="font-size: 7.3px;" id="magicExampleList">
-                            <!-- Populated by JS -->
-                        </ul>
+                            </ul>
                     </div>
 
                     <div class="column-box">
@@ -1150,8 +1139,7 @@
                                 </tr>
                             </thead>
                             <tbody id="dynamicLootBody">
-                                <!-- Populated by JS -->
-                            </tbody>
+                                </tbody>
                         </table>
 
                         <h2>6. VEHICLES, MOUNTS AND CHASES</h2>
@@ -1172,7 +1160,6 @@
         <div class="page-num">Page 5</div>
     </div>
 
-    <!-- SCRIPT LOGIC -->
     <script>
         const STORAGE_KEY = 'EasyPlayD20_CharacterData';
 
