@@ -140,17 +140,12 @@
 
         /* DEDICATED FULL-PAGE CODEX STYLES (PAGE 3) */
         .codex-page {
-            padding: 0.26in 0.36in 0.3in 0.36in;
+            padding: 0.24in 0.34in 0.28in 0.34in;
         }
 
         .codex-page h2 {
-            margin-top: 4px;
-            margin-bottom: 2px;
-        }
-
-        .codex-page h3 {
             margin-top: 3px;
-            margin-bottom: 1px;
+            margin-bottom: 2px;
         }
 
         .codex-page p {
@@ -158,16 +153,30 @@
             margin-bottom: 1px;
         }
 
-        .codex-page ul {
-            margin-top: 0px;
-            margin-bottom: 2px;
-            padding-left: 11px;
+        .talent-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
         }
 
-        .codex-page li {
+        .talent-list li {
+            position: relative;
+            padding-left: 17px;
             margin-top: 0px;
-            margin-bottom: 1px;
-            line-height: 1.22;
+            margin-bottom: 2px;
+            line-height: 1.20;
+            font-size: 7.9px;
+        }
+
+        .talent-list input[type="checkbox"] {
+            position: absolute;
+            left: 0;
+            top: 0.5px;
+            margin: 0;
+            cursor: pointer;
+            accent-color: var(--accent-color);
+            width: 11px;
+            height: 11px;
         }
 
         h1 {
@@ -680,93 +689,93 @@
             <h1>UNIFIED PLAYBOOK & TALENT CODEX</h1>
 
             <h2>1. STARTING ARCHETYPES (CHOOSE 1 AT LEVEL 1)</h2>
-            <div class="two-column" style="gap: 8px; margin-bottom: 3px;">
+            <div class="two-column" style="gap: 8px; margin-bottom: 2px;">
                 <div class="column-box">
-                    <ul style="font-size: 8.2px; padding-left: 10px; margin: 0;">
-                        <li><strong>1. <span data-key="c1_title">THE WARDEN</span>:</strong> <em>Passive:</em> <span data-key="c1_spec">Vanguard Guard</span> (Req Shield) — End turn adjacent to an ally to grant them Advantage on Evasion. <span data-key="c1_loadout">Heavy Armor, Shield, Light Melee.</span></li>
-                        <li><strong>2. <span data-key="c2_title">THE BREAKER</span>:</strong> <em>Passive:</em> <span data-key="c2_spec">Breacher</span> — Never suffer movement penalties kicking doors, breaking barricades, or clearing rubble. <span data-key="c2_loadout">Heavy Melee, Medium Armor, Tools.</span></li>
-                        <li><strong>3. <span data-key="c3_title">THE PROWLER</span>:</strong> <em>Passive:</em> Twin Fangs (Req Dual-Wield) — Dual-wielding Light Melee adds +1 Flat Damage. <span data-key="c3_loadout">Twin Light Melee, Light Armor, Throwing Daggers.</span></li>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="arch_warden" /><strong>1. <span data-key="c1_title">THE WARDEN</span>:</strong> <em>Passive:</em> <span data-key="c1_spec">Vanguard Guard</span> (Req Shield) — End turn adjacent to ally to grant them Advantage on Evasion. <span data-key="c1_loadout">Heavy Armor, Shield, Light Melee.</span></li>
+                        <li><input type="checkbox" id="arch_breaker" /><strong>2. <span data-key="c2_title">THE BREAKER</span>:</strong> <em>Passive:</em> <span data-key="c2_spec">Breacher</span> — Never suffer movement penalties kicking doors, breaking barricades, or clearing rubble. <span data-key="c2_loadout">Heavy Melee, Medium Armor, Tools.</span></li>
+                        <li><input type="checkbox" id="arch_prowler" /><strong>3. <span data-key="c3_title">THE PROWLER</span>:</strong> <em>Passive:</em> Twin Fangs (Req Dual-Wield) — Dual-wielding Light Melee adds +1 Flat Damage. <span data-key="c3_loadout">Twin Light Melee, Light Armor, Throwing Daggers.</span></li>
                     </ul>
                 </div>
                 <div class="column-box">
-                    <ul style="font-size: 8.2px; padding-left: 10px; margin: 0;">
-                        <li><strong>4. <span data-key="c4_title">THE MARKSMAN</span>:</strong> <em>Passive:</em> Aimed Shot (Req Ranged) — Forfeit Move Phase for Advantage on Ranged attack vs 14. <span data-key="c4_loadout">Ranged Weapon, Light Armor, Light Melee.</span></li>
-                        <li><strong>5. <span data-key="c5_title">THE SABOTEUR</span>:</strong> <em>Passive:</em> Saboteur — Dismantle simple locks and traps outside combat in 1 min without rolling. <span data-key="c5_loadout">Light Melee, Light Armor, Explosives.</span></li>
-                        <li><strong>6. <span data-key="c6_title">THE SURVIVALIST</span>:</strong> <em>Passive:</em> Combat Medic — Stabilize adjacent dying ally (Will vs 14) on Move Phase. <span data-key="c6_loadout">Ranged/Thrown, Light Armor, Medical Gear.</span></li>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="arch_marksman" /><strong>4. <span data-key="c4_title">THE MARKSMAN</span>:</strong> <em>Passive:</em> Aimed Shot (Req Ranged) — Forfeit Move Phase for Advantage on Ranged attack vs 14. <span data-key="c4_loadout">Ranged Weapon, Light Armor, Light Melee.</span></li>
+                        <li><input type="checkbox" id="arch_saboteur" /><strong>5. <span data-key="c5_title">THE SABOTEUR</span>:</strong> <em>Passive:</em> Saboteur — Dismantle simple locks and traps outside combat in 1 min without rolling. <span data-key="c5_loadout">Light Melee, Light Armor, Explosives.</span></li>
+                        <li><input type="checkbox" id="arch_survivalist" /><strong>6. <span data-key="c6_title">THE SURVIVALIST</span>:</strong> <em>Passive:</em> Combat Medic — Stabilize adjacent dying ally (Will vs 14) on Move Phase. <span data-key="c6_loadout">Ranged/Thrown, Light Armor, Medical Gear.</span></li>
                     </ul>
                 </div>
             </div>
 
             <h2>2. TIER 1 TALENTS (LEVELS 1–3: CORE TACTICS | PICK 1 PER LEVEL)</h2>
-            <div class="two-column" style="gap: 8px; margin-bottom: 3px;">
+            <div class="two-column" style="gap: 8px; margin-bottom: 2px;">
                 <div class="column-box">
-                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">MIGHT / FORCE (1-COST):</p>
-                    <ul style="font-size: 8.1px;">
-                        <li><strong><span data-key="c1_ab1">Cleave</span> [1 Force]:</strong> <em>On Hit (Heavy Melee).</em> <span data-key="c1_ab1_desc">Deal 2 flat damage to adjacent secondary enemy in 1 pace.</span></li>
-                        <li><strong>Drive Back [1 Force]:</strong> <em>On Hit (Heavy Melee).</em> Shove target 1 pace back (+2 crush damage if slammed into wall).</li>
-                        <li><strong><span data-key="c2_ab3">Concussive Blow</span> [1 Force]:</strong> <em>On Hit (Melee).</em> <span data-key="c2_ab3_desc">Target passes Might vs 14 or becomes Dazed.</span></li>
-                        <li><strong>Brutal Force [1 Force]:</strong> <em>On Hit (Melee).</em> Add Might modifier to flat damage a second time on this attack.</li>
-                        <li><strong>Forage [1 Force]:</strong> <em>Outside Combat.</em> Gather clean rations to sustain squad for 1 day.</li>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.3px; margin: 0;">MIGHT / FORCE (1-COST):</p>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="t1_cleave" /><strong><span data-key="c1_ab1">Cleave</span> [1 Force]:</strong> <em>On Hit (Heavy Melee).</em> <span data-key="c1_ab1_desc">Deal 2 flat damage to adjacent secondary enemy in 1 pace.</span></li>
+                        <li><input type="checkbox" id="t1_driveback" /><strong>Drive Back [1 Force]:</strong> <em>On Hit (Heavy Melee).</em> Shove target 1 pace back (+2 crush damage if slammed into wall).</li>
+                        <li><input type="checkbox" id="t1_concussive" /><strong><span data-key="c2_ab3">Concussive Blow</span> [1 Force]:</strong> <em>On Hit (Melee).</em> <span data-key="c2_ab3_desc">Target passes Might vs 14 or becomes Dazed.</span></li>
+                        <li><input type="checkbox" id="t1_brutal" /><strong>Brutal Force [1 Force]:</strong> <em>On Hit (Melee).</em> Add Might modifier to flat damage a second time on this attack.</li>
+                        <li><input type="checkbox" id="t1_forage" /><strong>Forage [1 Force]:</strong> <em>Outside Combat.</em> Gather clean rations to sustain squad for 1 day.</li>
                     </ul>
-                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">AGILITY / REFLEX (1-COST):</p>
-                    <ul style="font-size: 8.1px;">
-                        <li><strong>Backstab [1 Reflex]:</strong> <em>On Hit (Light Melee).</em> Behind engaged foe in 1 pace, gain Advantage on attack vs 14.</li>
-                        <li><strong>Rig Chokepoint [1 Reflex]:</strong> <em>Action Phase.</em> Set tripwire in adjacent space; first enemy entering has speed = 0.</li>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.3px; margin: 0;">AGILITY / REFLEX (1-COST):</p>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="t1_backstab" /><strong>Backstab [1 Reflex]:</strong> <em>On Hit (Light Melee).</em> Behind engaged foe in 1 pace, gain Advantage on attack vs 14.</li>
+                        <li><input type="checkbox" id="t1_chokepoint" /><strong>Rig Chokepoint [1 Reflex]:</strong> <em>Action Phase.</em> Set tripwire in adjacent space; first enemy entering has speed = 0.</li>
                     </ul>
                 </div>
                 <div class="column-box">
-                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">AGILITY / REFLEX (CONTINUED):</p>
-                    <ul style="font-size: 8.1px;">
-                        <li><strong>Blinding Debris [1 Reflex]:</strong> <em>Action Phase.</em> Throw debris 3 paces (Agility vs 14); target has Disadvantage on next attack.</li>
-                        <li><strong>Drag to Safety [1 Reflex]:</strong> <em>Move Phase.</em> Grab unconscious/prone ally and drag full movement speed.</li>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.3px; margin: 0;">AGILITY / REFLEX (CONTINUED):</p>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="t1_debris" /><strong>Blinding Debris [1 Reflex]:</strong> <em>Action Phase.</em> Throw debris 3 paces (Agility vs 14); target has Disadvantage on next attack.</li>
+                        <li><input type="checkbox" id="t1_dragsafety" /><strong>Drag to Safety [1 Reflex]:</strong> <em>Move Phase.</em> Grab unconscious/prone ally and drag full movement speed.</li>
                     </ul>
-                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">WILL / RESOLUTE RP (1-COST):</p>
-                    <ul style="font-size: 8.1px;">
-                        <li><strong>Structural Weakness [1 RP]:</strong> <em>Action Phase.</em> Will vs 14 in 3 paces; next ally hit on target deals +2 Flat Dmg.</li>
-                        <li><strong>Prowler’s Eye [1 RP]:</strong> <em>Action Phase.</em> Scan 3 paces with Advantage vs 14 for hidden traps/hazards.</li>
-                        <li><strong>Aggressive Rouse [1 RP]:</strong> <em>Action Phase.</em> Remove 1 condition (Dazed, Prone, Grappled) from adjacent ally.</li>
-                        <li><strong>Elevated Advantage [1 RP]:</strong> <em>Move Phase.</em> Scale to high ground rapidly to ignore target cover on next shot.</li>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.3px; margin: 0;">WILL / RESOLUTE RP (1-COST):</p>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="t1_weakness" /><strong>Structural Weakness [1 RP]:</strong> <em>Action Phase.</em> Will vs 14 in 3 paces; next ally hit on target deals +2 Flat Dmg.</li>
+                        <li><input type="checkbox" id="t1_prowlereye" /><strong>Prowler’s Eye [1 RP]:</strong> <em>Action Phase.</em> Scan 3 paces with Advantage vs 14 for hidden traps/hazards.</li>
+                        <li><input type="checkbox" id="t1_rouse" /><strong>Aggressive Rouse [1 RP]:</strong> <em>Action Phase.</em> Remove 1 condition (Dazed, Prone, Grappled) from adjacent ally.</li>
+                        <li><input type="checkbox" id="t1_elevated" /><strong>Elevated Advantage [1 RP]:</strong> <em>Move Phase.</em> Scale to high ground rapidly to ignore target cover on next shot.</li>
                     </ul>
                 </div>
             </div>
 
             <h2>3. TIER 2 TALENTS (LEVELS 4–6: VETERAN MASTERY | PICK 1 PER LEVEL)</h2>
-            <div class="two-column" style="gap: 8px; margin-bottom: 3px;">
+            <div class="two-column" style="gap: 8px; margin-bottom: 2px;">
                 <div class="column-box">
-                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">MIGHT / FORCE (2-COST):</p>
-                    <ul style="font-size: 8.0px;">
-                        <li><strong>Heave [2 Force]:</strong> <em>Action Phase.</em> Throw heavy object 2 paces; target Agility vs 14 or takes 4 Dmg and Prone.</li>
-                        <li><strong>Cripple Target [2 Force]:</strong> <em>On Hit (Melee).</em> Target grants Advantage on all player attacks/Evasions until it clears it.</li>
-                        <li><strong>Hamstring [2 Force]:</strong> <em>On Hit (Melee).</em> Permanently reduce target speed to 1 pace until treated.</li>
-                        <li><strong>Noxious Irritant [2 Force]:</strong> <em>Action Phase.</em> Throw vial 3 paces; enemies starting turn in 1 pace have Disadvantage.</li>
-                        <li><strong>Potent Stimulant [2 Force]:</strong> <em>Action Phase.</em> Ally gains 1 RP and +2 Dmg on next hit (takes 2 crash Dmg at end).</li>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.3px; margin: 0;">MIGHT / FORCE (2-COST):</p>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="t2_heave" /><strong>Heave [2 Force]:</strong> <em>Action Phase.</em> Throw heavy object 2 paces; target Agility vs 14 or takes 4 Dmg and Prone.</li>
+                        <li><input type="checkbox" id="t2_cripple" /><strong>Cripple Target [2 Force]:</strong> <em>On Hit (Melee).</em> Target grants Advantage on all player attacks/Evasions until it clears it.</li>
+                        <li><input type="checkbox" id="t2_hamstring" /><strong>Hamstring [2 Force]:</strong> <em>On Hit (Melee).</em> Permanently reduce target speed to 1 pace until treated.</li>
+                        <li><input type="checkbox" id="t2_noxious" /><strong>Noxious Irritant [2 Force]:</strong> <em>Action Phase.</em> Throw vial 3 paces; enemies starting turn in 1 pace have Disadvantage.</li>
+                        <li><input type="checkbox" id="t2_stimulant" /><strong>Potent Stimulant [2 Force]:</strong> <em>Action Phase.</em> Ally gains 1 RP and +2 Dmg on next hit (takes 2 crash Dmg at end).</li>
                     </ul>
-                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">AGILITY / REFLEX (2-COST):</p>
-                    <ul style="font-size: 8.0px;">
-                        <li><strong>Iron Stance [2 Reflex]:</strong> <em>Action Phase.</em> Focus defense to auto-succeed on next Evasion before next turn.</li>
-                        <li><strong>Adrenaline Surge [2 Reflex]:</strong> <em>Move Phase.</em> Double total movement paces for this turn.</li>
-                        <li><strong>Nerve Strike [2 Reflex]:</strong> <em>On Hit (Light/Unarmed).</em> Target Might vs 14 or becomes Grappled (0 speed).</li>
-                        <li><strong>Shadow Strike [2 Reflex]:</strong> <em>On Hit (Concealment).</em> Strike with Advantage and deal +2 bonus Flat Damage.</li>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.3px; margin: 0;">AGILITY / REFLEX (2-COST):</p>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="t2_ironstance" /><strong>Iron Stance [2 Reflex]:</strong> <em>Action Phase.</em> Focus defense to auto-succeed on next Evasion before next turn.</li>
+                        <li><input type="checkbox" id="t2_surge" /><strong>Adrenaline Surge [2 Reflex]:</strong> <em>Move Phase.</em> Double total movement paces for this turn.</li>
+                        <li><input type="checkbox" id="t2_nervestrike" /><strong>Nerve Strike [2 Reflex]:</strong> <em>On Hit (Light/Unarmed).</em> Target Might vs 14 or becomes Grappled (0 speed).</li>
+                        <li><input type="checkbox" id="t2_shadowstrike" /><strong>Shadow Strike [2 Reflex]:</strong> <em>On Hit (Concealment).</em> Strike with Advantage and deal +2 bonus Flat Damage.</li>
                     </ul>
                 </div>
                 <div class="column-box">
-                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">AGILITY / REFLEX (CONTINUED):</p>
-                    <ul style="font-size: 8.0px;">
-                        <li><strong>Linebreaker [2 Reflex]:</strong> <em>Move Phase.</em> Move through enemy spaces, pushing 1 pace (wall slam = 2 Dmg).</li>
-                        <li><strong>Rig Trap [2 Reflex]:</strong> <em>Action Phase.</em> Rig object 3 paces (Agility vs 14) for 6 Dmg and knock Prone.</li>
-                        <li><strong>Sunder / Disarm [2 Reflex]:</strong> <em>On Hit (Melee).</em> Wrench weapon 2 paces away OR deal +3 bonus Flat Dmg.</li>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.3px; margin: 0;">AGILITY / REFLEX (CONTINUED):</p>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="t2_linebreaker" /><strong>Linebreaker [2 Reflex]:</strong> <em>Move Phase.</em> Move through enemy spaces, pushing 1 pace (wall slam = 2 Dmg).</li>
+                        <li><input type="checkbox" id="t2_rigtrap" /><strong>Rig Trap [2 Reflex]:</strong> <em>Action Phase.</em> Rig object 3 paces (Agility vs 14) for 6 Dmg and knock Prone.</li>
+                        <li><input type="checkbox" id="t2_sunder" /><strong>Sunder / Disarm [2 Reflex]:</strong> <em>On Hit (Melee).</em> Wrench weapon 2 paces away OR deal +3 bonus Flat Dmg.</li>
                     </ul>
-                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.4px; margin: 0;">WILL / RESOLUTE RP (2-COST & 3-COST):</p>
-                    <ul style="font-size: 8.0px;">
-                        <li><strong>Steel Stance [2 RP]:</strong> <em>Action Phase.</em> Cap incoming flat damage from all hits at 2 max until next turn.</li>
-                        <li><strong>Pinning Volley [2 RP]:</strong> <em>Action Phase (Ranged).</em> Blanket 2 paces in 8 paces; first foe inside is Pinned Down.</li>
-                        <li><strong>Pressure Dressing [2 RP]:</strong> <em>Action Phase.</em> Restore 3 HP to self/ally OR grant Advantage on next Evasion.</li>
-                        <li><strong>Funneling Fire [2 RP]:</strong> <em>On Hit (Ranged).</em> Force target to reposition 1 pace in direction of your choice.</li>
-                        <li><strong>Relentless Assault [3 RP]:</strong> <em>Action Phase (Melee).</em> Make 2nd attack on different adjacent foe in 1 pace.</li>
-                        <li><strong>Absolute Camouflage [3 RP]:</strong> <em>Action Phase.</em> In cover, enemies suffer Disadvantage on attacks vs you.</li>
-                        <li><strong>Piercing Strike [3 RP]:</strong> <em>Action Phase (Ranged).</em> Hit target in 8 paces & deal equal Dmg to foe directly behind.</li>
-                        <li><strong>Master of Ruin [3 RP]:</strong> <em>Action Phase.</em> Trigger collapse dealing 6 Dmg and blocking the corridor.</li>
-                        <li><strong>Field Surgery [3 RP]:</strong> <em>Outside Combat (Breather).</em> Restore ally HP equal to twice your Will modifier.</li>
+                    <p style="color: #2b5b84; font-weight: bold; font-size: 8.3px; margin: 0;">WILL / RESOLUTE RP (2-COST & 3-COST):</p>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="t2_steelstance" /><strong>Steel Stance [2 RP]:</strong> <em>Action Phase.</em> Cap incoming flat damage from all hits at 2 max until next turn.</li>
+                        <li><input type="checkbox" id="t2_pinning" /><strong>Pinning Volley [2 RP]:</strong> <em>Action Phase (Ranged).</em> Blanket 2 paces in 8 paces; first foe inside is Pinned Down.</li>
+                        <li><input type="checkbox" id="t2_dressing" /><strong>Pressure Dressing [2 RP]:</strong> <em>Action Phase.</em> Restore 3 HP to self/ally OR grant Advantage on next Evasion.</li>
+                        <li><input type="checkbox" id="t2_funneling" /><strong>Funneling Fire [2 RP]:</strong> <em>On Hit (Ranged).</em> Force target to reposition 1 pace in direction of your choice.</li>
+                        <li><input type="checkbox" id="t2_relentless" /><strong>Relentless Assault [3 RP]:</strong> <em>Action Phase (Melee).</em> Make 2nd attack on different adjacent foe in 1 pace.</li>
+                        <li><input type="checkbox" id="t2_camouflage" /><strong>Absolute Camouflage [3 RP]:</strong> <em>Action Phase.</em> In cover, enemies suffer Disadvantage on attacks vs you.</li>
+                        <li><input type="checkbox" id="t2_piercing" /><strong>Piercing Strike [3 RP]:</strong> <em>Action Phase (Ranged).</em> Hit target in 8 paces & deal equal Dmg to foe directly behind.</li>
+                        <li><input type="checkbox" id="t2_masterruin" /><strong>Master of Ruin [3 RP]:</strong> <em>Action Phase.</em> Trigger collapse dealing 6 Dmg and blocking the corridor.</li>
+                        <li><input type="checkbox" id="t2_fieldsurgery" /><strong>Field Surgery [3 RP]:</strong> <em>Outside Combat (Breather).</em> Restore ally HP equal to twice your Will modifier.</li>
                     </ul>
                 </div>
             </div>
@@ -774,18 +783,18 @@
             <h2>4. TIER 3 TALENTS (LEVELS 7–8: APEX FINISHERS | PICK 1 PER LEVEL)</h2>
             <div class="two-column" style="gap: 8px;">
                 <div class="column-box">
-                    <ul style="font-size: 8.0px;">
-                        <li><strong>Brawl Mastery [4 Force]:</strong> <em>On Hit (1-Hand/Unarmed).</em> Grab foe as cover (+Adv on Evade) OR pin beast to remove its Action Phase.</li>
-                        <li><strong>Lethal Strike [4 Force]:</strong> <em>Action Phase (Light Melee).</em> Strike unaware non-boss from behind in 1 pace to drop them to 0 HP.</li>
-                        <li><strong>Unstoppable Defiance [4 RP]:</strong> <em>Reaction (at 0 HP).</em> Spend 4 RP when reduced to 0 HP to remain standing at 1 HP.</li>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="t3_brawlmastery" /><strong>Brawl Mastery [4 Force]:</strong> <em>On Hit (1-Hand/Unarmed).</em> Grab foe as cover (+Adv on Evade) OR pin beast to remove its Action Phase.</li>
+                        <li><input type="checkbox" id="t3_lethalstrike" /><strong>Lethal Strike [4 Force]:</strong> <em>Action Phase (Light Melee).</em> Strike unaware non-boss from behind in 1 pace to drop them to 0 HP.</li>
+                        <li><input type="checkbox" id="t3_unstoppable" /><strong>Unstoppable Defiance [4 RP]:</strong> <em>Reaction (at 0 HP).</em> Spend 4 RP when reduced to 0 HP to remain standing at 1 HP.</li>
                     </ul>
                 </div>
                 <div class="column-box">
-                    <ul style="font-size: 8.0px;">
-                        <li><strong>Crash the Gates [4 RP]:</strong> <em>Move Phase.</em> Smash barrier to take immediate Action Phase with Adv vs surprised foes.</li>
-                        <li><strong>Perfect Aim [4 RP]:</strong> <em>Action Phase (Ranged).</em> Forfeit Move; fire in 8 paces with Adv, ignore cover, add Will Mod to Dmg.</li>
-                        <li><strong>Volatile Reaction [4 RP]:</strong> <em>Action Phase.</em> Detonate explosive dealing 8 Flat Dmg and Dazed in 2-pace radius.</li>
-                        <li><strong>Extreme Triage [4 RP]:</strong> <em>Action Phase.</em> Revive dying ally in 1 pace at 1 HP with a permanent scar/injury.</li>
+                    <ul class="talent-list">
+                        <li><input type="checkbox" id="t3_crashgates" /><strong>Crash the Gates [4 RP]:</strong> <em>Move Phase.</em> Smash barrier to take immediate Action Phase with Adv vs surprised foes.</li>
+                        <li><input type="checkbox" id="t3_perfectaim" /><strong>Perfect Aim [4 RP]:</strong> <em>Action Phase (Ranged).</em> Forfeit Move; fire in 8 paces with Adv, ignore cover, add Will Mod to Dmg.</li>
+                        <li><input type="checkbox" id="t3_volatile" /><strong>Volatile Reaction [4 RP]:</strong> <em>Action Phase.</em> Detonate explosive dealing 8 Flat Dmg and Dazed in 2-pace radius.</li>
+                        <li><input type="checkbox" id="t3_extremetriage" /><strong>Extreme Triage [4 RP]:</strong> <em>Action Phase.</em> Revive dying ally in 1 pace at 1 HP with a permanent scar/injury.</li>
                     </ul>
                 </div>
             </div>
